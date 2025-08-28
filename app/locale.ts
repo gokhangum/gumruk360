@@ -2,8 +2,9 @@ import { headers } from 'next/headers';
 
 export type Locale = 'tr' | 'en';
 
-export function getActiveLocale(): Locale {
-  const host = headers().get('host') || '';
+export async function getActiveLocale(): Promise<Locale> {
+  const h = await headers();              // ← await
+  const host = h.get('host') || '';
 
   // İngilizce site: tr.easycustoms360.com
   if (host.includes('tr.easycustoms360.com')) return 'en';

@@ -20,10 +20,11 @@ export const metadata: Metadata = {
   description: "Online customs consulting — TR & EN",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const locale = getActiveLocale(); // 'tr' | 'en'
+  const locale = await getActiveLocale(); // ← await
+
   return (
     <html lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>

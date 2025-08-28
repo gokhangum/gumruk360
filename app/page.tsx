@@ -3,8 +3,8 @@ export const dynamic = 'force-dynamic';
 import { getActiveLocale } from './locale';
 import { getDictionary } from './i18n';
 
-export default function Home() {
-  const locale = getActiveLocale();
+export default async function Home() {       // ← async
+  const locale = await getActiveLocale();    // ← await
   const dict = getDictionary(locale);
 
   return (
