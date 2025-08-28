@@ -1,10 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  i18n: {
-    locales: ['tr', 'en'],
-    defaultLocale: 'tr',
-    // ❌ domains KALDIRILDI
-  },
+  reactStrictMode: true,
+  // i18n KULLANMIYORUZ. Dili host'tan tespit edeceğiz.
 };
 
 module.exports = nextConfig;

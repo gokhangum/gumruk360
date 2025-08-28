@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { getActiveLocale } from './locale';
 import { getDictionary } from './i18n';
 
@@ -11,11 +13,9 @@ export default function Home() {
         <h1 className="text-3xl sm:text-4xl font-bold">
           {dict.brand}
         </h1>
-
         <p className="text-base sm:text-lg">
           {dict.lead}
         </p>
-
         <div className="flex gap-4">
           <a
             href="/ask"
@@ -25,7 +25,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-
       <footer className="row-start-3 flex items-center justify-center text-sm opacity-70">
         {locale === 'tr'
           ? '© 2025 Gümrük360 — Tüm hakları saklıdır.'
