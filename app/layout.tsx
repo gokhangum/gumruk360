@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const locale = await getActiveLocale(); // ← await
+  const locale = await getActiveLocale(); // <-- await
 
   return (
     <html lang={locale}>
