@@ -24,15 +24,11 @@ const withNextIntl = createNextIntlPlugin()
         },
       ];
     },
-    async redirects() {
-      return [
-       {
-          source: "/:path*",
-        has: [{ type: "host", value: "gumruk360.com" }],
-         destination: "https://www.gumruk360.com/:path*",
-         permanent: true, // 308
-       },
-      ];
+     async redirects() {
+   // gumruk360.com / www.gumruk360.com canonical yönlendirmesini
+    // lib/urlPolicy.ts içindeki UrlPolicy zaten yönetiyor.
+    // Burada ek bir host bazlı redirect yapmayalım ki loop oluşmasın.
+    return [];
     },
    turbopack: {},
    eslint: {
