@@ -1,0 +1,596 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* ===== GUMRUK360 Theme v3.5 — Sidebar tab: right-attached, outward (convex), NO circle ===== */
+:root {
+  --background: #f6f8fb;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --surface: #ffffff;
+
+  /* Sidebar blue tuned close to your screenshot */
+  --brand-950: #082a64;
+  --brand-900: #0d4aa2;
+  --brand-800: #125ac0;
+  --brand-700: #1768da;
+  --brand-600: #1b74ec;
+  --brand-500: #2a82f0;
+  --brand-400: #4b95f2;
+  --brand-300: #7fb3f7;
+  --brand-200: #b7d2fb;
+  --brand-100: #e1ecff;
+  --brand-50:  #f2f7ff;
+
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --shadow-card: 0 4px 16px rgba(6, 26, 58, .08);
+  --shadow-elev: 0 10px 28px rgba(6, 26, 58, .14);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b1220;
+    --foreground: #e5e7eb;
+    --muted: #9aa7bd;
+    --border: #1f2937;
+    --surface: #0f172a;
+
+    --brand-950: #051437;
+    --brand-900: #0a2f75;
+    --brand-800: #0d3d97;
+    --brand-700: #1250c1;
+    --brand-600: #1a65ec;
+    --brand-500: #3380ff;
+    --brand-400: #5d9aff;
+    --brand-300: #8fbbff;
+    --brand-200: #bcd6ff;
+    --brand-100: #deebff;
+    --brand-50:  #eff6ff;
+
+    --shadow-card: 0 8px 22px rgba(0,0,0,.35);
+    --shadow-elev: 0 14px 40px rgba(0,0,0,.45);
+  }
+}
+
+/* Base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Sidebar */
+.sidenav { background: linear-gradient(180deg, var(--brand-800), var(--brand-900)); color: #fff; position: relative; overflow: visible; }
+.sidenav .title { color: rgba(255,255,255,.88); font-weight: 700; letter-spacing: .2px; }
+.sidenav .divider { height: 1px; background: rgba(255,255,255,.12); margin: 10px 0; }
+
+/* gutter so the white tab can visually touch the content edge */
+.sidenav .navlist { margin-right: -16px; padding-right: 16px; }
+
+.sidenav .link {
+  position: relative; z-index: 1;
+  display: inline-flex; align-items: center; gap: 10px;
+  /* daha fazla sağ iç boşluk */
+  padding: 10px 16px 10px 12px;
+  border-radius: 10px;
+  color: rgba(255,255,255,.92);
+  transition: background-color .15s ease, color .15s ease, transform .12s ease;
+}
+.sidenav .link:not(.tab-active):hover { background: rgb(219 234 254); color: var(--brand-900); } /* sky-100 tonunda açık mavi */
+
+
+/* RIGHT-ATTACHED WHITE TAB (outward on right), NO circle */
+ .sidenav .link.tab-hover:hover { color: var(--brand-900); }
+ .sidenav .link.tab-active {
+   color: var(--brand-900);
+   /* aktif butonun üzerinde: solda açık mavi, sağa doğru içerik zeminine yumuşak geçiş */
+   background: linear-gradient(
+     to right,
+     rgb(219 234 254) 0%,
+     rgb(219 234 254) 65%,
+     var(--background) 100%
+   );
+ }
+ .sidenav .link.tab-active::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  width: calc(100% + 18px);     /* sağ kenara taşsın */
+   background: linear-gradient(
+     to right,
+     rgb(219 234 254) 0%,
+     rgb(219 234 254) 65%,
+     var(--background) 100%
+   );
+  /* asimetrik radius: solda küçük, sağda büyük → sağa doğru açılan hissi */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  
+  /* hafif gölge */
+  box-shadow: 0 2px 6px rgba(6,26,58,.14);
+  z-index: -1;
+  pointer-events: none;
+  /* sağ tarafta hafif dışa açılma efekti (mask ile) */
+  -webkit-mask-image: radial-gradient(30px 24px at calc(100% - 2px) 50%, #000 98%, transparent 100%), linear-gradient(#000,#000);
+  mask-image: radial-gradient(30px 24px at calc(100% - 2px) 50%, #000 98%, transparent 100%), linear-gradient(#000,#000);
+  -webkit-mask-composite: source-over;
+          mask-composite: add;
+}
+
+/* Content her koşulda üstte kalsın */
+.content-elev { position: relative; z-index: 5; }
+
+/* The rest (buttons/cards/forms/tables) are identical to v3.4 and omitted for brevity in this zip. */
+
+/* === Soft Dashboard Utilities (colored shadows, cards, tables, buttons, badges, inputs) === */
+.card-surface {
+  background: var(--surface, #ffffff);
+  border-radius: var(--radius-md, 12px);
+  box-shadow: var(--shadow-card, 0 6px 20px -8px rgba(15, 23, 42, 0.12));
+}
+.card-surface:hover { box-shadow: var(--shadow-elev, 0 10px 28px -10px rgba(15, 23, 42, 0.18)); }
+
+.shadow-colored {
+  box-shadow: 0 10px 32px -12px rgba(59, 130, 246, 0.28);
+}
+.shadow-colored-teal {
+  box-shadow: 0 10px 32px -12px rgba(20, 184, 166, 0.28);
+}
+
+.badge {
+  display: inline-flex; align-items: center; gap: .375rem;
+  padding: .25rem .5rem; border-radius: 9999px;
+  font-size: .75rem; line-height: 1; font-weight: 600;
+}
+.badge--success { color: #065F46; background: rgba(16,185,129,.12); }
+.badge--warning { color: #7C2D12; background: rgba(245,158,11,.14); }
+.badge--danger  { color: #7F1D1D; background: rgba(239,68,68,.12); }
+.badge--info    { color: #0F766E; background: rgba(20,184,166,.14); }
+.badge--muted   { color: #334155; background: rgba(148,163,184,.16); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  height: 40px; padding: 0 14px;
+  border-radius: var(--radius-md, 12px);
+  font-weight: 600;
+  transition: box-shadow .2s ease, transform .08s ease, background .2s ease;
+  box-shadow: var(--shadow-card, 0 6px 20px -8px rgba(15, 23, 42, 0.12));
+}
+.btn--sm { height: 40px; padding: 0 12px; font-size: 14px; gap: .375rem; }
+.btn--xs { height: 30px; padding: 0 10px; font-size: 12px; gap: .25rem; }
+.btn:hover { box-shadow: var(--shadow-elev, 0 10px 28px -10px rgba(15, 23, 42, 0.18)); transform: translateY(-1px); }
+.btn:focus-visible { outline: 2px solid var(--brand-500, #3B82F6); outline-offset: 2px; }
+.btn:disabled { opacity: .6; cursor: not-allowed; box-shadow: none; transform:none; }
+.btn--primary { background: var(--brand-600, #1b74ec); color: #fff; }
+.btn--outline { background: #fff; color: var(--foreground, #0f172a); border:1px solid var(--border, #e2e8f0); }
+.btn--ghost   { background: transparent; color: var(--foreground, #0f172a); }
+
+.input {
+   height: 40px; border-radius: var(--radius-md, 12px);
+  border: 1px solid var(--border, #E2E8F0); padding: 0 12px; background: #fff;
+}
+ /* Textarea'larda sabit yükseklik istemiyoruz */
+ textarea.input { height: auto !important; }
+.input:focus { outline: 2px solid rgba(59,130,246,.3); border-color: #93C5FD; }
+
+.table-surface {
+  background: #fff;
+  border-radius: var(--radius-md, 12px);
+  box-shadow: 0 10px 32px -12px rgba(59, 130, 246, 0.28);
+  overflow: hidden;
+}
+.table-surface table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.table-surface thead th {
+  font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .02em;
+  color: #334155; background: #F8FAFC;
+}
+.table-surface tbody tr { transition: background .12s ease; }
+.table-surface tbody tr:hover { background: #F8FAFC; }
+.table-surface td, .table-surface th { padding: 12px 16px; }
+
+/* === Edge Underline (solid) – shadow YOK, köşelerden yukarı kıvrılır === */
+/* Mantık: kartın DIŞINDA alt/sol/sağ renkli çerçeve; üst taraf şeffaf. */
+.edge-underline {
+  position: relative;
+  overflow: visible;          /* şeridin dışarı taşmasına izin ver */
+  --edge-color: #3B82F6;      /* mavi varsayılan */
+  --edge-thickness: 4px;      /* çizgi kalınlığı (alt ve yanlar) */
+  --edge-offset: 6px;         /* kartın dışına ne kadar insin */
+  --edge-rise: 16px;          /* köşelerde yukarı çıkma miktarı */
+}
+
+/* Dış çerçeveyi alt+yanlarda boyar; üstü transparan bırakır */
+.edge-underline::after {
+  content: "";
+  position: absolute;
+  left: 4;                  /* TAM GENİŞLİK: kenarlara yapışık */
+  right: 4;
+  bottom: calc(-1 * var(--edge-offset, 0px));  /* alt yapışıklık/preset */
+  height: var(--edge-thickness, 8px);
+  background: var(--edge-color, #3B82F6);
+
+  /* Sadece alt ve yan çizgiler görünür; üst taraf şeffaf */
+  border-bottom: var(--edge-thickness, 8px) solid var(--edge-color, #3B82F6);
+  border-left:   var(--edge-thickness, 8px) solid var(--edge-color, #3B82F6);
+  border-right:  var(--edge-thickness, 8px) solid var(--edge-color, #3B82F6);
+  border-top:    var(--edge-thickness, 8px) solid transparent;
+
+  /* Kart radius’ini bire bir takip etsin (taşma yok) */
+  border-radius: var(--radius-md, 12px);
+
+  /* Köşelerden yukarı kıvrım yüksekliği (edge-rise ile kontrol) */
+  clip-path: inset(calc(100% - var(--edge-rise, 16px)) 0 0 0
+                   round var(--radius-md, 12px));
+  pointer-events: none;
+}
+
+
+/* — Renk varyantları — */
+.edge-blue { --edge-color: #3B82F6; }
+.edge-teal { --edge-color: #14B8A6; }
+.edge-pink { --edge-color: #F472B6; }
+
+/* — Opsiyonel: Ortada incelerek birleşsin (taper) — */
+/* Merkezde kalınlığı azaltan alfa maskesi */
+.edge-taper::after {
+  -webkit-mask:
+    radial-gradient(160% 120% at 50% 120%, #000 64%, transparent 68%); /* merkezde incelt */
+          mask:
+    radial-gradient(160% 120% at 50% 120%, #000 64%, transparent 68%);
+}
+
+/* Küçük ipuçları:
+   – Daha belirgin kıvrım: --edge-rise: 20px
+   – Daha ince çizgi:      --edge-thickness: 6px
+   – Alt sarkma azalsın:   --edge-offset: 4px
+*/
+/* === Edge underline helpers — 2mm kıvrım preset === */
+.edge-rise-2mm {
+  --edge-thickness: 4px;   /* çizginin kalınlığı (isteğe göre 6–10px oynar) */
+  --edge-offset: 0px;      /* ALTTA TAM YAPIŞIK: dışa sarkma yok */
+  --edge-rise: 7.6px;      /* ≈ 2mm: köşelerden üste doğru çıkış yüksekliği */
+}
+/* Acil (Danger) – açık & koyu varyantlar */
+.btn.btn--danger-light {
+  background: #F87171;   /* açık kırmızı (red-400) */
+  color: #fff;
+  border: 1px solid #F87171;
+  transition: filter .15s ease, transform .05s ease;
+}
+.btn.btn--danger-light:hover { filter: brightness(1.05); }
+.btn.btn--danger-light:active { transform: translateY(0.5px); }
+
+/* Koyu varyant: aktif (basılı) hâl */
+.btn.btn--danger {
+  background: #DC2626;   /* koyu kırmızı (red-600) */
+  color: #fff;
+  border: 1px solid #DC2626;
+}
+.btn.btn--danger:hover { filter: brightness(1.05); }
+.btn.btn--danger:focus-visible { outline: 2px solid #FCA5A5; outline-offset: 2px; }
+
+/* Büyük CTA — banner içindeki “Soru Sor” düğmesi */
+.btn--cta.btn--primary{ background:linear-gradient(180deg,#3B82F6 0%,#2563EB 100%); }
+/* ---- Marketing top menu rectangular hover ---- */
+.topnav a {
+  padding: 6px 10px;          /* dikdörtgen alan */
+  border-radius: 6px;         /* köşeler hafif yumuşak; tam dikdörtgen istersen 0 yap */
+  transition: background-color .15s ease, color .15s ease;
+}
+.topnav a:hover {
+  background: #DBEAFE;        /* açık mavi (Tailwind: bg-blue-100) */
+  color: #0f172a;             /* koyu metin (Tailwind: slate-900) */
+}
+/* Mobile header brand background (fallback when arbitrary colors are purged) */
+.header-brand {
+  background-color: var(--brand-900) !important;
+  color: #fff !important;
+}
+/* ======== Top Header Nav (rectangular hover + persistent active) ======== */
+.topnav .link {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;                /* dikdörtgen alan */
+  border-radius: 6px;               /* köşeleri hafif yumuşat */
+  color: rgba(255,255,255,.92);
+  transition: background-color .15s ease, color .15s ease;
+}
+.topnav .link.tab-hover:hover {
+  background: #DBEAFE;              /* açık mavi (sky-100) */
+  color: #0f172a;                   /* koyu metin (slate-900) */
+}
+.topnav .link.tab-active {
+  background: #DBEAFE;              /* kalıcı mavi zemin */
+  color: #0f172a;
+}
+
+/* (Eğer bazı yerlerde doğrudan <a> kullanılırsa güvenlik için:) */
+.topnav a:hover {
+  background: #DBEAFE;
+  color: #0f172a;
+  border-radius: 6px;
+  transition: background-color .15s ease, color .15s ease;
+}
+.ProseMirror h2{font-size:1.5rem;font-weight:600;margin:.75rem 0}
+.ProseMirror h3{font-size:1.25rem;font-weight:600;margin:.5rem 0}
+.ProseMirror ul{list-style:disc;margin-left:1.25rem;padding-left:1.25rem}
+.ProseMirror ol{list-style:decimal;margin-left:1.25rem;padding-left:1.25rem}
+.ProseMirror blockquote{border-left:4px solid #e5e7eb;padding-left:1rem;color:#6b7280;margin:.75rem 0}
+/* ===== Float image rules (public) ===== */
+.prose img.tiptap-image {
+   display: block;
+  max-width: 100%;
+}
+
+.prose img.tiptap-image.float-left {
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+
+.prose img.tiptap-image.float-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+/* TipTap sınıfı taşınmadıysa veya inline style geldiyse de çalışsın */
+/* Sol float */
+.prose img.float-left,
+.prose figure[data-float="left"] > img,
+.prose img[style*="float:left"] {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  max-width: 40%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Sağ float */
+.prose img.float-right,
+.prose figure[data-float="right"] > img,
+.prose img[style*="float:right"] {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  max-width: 40%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* İçinde float'lı img olan paragraflarda dikey boşluğu kısalt */
+.prose p:has(> img.float-left),
+.prose p:has(> img.float-right),
+.prose p:has(> img.tiptap-image.float-left),
+.prose p:has(> img.tiptap-image.float-right),
+.prose p:has(> img[style*="float:left"]),
+.prose p:has(> img[style*="float:right"]) {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+}
+
+/* Clear işlemi paragraf yerine kapsayıcıda yapılsın (akışı bozmaz) */
+.prose::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Mobilde okunabilirlik için float'ı iptal et */
+@media (max-width: 640px) {
+    .prose img.tiptap-image.float-left,
+  .prose img.tiptap-image.float-right,
+  .prose img.float-left,
+  .prose img.float-right,
+  .prose figure[data-float="left"] > img,
+  .prose figure[data-float="right"] > img,
+  .prose img[style*="float:left"],
+  .prose img[style*="float:right"] {
+    float: none;
+    margin: .5rem 0;
+    max-width: 100%;
+  }
+
+}
+
+/* ===== Float image rules (editor) ===== */
+.ProseMirror img.tiptap-image {
+ display: block;
+  max-width: 100%;
+}
+
+.ProseMirror img.tiptap-image.float-left {
+  float: left;
+  margin: 0 1rem 1rem 0;
+}
+
+.ProseMirror img.tiptap-image.float-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+}
+
+/* Clear işlemi editör kapsayıcısında (paragraf bazında değil) */
+.ProseMirror::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* Seçili image node vurgusu */
+.ProseMirror img.tiptap-image.ProseMirror-selectednode {
+  outline: 2px solid #3b82f6; /* mavi kontur */
+  outline-offset: 2px;
+}
+/* ==== Mobile-friendly Form Base (low-specificity, global) ==== */
+/* Not: :where() ile spesifikliği düşük tutuyoruz; ihtiyaç halinde bileşen sınıfları üstüne yazar. */
+/* Çerçeve + dolgu + gölge + focus ring; tüm formlarda tutarlı görünüm. */
+:where(input[type="text"],
+       input[type="email"],
+       input[type="tel"],
+       input[type="url"],
+       input[type="search"],
+       input[type="password"],
+       input[type="number"],
+       input[type="date"],
+       input[type="time"],
+       select):not(.unstyled,[data-unstyled]) {
+  @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 shadow-sm outline-none;
+  @apply focus:ring-2 focus:ring-amber-500/60 focus:border-amber-500;
+}
+
+/* Textarea da aynı taban stili; mobilde rahat yazım için min yükseklik */
+:where(textarea):not(.unstyled,[data-unstyled]) {
+  @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 shadow-sm outline-none;
+  @apply focus:ring-2 focus:ring-amber-500/60 focus:border-amber-500;
+  min-height: 44px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+/* Küçük ekranlarda dokunma hedeflerini büyüt (sadece form kontrolleri) */
+@media (max-width: 480px) {
+  :where(input[type="text"],
+         input[type="email"],
+         input[type="tel"],
+         input[type="url"],
+         input[type="search"],
+         input[type="password"],
+         input[type="number"],
+         input[type="date"],
+         input[type="time"],
+         select,
+         textarea):not(.unstyled,[data-unstyled]) {
+    min-height: 44px;
+  }
+}
+/* Mesaj yazma (questions/[id]) alanını her zaman uzun yap */
+textarea[name="message"] {
+  min-height: 200px;
+}
+
+@media (min-width: 768px){
+  textarea[name="message"] {
+    min-height: 200px;
+  }
+}
+
+/* İsteğe bağlı yardımcı sınıf: kritik CTA/ikon butonlarda hedef alanı büyütmek için kullanabilirsiniz. */
+.touch-target { min-height: 44px; padding-top: .5rem; padding-bottom: .5rem; }
+/* ==== Mobile-friendly Tables ==== */
+.table-responsive,
+:where(.prose table, table):not(.unstyled,[data-unstyled]) {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+:where(.prose table, table):not(.unstyled,[data-unstyled]) th,
+:where(.prose table, table):not(.unstyled,[data-unstyled]) td {
+  padding: .5rem .75rem;
+  border-bottom: 1px solid theme(colors.slate.200);
+  white-space: nowrap;            /* hücreler tek satır kalsın */
+}
+
+:where(.prose table, table):not(.unstyled,[data-unstyled]) th {
+  font-weight: 600;
+  background: theme(colors.slate.50);
+}
+
+@media (max-width: 600px) {
+  .table-responsive {
+    margin: 0 -.5rem;             /* kenarı kırpmadan daha ferah kaydırma */
+    padding: 0 .5rem;
+  }
+}
+/* ==== Sticky helpers & Safe Area ==== */
+.safe-area-b { padding-bottom: env(safe-area-inset-bottom); }
+.safe-area-t { padding-top: env(safe-area-inset-top); }
+
+/* Yapışkan bir üst barınız 56–64px civarıysa, içerik başlangıcını telafi etmek için: */
+.sticky-offset-56 { padding-top: 56px; }
+.sticky-offset-64 { padding-top: 64px; }
+/* ==== Focus-visible (a11y) ==== */
+:where(a, button, [role="button"], input, select, textarea):focus { outline: none; }
+:where(a, button, [role="button"], input, select, textarea):focus-visible {
+  outline: 2px solid theme(colors.amber.500 / 0.6);
+  outline-offset: 2px;
+  border-color: theme(colors.amber.500 / 0.6);
+}
+/* ==== Autofill normalize (WebKit) ==== */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  transition: background-color 99999s ease-in-out 0s, color 99999s ease-in-out 0s;
+  -webkit-text-fill-color: theme(colors.slate.900) !important;
+}
+/* Merge this into your globals.css (at the end) */
+
+/* SAFEGUARD: mobile-only drawer transforms, so desktop cannot be affected */
+@media (max-width: 767.98px){
+  .sidenav { transform: translateX(-100%); }
+  /* If someone overrides Tailwind peer-checked, this still opens the drawer */
+  input#dash-nav-toggle:checked ~ .sidenav { transform: translateX(0); }
+}
+
+/* On desktop, never apply drawer transforms to .sidenav (if present anywhere) */
+@media (min-width: 768px){
+  .sidenav { transform: none !important; }
+}
+
+/* Make sure no global rule forcibly displays sidebars on mobile */
+@media (max-width: 767.98px){
+  .sidebar, .sidenav {
+    /* Do NOT set display:block !important here */
+  }
+}
+/* Auto-added: Hide desktop dashboard sidebar on mobile */
+@media (max-width: 767px){
+  .sidenav { display: none !important; }
+}
+/* === Questions/[id] mesaj alanı boyutları === */
+@media (max-width: 767.98px){
+  /* Mobil: ~4 satır */
+  textarea.msg-field { 
+    min-height: 96px !important;   /* ~4 satır */
+    resize: vertical;
+  }
+}
+
+@media (min-width: 768px){
+  /* Desktop: uzun yazım alanı */
+  textarea.msg-field { 
+    min-height: 200px !important;
+    resize: vertical;
+  }
+}
+ /* ===== CKEditor content responsive table overrides (fix overflow) ===== */
+.ck-content { max-width: 100%; }
+.ck-content table { width: 100% !important; table-layout: fixed !important; }
+.ck-content th, .ck-content td {
+ white-space: normal !important;
+ word-break: break-word;
+ }
+.ck-content img, 
+.ck-content video, 
+.ck-content iframe { max-width: 100%; height: auto; }
+/* ===== /CKEditor overrides ===== */
+ /* === TipTap / ProseMirror editor size === */
+.ProseMirror {
+   min-height: 50vh; /* mobile */
+ }
+@media (min-width: 768px){
+.ProseMirror { min-height: 50vh; } /* desktop */
+ }
+ /* (İçerik genişliği zaten .prose max-w-none ile sınırsız) */
+/* ========================================= */

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  width="96"
+  height="1600"
+  viewBox="0 0 96 1600"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <defs>
+    <!-- Left-to-right fade mask (left transparent -> right opaque) -->
+    <linearGradient id="fade-left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="black" stop-opacity="1"/>
+      <stop offset="55%" stop-color="white" stop-opacity="1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="leftFadeMask">
+      <rect x="0" y="0" width="96" height="1600" fill="url(#fade-left)"/>
+    </mask>
+
+    <style type="text/css"><![CDATA[
+      /* Single color control: change this hex to recolor everything */
+      .t1   { stroke: #f59e0b; stroke-width: .9;  fill: none; opacity: .9; }
+      .t2   { stroke: #f59e0b; stroke-width: .9;  fill: none; opacity: .85; stroke-dasharray: 6 4; }
+      .t3   { stroke: #f59e0b; stroke-width: 1.0; fill: none; opacity: .8;  stroke-dasharray: 2 3; }
+      .mark { fill:   #f59e0b; }
+      .node { fill:   #f59e0b; opacity: .8; }
+      .node-faint { fill: #f59e0b; opacity: .45; }
+      .bg-dot{ fill:#000000; opacity:.05; }
+    ]]></style>
+
+    <!-- Subtle microgrid -->
+    <pattern id="micro-dots" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="12" height="12" fill="transparent"/>
+      <circle class="bg-dot" cx="3" cy="3" r="0.8"/>
+      <circle class="bg-dot" cx="9" cy="9" r="0.8"/>
+    </pattern>
+
+    <!-- Monochrome icons -->
+    <symbol id="icon-server" viewBox="0 0 24 24">
+      <rect x="3" y="4"  width="18" height="5" rx="1.2" fill="none" stroke="#f59e0b" stroke-width="1.2"/>
+      <rect x="3" y="10" width="18" height="5" rx="1.2" fill="none" stroke="#f59e0b" stroke-width="1.2"/>
+      <rect x="3" y="16" width="18" height="5" rx="1.2" fill="none" stroke="#f59e0b" stroke-width="1.2"/>
+    </symbol>
+
+    <symbol id="icon-network" viewBox="0 0 24 24">
+      <circle cx="6"  cy="18" r="2" fill="#f59e0b"/>
+      <circle cx="18" cy="18" r="2" fill="#f59e0b"/>
+      <circle cx="12" cy="6"  r="2" fill="#f59e0b"/>
+      <path d="M7.5 16.5 L10.8 7.6 M16.5 16.5 L13.2 7.6 M7.8 17.6 L16.2 17.6" stroke="#f59e0b" stroke-width="1.0" fill="none"/>
+    </symbol>
+
+    <symbol id="icon-platform" viewBox="0 0 24 24">
+      <rect x="3" y="5"  width="18" height="4" rx="1.2" fill="none" stroke="#f59e0b" stroke-width="1.2"/>
+      <rect x="5" y="10" width="14" height="4" rx="1.2" fill="none" stroke="#f59e0b" stroke-width="1.2"/>
+      <rect x="7" y="15" width="10" height="4" rx="1.2" fill="none" stroke="#f59e0b" stroke-width="1.2"/>
+    </symbol>
+
+    <symbol id="icon-globe-grid" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="#f59e0b" stroke-width="1.2"/>
+      <path d="M3 12 H21" stroke="#f59e0b" stroke-width="1"/>
+      <path d="M12 3 V21" stroke="#f59e0b" stroke-width="1"/>
+      <path d="M4.5 8 H19.5 M4.5 16 H19.5" stroke="#f59e0b" stroke-width="0.9"/>
+      <path d="M8 4.5 V19.5 M16 4.5 V19.5" stroke="#f59e0b" stroke-width="0.9"/>
+    </symbol>
+  </defs>
+
+  <g mask="url(#leftFadeMask)">
+    <!-- Background -->
+    <rect x="0" y="0" width="96" height="1600" fill="url(#micro-dots)"/>
+
+    <!-- Upward sparse traces (no vertical rails) -->
+    <path class="t1" d="M30 180 L48 168 L62 156 L74 144"/>
+    <path class="t2" d="M28 380 L44 368 L58 354 L74 340"/>
+    <path class="t1" d="M26 560 L42 560 L42 548 L58 548 L74 536"/>
+    <path class="t3" d="M28 760 L38 750 L48 760 L58 750 L74 738"/>
+    <path class="t1" d="M26 980 L40 970 L56 958 L74 946"/>
+    <path class="t2" d="M24 1200 L40 1188 L58 1174 L74 1162"/>
+
+    <!-- Icons (same positions) -->
+    <g transform="translate(0,40)">
+      <use xlink:href="#icon-network" x="58" y="0" width="24" height="24"/>
+      <rect class="mark" x="72" y="34" width="3" height="3"/>
+    </g>
+
+    <g transform="translate(0,300)">
+      <use xlink:href="#icon-server" x="58" y="0" width="24" height="24"/>
+      <rect class="mark" x="72" y="34" width="3" height="3"/>
+    </g>
+
+    <g transform="translate(0,560)">
+      <use xlink:href="#icon-globe-grid" x="58" y="0" width="24" height="24"/>
+      <rect class="mark" x="72" y="34" width="3" height="3"/>
+    </g>
+
+    <g transform="translate(0,820)">
+      <use xlink:href="#icon-platform" x="58" y="0" width="24" height="24"/>
+      <rect class="mark" x="72" y="34" width="3" height="3"/>
+    </g>
+
+    <g transform="translate(0,1080)">
+      <use xlink:href="#icon-network" x="58" y="0" width="24" height="24"/>
+      <rect class="mark" x="72" y="34" width="3" height="3"/>
+    </g>
+
+    <g transform="translate(0,1340)">
+      <use xlink:href="#icon-server" x="58" y="0" width="24" height="24"/>
+      <rect class="mark" x="72" y="34" width="3" height="3"/>
+    </g>
+
+    <!-- FUTURISTIC CONNECTOR DOTS -->
+    <!-- Between 180-line end (~144) and top icon (~40+34=74) -->
+    <g>
+      <circle class="node" cx="70" cy="110" r="1.6"/>
+      <circle class="node-faint" cx="66" cy="120" r="1.3"/>
+      <circle class="node-faint" cx="62" cy="130" r="1.1"/>
+      <circle class="node-faint" cx="58" cy="140" r="1.0"/>
+    </g>
+
+    <!-- Between 340-line end and 300 icon cluster -->
+    <g>
+      <circle class="node" cx="70" cy="320" r="1.6"/>
+      <circle class="node-faint" cx="64" cy="330" r="1.2"/>
+      <circle class="node-faint" cx="58" cy="338" r="1.0"/>
+    </g>
+
+    <!-- Between 536-line end and 560 icon cluster -->
+    <g>
+      <circle class="node" cx="70" cy="548" r="1.6"/>
+      <circle class="node-faint" cx="64" cy="552" r="1.2"/>
+      <circle class="node-faint" cx="58" cy="556" r="1.0"/>
+    </g>
+
+    <!-- Between 738-line end and 820 icon cluster -->
+    <g>
+      <circle class="node" cx="70" cy="780" r="1.6"/>
+      <circle class="node-faint" cx="64" cy="792" r="1.2"/>
+      <circle class="node-faint" cx="58" cy="804" r="1.0"/>
+    </g>
+
+    <!-- Between 946-line end and 1080 icon cluster -->
+    <g>
+      <circle class="node" cx="70" cy="1000" r="1.6"/>
+      <circle class="node-faint" cx="64" cy="1014" r="1.2"/>
+      <circle class="node-faint" cx="58" cy="1028" r="1.0"/>
+    </g>
+
+    <!-- Between 1162-line end and 1340 icon cluster -->
+    <g>
+      <circle class="node" cx="70" cy="1220" r="1.6"/>
+      <circle class="node-faint" cx="64" cy="1240" r="1.2"/>
+      <circle class="node-faint" cx="58" cy="1260" r="1.0"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1248.6" height="194.29" version="1.1" viewBox="0 0 1248.6 194.29" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.wm { font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto; font-weight: 700; }
+      .sub { font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto; font-weight: 500; }</style>
+  <linearGradient id="connGrad" x1="79.148" x2="480.58" y1="845.64" y2="845.64" gradientTransform="scale(3.0551 .32733)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#0D47A1" offset="0"/>
+   <stop stop-color="#1159BF" offset=".55"/>
+   <stop stop-color="#59A7FF" offset="1"/>
+  </linearGradient>
+  <filter id="connGlow" x="-.024103" y="-.376" width="1.0482" height="1.752">
+   <feGaussianBlur result="b" stdDeviation="8"/>
+   <feColorMatrix in="b" values="0 0 0 0 0.07                 0 0 0 0 0.45                 0 0 0 0 0.95                 0 0 0 0 0.65 0"/>
+  </filter>
+ </defs>
+ <g id="Wordmark" transform="translate(-252.4,-302.5)">
+  <text class="wm" x="357.80075" y="494.5925" fill="#0f172a" font-size="180px" letter-spacing=".5"><tspan fill="#000000" font-family="Poppins, Inter, system-ui, '-apple-system', 'Segoe UI', Roboto" font-weight="bold">Gümrük360</tspan></text>
+  <text x="477.36093" y="657.82666" fill="#33339e" fill-opacity=".92466" font-size="48px" xml:space="preserve"><tspan x="477.36093" y="657.82666"/></text>
+ </g>
+ <g id="ConnectionArc" transform="translate(-252.4,-302.5)">
+  <path d="m270 380c290-100 890-100 1170 0" fill="none" filter="url(#connGlow)" stroke="url(#connGrad)" stroke-linecap="round" stroke-width="18"/>
+  <path d="m270 380c290-100 890-100 1170 0" fill="none" opacity=".85" stroke="#cfe3ff" stroke-linecap="round" stroke-width="5"/>
+  <g fill="#59a7ff">
+   <circle cx="630" cy="325" r="6" opacity=".95"/>
+   <circle cx="900" cy="310" r="5" opacity=".9"/>
+   <circle cx="1180" cy="320" r="5" opacity=".85"/>
+   <circle cx="1340" cy="355" r="4.5" opacity=".8"/>
+  </g>
+  <g id="ConsultantHex" transform="translate(270,380)">
+   <polygon points="15.6 9 0 18 -15.6 9 -15.6 -9 0 -18 15.6 -9" fill="#fff" stroke="#1159bf" stroke-width="4"/>
+   <circle r="4" fill="#1159bf"/>
+  </g>
+  <g id="ClientRing" transform="translate(1440,380)">
+   <circle r="12" fill="#fff" stroke="#1159bf" stroke-width="4"/>
+   <circle r="5" fill="#1159bf"/>
+  </g>
+  <g id="SignalWaves" transform="translate(1440,380)" fill="none" stroke="#1159bf" stroke-linecap="round" stroke-width="6">
+   <path d="m18-8a28 28 0 0 1 0 16" opacity=".55"/>
+   <path d="m36-12a44 44 0 0 1 0 24" opacity=".35"/>
+   <path d="m56-16a64 64 0 0 1 0 32" opacity=".2"/>
+  </g>
+ </g>
+</svg>

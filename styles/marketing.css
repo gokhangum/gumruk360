@@ -1,0 +1,30 @@
+/* styles/marketing.css */
+/* Shared tokens driven by dashboard theme */
+:root {
+  --mkt-bg: #fff;
+  --mkt-fg: #0f172a;                /* text-slate-900 */
+  --mkt-accent: var(--dashboard-bg, #1159BF);
+  --mkt-accent-fg: #fff;
+  --mkt-link: var(--mkt-accent);
+}
+
+/* Tailwind layer for reusable utilities */
+@layer components {
+  .mkt-container { @apply mx-auto px-4 md:px-8 max-w-[clamp(320px,90vw,1280px)]; }
+  .mkt-section   { @apply py-10 md:py-16; }
+  .mkt-section-muted { @apply border-t border-b border-slate-200; background: #f8fafc; } /* slate-50 */
+
+  .mkt-cta { @apply inline-flex items-center rounded-full px-5 py-3 font-medium transition; }
+  .mkt-cta--primary  { background: var(--mkt-accent); color: var(--mkt-accent-fg); }
+  .mkt-cta--secondary{ @apply border border-slate-300; background:#fff; color:#0f172a; }
+
+  .mkt-link { color: var(--mkt-link); }
+  .mkt-link:hover { text-decoration: underline; }
+
+  /* Sticky helper (already used by header) */
+  .mkt-sticky { @apply sticky top-0 z-40; }
+
+  /* Right-side drawer (future use) */
+  .mkt-drawer { @apply fixed top-0 right-0 h-dvh w-full max-w-sm shadow-xl; background: #fff; }
+  .mkt-drawer__backdrop { @apply fixed inset-0 bg-black/30; }
+}

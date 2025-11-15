@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1112.1" height="322" version="1.1" viewBox="0 0 1112.1 322" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.wm { font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto; font-weight: 700; }
+      .sub { font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto; font-weight: 500; }</style>
+  <linearGradient id="arcGrad" x1="417.69" x2="650.04" y1="307.12" y2="307.12" gradientTransform="scale(.97871 1.0218)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#0D47A1" offset="0"/>
+   <stop stop-color="#1159BF" offset=".55"/>
+   <stop stop-color="#59A7FF" offset="1"/>
+  </linearGradient>
+  <filter id="arcGlow" x="-.14971" y="-.14162" width="1.2994" height="1.2832">
+   <feGaussianBlur result="blur" stdDeviation="8"/>
+   <feColorMatrix in="blur" values="0 0 0 0 0.07                 0 0 0 0 0.45                 0 0 0 0 0.95                 0 0 0 0.7 0"/>
+  </filter>
+ </defs>
+ <g id="Symbol" transform="translate(-359,-289)">
+  <g id="C-Ring">
+   <circle cx="520" cy="450" r="150" fill="none" stroke="#1159bf" stroke-width="22"/>
+   <path d="m610 340a150 150 0 0 1 0 220" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="44"/>
+   <g id="ClientNode" transform="translate(610,340)">
+    <circle r="14" fill="#fff" stroke="#1159bf" stroke-width="4"/>
+    <circle r="6" fill="#1159bf"/>
+   </g>
+  </g>
+  <g id="ConnectionArc">
+   <g id="ConsultantNode" transform="translate(435,525)">
+    <polygon points="13.9 8 0 16 -13.9 8 -13.9 -8 0 -16 13.9 -8" fill="#fff" stroke="#1159bf" stroke-width="4"/>
+    <circle r="4" fill="#1159bf"/>
+   </g>
+   <path d="m435 525c35-70 85-130 175-185" fill="none" filter="url(#arcGlow)" stroke="url(#arcGrad)" stroke-linecap="round" stroke-width="14"/>
+   <path d="m438 522c34-67 84-124 170-180" fill="none" opacity=".85" stroke="#cfe3ff" stroke-linecap="round" stroke-width="4"/>
+   <g fill="#59a7ff">
+    <circle cx="475" cy="470" r="4" opacity=".95"/>
+    <circle cx="515" cy="425" r="4" opacity=".8"/>
+    <circle cx="555" cy="395" r="4" opacity=".7"/>
+   </g>
+  </g>
+  <g id="Remote" fill="none" stroke="#1159bf" stroke-linecap="round" stroke-width="6">
+   <path d="m630 340a40 40 0 0 1 0 40" opacity=".55"/>
+   <path d="m650 340a60 60 0 0 1 0 60" opacity=".35"/>
+   <path d="m670 340a80 80 0 0 1 0 80" opacity=".2"/>
+  </g>
+ </g>
+ <g id="Wordmark" transform="translate(-359,-289)">
+  <text class="wm" x="545.76971" y="509.58603" fill="#66bca3" font-size="213.33px" letter-spacing="1.2"><tspan fill="#66bca3">onsphera</tspan></text>
+  <text class="sub" x="684.3208" y="597.52905" fill="#334155" font-size="48px"><tspan fill="#33339e" fill-opacity=".92466">Consultancy · Intelligence · Trust</tspan></text>
+ </g>
+</svg>

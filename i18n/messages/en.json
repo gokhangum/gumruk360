@@ -1,0 +1,2800 @@
+{
+	"rss": {
+    "title": "EasyCustoms360 Blog",
+    "description": "Latest posts"
+  },
+	"contactmain": {
+		"dropzone": {
+    "title": "Drag & drop your files here",
+    "or": "or",
+    "browse": "Browse files"
+  },
+    "hero": {
+      "title": "Contact",
+      "subtitle": "Send us your questions and requests; we’ll get back to you shortly."
+    },
+    "fields": {
+      "email": {
+        "label": "Email",
+        "placeholder": "name@example.com"
+      },
+      "phone": {
+        "label": "Phone (optional)",
+        "placeholder": "+1 (555) 123-4567"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Subject line"
+      },
+      "message": {
+        "label": "Your Message",
+        "placeholder": "Write your message here..."
+      },
+      "attachments": {
+        "label": "Attachments (optional)",
+        "hint": "You may attach PDF, DOCX, XLSX, JPG, PNG files."
+      }
+    },
+    "actions": {
+      "send": "Send",
+      "sending": "Sending..."
+    },
+    "success": "Your message has been received. Thank you! We will get back to you within one business day.",
+    "errors": {
+      "unexpected": "An unexpected error occurred. Please try again."
+    },
+    "ref": "Ref"
+	},
+	 "about": {
+    "hero": {
+      "title": "About Us"
+    },
+    "body_html": "<p>Customs and foreign trade involve constantly updated regulations, document flows, and time pressure. Traditional methods can be slow, hard to track, and costly. Easycustoms360 is a Customs Consultancy Service Platform built on the infrastructure of Consphera Technology & Consultancy, which unites engineering, consulting, and artificial intelligence.</p>\n<p>Our aim is to combine technology with customs expertise to make access to the expertise required for foreign trade and customs processes fast, expert-driven, transparent, and traceable.</p>\n<p>Accordingly, our in-house Consphera PSA (Professional Services Automation) backbone automates—end to end—intake, pre-assessment, risk scoring, AI-assisted instant pricing, SLA management, expert selection, quality control, invoicing, and reporting, making the consultancy flow traceable from first contact to delivery.</p>\n<h2>What We Do with Easycustoms360</h2>\n<ul><li>Simplifying complex regulation with expertise: making problem areas understandable through expert analysis and offering applicable solutions.</li><li>Standardizing speed: instant offers, response times, real-time notifications, and tracking screens for predictable service.</li><li>Trust through expertise: the ability to choose a topic-specific expert and two-stage quality control.</li><li>Cost and flexibility: per-question or credit-based model; one-off payments and subscription scenarios.</li><li>Traceability and compliance: all processes are recorded and comply with GDPR principles; data security strengthened with role-based access and encryption.</li></ul>\n<h2>Vision</h2>\n<p>To digitize foreign trade and customs consultancy; to standardize speed, accuracy, and trust in one package; to become a globally referenced “new norm” for regulation-based consultancy—supported by a scalable architecture, measurable SLAs, and continuous improvement.</p>\n<h2>Our Values</h2>\n<ul><li>Trust: Accurate information, clear contracts, traceable process.</li><li>Competence: Expert team, continuous training, and up-to-date legislation tracking.</li><li>Speed: Short response times, effective automation, smart prioritization.</li><li>Privacy & Compliance: Data processing aligned with GDPR principles and standards.</li><li>Continuous Improvement: A product that evolves with user feedback; we track performance/experience metrics every release and deliver visible improvements.</li></ul>\n<h2>Our Founder</h2>\n<p>Our founder, Gökhan Yurdakul, spent the first ten years of his career at the Republic of Türkiye Ministry of Trade, playing an active role in drafting both legislation and the regulations that guide implementation. He then joined PwC Türkiye, and over the next ten years he blended his public-sector experience with the private sector’s needs—identifying requirements and delivering practical, applicable solutions. </p><p>Recognizing that customs and foreign trade processes require continuous improvement, and that rapid access to information on current or planned matters can significantly increase the value created—while traditional methods fall short in this respect—he founded EasyCustoms360.com.</p>"
+  },
+"howItWorksIndividual": {
+	"intro_html": "<p>Easycustoms360 is an online platform that makes customs consulting fast, traceable, and transparent. You upload your question and related documents; based on the information and files you provide, the system performs a pre-check and generates a clear offer with a target delivery time (SLA). You make the payment and securely receive your answer via the portal. You manage every step of the consulting process from a single platform.</p><p>If you have any questions, please reach us via the <a href=\"/contact\" class=\"underline\">Contact</a> page.</p>",
+    "hero": {
+      "title": "How It Works - Individual Users"
+    },
+    "tabs": {
+      "tab1": "Question & Answer Process",
+      "tab2": "Credits Management Process"
+    },
+    "tab1_html": "<h3><b>A) Membership and Profile</b></h3>\n<p>• You must be a member to use the service.</p>\n<p>• Keep your <a href=\"/dashboard/profile\" class=\"underline\">profile and invoicing</a> details up to date for accurate notifications and billing.</p>\n<h3><b>B) Creating a Question</b></h3>\n<p><b>1.</b> Open the /ask page and start the “<a href=\"/ask\" class=\"underline\">Ask a Question</a>” step. Carefully read and accept the disclosure shown.</p>\n<p><b>2.</b> Write your question clearly and concretely; attach your documents if any (PDF/DOCX/XLSX/JPG/PNG). For accurate pricing, check the “Ask Question tips” section at the top-right of the description field.</p>\n<p><b>3.</b> You may mark the request as Urgent. Urgent work is delivered faster and an urgency multiplier is applied to the fee.</p>\n<p><b>4.</b> When you click “Calculate Offer”, the system runs pre-checks, calculates final price depending on various criterias to determine the required hours to answer your question. If the topic cannot be reasonably linked to customs legislation or information is missing, you will be warned and guided. Missing details affect both pricing and the quality of the answer; adjust per the warnings and calculate again.</p>\n<p>Note: You can complete missing details or proceed with them missing and still view the offer.</p>\n<h3><b>C) Offer and Target Delivery</b></h3>\n<p>You will see the following in the offer box:</p>\n<p>• Estimated duration and target delivery time (SLA)</p>\n<p>• Normal and Urgent delivery options</p>\n<p>• Price summary (dynamically calculated based on scope)</p>\n<p>• Credit requirement (if you will pay with credits)</p>\n<p>You can also download the offer as a PDF by clicking Download PDF button.</p>\n<p>You can Approve or Reject the offer. If you reject it, you can access it again later from the <a href=\"/dashboard/questions\" class=\"underline\">My Questions - Deatil</a> screen via “Go to Offer”.</p>\n<h3><b>D) Payment Options</b></h3>\n<p><b>1. Card payment (Paddle – USD):</b> Secure Paddle Billing is used; your card details are not processed/stored by Easycustoms360. After a successful transaction your order is matched automatically; the status becomes “Approved” on the <a href=\"/dashboard/questions\" class=\"underline\">My Questions - Detail</a> screen. You can access your payment details under <a href=\"/dashboard/orders\" class=\"underline\">My Payments</a>.</p>\n<p><b>2. Pay with credits:</b> If you have credits, use the “Pay with Credits” button. After approval, your credit balance is updated instantly. If you do not have credits, you can quickly top up by using <a href=\"/dashboard/credits\" class=\"underline\">Buy Credits</a> (see the “Credits Management” tab).</p>\n<h3><b>E) Question Panel and Communication</b></h3>\n<p>After payment, open <a href=\"/dashboard/questions\" class=\"underline\">My Questions</a> → click “Details” on the relevant question to open the panel; you manage everything from here. The answer status shows whether the work is ongoing or completed. If needed, the consultant may request additional information/documents. All question related querries can be managed in this panel. All correspondence remains recorded inside the portal and is also notified via email.</p>\n<h3><b>F) Work and Delivery</b></h3>\n<p>When the work is completed, the answer is uploaded to the panel, the status becomes “Delivered”, and you are notified by email. You can view the answer on the portal and download it as a PDF.</p>",
+    "tab2_html": "<h3><b>A) Buying Credits</b></h3>\n<p><b>1.</b> Open the <a href=\"/dashboard/credits\" class=\"underline\">Credits Management</a> panel.</p>\n<p><b>2.</b> Check your current Credit balance.</p>\n<p><b>3.</b> View credit pricing; the unit price may change periodically and may be more advantageous for higher amounts.</p>\n<p><b>4.</b> Enter the amount of credit you want to load and click the “Load Credits” button.</p>\n<p><b>5.</b> Review and approve the information on the confirmation screen, then complete the transaction via the payment provider.</p>\n<p><b>6.</b> The credits you purchase are reflected to your balance instantly and ready for use.</p>\n<p><b>7.</b> You can view purchase and usage activity in their respective tabs.</p>\n<p>Note: Paying with credits lets you complete the flow quickly right after approving the offer by clicking “Pay with Credits”.</p>\n<h3><b>B) Invoicing</b></h3>\n<p>Your invoice will be sent to your registered email address. We recommend keeping <a href=\"/dashboard/profile\" class=\"underline\">Profile</a> → Billing Information accurate and up to date.</p>"
+  },
+  "howItWorksCorporate": {
+	  "intro_html": "<p>Easycustoms360 is an online platform that makes customs consulting fast, traceable, and transparent. You upload your question and related documents; based on the information and files you provide, the system performs a pre-check and generates a clear offer with a target delivery time (SLA). You make the payment and securely receive your answer via the portal. You manage every step of the consulting process from a single platform.</p><p>If you have any questions, please reach us via the <a href=\"/contact\" class=\"underline\">Contact</a> page.</p>",
+    "hero": {
+      "title": "How It Works - Corporate Users"
+    },
+    "tabs": {
+      "tab1": "Credits Management Process",
+      "tab2": "Question & Answer Process"
+    },
+    "tab1_html": "<h3><b>A) Subcription concept</b></h3>\n<p>For corporate users, the recommended payment method is organization credits. You load the credit balance on behalf of the company; authorized team members can use this balance for questions. This provides a fast and controllable payment flow without dealing with individual card transactions.</p>\n<h3><b>B) Buying credits</b></h3>\n<p><b>1.</b> Open the <a href=\"/dashboard/subscription\" class=\"underline\">Subscription</a> menu.</p>\n<p><b>2.</b> Check your current credit balance.</p>\n<p><b>3.</b> View credit pricing. (The unit price may change periodically and may be more advantageous for higher amounts.)</p>\n<p><b>4.</b> Enter the amount of credit you want to load and click the “Load Credits” button.</p>\n<p><b>5.</b> Review and approve the information on the confirmation screen; complete the transaction via the payment provider.</p>\n<p><b>6.</b> The credits you purchase are reflected to your balance instantly and ready for use</p>\n<p><b>7.</b> You can view purchase and usage activity in their respective tabs.</p>\n<p>Note: Only the Subscription Administrator (the user who loads credits on behalf of the company) has the authority to load organization credits and manage plans/subscriptions.</p>\n<h3><b>C) User authorization</b></h3>\n<p>• Go to <a href=\"/dashboard/subscription\" class=\"underline\">Subscription</a> → click the “Authorize” button.</p>\n<p>• Enter the email address of the user who will be allowed to transact with organization credits and click “Authorize”.</p>\n<p>• The user appears in the list; you can revoke authorization with Remove.</p>\n<p>• Authorized users cannot see credit loading/plan information; they can only pay for questions using credits.</p>\n<p>Team usage statistics can be viewed from the “Usage” button and exported to Excel.</p>\n<h3><b>D) Invoicing</b></h3>\n<p>• Your invoice will be sent to your registered email address.</p>\n<p>• Keep <a href=\"/dashboard/profile\" class=\"underline\">Profile</a> → Billing Information accurate and up to date.</p>",
+    "tab2_html": "<h3><b>A) Creating a question</b></h3>\n<p><b>1.</b> Start the “<a href=\"/ask\" class=\"underline\">Ask a Question</a>” flow (read and accept the disclosure).</p>\n<p><b>2.</b> Describe your question clearly and concretely; attach relevant documents if any (PDF/DOCX/XLSX/JPG/PNG).</p>\n<p>For accurate pricing, check the “As Question tips” section at the top-right of the description field.</p>\n<p><b>3.</b> Consultant selection: You can optionally select a consultant from the list if available; if no selection is made, the system assigns a suitable expert from Easycustoms360 team.</p>\n<p><b>4.</b> You may mark the request as Urgent. Urgent work is delivered in a shorter time; an urgency multiplier is applied to the fee.</p>\n<h3><b>B) Pre-check, offer, and SLA</b></h3>\n<p>• When you click Calculate Offer, the system runs pre-checks, calculates final price depending on various criterias to determine the required hours to answer your question. If the topic is not aligned with customs legislation or information is missing, warnings and guidance are provided.</p>\n<p>• Missing details may affect both the price and the quality of the answer; adjust per the warnings and calculate again.</p>\n<p>• Offer box: Estimated duration and target delivery (SLA); Normal/Urgent delivery options; dynamic price summary based on scope; credit requirement.</p>\n<p>You can download the offer as a PDF by clicking Download PDF button.</p>\n<p>You can Approve or Reject the offer. If you reject it, you can access it again from <a href=\"/dashboard/questions\" class=\"underline\">My Questions</a> → Details on the relevant question via “Go to Offer”.</p>\n<h3><b>C) Payment options</b></h3>\n<p><b>Primary flow:</b> pay with organization credits</p>\n<p><b><i>•If credit is sufficient:</i></b> click “Use Organization Credits”, review the confirmation screen and approve. The balance is updated instantly.</p>\n<p><b><i>• If credit is insufficient:</i></b> add new credit via “Top-up Organization Credits” (Subscription Administrator only). In addition, if the credit amount is insufficient, when authorized team members click the relevant notice shown to them, the system notifies the Subscription Administrator about this.</p>\n<p><b>Alternative flow:</b>pay by card</p>\n<p>• In exceptional cases, the question can also be paid by card.</p>\n<p>• Paddle Billing is used; your card details are not processed/stored by Easycustoms360.</p>\n<p>• After a successful transaction, the order is matched automatically; the question status becomes “Approved” on the <a href=\"/dashboard/questions\" class=\"underline\">My Questions -Details</a> screen.</p>\n<p>• You can access the payment summary under <a href=\"/dashboard/orders\" class=\"underline\">My Payments</a>.</p>\n<h3><b>D) Question panel and communication</b></h3>\n<p>• After payment, open <a href=\"/dashboard/questions\" class=\"underline\">My Questions</a> → click “Details” on the relevant question; manage the entire process from here.</p>\n<p>• The answer status shows whether the work is ongoing or completed.</p>\n<p>• If needed, the consultant may request additional information. All question related querries can be managed in this panel. All correspondence is recorded inside the portal and notified via email.</p>\n<h3><b>E) Work and delivery</b></h3>\n<p>• When the work is completed, the answer is uploaded to the panel, the status becomes “Delivered”, and you are notified by email.</p>\n<p>• You can view the answer on the portal and download it as a PDF.</p>"
+  },
+	"legal": {
+		"privacy": {
+      "meta": {
+        "title": "Privacy Notice (GDPR / UK GDPR)",
+        "description": "Privacy information for personal data processed by Consphera Teknoloji ve Danışmanlık Ltd. Şti. under the EasyCustoms360 services, prepared in line with GDPR."
+      },
+      "title": "Privacy Notice (GDPR / UK GDPR)",
+      "effective_date_label": "Effective date:",
+      "effective_date_value": "10 Nov 2025",
+      "last_update_label": "Last update:",
+      "last_update_value": "10 Nov 2025",
+      "content_html": "<p><strong>Controller:</strong> Consphera Teknoloji ve Danışmanlık Ltd. Şti. (\"Consphera\", \"we\", \"us\")<br/><strong>Registered address:</strong> Nisbetiye Mahallesi, Nisbetiye Caddesi No:24 Da:17 Beşiktaş /İSTANBUL<br/><strong>Contact:</strong> support@easycustoms360.com</p><p>This Notice explains how we process personal data when you use <strong>easycustoms360.com</strong> and their subdomains (e.g., <strong>tr.easycustoms360.com</strong>) and the related services branded EasyCustoms360.</p><h2>1) Scope &amp; Who this applies to</h2><ul><li>Site visitors, account holders, and representatives of customers/prospects</li><li>Representatives of suppliers and business partners</li><li>Job applicants</li></ul><h2>2) Categories of personal data we process</h2><ul><li><strong>Identity &amp; contact:</strong> name, title, company, email, phone.</li><li><strong>Account &amp; usage:</strong> username, hashed password, preferences, session/activity logs, support tickets.</li><li><strong>Transaction &amp; billing:</strong> order/contract records, invoicing/tax data.</li><li><strong>Payment:</strong> we do not store full card details; payments are handled by our payment provider.</li><li><strong>Content you submit:</strong> files/info shared for consultancy (attachments, messages).</li><li><strong>Technical &amp; security:</strong> IP address, device/browser info, timestamps, error logs.</li><li><strong>Marketing preferences:</strong> newsletter opt-in/out, campaign interactions.</li><li><strong>Cookies/Similar tech:</strong> essential, analytics, functional and (with consent) marketing cookies.</li></ul><p><em>We do not intentionally collect special categories of data. If your documents contain such data, please redact/mask it before sharing.</em></p><h2>3) Purposes &amp; legal bases (Art. 6 GDPR)</h2><table><thead><tr><th>Purpose</th><th>Legal basis</th></tr></thead><tbody><tr><td>Account registration, providing the Services, support, contract management</td><td>Contract necessity (Art. 6(1)(b))</td></tr><tr><td>Billing, invoicing, tax &amp; compliance</td><td>Legal obligation (Art. 6(1)(c))</td></tr><tr><td>Security, fraud prevention, monitoring, improvement, internal reporting</td><td>Legitimate interests (Art. 6(1)(f))</td></tr><tr><td>Newsletters, product updates, analytics/marketing cookies</td><td>Consent (Art. 6(1)(a))</td></tr><tr><td>Handling queries, pre-contractual steps</td><td>Contract necessity (Art. 6(1)(b)) / Legitimate interests (Art. 6(1)(f))</td></tr><tr><td>Recruitment &amp; candidate evaluation</td><td>Legitimate interests (Art. 6(1)(f)) / Consent where required</td></tr></tbody></table><p><em>Legitimate interests</em> include operating a safe, reliable platform; detecting misuse; improving features; and managing our B2B/B2C relationships.</p><h2>4) Sources of data</h2><ul><li>Directly from you (forms, uploads, support, email/phone)</li><li>Automatically via our Services (logs, cookies)</li><li>Your organisation (if you are its representative)</li><li>Public or third-party sources where appropriate (e.g., sanctions/PEP screening if legally required)</li></ul><h2>5) International transfers (Arts. 44–49)</h2><p>Where data is transferred outside the EEA/UK, we rely on adequacy decisions, the Standard Contractual Clauses (and the UK Addendum/IDTA as applicable) with appropriate technical/organizational measures, or your explicit consent (Art. 49(1)(a)) when required.</p><h2>6) Retention</h2><table><thead><tr><th>Data</th><th>Typical retention</th><th>Rationale</th></tr></thead><tbody><tr><td>Account/contract &amp; invoicing records</td><td>10 years</td><td>commercial &amp; tax laws</td></tr><tr><td>Security &amp; system logs</td><td>up to 2 years</td><td>security, fraud prevention, disputes</td></tr><tr><td>Marketing preferences</td><td>until withdrawn</td><td>consent management</td></tr><tr><td>Job applications</td><td>process + 1 year</td><td>applications &amp; disputes</td></tr><tr><td>Cookies data</td><td>6–24 months</td><td>consent/necessity</td></tr></tbody></table><h2>7) Automated decision-making / profiling (Art. 22)</h2><p>We use automated processing (e.g., workload scoring, pre-pricing) to assist operations. These tools support decisions and do not by themselves produce legal or similarly significant effects.</p><h2>8) Cookies</h2><p>Essential cookies are always on (security/session). Analytics/marketing cookies operate only with your consent. See the <a href=\"/cookies\">Cookie Policy</a> for details and to manage preferences.</p><h2>9) Your rights (EEA &amp; UK)</h2><ul><li>Access (Art. 15), Rectification (Art. 16), Erasure (Art. 17)</li><li>Restriction (Art. 18), Portability (Art. 20)</li><li>Object to processing based on legitimate interests and to profiling (Art. 21)</li><li>Withdraw consent at any time (without affecting past processing)</li><li>Not to be subject to decisions based solely on automated processing with legal/similar significant effects (Art. 22)</li></ul><h2>10) How to exercise your rights</h2><p>Email: <a href=\"mailto:support@easycustoms360.com\">support@easycustoms360.com</a><br/>We respond within one month (extendable where permitted). We may verify identity and, where requests are excessive, charge a reasonable fee.</p><h2>11) Complaints</h2><p>You may lodge a complaint with your local Supervisory Authority (EEA list via EDPB; UK: ICO). We would appreciate the chance to resolve your concerns first.</p><h2>12) Security</h2><p>We implement technical, organisational and contractual measures (encryption in transit, access controls, backups, logging/monitoring, vulnerability management and supplier due diligence). In case of a personal data breach, we assess and notify authorities and affected individuals when legally required.</p><h2>13) Children</h2><p>Our Services are intended for adults; we do not knowingly collect data from persons under 18. If you believe a minor has provided data, contact us to remove it.</p><h2>14) Changes to this Notice</h2><p>We may update this Notice. The updated version becomes effective when posted. For material changes, we will provide a prominent notice.</p><h2>15) Contact</h2><p>Consphera Teknoloji ve Danışmanlık Ltd. Şti.<br/>Nisbetiye Mahallesi, Nisbetiye Caddesi No:24 Da:17 Beşiktaş /İSTANBUL<br/>support@easycustoms360.com</p>"
+    },
+		"terms": {
+      "meta": {
+        "title": "Terms of Service",
+        "description": "Terms governing the EasyCustoms360 platform and services provided by Consphera Teknoloji ve Danışmanlık Ltd. Şti."
+      },
+      "title": "Terms of Service",
+      "effective_date_label": "Effective date:",
+      "effective_date_value": "10 November 2025",
+      "last_update_label": "Last updated:",
+      "last_update_value": "10 November 2025",
+      "content_html": "<p>These Terms of Service (“Terms”) govern access to and use of the EasyCustoms360 platforms and domains (together, the “Platform”) and all related products and services (consulting by competent/qualified experts, content, training, credit-based features, and other functionality, collectively the “Services”) provided by Consphera Teknoloji ve Danışmanlık Ltd. Şti. (“Consphera,” “we,” “our,” or “us”). By visiting or using the Platform/Services, you (“User,” “you,” or “customer”) agree to these Terms.</p><p>These Terms are intended for B2C and B2B use. Mandatory consumer protection rules in your country/region prevail over any conflicting provision herein.</p><h2>1) Definitions</h2><p><strong>Tenant:</strong> A logical, segregated space set up for each customer/organization in our multi-tenant architecture.<br/><strong>Credits:</strong> Numeric usage units consumed by certain features or actions.<br/><strong>Expert Answer:</strong> The final response/report prepared and reviewed exclusively by competent/qualified human experts.<br/><strong>Pricing Engine:</strong> Automation and/or AI components used only for pricing/score estimation. It does not generate consulting answers or drafts.<br/><strong>Third Parties:</strong> Payment processors, infrastructure, identity, analytics, hosting, and similar providers.</p><h2>2) Agreement & Scope</h2><p>2.1. Creating an account, accessing the Platform, or using the Services constitutes acceptance of these Terms.<br/>2.2. These Terms are concluded electronically; electronic notices are valid and enforceable.</p><h2>3) Accounts, Tenants, and Access</h2><p>3.1. Each customer may have a distinct tenant. Tenant admins manage invitations, roles, and permissions.<br/>3.2. You are responsible for safeguarding your credentials and for activities under your account. Notify us promptly of any unauthorized use.</p><h2>4) Nature of Services — Expert-Only Answers (No AI content generation)</h2><p>4.1. All consulting answers are prepared and approved only by competent/qualified human experts.<br/>4.2. The Pricing Engine is used solely for pricing/score estimation; it does not produce legal/technical content or drafts.<br/>4.3. Customs, trade, and tax laws change frequently. All answers are for informational purposes only and are not definitive or binding opinions.<br/>4.4. You must verify matters directly with the relevant public authorities before making decisions or filings.<br/>4.5. You are solely responsible for the accuracy/completeness of information and documents you provide for any official process.</p><h2>5) Acceptable Use</h2><p>You may not use the Platform/Services to:<br/>a) Violate laws, mislead, or infringe third-party rights;<br/>b) Process or share personal data unlawfully;<br/>c) Share accounts, impersonate, or manipulate access via multiple accounts;<br/>d) Probe, scan, reverse engineer, or stress-test the Platform without authorization;<br/>e) Promote illegal products/services;<br/>f) Bypass or abuse the credit/pricing model.<br/>We may suspend or terminate accounts for violations.</p><h2>6) Pricing, Credits, and Payments</h2><p>6.1. Credits. Certain features consume credits.<br/>6.2. Pricing. Prices are determined by our internal policies and automations; specific criteria are not disclosed.<br/>6.3. Taxes. Prices shown at checkout will include or add applicable taxes as required by law and by your billing location.<br/>6.4. Instant Charge. Payments are processed immediately via authorized third-party providers.<br/>6.5. Refunds. Due to the digital nature of the Services, used credits are non-refundable. In case of an erroneous charge, we may provide a pro-rata refund or credit.</p><h2>7) Content Ecosystem (Blog, News, User Content)</h2><p>7.1. Blog/News content is general information only; we do not guarantee accuracy, completeness, or timeliness.<br/>7.2. You are solely responsible for the legality of any content you upload.<br/>7.3. By uploading content, you grant us a worldwide, non-exclusive, royalty-free license to host, display, and use it within the Platform.</p><h2>8) Intellectual Property</h2><p>8.1. The Platform, software, designs, data models, training materials, and brands are owned by Consphera or its licensors.<br/>8.2. Reverse engineering, reproduction, resale, or sublicensing is prohibited.<br/>8.3. Feedback or suggestions are licensed to us on a free, transferable, non-exclusive basis.</p><h2>9) Data Protection & Security</h2><p>9.1. Our Privacy Notice and Cookie Policy form part of these Terms.<br/>9.2. Depending on context, Consphera may act as a data controller and/or processor. Sub-processors (hosting, storage, analytics, payments) may be used.<br/>9.3. We implement reasonable administrative and technical safeguards, but no system is perfectly secure.<br/>9.4. You remain responsible for any highly sensitive, case-specific information you share or handle outside the Platform.</p><h2>10) Third-Party Services</h2><p>10.1. Payments, identity, storage, analytics, and certain features are provided by third parties under their own terms.<br/>10.2. We accept no responsibility for any direct or indirect losses arising from third-party changes, outages, or actions.</p><h2>11) Service Level, Maintenance, and Changes</h2><p>11.1. The Platform is provided “as is” and “as available” with no guarantee of uninterrupted service.<br/>11.2. We may maintain, upgrade, add, or remove features. Material changes will be reasonably notified.</p><h2>12) Disclaimers & Comprehensive Limitation of Liability</h2><p>12.1. All information and Expert Answers are informational only and not definitive/binding opinions.<br/>12.2. You are solely responsible for any and all actions, filings, statements, calculations, or decisions made based on the Platform/Services. You will verify directly with public authorities as needed.<br/>12.3. To the maximum extent permitted by law, we accept no liability of any kind—including direct, indirect, special, incidental, consequential, punitive, or loss of profit, reputation, or data—arising from or related to the Platform/Services, your reliance on any information, third-party services, network/communication issues, user error, or incomplete/inaccurate information/documents you provide.<br/>12.4. No limitation, cap, carve-out, or exception shall be construed in your favor beyond what mandatory law imposes.<br/><em>Consumer notice: Any non-waivable rights under mandatory consumer law remain unaffected.</em></p><h2>13) Term, Suspension, and Termination</h2><p>13.1. These Terms take effect upon acceptance.<br/>13.2. We may suspend or terminate your account for AUP violations, legal non-compliance, or security risks.<br/>13.3. Data may be retained for a reasonable period as required by law.</p><h2>14) Changes to the Terms</h2><p>14.1. We may update these Terms; the Effective Date will be revised and reasonable notice provided.<br/>14.2. Continued use of the Platform after changes constitutes acceptance.</p><h2>15) Governing Law & Jurisdiction</h2><p>15.1. These Terms are governed by the laws of Türkiye (without regard to conflict-of-laws rules).<br/>15.2. Courts of İstanbul (Central) shall have jurisdiction, unless mandatory consumer jurisdiction rules in your country/region require otherwise.</p><h2>16) Notices & Contact</h2><p>16.1. Contractual notices may be delivered via in-Platform notifications or to your registered email address.<br/>16.2. Contact: Consphera Teknoloji ve Danışmanlık Ltd. Şti.<br/>Address: Nisbetiye Mahallesi, Nisbetiye Caddesi No:24 Da:17 Beşiktaş /İSTANBUL<br/>E-mail: support@easycustoms360.com</p><h2>17) Severability & Assignment</h2><p>17.1. If any provision is found invalid or unenforceable, the remaining provisions remain in force.<br/>17.2. You may not assign these Terms without our consent. We may assign in connection with a business transfer or reorganization.</p><h2>18) Order of Precedence & Policies</h2><p>18.1. These Terms apply together with our Privacy Notice, Cookie Policy, and any applicable order/offer/plan.<br/>18.2. In case of conflict: any specific written agreement (order/proposal) → these Terms → policies.</p><h3>Acknowledgment</h3><p>By using the Platform/Services, you acknowledge that you have read, understood, and agreed to these Terms.</p>"
+    },
+    "cookies": {
+      "meta": {
+        "title": "Cookie Policy",
+        "description": "Detailed information about the cookies and similar technologies used on domains operated by Consphera Teknoloji ve Danışmanlık Ltd. Şti."
+      },
+      "title": "Cookie Policy",
+      "effective_date_label": "Effective date:",
+      "effective_date_value": "10 November 2025",
+      "last_update_label": "Last update:",
+      "last_update_value": "10 November 2025",
+      "content_html": "<p>This Cookie Policy explains the cookies and similar technologies used on the following domains (the “Site”) operated by Consphera Teknoloji ve Danışmanlık Ltd. Şti. (“Company”, “we”):</p><ul><li><strong>easycustoms360.com</strong>, <strong>tr.easycustoms360.com</strong> and their subdomains</li></ul><p>This notice is prepared to fulfil our information duties under the Turkish Data Protection Law (KVKK) and, where applicable, the EU GDPR.</p><h2>1) What is a cookie? What are similar technologies?</h2><p>A “cookie” is a small text file stored on your browser/device when you visit a website. Similar technologies include local storage (localStorage/sessionStorage), pixel tags, SDKs and cookie-like identifiers. These technologies are used for purposes such as maintaining sessions, security, remembering preferences and measuring Site performance.</p><h2>2) Types of cookies</h2><p><em>By duration</em></p><ul><li><strong>Session cookies:</strong> Deleted when the browser is closed.</li><li><strong>Persistent cookies:</strong> Remain on the device for a defined period.</li></ul><p><em>By source</em></p><ul><li><strong>First-party:</strong> Placed directly by the Site.</li><li><strong>Third-party:</strong> Placed by our partners/service providers.</li></ul><p><em>By purpose</em></p><ul><li><strong>Strictly necessary:</strong> Site operation, security, fraud prevention. (No consent required.)</li><li><strong>Preferences/Functionality:</strong> Remembers language, currency, appearance, etc.</li><li><strong>Performance/Analytics:</strong> Measures usage and engagement to drive improvements.</li><li><strong>Advertising/Targeting:</strong> Delivers interest-based content and measurement.</li></ul><h2>3) What data is processed?</h2><p>Through cookies and similar tech we may process: masked IP, device/browser info, session/cookie ID, referrer page, clickstream, viewed pages, form interactions, preferred language, timestamps and pseudonymous identifiers in advertising categories. Where possible, your data is processed in aggregated/anonymous or pseudonymized form.</p><h2>4) Why we use cookies</h2><ul><li>Authentication, session management, load balancing and security</li><li>Account operations, payments and fraud prevention</li><li>Remembering preferences such as language/currency/tenant</li><li>Performance/analytics measurement and product/UX improvements</li><li>Effective display of campaigns, announcements and service promotions</li></ul><h2>5) Legal basis</h2><p><strong>Strictly necessary cookies:</strong> Legal obligation and/or legitimate interests (KVKK Art.5/2; GDPR Art.6(1)(c)-(f)).<br/><strong>Preferences, Analytics, Advertising cookies:</strong> Consent (KVKK Art.5/1; GDPR Art.6(1)(a)).</p><p>You can give, update or withdraw your consent at any time via the Cookie Management Panel.</p><p><strong>Prior blocking:</strong> Cookies requiring consent are not triggered until consent is given.</p><h2>6) Third-party providers and international transfers</h2><p>We may use third-party services for analytics, security, payments, marketing/communications and hosting. Cookies set by these providers are subject to their own policies and retention schemes; data may be transferred abroad. Appropriate safeguards (e.g., adequacy decisions, Standard Contractual Clauses – SCCs, explicit consent) are applied for transfers.</p><ul><li><em>Analytics/Performance:</em> Google Analytics / Plausible / Vercel Analytics (IP anonymization can be enabled).</li><li><em>Security/Performance:</em> Cloudflare, (if needed) reCAPTCHA.</li><li><em>Payments &amp; Tax:</em> PayTR and Paddle (transaction security, tax compliance, fraud prevention).</li><li><em>Marketing/Comms:</em> Meta Pixel, LinkedIn Insight Tag, email services.</li><li><em>Infrastructure/Session:</em> Authentication, hosting and CDN services (e.g., Supabase Auth).</li></ul><h2>7) How to manage cookies</h2><ul><li><strong>Cookie Management Panel:</strong> Use the banner or the “Cookie Preferences” link in the footer to enable/disable categories.</li><li><strong>Browser settings:</strong> Most browsers allow blocking/deleting cookies.</li><li><strong>Device/ads preferences:</strong> You may reset mobile ad IDs and limit interest-based ads.</li></ul><p><em>Note:</em> Disabling strictly necessary cookies may affect core Site functions and cause service interruptions.</p><h2>8) Retention</h2><ul><li><strong>Session cookies:</strong> Until the browser is closed.</li><li><strong>Persistent cookies:</strong> 1 day to 24 months proportionate to purpose (varies by provider).</li></ul><p>Up-to-date granular durations are published in the Cookie Management Panel and in Annex A.</p><h2>9) Consent logs, IP anonymization and multi-tenant note</h2><ul><li><strong>Consent logs:</strong> Preferences are stored per category with timestamp and a technical identifier. You can withdraw consent at any time.</li><li><strong>IP anonymization:</strong> Where possible, IP truncation/masking is applied in analytics.</li><li><strong>Multi-tenant note:</strong> This policy applies to all domains listed above and their subdomains. Tenant/country differences are reflected in the Panel and Annex A.</li></ul><h2>10) Your rights (KVKK and GDPR)</h2><p>Under KVKK and (where applicable) GDPR you have the following rights:</p><ul><li>Access, rectification/update, erasure (right to be forgotten)</li><li>Restriction of processing, objection</li><li>Data portability (GDPR)</li><li>Withdraw consent</li><li>Request information on international transfers</li></ul><p>Submit your requests via the channels in the Contact section. We respond within 30 days at the latest.</p><p><strong>Supervisory authority:</strong> If dissatisfied with our response, you may complain to the Turkish DPA (KVKK) or, if you reside in the EU, to your national Data Protection Authority.</p><h2>11) Children’s privacy</h2><p>Our services target adult users; we do not aim at children. If we become aware that we process children’s data, we take necessary measures and delete the data as soon as possible.</p><h2>12) Changes to this Policy</h2><p>We may update this Policy due to changes in our services or the law. The latest version is always available on this page; the effective and last update dates are shown above. Where necessary, we provide additional notice.</p><h2>13) Contact</h2><p><strong>Data Controller:</strong> Consphera Teknoloji ve Danışmanlık Ltd. Şti.<br/><strong>Address:</strong> Nisbetiye Mahallesi, Nisbetiye Caddesi No:24 Da:17 Beşiktaş /İSTANBUL<br/><strong>Email:</strong> support@easycustoms360.com</p><h3>Annex A — Cookies used (example template; update according to your setup)</h3><table><thead><tr><th>Cookie Name</th><th>Provider</th><th>Category</th><th>Purpose</th><th>Duration</th><th>First/Third Party</th></tr></thead><tbody><tr><td>__Host-next-auth.csrf-token</td><td>Site</td><td>Strictly necessary</td><td>Session security (CSRF protection)</td><td>Session</td><td>First</td></tr><tr><td>sb-access-token</td><td>Site (Supabase)</td><td>Strictly necessary</td><td>Authentication</td><td>1 day (example)</td><td>First</td></tr><tr><td>sb-refresh-token</td><td>Site (Supabase)</td><td>Strictly necessary</td><td>Session refresh</td><td>7 days (example)</td><td>First</td></tr><tr><td>__cf_bm</td><td>Cloudflare</td><td>Strictly necessary</td><td>Bot detection</td><td>~30 min</td><td>Third</td></tr><tr><td>paddle_session</td><td>Paddle</td><td>Strictly necessary</td><td>Payment session, fraud prevention</td><td>Session</td><td>Third</td></tr><tr><td>_ga, _ga_*, _gid</td><td>Google Analytics</td><td>Analytics</td><td>Traffic &amp; engagement measurement (IP masking enabled)</td><td>1d–24m</td><td>Third</td></tr><tr><td>_fbp</td><td>Meta</td><td>Advertising</td><td>Measurement &amp; targeting</td><td>~90d</td><td>Third</td></tr><tr><td>li_fat_id (ex.)</td><td>LinkedIn</td><td>Advertising</td><td>Campaign measurement</td><td>Varies by provider</td><td>Third</td></tr></tbody></table><p><em>Note:</em> Cookie names/durations may change due to provider updates.</p>"
+    }
+  },
+	"news": {
+		"detail": {
+      "articleSection": "News"
+    },
+		"rss": {
+      "channelTitle": "News",
+      "channelDescription": "Latest news",
+      "errorDescription": "Error"
+    },
+    "list": {
+      "suffix": "News",
+      "pageH1": "News & Announcements",
+      "articleSection": "News"
+    }
+  },
+		"NewsLatestThree": {
+		"heading": "News & Announcements",
+		"readMore": "Read more",
+		"viewAll": "View all"
+	},
+	"LatestThree": {
+    "heading": "Latest Posts",
+    "coverAlt": "Cover image",
+    "readMore": "Read more →",
+    "viewAll": "View all"
+  },
+	"AuthorBlock": {
+		"avatarAria": "Author avatar",
+  "authorAlt": "Author",
+  "none": "None",
+  "aboutAuthor": "About the author",
+  "allPosts": "All posts",
+  "noImage": "No image",
+  "close": "Close",
+  "cvPreviewTitle": "CV Preview"
+},
+	"AuthorSelector": {
+		"label": "Author",
+  "loadError": "Load error",
+  "pleaseEnterAuthorName": "Please enter the author name.",
+  "avatarUploadFailed": "Avatar upload failed",
+  "saveFailed": "Save failed",
+  "loading": "Loading...",
+  "selectAuthor": "Select an author",
+  "groupProfiles": "Profiles (worker/worker360/admin)",
+  "groupCustomAuthors": "Custom Authors (blog_authors)",
+  "addNew": "+ Add new author…",
+  "addNewAria": "Add new author",
+  "authorName": "Author name",
+  "authorNamePh": "Full name",
+  "titleOptional": "Title (optional)",
+  "titlePh": "e.g., Senior Customs Consultant",
+  "bioOptional": "Bio (optional)",
+  "bioPh": "Short introduction...",
+  "avatarOptional": "Author Photo (optional)",
+  "previewAlt": "Preview",
+  "none": "None",
+  "avatarHint": "Recommended: square (1:1), JPG/PNG/WEBP, <= 5MB",
+  "saveAndSelect": "Save & Select",
+  "cancel": "Cancel"
+},
+	"BlogForm": {
+		"defaultPostTitle": "New Post",
+  "errorDraftCreate": "Draft could not be created",
+  "errorUpload": "Upload error",
+  "coverUploaded": "Cover uploaded.",
+  "errorAssignAuthor": "Author could not be assigned",
+  "pleaseSelectAuthor": "Please select an author.",
+  "errorGeneric": "Error",
+  "saved": "Saved",
+  "errorSave": "Save error",
+  "pleaseSaveFirst": "Please save first.",
+  "submittedForReview": "Submitted for review",
+  "published": "Published",
+  "pickDateTime": "Pick a date/time",
+  "scheduled": "Scheduled",
+    "labelseotitle": "SEO Title",
+  "labelseodesc": "SEO Description",
+  "labelLang": "Language",
+  "labelTenantOptional": "Tenant (optional)",
+  "optionGlobal": "(Global)",
+  "labelAuthor": "Author",
+  "authorLocked": "The author is locked to your session and cannot be changed.",
+  "labelTitle": "Title",
+  "labelSlugOptional": "Slug (optional)",
+  "labelSummary": "Summary",
+  "labelContent": "Content",
+  "labelSearchInternalLink": "Search internal link",
+  "btnAutoMeta": "Auto Fill (SEO/Summary)",
+  "labelKeywordsComma": "Keywords (comma-separated)",
+  "labelTagsComma": "Tags (comma-separated)",
+  "labelCoverImage": "Cover Image",
+  "pickImage": "Pick an image",
+  "imageHint": "PNG, JPG, WEBP (max 5MB)",
+  "coverAlt": "Cover",
+  "btnChange": "Change",
+  "btnDelete": "Delete",
+  "draftId": "Draft ID",
+  "coverPath": "Cover (path)",
+  "save": "Save",
+  "submitForReview": "Submit for Review",
+  "publish": "Publish",
+  "schedule": "Schedule"
+},
+	"ClientLinkPanel": {
+		  "heading": "Link to a related post",
+  "placeholder": "Enter title/text (at least 3 characters)…",
+  "hintLinkInEditor": "When you pick a suggestion, the selected text will be linked (in the editor).",
+  "hintCopyToClipboard": "When you pick a suggestion, the URL will be copied to the clipboard."
+},
+	"CoverEditor": {
+		"inputPlaceholder": "storage object path (blog/..../image.jpg)",
+  "btnClearTitle": "Clear cover",
+  "btnClear": "Clear Cover",
+  "currentCoverPrefix": "Current cover:",
+  "noCover": "No cover",
+  "clearFailed": "Cover could not be cleared",
+  "setFailed": "Cover could not be saved"
+},
+	"EditContentClient": {
+		  "labelTitle": "Title",
+  "placeholderTitle": "Post title",
+  "save": "Save",
+  "saving": "Saving...",
+  "saved": "Saved.",
+  "saveError": "Save error",
+  "genericError": "Error"
+},
+	"EditorTextarea": {
+		  "placeholder": "Type content (plain text will be auto-converted to JSON; if you know JSON, you can paste a valid Tiptap JSON structure)."
+},
+	"LinkSuggestDrawer": {
+		"heading": "Internal Link Suggestions",
+  "close": "Close",
+  "intro": "Below are candidate phrases extracted from the text and suggested target posts for each. When you pick a target, that phrase will be linked everywhere it appears in the post. (Already linked regions are skipped.)",
+  "candidates": "Candidate phrases",
+  "loading": "Loading…",
+  "noSuggestions": "No suggestions",
+  "selections": "Selections to apply",
+  "noPicks": "No selections yet.",
+  "remove": "Remove",
+  "cancel": "Cancel",
+  "apply": "Apply",
+  "applyTitle": "Apply selections"
+},
+	"LinkSuggester": {
+		  "heading": "Internal Link Suggestions",
+  "loading": "Loading…"
+},
+	"RelatedAndNav": {
+		  "prev": "← Previous",
+  "next": "Next →",
+  "relatedHeading": "Related posts"
+},
+	"RichEditor": {
+		  "btnLinkTitle": "Add or edit link",
+  "btnLink": "Link",
+		"placeholder": "Start typing…",
+  "alertSaveFirst": "Save the post to create an ID before uploading an image.",
+  "uploadFailed": "Upload failed.",
+  "btnBulletList": "• List",
+  "btnOrderedList": "1. List",
+  "btnBlockquote": "“ Quote",
+  "btnInlineQuote": "“ Inline",
+  "btnUndo": "Undo",
+  "btnRedo": "Redo",
+  "btnEmojiTitle": "Add emoji",
+  "btnUnlinkTitle": "Remove link",
+  "btnUnlink": "Unlink",
+  "btnLinkTitle": "Add or edit link",
+  "btnLink": "Link",
+  "btnAddImage": "Add Image",
+  "loading": "Loading…",
+  "characters": "Characters",
+  "words": "Words",
+  "btnSuggestLinks": "Suggest internal links"
+},
+	"WorkerBlogList": {
+		"heading": "My Posts",
+  "newPost": "New Post",
+  "empty": "You don't have any posts yet.",
+  "thTitle": "Title",
+  "thLang": "Lang",
+  "thStatus": "Status",
+  "thUpdated": "Updated",
+  "thActions": "Actions",
+  "btnPublicView": "Public View",
+  "btnEdit": "Edit",
+  "status": {
+	  "published": "Published",
+  "scheduled": "Scheduled",
+  "in_review": "In Review",
+  "draft": "Draft",
+  "archived": "Archived"
+  }
+},
+	"WorkerBlogNew": {
+		  "heading": "New Blog Post"
+},
+	"WorkerBlogEdit": {
+		  "heading": "Edit Post"
+},
+	"Seo": {
+		  "siteName": "EasyCustoms360",
+  "listTitle": "",
+  "listDescription": "Articles, guides, and news on customs and international trade."
+},
+	"BlogIndex": {
+		"fallbackListTitle": "Blog",
+		"ogImageAlt": "{siteName} – Blog cover image",
+  "breadcrumbHome": "Home",
+  "searchAria": "Blog search",
+  "searchPlaceholder": "Search…",
+  "tagPlaceholder": "tag (optional)",
+  "searchInputAria": "Search",
+  "tagInputAria": "Tag",
+  "apply": "Apply",
+  "noPosts": "No posts found.",
+  "prevPage": "← Prev",
+  "nextPage": "Next →",
+  "prevPageAria": "Previous page",
+  "nextPageAria": "Next page",
+  "pageStatus": "Page {page} / {total}",
+  "siteName": "EasyCustoms360",
+  "authors": "Authors"
+},
+	"rss": {
+		  "title": "Blog RSS",
+  "description": "Easycustoms360 Blog"
+},
+	"AuthorPosts": { 
+	  "headingByAuthor": "All posts by {name}",
+  "headingAll": "All posts",
+  "noPosts": "This author has no published posts.",
+  "coverAlt": "Cover image"
+},
+  "cookieConsent": {
+    "cookies": {
+      "banner": {
+        "title": "Cookie Preferences",
+        "body": "We use cookies to improve your experience. You can accept, reject, or customize your preferences."
+      },
+      "actions": {
+        "accept": "Accept",
+        "reject": "Reject",
+        "customize": "Customize",
+        "save": "Save",
+        "cancel": "Cancel"
+      },
+      "categories": {
+        "necessary": "Strictly Necessary",
+        "preferences": "Preferences",
+        "analytics": "Analytics",
+        "marketing": "Marketing"
+      }
+    }
+  },
+  "common": {
+    "org": {
+      "companySuffix": " - Company",
+      "newOrganization": "New Organization"
+    },
+    "cvHoverPreview": {
+      "loading": "Loading preview…"
+    },
+    "appName": "EasyCustoms360",
+    "unknown": "Unknown",
+    "untitled": "Untitled",
+    "back": "Back",
+    "loading": "Loading...",
+    "close": "Close",
+    "delete": "Delete",
+    "deleteFailed": "Could not delete.",
+    "noRecords": "No records found.",
+    "detail": "Details",
+    "goToEditor": "Go to editor",
+    "backToEditor": "Back to editor",
+    "email": "Email",
+    "status": "Status",
+    "answerStatus": "Answer status",
+    "assignedTo": "Assigned to",
+    "preview": {
+      "failed": "{title} preview failed.",
+      "openFile": "Open file",
+      "titleHtml": "HTML Preview"
+    },
+    "detailArrow": "Detail →",
+    "send": "Send",
+    "lastUpdated": "Last updated",
+    "tagsInput": {
+      "placeholder": "Type a tag, press Enter or comma",
+      "tooLong": "Too long (max {max})",
+      "alreadyExists": "Already added",
+      "tooMany": "Up to {max} tags"
+    },
+    "busyOverlay": {
+      "processing": "Processing…"
+    },
+    "level2Modal": {
+      "GTİP": "Hs Code",
+      "Gümrük Tarife İstatistik Pozisyonu (GTİP)": "Customs Tariff Statistical Position (HS Code)",
+      "Kesin Menşe Ülke": "Confirmed Country of Origin",
+      "AB içinde farklı vergi oranları olabilir": "Tax rates may vary across the EU",
+      "Maliyet hesaplaması için faydalı": "Useful for cost estimation",
+      "Vergi oranı ve belgeler için gerekli": "Required for tax rates and documentation",
+      "Tam Menşe Ülkesi": "Exact Country of Origin",
+      "AB içindeki ülkeye göre farklı belgeler gerekebilir": "Different documents may be required depending on the EU member state",
+      "Vergi oranı ve belgeler için zorunlu": "Required for tax rate and documentation",
+      "Kesin Menşe": "Confirmed country of origin",
+      "AB içindeki ülkeye göre vergi ve belgeler değişebilir": "Taxes and documents may vary by EU member state",
+      "Teslim Şartları": "Delivery Terms (Incoterms)",
+      "İşlem süresi ve maliyet hesaplaması için faydalı": "Useful for processing time and cost estimation",
+      "title": "Missing Info/Docs Check",
+      "infoBanner": "The following notice is generated by the system after evaluating your question and attachments. You can press Edit to complete the missing parts. If these do not apply to your question, you can ignore them. When you press Continue, we will send you our offer.",
+      "noMissing": "No missing items to display. You can proceed.",
+      "requiredTitle": "Required",
+      "recommendedTitle": "Recommended",
+      "infoTitle": "Info",
+      "edit": "Edit",
+      "continue": "Continue with Missing"
+    },
+    "cvPreview": {
+      "profileAlt": "profile",
+      "noPhoto": "No Photo",
+      "unnamedConsultant": "Unnamed Consultant",
+      "perHourShort": "/hour",
+      "hourlyNotSet": "Hourly rate not set",
+      "specificExpertise": "Specific expertise:",
+      "noContent": "No content."
+    },
+    "cvPreviewById": {
+      "loading": "Loading preview…",
+      "loadFailed": "Failed to load preview: {error}"
+    },
+    "error": "Error",
+    "login": "Log in",
+    "noDescription": "No description"
+  },
+  "askAiNotice": {
+    "title": "AI Review Notice",
+    "intro": "This section explains how your question and attachments are processed. Please read and confirm before continuing.",
+    "bullets": {
+      "1": "Your question and attachments are analyzed by AI for pricing estimation.",
+      "2": "Dozens of criteria are considered (technical difficulty, regulatory scope, number of documents, urgency, foreign language, need for calculations, etc.).",
+      "3": "Accordingly, your content is read by AI and processed solely for price/workload estimation and quality pre-check.",
+      "4": "The review is performed via the",
+      "4b": "API.",
+      "5a": "OpenAI does not use API-submitted data to train models",
+      "5b": "(default for business/platform API usage). Sources:",
+      "6a": "OpenAI may retain API input/output logs for abuse monitoring for up to",
+      "6b": "then deletes them (except where required by law). Source:",
+      "7a": "At Gümrük360, we process your content",
+      "7b": "only for pricing and quality pre-check",
+      "7c": "and we do not use it for any other purpose nor allow such use.",
+      "8": "If you include trade secrets, please remove unnecessary personal data (IDs, birth dates, IBAN, etc.); mask sensitive details in files.",
+      "9": "You can find our detailed privacy notice and KVKK/GDPR principles on the “How It Works” page."
+    },
+    "summary": {
+      "title": "Summary :",
+      "text": "“My content is processed by AI only for price/workload estimation and quality pre-check; it is not used for model training by Gümrük360 or OpenAI.”"
+    },
+    "consentLabel": "I have read and understood, and I consent to the processing of my content for these purposes.",
+    "buttons": {
+      "exit": "Exit",
+      "approve": "I Agree"
+    },
+    "note": "Note: You may see this dialog again if you clear your browser data.",
+    "links": {
+      "dataControls": "Data Controls",
+      "howYourDataIsUsed": "How Your Data Is Used"
+    },
+    "common": {
+      "days": "days"
+    }
+  },
+  "notFound": {
+    "metaTitle": "Page not found",
+    "title": "Page not found",
+    "body": "The page you’re looking for may have been moved, deleted, or never existed.",
+    "actions": {
+      "home": "Home",
+      "contact": "Contact"
+    }
+  },
+  "brand": {
+    "footer": {
+      "gumruk360": "Gümrük 360",
+      "easycustoms360": "Easycustoms 360"
+    }
+  },
+  "marketing": {
+	  "brandName": "EasyCustoms360",
+    "og": {
+      "title": "Easycustoms 360",
+      "subtitle": "AI-powered customs advisory"
+    },
+    "twitter": {
+      "title": "Easycustoms 360",
+      "subtitle": "Trusted, intelligent trade compliance"
+    },
+    "home": {
+		 "newsTitle": "Gümrük360 News",
+		"hero_i18n": {
+        "title_part1": "Turkish Customs Consultancy:",
+        "title_part2": "local expertise, fast, traceable, transparent",
+        "description": "Upload your question and documents; the system pre-checks and generates a clear quote with a target SLA.",
+        "cta_primary": "Ask a Question",
+        "cta_secondary": "How It Works",
+		"cta_secondary2": "Corporate Membership",
+        "bullets": [
+          "Minimisation of risks and costs through accurate declaration and regulatory compliance",
+		  "Full integration with ConspheraPSA for managing all processes through a single channel",
+          "Process transparency and traceability and team management in corporate membership",
+          "Fast delivery and clear SLAs: Customs Consultancy at the right time, at the right cost"
+        ],
+        "cards": [
+          { "title": "Fast Answers to Regulatory Questions", "desc": "Accurate outcomes through expert consultant matching.", "href": "/ask", "emoji": "⚖️" },
+          { "title": "Instant, Tailored Quote for Your Question", "desc": "The Consphera PSA engine reviews your case and prices it against dozens of criteria, speeding up the process.", "href": "/ask", "emoji": "🚀" },
+          { "title": "Corporate Membership", "desc": "Authorize your team and manage all questions and usage from a single dashboard.", "href": "/dashboard/subscription", "emoji": "🏢" },
+          { "title": "More Value with Credits", "desc": "Buy credits in bulk and get the same quality with tiered discounts.", "href": "dashboard/credits", "emoji": "🏷️" }
+        ],
+        "learn_more": "Learn More",
+        "learn_more_aria": "{title} - Learn More"
+      },
+		  "footer_i18n": {
+        "brandName": "EasyCustoms360"
+      },
+      "title": "Easycustoms 360 – Customs & Trade Solutions",
+      "hero": {
+        "title": "Streamline your customs & trade operations",
+        "subtitle": "One panel, smart pre-checks, and an expert network for faster, safer workflows.",
+        "cta": "Get started"
+      },
+      "topbar": {
+        "security": "Security",
+        "fees": "Fees",
+        "contact": "Contact",
+        "login": "Sign in"
+      },
+      "nav": {
+		  "logout": "Log out",
+		   "dashboard": "User Dashboard",
+		  "menu": "Menu",
+		  "blog": "Blog",
+        "solutions": "Solutions",
+        "services": "Advisory",
+		"accountFallback": "My Account",
+		"login": "Log in",
+        "resources": "Resources",
+        "about": "About",
+        "ask": "Ask a Question",
+		   "signup": "Sign up",
+        "welcome": "Welcome: {name}",
+		        "home": "Home",
+        "howitworks": "How It Works",
+				 "howitworks_individual": "Individual Users",
+		  "howitworks_corporate": "Corporate Users",
+		"hbrdyr": "News& Announcements",
+        "faq": "FAQ",
+        "about": "About",
+        "contact": "Contact",
+        "legal": "Legal",
+		        "legal_privacy": "Privacy / KVKK",
+        "legal_terms": "Terms of Use",
+        "legal_cookies": "Cookie Policy"
+      },
+
+      "quickActions": {
+        "title": "Quick Actions",
+        "items": {
+          "tariff": "HS / Tariff Classification",
+          "origin": "Rules of Origin",
+          "taxes": "Duty & Taxes",
+          "exemptions": "Exemptions",
+          "technical": "Technical Regulations",
+          "docs": "Document Check",
+          "otvkkdf": "Excise/KKDF",
+          "drawback": "Drawback (Refund)"
+        }
+      },
+      "products": {
+        "title": "Featured Services",
+        "cards": {
+          "fastQuestion": {
+            "title": "Quick Question",
+            "desc": "Select an expert. Get quick answers to your questions.",
+            "cta": "Ask"
+          },
+          "opinion": {
+            "title": "Formal Opinion",
+            "desc": "Comprehensive report with legal refs.",
+            "cta": "View Details"
+          },
+          "docReview": {
+            "title": "Corporate Subscription",
+            "desc": "Manage your organisation's consultancy needs through a single channel.",
+            "cta": "Start Now"
+          }
+        }
+      },
+      "news": {
+        "title": "EasyCustoms360 News",
+        "seeAll": "View All"
+      },
+      "blog": {
+        "title": "Blog",
+        "seeAll": "View All"
+      },
+      "footer_i18n": {
+        "aboutTitle": "Gümrük360",
+        "aboutDesc": "Fast, reliable and transparent digital experience in customs & trade advisory.",
+        "colProducts": "Products",
+        "colResources": "Resources",
+        "colContact": "Contact",
+        "links": {
+          "fastQuestion": "Ask a Question",
+           "indcredit": "Individual Credits",
+		     "hiwind": "How It Works-Individual",
+		  "hiwcorp": "How It Works-Corporate",
+          "orgcredit": "Corporate Subscription",
+          "guides": "How It Works",
+          "blog": "Blog",
+          "faq": "FAQ",
+          "contact": "Contact Us",
+          "privacy": "Privacy",
+          "terms": "Terms"
+        },
+        "copyright": "© {year} EasyCustoms360. All rights reserved."
+      }
+    },
+    "about": {
+      "title": "About",
+      "body": "We deliver scalable, secure, and compliant solutions."
+    },
+    "contact": {
+      "title": "Contact",
+      "body": "Reach us at contact@easycustoms360.com"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "q": "What services do you provide?",
+          "a": "Customs advisory, pre-check, and regulation research."
+        },
+        {
+          "q": "How are payments handled?",
+          "a": "PayTR for Turkey; alternative providers for international payments."
+        },
+        {
+          "q": "Do you support multi-tenant and languages?",
+          "a": "Yes; domain-based tenant with TR/EN language support."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Pricing",
+      "subtitle": "Flexible, credit-based pricing — views can adapt by host and currency.",
+      "cta": "Buy credits",
+      "notes": "Note: TRY for TR site; other currencies may be presented on EN site."
+    },
+    "legal": {
+      "privacy": {
+        "title": "Privacy Policy",
+        "body": "Personal data is processed under KVKK/GDPR. Administrative and technical measures are taken."
+      },
+      "terms": {
+        "title": "Terms of Service",
+        "body": "Scope of services, responsibilities, and user obligations are summarized on this page."
+      },
+      "cookies": {
+        "title": "Cookies Policy",
+        "updated": "Last updated",
+        "date": "October 14, 2025",
+        "intro": "This page explains the types of cookies we use, their purposes, and how to manage your preferences.",
+        "sections": {
+          "what": {
+            "h": "1) What Are Cookies?",
+            "p": "Cookies are small text files placed on your browser when you visit a website."
+          },
+          "cats": {
+            "h": "2) Categories",
+            "p": "Strictly Necessary, Preferences, Analytics, Marketing."
+          },
+          "third": {
+            "h": "3) Third Parties",
+            "p": "Analytics and marketing providers may set cookies."
+          },
+          "ret": {
+            "h": "4) Retention",
+            "p": "Session cookies are deleted on browser close; persistent cookies may last 1–24 months."
+          },
+          "manage": {
+            "h": "5) Managing Preferences",
+            "p": "Use your browser settings or our cookie banner to manage consent by category."
+          },
+          "contact": {
+            "h": "6) Contact",
+            "p": "For questions, see our contact page."
+          }
+        }
+      }
+    },
+    "footer": {
+      "links": {
+        "terms": "Terms of Service",
+        "kvkkGdpr": "KVKK / GDPR"
+      }
+    }
+  },
+  "unauthorized": {
+    "metaTitle": "{brand} • Access Denied",
+    "metaDesc": "You must be signed in and authorized to view this page.",
+    "title": "Access Denied",
+    "heading": "{brand} – You are not authorized",
+    "desc": "Please sign in or continue with an account that has permission to view this page.",
+    "login": "Sign In",
+    "signup": "Sign Up",
+    "backHome": "Back to homepage"
+  },
+  "creditPricing": {
+    "heading": {
+      "org": "Credit Pricing (Corporate)",
+      "user": "Credit Pricing (Individual)"
+    },
+    "range": "Range",
+    "unitPrice": "Unit Price ({ccy})",
+    "loadError": "Failed to load pricing.",
+    "empty": "No records found."
+  },
+  "report": {
+    "headers": {
+      "credit": "Credit",
+      "question_title": "Question Title",
+      "full_name": "Full Name",
+      "date": "Date"
+    }
+  },
+  "orgInsufficient": {
+    "subject": "{brand} Corporate Credits Insufficient",
+    "intro": "Your corporate credit balance is insufficient for the question below.",
+    "userFullName": "User full name",
+    "questionId": "Question ID",
+    "questionTitle": "Question title",
+    "subsPage": "Credit purchase page",
+    "email": {
+      "heading": "Corporate Credits Insufficient.",
+      "intro": "Your credits are insufficient. You can buy credits using the link below.",
+      "userFullName": "User full name",
+      "questionId": "Question ID",
+      "questionTitle": "Question title",
+      "openQuestionCta": "Open Question",
+      "buyCreditsCta": "Buy Credits"
+    }
+  },
+  "payCredit": {
+    "assign": {
+      "subject": "{brand} Question assignment",
+      "heading": "{brand} Question assignment",
+      "questionId": "Question ID",
+      "paymentAmount": "Payment amount",
+      "creditAmount": "Credit amount",
+      "paymentMethod": "Payment method",
+      "creditMethod": "Credits",
+      "panelCta": "Go to panel",
+      "openQuestionCta": "Open question",
+      "signoff": "Best regards"
+    }
+  },
+  "payOrgCredit": {
+    "ownerNotice": {
+      "subject": "{brand} Corporate credit used",
+      "heading": "Corporate credit usage",
+      "intro": "The user and question below used corporate credits.",
+      "userFullName": "User full name",
+      "questionId": "Question ID",
+      "questionTitle": "Question title",
+      "creditsUsed": "Credits used",
+      "creditsBalance": "Remaining credits",
+      "regards": "Best regards,",
+      "team": "{brand} team"
+    },
+    "assign": {
+		"questionId": "Question ID",
+      "amountWithCurrency": "{amount} {currency}",
+      "subject": "{brand} Question assignment",
+      "heading": "{brand} Question assignment",
+      "paymentAmount": "Payment amount",
+      "creditAmount": "Credit amount",
+      "panelCta": "Go to panel",
+      "openQuestionCta": "Open question",
+      "signoff": "Good luck",
+      "paymentMethod": "Payment method",
+      "paymentMethodCredits": "Credits"
+    }
+  },
+  "emails": {
+	
+    "payment": {
+      "subject": "Payment Confirmation – Order #{orderId}",
+      "greeting": "Hello,",
+      "paidSuccess": "Your payment has been received successfully.",
+      "orderNoText": "Order No: {orderId}",
+      "amountText": "Amount: {amount} {currency}",
+      "creditsText": "Credits purchased: {credits}",
+      "orderNoLabel": "Order No:",
+      "amountLabel": "Amount:",
+      "creditsLabel": "Credits:",
+      "thanks": "Thank you."
+    },
+    "orgAuthorize": {
+      "yourCompany": "Your Company",
+      "subject": "Authorization from {orgName}",
+      "bodyMd": "{orgName} has authorized you.\n\nYou can submit your question from the \"Ask a question\" menu.",
+      "bodyHtml": "{orgName} has authorized you.",
+      "bodyText": "{orgName} has authorized you.\n\n{ctaUrl}",
+      "ctaLabel": "Click here to ask your question"
+    },
+    "assignment": {
+      "subject": "Gumruk360 Question Assignment",
+      "title": "Gumruk360 Question Assignment",
+      "questionId": "Question ID",
+      "paymentAmount": "Payment amount",
+      "creditAmount": "Credit amount",
+      "paymentMethod": "Payment method",
+      "goToPanel": "Go to panel",
+      "goToQuestion": "Go to question",
+      "regards": "Best regards"
+    }
+  },
+  "settings": {
+    "billing": {
+      "title": "Billing Information",
+      "individual": "Individual",
+      "corporate": "Corporate",
+      "fullName": "Full Name",
+      "companyName": "Company Name",
+      "taxNumber": "Tax Number",
+      "taxOffice": "Tax Office",
+      "addressLine": "Address",
+      "city": "City",
+      "country": "Country",
+      "phone": "Phone",
+      "eInvoice": "e-Invoice",
+      "loading": "Loading…",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Saved.",
+      "saveFailed": "Could not save",
+      "back": "Back"
+    }
+  },
+  "confirmInfo": {
+    "title": "Email Verification",
+    "intro": "When you click the verification link in the email, verification is completed automatically and you are signed in.",
+    "items": [
+      "If you arrive here without the link parameters ({code} or {token}), verification won’t work.",
+      "If the link has expired, you’ll be redirected to the login page."
+    ]
+  },
+  "attachments": {
+    "title": "Attachments",
+    "backProfile": "← Profile",
+    "actions": {
+      "upload": "Upload",
+      "download": "Download"
+    },
+    "messages": {
+      "uploaded": "Uploaded.",
+      "deleted": "Deleted."
+    },
+    "confirmDelete": "Are you sure you want to delete this file?",
+    "errors": {
+      "listFailedLogin": "Could not list files. You may need to sign in.",
+      "chooseFile": "Please choose a file.",
+      "uploadFailedDetail": "Upload failed: {detail}",
+      "downloadLinkFailedDetail": "Could not get download link: {detail}",
+      "deleteFailedDetail": "Delete failed: {detail}"
+    },
+    "form": {
+      "questionIdPlaceholder": "Question ID (optional, UUID)",
+      "maxNote": "Max 20 MB. You may link to a Question ID (UUID) or leave it blank."
+    },
+    "table": {
+      "name": "Name",
+      "size": "Size",
+      "type": "Type",
+      "questionId": "Question ID",
+      "date": "Date",
+      "action": "Action",
+      "empty": "No files yet."
+    }
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "intro": "This Cookie Policy explains the types of cookies used by Gümrük360 and how you can manage your preferences.",
+    "sections": {
+      "what": {
+        "title": "1. What Are Cookies?",
+        "body": "Cookies are small text files placed in your browser by websites you visit. They are used for session management, security, personalization and analytics."
+      },
+      "types": {
+        "title": "2. Types of Cookies We Use",
+        "items": [
+          {
+            "title": "Strictly necessary",
+            "body": "Required for login, session management and security."
+          },
+          {
+            "title": "Preference",
+            "body": "Remember language and display settings."
+          },
+          {
+            "title": "Analytics",
+            "body": "Collect anonymous usage to improve our services."
+          }
+        ]
+      },
+      "thirdParties": {
+        "title": "3. Third Parties",
+        "body": "Hosting, analytics and notification providers may use cookies or similar technologies."
+      },
+      "manage": {
+        "title": "4. Managing Cookies",
+        "body": "You can delete, block or limit cookies via your browser settings. Disabling cookies may affect certain features."
+      }
+    },
+    "banner": {
+      "title": "Cookie Preferences",
+      "body": "We use cookies to improve your experience. You can accept, reject, or customize your preferences."
+    },
+    "actions": {
+      "accept": "Accept",
+      "reject": "Reject",
+      "customize": "Customize",
+      "save": "Save",
+      "cancel": "Cancel"
+    },
+    "categories": {
+      "necessary": "Strictly Necessary",
+      "preferences": "Preferences",
+      "analytics": "Analytics",
+      "marketing": "Marketing"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "intro": "We’ll keep expanding this page. Here are a few common topics:",
+    "items": [
+      {
+        "q": "How are fees calculated?",
+        "a": "Short answer: with a GPT-based pricing model. Details coming soon."
+      },
+      {
+        "q": "What are the delivery times?",
+        "a": "There are normal and urgent options. Details coming soon."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "intro": "We’ll add more details soon. Here’s the basic flow:",
+    "steps": [
+      "Step 1: Create a question.",
+      "Step 2: Review and approve the offer.",
+      "Step 3: Payment and delivery."
+    ]
+  },
+  "kvkkGdpr": {
+    "title": "Privacy Notice (KVKK / GDPR)",
+    "intro": "This Privacy Notice is provided by Gümrük360 as the data controller under applicable law. When processing falls within the scope of the EU GDPR, we follow the principles below.",
+    "sections": {
+      "personalData": {
+        "title": "1. Categories of Personal Data",
+        "items": [
+          "Identity & contact: name, email, phone.",
+          "Account data: profile, session and authorization logs.",
+          "Operations: support tickets, messages, attachments, timestamps.",
+          "Technical data: IP address, browser info, cookies."
+        ]
+      },
+      "purposes": {
+        "title": "2. Purposes",
+        "items": [
+          "Providing services and managing your account,",
+          "Customer support and communications,",
+          "Security/fraud prevention and service integrity,",
+          "Compliance with legal obligations and auditing."
+        ]
+      },
+      "legalBases": {
+        "title": "3. Legal Bases",
+        "body": "GDPR Art. 6(1)(b) performance of a contract, Art. 6(1)(c) legal obligation, Art. 6(1)(f) legitimate interests; and where required, Art. 6(1)(a) consent. Under Turkish law, corresponding KVKK bases may apply."
+      },
+      "transfers": {
+        "title": "4. Disclosures & International Transfers",
+        "body": "We may share data with service providers (hosting/cloud, email, notifications, analytics) and with authorities when required. For transfers outside the EEA, appropriate safeguards (e.g., Standard Contractual Clauses under Art. 46 GDPR) apply."
+      },
+      "retention": {
+        "title": "5. Retention",
+        "body": "We retain data as long as necessary to provide the services and to meet legal obligations, then delete or anonymize it."
+      },
+      "rights": {
+        "title": "6. Your Rights",
+        "body": "Under GDPR Arts. 15–22 you have rights to access, rectify, erase, restrict, object, and data portability. Please contact us using the details below."
+      },
+      "contact": {
+        "title": "7. Contact",
+        "controller": "Controller",
+        "email": "Email"
+      }
+    }
+  },
+  "orders": {
+	  "provider": "Provider",
+    "date": "Date",
+    "detailTitle": "Order Details",
+    "orderId": "Order ID",
+    "lastestPayment": "Recent Payment",
+    "status": "Status",
+    "amount": "Amount",
+    "createdAt": "Created At",
+    "paidAt": "Paid At",
+    "relatedQuestion": "Related Question",
+    "goToQuestion": "Go to Question",
+    "paymentSummary": "Payment Summary",
+    "provider": "Provider",
+    "paymentRef": "Reference",
+    "paymentStatus": "Payment Status",
+    "statusMap": {
+      "paid": "Paid",
+      "pending": "Pending",
+      "failed": "Failed"
+    },
+    "payment": {
+      "provider": "Provider:",
+      "amount": "Amount:",
+      "status": "Status:",
+      "date": "Date:"
+    }
+  },
+  "checkout": {
+	   "info": {
+      "title": "Information",
+      "li1": "All advisory answers are prepared by competent/qualified experts.",
+      "li2": "The information/answers provided are not definitive or binding. You must verify with the relevant public authorities before taking action.",
+      "li3": "To the extent permitted by law, no liability is accepted for any loss (direct/indirect, special, incidental, or loss of profit/reputation/data) arising from the Platform or the Services.",
+      "li4": "Prices include VAT and are charged at the time of payment (via the authorized payment provider).",
+      "li5": "Given the digital nature of the service, fees or used credits are non-refundable. Only in case of an erroneous charge, a pro-rata refund or credit may be provided.",
+      "li6": "You are responsible for account security and for the accuracy of any information/documents you share.",
+      "li7": "The Platform is provided “as is/as available”; uninterrupted service is not guaranteed.",
+      "li8": "For details:",
+	  "tos": "Terms of Service"
+    },
+    "title": "Checkout",
+    "subscriptionType": "Subscription type",
+    "org": "Organization",
+    "user": "Individual",
+    "creditsToBuy": "Credits to purchase",
+    "unitPrice": "Price per credit",
+    "totalPayable": "Total payable",
+    "back": "Back",
+    "redirecting": "Redirecting…",
+    "goToPayment": "Proceed to Payment",
+    "priceFetchFail": "Failed to fetch pricing",
+    "paymentStartFail": "Couldn’t start the payment",
+    "networkError": "Network error",
+    "redirectNote": "You will be redirected to the payment page. If payment succeeds, your credits will be loaded automatically."
+  },
+  "progress": {
+    "processing": "Processing…"
+  },
+  "dash": {
+    "subscriptionHistory": {
+		"sr_purchases": "Purchases (full list)",
+      "sr_usage": "Usage (full list)",
+      "title": "History",
+      "backLink": "Back to subscription",
+      "tabs": {
+        "purchases": "Purchases",
+        "usage": "Usage",
+        "countSuffix": " ({count})"
+      },
+      "loading": "Loading…",
+      "onlyOwner": "Only Organization Owner can view this",
+      "empty": "No records",
+      "purchasesTable": {
+        "date": "Date",
+        "creditPlus": "Credits (+)"
+      },
+      "usageTable": {
+        "date": "Date",
+        "description": "Description",
+        "question": "Question",
+        "asker": "Asker",
+        "creditMinus": "Credits (-)"
+      }
+    }
+  },
+  "nav": {
+	  "dashwellcome": "Wellcome,",
+      "dashlogin": "Login",
+      "dashsignup": "Signup",
+	  "homepage": "Site Homepage", 
+    "dashboard": "Dashboard",
+    "ask": "Ask Your Question",
+    "myQuestions": "My Questions",
+    "myPayments": "My Payments",
+    "profile": "My Profile",
+    "logout": "Logout",
+    "admin": "Admin",
+    "worker": "Worker",
+    "workerAssigned": "Assigned to me",
+    "assignmentRequests": "Assignment requests",
+    "workerPool": "Assignment pool",
+    "workerDone": "Completed",
+    "requests": "Requests",
+    "siteStats": "Site Stats",
+    "finance": "Finance",
+    "users": "Users",
+    "settings": "Settings",
+    "logs": "Logs",
+    "gptModule": "GPT Module",
+    "creditManagement": "Credit Management",
+    "subscriptionManagement": "Subscription Management",
+    "howItWorks": "How it works",
+    "announcements": "Announcements",
+    "contact": "Contact",
+    "support": "Inbox",
+    "faq": "FAQ",
+    "kvkkGdpr": "KVKK/GDPR",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
+  },
+  "admin": {
+	  "blog": {
+		  "api": {
+        "createDraft": {
+
+          "meta": {
+            "knownTags": [
+              "customs",
+              "import",
+              "export",
+              "declaration",
+              "warehouse",
+              "duties",
+              "exemption",
+              "penalty"
+            ]
+          }
+        }
+      },
+      "edit": { "title": "Edit Post" },
+      "new":  { "title": "New Blog Post" },
+      "review": {
+        "title": "Blog List",
+        "actions": { "addNew": "Add New" },
+        "filters": {
+			"q": {
+      "placeholder": "Search by title or slug…"
+    },
+          "status": { "all": "All statuses" },
+          "lang":   { "all": "All languages" },
+          "tenant": { "all": "All tenants" },
+          "submit": "Apply"
+        },
+        "empty": "No records found. Try another filter or clear filters.",
+        "table": {
+			"emptyCell": "-",
+          "count": "{total} items • {selected} selected",
+          "aria": { 
+		  "select": "Select row {title}",
+"selectAll": "Select all"		  
+		  }
+        },
+		"status": {
+    "in_review": "In review",
+    "draft": "Draft",
+    "scheduled": "Scheduled",
+    "published": "Published",
+    "archived": "Archived"
+  },
+        "bulk": {
+          "scheduling": "Scheduling...",
+          "schedule":   "Bulk Schedule",
+		     "publishing": "Publishing...",
+          "publish": "Bulk Publish",
+          "archiving":  "Archiving...",
+          "archive":    "Bulk Archive",
+          "review":     "Bulk → Review",
+          "reverting":  "Reverting...",
+           "review": {
+      "label": "Bulk → Review",
+      "title": "Revert selected posts back to Review"
+    }
+        },
+        "col": {
+          "tenant": "Tenant",
+          "status": "Status",
+		    "title": "Title",
+          "lang": "Lang",
+          "scheduled": "Scheduled",
+          "updated": "Updated",
+          "actions": "Actions"
+        },
+        "link": {
+          "viewPublic": "View public",
+          "edit": "✎ Edit"
+        },
+        "row": { "by": "by {name}" },
+        "actions": {
+          "publish": "Publish",
+          "schedule": "Schedule",
+            "toReview": {
+      "label": "→ Rev",
+      "title": "Revert from Published to Review"
+    },
+          "archive": "Archive",
+          "delete": {
+            "label": "Delete",
+            "title": "Delete permanently",
+            "confirm": "Delete?\n\n{title}"
+          }
+        }
+      }
+    },
+	  "request": {
+      "editor": {
+		  		        "send": {
+          "open": "Preview & Send",
+          "openTitle": "Preview & send",
+          "disabledTitle": "This feature is disabled for workers",
+          "preparing": "Preparing…",
+          "modalTitle": "Email Preview",
+          "close": "Close",
+          "toPlaceholder": "recipient@company.com",
+          "subjectPlaceholder": "Subject",
+          "attachmentsHeader": "Attachments",
+          "noAttachments": "No attachments.",
+          "previewOrDownloadTitle": "Preview/download",
+          "downloadTitle": "Download",
+          "sending": "Sending…",
+          "sent": "Message sent",
+          "sendFailed": "Message failed to send",
+          "sendBtn": "Send",
+          "cancelBtn": "Cancel",
+          "previewFailed": "Preview failed",
+          "previewError": "Preview error: {message}",
+          "sendError": "Send error: {message}",
+          "validation": {
+            "toAndSubjectRequired": "Recipient email and subject are required."
+          }
+        },
+		      "progress": {
+          "completing": "Completing…"
+        },
+		  "editorView": {
+          "loading": "Loading…",
+          "loadError": "Load error: {message}",
+		  "genericError": "Load error",
+		  "contentNotFound": "Editor content not found."
+        },
+		  "buttons": {
+          "quickDraft": "Quick Draft",
+          "reviseDone": "Revise completed",
+          "revisions": "Revisions"
+        },
+        "labels": {
+          "editor": "Editor",
+		      "messagingDisabled": "Messaging disabled",
+          "questionId": "Question ID",
+          "latestDraft": "Latest Draft"
+        },
+        "errors": {
+          "noReviseActions": "Revision actions could not be found.",
+          "questionTextNotFound": "⚠️ Question text not found."
+        },
+        "draft": {
+          "empty": "⚠️ Draft content cannot be empty.",
+		  "saveFailedShort": "Save failed",
+		            "manualPrompt": "Content to save (JSON or text):",
+          "savedAndIngested": "Draft saved and ingested to revision (#{no}).",
+          "autoIngestHint": "(Auto-ingest to revision after saving)",
+          "saveFailed": "⚠️ Could not save the draft. Server error.",
+          "genFailed": "⚠️ Draft generation failed.",
+          "generated": "Draft generated and loaded into the editor.",
+          "generatedEmpty": "Draft generated but returned empty content.",
+		  "saved": "Draft saved.",
+          "genUnexpected": "⚠️ An unexpected error occurred during draft generation.",
+          "saveBusy": "Saving…",
+          "save": "Save Draft"
+        },
+        "revise": {
+          "lastFetchFailed": "⚠️ Could not fetch the last revision.",
+          "lastEmpty": "⚠️ Last revision seems empty.",
+		  "createFailed": "Failed to create revision",
+		       "saveError": "✗ Error: {message}",
+          "savedInfo": "✓ Saved (revision #{no})",
+          "summaryCreated": "Summary created (from last revision) and loaded into the editor.",
+          "summaryEmpty": "Summarization done but returned empty content.",
+          "summaryUnexpected": "⚠️ An unexpected error occurred during summarization.",
+          "doneButtonNotFound": "“Revise completed” button could not be found."
+        },
+        "pdf": {
+          "createFailed": "⚠️ Failed to create PDF.",
+          "createFailedServer": "⚠️ Failed to create PDF. Server error.",
+          "opinionLetter": "Opinion Letter",
+          "subtitleFromLastRevision": "Official response — generated from last editor revision",
+          "noContentToExport": "No content to export.",
+          "uploadFailed": "Upload failed.",
+          "createdAttached": "PDF created and attached.",
+          "busy": "Creating PDF…",
+          "create": "Create PDF",
+          "fromLastRevisionTitle": "Create PDF from last revision and save as attachment"
+        },
+		"attachments": {
+          "header": "Attachments",
+          "addFile": "Add file",
+          "select": "Select",
+          "delete": "Delete",
+          "loadAuthError": "Failed to load attachments: authorization or redirect error.",
+          "loadFailed": "Failed to load attachments.",
+          "uploadFailed": "Upload failed.",
+          "deleteFailed": "Delete failed.", 
+		  "empty": "No attachments yet.",
+		           "headerQuestion": "Question Attachments",
+          "count": "{count} attachments",
+          "loading": "Loading…",
+          "emptyForQuestion": "No attachments found for this question.",
+          "previewDownload": "Preview / download",
+          "linkFailed": "Could not create link",
+          "kb": "KB"
+        },
+        "tooltips": {
+          "quickGen": "Open Quick Generate with question and attachments",
+          "saveDraft": "Save the draft into the answer_drafts table",
+          "applyReviseDone": "Apply the 'Revise completed' action",
+          "history": "Revision history, diff and revert",
+          "featureToggleHint": "You can enable it from Admin → Settings"
+        }
+      }
+    },
+    "title": "Admin",
+    "requestsSubtitle": "List and manage incoming questions",
+    "settings": {
+      "messageSending": "Message sending",
+      "on": "On",
+      "off": "Off",
+      "hint": "Controls the email send button visibility in worker editor."
+    },
+    "gptModule": {
+      "title": "GPT Module",
+      "tabs": {
+        "config": "Configuration",
+        "versions": "Versions",
+        "calc": "Sample Estimate"
+      },
+      "config": {
+        "sectionFees": "Base Fee Parameters",
+        "hourly": "Hourly Rate (TRY)",
+        "min": "Minimum Price (TRY)",
+        "urgentMult": "Urgent Multiplier",
+        "roundStep": "Rounding Step",
+        "sectionFormula": "Formula Configuration",
+        "pph": "Points per Hour",
+        "progressive": "Progressive Bands",
+        "gtip": "HS Code",
+        "legalLanguage": "Legal / Language",
+        "criteriaWeights": "Criteria Weights (sum to 100)",
+        "active": "active",
+        "enabled": "enabled",
+        "saveVersion": "Create & Activate New Version"
+      },
+      "calc": {
+        "title": "Sample Estimate",
+        "question": "Question",
+        "lang": "Language",
+        "urgent": "Urgent",
+        "gtipCount": "HS code count",
+        "gtipDifficulty": "HS difficulty (0-10)",
+        "legalScore": "Legal (0-10)",
+        "langDiffScore": "Language diff. (0-10)",
+        "gptSubjective": "GPT subjective (0-15)",
+        "run": "Generate Quote"
+      },
+      "result": {
+        "price": "Amount (TRY)",
+        "hours": "Hours",
+        "termDays": "ETA (days)",
+        "details": "Calculation details"
+      }
+    },
+    "subscription": {
+      "title": "Subscription Settings",
+      "creditsPerPoint": "Points per 1 Credit",
+      "creditsPerPointHint": "No rounding. Example: if 1 credit = 10 points, enter 10.0000.",
+      "lowBalanceThresholdUser": "Low balance threshold (Individual)",
+      "lowBalanceThresholdOrg": "Low balance threshold (Corporate)",
+      "notifyEmails": "Notification emails (comma-separated)",
+      "notifyEmailsHint": "Emails to notify when balance falls below threshold.",
+      "save": "Save",
+      "back": "Back"
+    },
+    "contact": {
+      "detail": {
+        "title": "Contact Detail",
+        "back": "Back to list",
+        "labels": {
+          "ticketId": "Ticket ID",
+          "sender": "Sender",
+          "question": "Question",
+          "subject": "Subject",
+          "status": "Status",
+          "date": "Date"
+        },
+        "status": {
+          "open": "Open",
+          "answered": "Answered",
+          "closed": "Closed"
+        },
+        "sections": {
+          "messages": "Messages",
+          "attachments": "Attachments"
+        },
+        "empty": {
+          "noMessages": "No messages yet.",
+          "noAttachments": "No attachments."
+        },
+        "attachments": {
+          "fallback": "attachment"
+        },
+        "form": {
+          "body": {
+            "label": "Reply (HTML allowed)",
+            "placeholder": "<p>Your reply...</p>"
+          },
+          "submit": "Reply"
+        }
+      }
+    }
+  },
+  "home": {
+    "appName": "{appName}",
+    "tagline": "GPT-powered customs advisory platform",
+    "customerPanel": "Customer panel",
+    "adminPanel": "Admin panel",
+    "workerPanel": "Worker panel",
+    "logoutDesc": "Sign out",
+    "activeLocale": "Active locale"
+  },
+  "dashboard": {
+	  "checkout": {
+      "paddle": {
+        "title": "Paddle Checkout",
+        "go_now": "Go now",
+        "order_detail": "Order Detail",
+        "order_no": "Order No",
+        "txn_no": "Transaction No",
+		"err_open_modal": "Could not open the payment window.",
+        "msg_redirecting": "Redirecting to payment…",
+        "msg_opening_modal": "Opening Paddle payment window…",
+        "msg_success_redirect": "Payment successful! Redirecting to the order page…",
+        "msg_closed_redirect": "Payment window closed. Redirecting to the order page…",
+        "msg_failed_redirect": "Payment failed. Redirecting to the order page…",
+        "msg_canceled_redirect": "Payment canceled. Redirecting to the order page…",
+        "msg_error_redirect": "An error occurred. Redirecting to the order page…",
+        "msg_starting_payment": "Starting payment…",
+        "msg_txn_not_found_redirect": "Transaction not found. Redirecting to the order page…"
+      }
+    },
+    "questionDescription": "Question description",
+    "createdAt": "Created at",
+    "amount": "Amount",
+    "currency": "Currency",
+    "subscription": {
+      "removeMemberTitle": "Remove from organization",
+      "removeMemberConfirm": "Are you sure you want to remove this member from the organization?",
+      "title": "Subscription Management",
+      "orgBalanceLabel": "Organization credits",
+      "loadCredits": "Buy Credits",
+      "tabs": {
+        "purchases": "Purchases",
+        "usage": "Usage",
+        "members": "Members"
+      },
+      "historyLink": "History",
+      "exportExcel": "Export to Excel",
+      "questionFallback": "Question",
+      "invite": "Invite",
+      "inviteSent": "Invitation sent / added",
+      "errorGeneric": "Error",
+      "noMembers": "No members",
+      "onlyOwnerCanView": "Only the subscription owner can view"
+    }
+  },
+  "worker": {
+    "questions": {
+      "ui": {
+        "workerAttachments": {
+          "title": "Attachments",
+          "loading": "Loading…",
+          "questionAttachments": "Question Attachments",
+          "answerAttachments": "Answer Attachments",
+          "noFiles": "No files",
+          "download": "Download",
+          "empty": "No attachments",
+          "previewDownload": "Preview / Download",
+          "kb": "KB",
+          "linkCreateFailed": "Failed to create link",
+          "loadFailed": "Failed to load attachments"
+        }
+      }
+    },
+    "answer": "Answer",
+    "noAnswerYet": "No answer yet",
+    "assigned": {
+      "heading": "Assigned to me",
+      "table": {
+        "id": "ID",
+        "title": "Title",
+        "status": "Status",
+        "left": "Time left",
+        "action": "Action",
+        "noRecords": "No records found.",
+        "goEditor": "Go to editor"
+      },
+      "status": {
+        "submitted": "Submitted",
+        "approved": "Approved",
+        "rejected": "Rejected",
+        "paid": "Paid"
+      },
+      "time": {
+        "dayShort": "d",
+        "hourShort": "h",
+        "minuteShort": "m",
+        "leftSuffix": "left",
+        "overduePrefix": "",
+        "overdueSuffix": "overdue"
+      }
+    },
+    "pool": "Assignment pool",
+    "done": "Completed",
+    "sent": "Sent",
+    "openEditor": "Open editor",
+    "revisions": "Revisions",
+    "view": "View",
+    "messagingDisabled": "Message sending is disabled",
+    "requestAssignment": "Request assignment",
+    "requesting": "Submitting…",
+    "assignmentRequested": "Assignment request sent",
+    "assignmentRejected": "Assignment request rejected",
+    "assignmentApproved": "Assignment approved",
+    "attachments": "Attachments",
+    "noAttachments": "No attachments found.",
+    "backToPool": "Back to pool",
+    "nav": {
+		"homepage": "Site Homepage",
+      "panelTitle": "Consultant Panel",
+      "paymentmanagement": "Payment Management",
+      "payments": "Payments",
+      "assigned": "Assigned",
+      "done": "Completed",
+      "contact": "Contact",
+      "inbox": "Message Inbox",
+      "announcements": "Announcements & News",
+      "cvEdit": "Edit CV",
+	  "blog": "Blog Posts",
+      "profilePage": "Profile",
+      "logout": "Logout"
+    },
+    "payments": {
+      "tabMake": "Make a payment request",
+      "tabList": "Requests & payouts",
+      "agreementRate": "Agreement rate",
+      "agreementRateNA": "Not set",
+      "colQuestionId": "Question ID",
+      "colDate": "Date",
+      "colCurrency": "Currency",
+      "colAmount": "Payment amount",
+      "colKur": "Rate",
+      "colFx": "FX (USD/TRY on date)",
+      "colFinal": "Final amount",
+      "colAgreement": "Agreement",
+      "colHakedis": "Earnings",
+      "totalHakedis": "Total earnings",
+      "createRequest": "Create payment request",
+      "noRows": "No records.",
+      "createdOk": "Payment request created: {code}",
+      "colReqCode": "Request code",
+      "colTotal": "Total",
+      "colStatus": "Status",
+      "colPayRef": "Payment reference",
+      "status": {
+        "pending": "Pending",
+        "approved": "Approved",
+        "needs_fix": "Needs revision",
+        "rejected": "Rejected"
+      }
+    },
+    "support": {
+		"adminEmail": {
+      "userReply": {
+        "subtitle": "New reply from user",
+        "linkAdmin": "Open ticket (Admin)",
+        "subject": "New user reply"
+      },
+      "resolved": {
+        "subject": "User notification: Marked as resolved",
+        "questionIdLabel": "Question ID",
+        "ticketLabel": "Ticket",
+        "reportedBy": "Reported by",
+        "body": "This ticket has been marked as resolved by the user."
+      }
+    },
+      "title": "Inbox",
+      "loginToContinue": "Please sign in to continue.",
+      "newTicket": "Create new ticket",
+      "listError": "List error",
+      "table": {
+        "date": "Date",
+        "subject": "Subject",
+        "question": "Question",
+        "status": "Status",
+        "action": "Action"
+      },
+      "status": {
+        "open": "Open",
+        "answered": "Answered",
+        "closed": "Closed"
+      },
+      "action": {
+        "open": "Open",
+        "markResolved": "Mark as resolved",
+        "delete": "Delete"
+      },
+      "empty": "No tickets yet.",
+      "errors": {
+        "loginRequired": "Sign-in required",
+        "missingId": "Missing id",
+        "unauthorized": "Unauthorized operation",
+        "missingFields": "Missing fields",
+        "messageSaveFailed": "Message could not be saved",
+        "attachmentUploadFailed": "Attachment upload failed",
+        "attachmentMetaFailed": "Attachment metadata insert failed"
+      },
+      "mail": {
+        "resolvedSubject": "User notice: Marked as resolved",
+        "labels": {
+          "questionId": "Question ID",
+          "reporter": "Reporter"
+        },
+        "resolvedInfo": "This ticket has been marked as resolved by the user.",
+        "userFallbackName": "User"
+      },
+      "detail": {
+		   "messages": "Message(s)",
+        "title": "Support Ticket",
+        "back": "Back to list",
+        "labels": {
+          "ticketId": "Ticket ID",
+          "subject": "Subject",
+          "status": "Status",
+          "date": "Date",
+          "question": "Question"
+        },
+        "noMessages": "No messages yet.",
+        "noAttachments": "No attachments.",
+        "by": {
+          "me": "Me",
+          "admin": "Admin"
+        }
+      },
+	     "common": {
+        "customer": "Customer"
+      },
+      "ui": {
+		  "messages": "Messages",
+        "markResolved": {
+          "title": "Mark as resolved",
+          "button": "Resolved"
+        },
+        "reply": {
+          "title": "Reply",
+          "messageLabel": "Your message",
+          "placeholder": "Type your message…",
+          "send": "Send"
+        },
+        "attachments": "Attachments",
+        "filePicker": {
+          "title": "Attachment(s)",
+          "button": "Choose file",
+          "selectedList": "{count} selected"
+        }
+      },
+      "reply": {
+        "title": "Your reply (HTML allowed)",
+        "placeholder": "Your message…",
+        "send": "Send"
+      }
+    },
+    "editor": {
+      "labels": {
+        "question": "Question",
+        "noQuestion": "No question text.",
+        "originalAttachments": "Attachments"
+      },
+      "actions": {
+        "generateDraftFast": "Generate Draft"
+      },
+      "editorAttachments": {
+        "loading": "Loading…",
+        "loadFailed": "Failed to load attachments.",
+        "empty": "No attachments for this question.",
+        "previewDownload": "Preview / download",
+        "linkCreateFailed": "Link could not be created",
+        "kb": "KB"
+      },
+      "fast": {
+        "errors": {
+          "notFound": "Question not found: {detail}"
+        },
+        "ui": {
+          "title": "FAST DRAFT",
+          "styleLabel": "Style",
+          "questionLabel": "Question",
+          "resultLabel": "Result",
+          "sourcesLabel": "Sources",
+          "styleOption": {
+            "teknik": "Technical",
+            "resmi": "Formal"
+          },
+          "extraTexts": {
+            "label": "Extra Texts",
+            "add": "Add",
+            "remove": "Remove"
+          },
+          "files": {
+            "label": "Attachments",
+            "choose": "Choose File",
+            "typeFallback": "file",
+            "remove": "Remove"
+          },
+          "buttons": {
+            "generate": "Generate",
+            "generating": "Generating…",
+            "generateEng": "Generate in EN",
+            "summarize": "Summarize",
+            "summarizing": "Summarizing…",
+            "copy": "Copy",
+            "copied": "Copied",
+            "goToEditor": "Go to Editor"
+          },
+          "errors": {
+            "runFailed": "Generation failed",
+            "runException": "Generation exception: {detail}",
+            "sumFailed": "Summarization failed",
+            "sumException": "Summarization exception: {detail}",
+            "copyFailed": "Copy failed"
+          },
+          "markdown": {
+            "resultTitle": "Result",
+            "sourcesTitle": "Sources"
+          }
+        }
+      }
+    }
+  },
+  "revisions": {
+    "title": "Revisions",
+    "view": "View",
+    "backToEditor": "Back to editor",
+    "content": "Content",
+    "table": {
+      "no": "No",
+      "date": "Date",
+      "action": "Action"
+    },
+    "empty": "No revisions found.",
+    "detail": {
+      "heading": "Revision #{no}",
+      "labels": {
+        "question": "Question",
+        "date": "Date"
+      },
+      "emptyContent": "(empty)"
+    }
+  },
+  "profile": {
+    "loading": "Loading…",
+    "title": "My Profile",
+    "accountInfo": "Your account information",
+    "personalInfo": "Personal Information",
+    "organizationInfo": "Organization",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Mobile phone",
+    "country": "Country",
+    "address": "Address",
+    "orgName": "Organization name",
+    "taxNo": "Tax number",
+    "save": "Save",
+    "saving": "Saving…",
+    "saved": "Saved",
+    "changePassword": "Change password",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "newPassword2": "New password (repeat)",
+    "updatePassword": "Update password",
+    "updating": "Updating…",
+    "updated": "Password updated",
+    "birthDate": "Date of birth",
+    "passwordMinHint": "At least 8 characters",
+    "otherDial": "+ (Other)",
+    "errors": {
+      "required": "This field is required.",
+      "invalidEmail": "Invalid email address.",
+      "passwordsMismatch": "Passwords do not match.",
+      "minLength": "Minimum length not met.",
+      "invalidCurrentPassword": "Current password is incorrect.",
+      "phoneTenDigits": "Please enter 10 digits.",
+      "loadFailed": "Profile could not be loaded.",
+      "saveFailed": "Could not save.",
+      "unknown": "An error occurred."
+    },
+    "billing": {
+      "title": "Billing Information",
+      "loading": "Loading…",
+      "isCorporate": "Corporate (Company)",
+      "companyName": "Company name",
+      "fullName": "Full name",
+      "tcknLabel": "ID number",
+      "tcknPlaceholder": "11 digits",
+      "taxOffice": "Tax office",
+      "vknLabel": "Tax number",
+      "vknPlaceholder": "Tax/VAT number",
+      "country": "Country",
+      "countries": {
+        "TR": "Turkey",
+        "DE": "Germany",
+        "UK": "United Kingdom",
+        "US": "United States",
+        "FR": "France",
+        "IT": "Italy"
+      },
+      "otherCountry": "Other",
+      "city": "City",
+      "select": "Select",
+      "cityPlaceholder": "City",
+      "address": "Address",
+      "addressPlaceholder": "Full address",
+      "phone": "Phone",
+      "otherDial": "+ (Other)",
+      "eInvoice": "I am an e-Invoice taxpayer",
+      "save": "Save",
+      "saving": "Saving…",
+      "saved": "Saved",
+      "saveFailed": "Save failed",
+      "errors": {
+        "phoneTenDigits": "Please enter 10 digits.",
+        "tcknElevenDigits": "ID number must be 11 digits.",
+        "vknFifteenDigits": "Tax number must be 15 digits."
+      }
+    }
+  },
+  "logout": "Logout",
+  "precheck": {
+    "checking": "Running precheck…",
+    "meaninglessTitle": "Not meaningful",
+    "meaninglessMsg": "Your question is not sufficiently clear. Please add concrete context such as item/HS code, procedure, and background.",
+    "nonCustomsTitle": "Out of customs scope",
+    "nonCustomsMsg": "Your question appears to be outside the scope of customs regulations.",
+    "continueEdit": "Back to edit",
+    "tryAgain": "Try again"
+  },
+  "auth": {
+	  "confirmInfo": {
+      "title": "Your account is being verified…",
+      "desc_redirect": "Please wait; you will be redirected automatically in a few seconds."
+    },
+    "reset": {
+      "sendHint": "Enter your email and we'll send a reset link.",
+      "emailPh": "Email address",
+      "sendBtn": "Send link",
+      "setNew": "Set your new password",
+      "newPwd": "New password",
+      "newPwd2": "Confirm new password",
+      "saveBtn": "Save",
+      "unexpected": "An unexpected error occurred. Please try again.",
+      "sent": "Reset email sent. Check your inbox.",
+      "failed": "Action failed. Please check your details and try again.",
+      "errPwdLen": "Password must be at least 8 characters.",
+      "errPwdMatch": "Passwords don’t match.",
+      "okRedirect": "Your password has been updated. Redirecting…",
+      "title": "Set a New Password",
+      "verifying": "Verifying the link…",
+      "placeholders": {
+        "new": "New password (min 8)",
+        "new2": "New password (repeat)"
+      },
+      "submit": "Update Password",
+      "successUpdatedRedirect": "Your password has been updated. Redirecting to the login page…",
+      "errors": {
+        "invalidOrExpiredLink": "Invalid or expired link. Please request a new one.",
+        "unexpected": "An unexpected error occurred.",
+        "passwordMin": "Password must be at least 8 characters.",
+        "passwordsMismatch": "Passwords do not match.",
+        "updateFailed": "An error occurred during update."
+      }
+    },
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "forgot": "Forgot password?",
+      "loggingIn": "Signing in...",
+      "login": "Sign In",
+      "noAccount": "Don’t have an account?",
+      "signup": "Sign up",
+      "errors": {
+        "invalidCredentials": "Invalid email or password.",
+        "emailNotConfirmed": "Email not confirmed. Please verify your email.",
+        "loginFailed": "Login failed"
+      }
+    },
+    "signup": {
+      "title": "Sign up",
+      "individual": "Individual",
+      "corporate": "Corporate",
+      "fullName": "Full name",
+      "email": "Email",
+      "password": "Password",
+      "password2": "Password (repeat)",
+      "orgName": "Organization name",
+      "creatingAccount": "Creating account…",
+      "signUp": "Sign up",
+      "success": "Please verify your email before logging in. (Verification email sent)",
+      "errors": {
+        "emailAndPasswordRequired": "Email and password are required.",
+        "passwordsMismatch": "Passwords do not match.",
+        "fullNameRequired": "Full name is required.",
+        "orgNameRequired": "Organization name is required.",
+        "signupFailed": "Sign up failed"
+      }
+    }
+  },
+  "support": {
+	      "detail": {
+        "labels": {
+          "ticketId": "Ticket ID",
+          "sender": "Sender",
+          "question": "Question",
+          "subject": "Subject",
+          "status": "Status",
+          "date": "Date"
+		}
+        },
+    "title": "Support requests",
+    "pleaseLogin": "Please sign in to continue.",
+    "createNew": "Create new request",
+    "listError": "List error",
+    "view": "View",
+    "resolved": "Resolved",
+    "delete": "Delete",
+    "empty": "No requests yet.",
+    "table": {
+      "date": "Date",
+      "subject": "Subject",
+      "question": "Question",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "status": {
+      "open": "Open",
+      "answered": "Answered",
+      "closed": "Closed"
+    },
+    "email": {
+      "resolvedSubject": "User notification: Marked as resolved",
+      "questionId": "Question ID",
+      "ticket": "Ticket",
+      "reportedBy": "Reported by",
+      "markedResolved": "This ticket has been marked as resolved by the user.",
+      "userFallbackName": "User"
+    },
+    "errors": {
+      "loginRequired": "Login required",
+      "missingId": "Missing id",
+      "unauthorized": "Unauthorized action"
+    },
+    "common": {
+      "user": "User",
+      "customer": "Customer"
+    },
+    "adminEmail": {
+      "userReply": {
+        "subtitle": "New reply from user",
+        "linkAdmin": "Open ticket (Admin)",
+        "subject": "New user reply"
+      },
+      "resolved": {
+        "subject": "User notification: Marked as resolved",
+        "questionIdLabel": "Question ID",
+        "ticketLabel": "Ticket",
+        "reportedBy": "Reported by",
+        "body": "This ticket has been marked as resolved by the user."
+      }
+    },
+    "ui": {
+      "titleFallback": "Support Ticket",
+      "messages": "Messages",
+      "attachments": "Attachments",
+      "filePicker": {
+        "title": "Add files",
+        "helper": "You can select multiple files.",
+        "button": "Choose files",
+        "clear": "Clear",
+        "selectedCount": "{count} selected"
+      },
+      "markResolved": {
+        "title": "Mark ticket as resolved",
+        "button": "Resolved"
+      },
+      "reply": {
+        "title": "Your reply",
+        "messageLabel": "Your message",
+        "placeholder": "Write your message",
+        "send": "Send"
+      },
+      "htmlPreview": {
+        "title": "HTML Preview",
+        "error": "Preview failed."
+      }
+    }
+  },
+  "ann": {
+    "list": {
+		 "noTenantKey": "No tenant_key found for the user.",
+      "tenantNotFound": "Tenant not found.",
+      "title": "Announcements & News"
+    },
+    "loginToContinue": "Sign in to continue.",
+    "errors": {
+      "listFailed": "List error:"
+    },
+    "table": {
+      "title": "Title",
+      "status": "Status"
+    },
+    "readStatus": {
+      "read": "Read",
+      "unread": "Unread"
+    },
+    "empty": "No records.",
+    "detail": {
+		"content": "Content",
+      "back": "Back to list"
+    },
+    "attachments": {
+      "title": "Attachments",
+      "empty": "No attachments."
+    }
+  },
+  "cred": {
+    "range": {
+      "plus": "{count}+ purchases",
+      "between": "{min} - {max} purchases",
+      "plusPurchases": "{min}+ purchases",
+      "betweenPurchases": "{min} - {max} purchases"
+    },
+    "buy": {
+      "enterValidAmount": "Enter a valid credit amount",
+      "minPurchase": "Minimum purchase is {count} credits."
+    },
+    "page": {
+      "title": "Credit Management",
+      "balanceLabel": "Current credits:",
+      "loadButton": "Add Credits"
+    },
+    "pricing": {
+      "open": "Credit Pricing",
+      "titleOrg": "Organization Credit Pricing",
+      "titleUser": "Personal Credit Pricing",
+      "range": "Range",
+      "unitPriceTry": "Unit Price (₺)",
+      "unitPriceWithCurrency": "Birim fiyat ({currency})"
+    },
+    "purchases": {
+      "titleRecent3": "Recent Purchases (last 3)"
+    },
+    "units": {
+      "credit": "credits"
+    },
+    "notFound": "No records found.",
+    "common": {
+      "error": "Error",
+      "close": "Close"
+    },
+    "loading": "Loading…",
+    "empty": "No records",
+    "usage": {
+      "title": "Usage (deductions per question)",
+      "questionFallback": "Question",
+      "purchase": "Purchase",
+      "openQuestion": "Open question"
+    },
+    "recent": {
+      "title": "Recent purchases",
+      "error": "Operation failed",
+      "loading": "Loading recent purchases…",
+      "loadFailed": "Could not fetch recent purchases",
+      "empty": "No credit purchases in the last 10 transactions.",
+      "table": {
+        "date": "Date",
+        "credits": "Credits",
+        "unitTry": "Unit ₺",
+        "total": "Total",
+        "order": "Order"
+      }
+    },
+    "table": {
+      "questionFallback": "Question"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subject": "Subject",
+    "subjectPlaceholder": "Subject",
+    "message": "Message",
+    "messagePlaceholder": "Your message",
+    "send": "Send",
+    "cancel": "Cancel",
+    "errors": {
+      "loginRequired": "Please sign in.",
+      "subjectMessageRequired": "Subject and message are required.",
+      "ticketCreateFailed": "Failed to create ticket.",
+      "messageCreateFailed": "Failed to create message",
+      "attachmentUploadFailed": "Attachment upload failed",
+      "attachmentMetaFailed": "Attachment metadata insert failed"
+    },
+    "email": {
+      "newRequestSubject": "New contact request",
+      "newRequestPreheader": "A new contact request has been created."
+    }
+  },
+  "questions": {
+    "status": {
+      "new": "New",
+      "submitted": "Submitted",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "paid": "Paid",
+      "pending": "Pending",
+      "priced": "Priced",
+      "closed": "Closed"
+    },
+    "answerStatus": {
+      "drafting": "Drafting",
+      "in_review": "In review",
+      "completed": "Completed",
+      "sent": "Sent",
+      "reopened": "Reopened"
+    },
+    "email": {
+      "adminEmailSubject": "User Contact – Question {shortId}",
+      "newMessageBanner": "New message (question)",
+      "questionId": "Question ID",
+      "sender": "Sender",
+      "subjectWithTitle": "Question: {title}",
+      "subjectGeneric": ""
+    },
+    "detail": {
+      "answerHeader": "Answer",
+      "answerAttachments": "Answer Attachments",
+      "goToOfferCta": "Go to offer",
+      "email": {
+        "adminEmailSubject": "User Contact – Question {shortId}",
+        "newMessageBanner": "New message (question)",
+        "questionId": "Question ID",
+        "sender": "Sender",
+        "subjectWithTitle": "Question: {title}",
+        "subjectGeneric": "Contact about question"
+      },
+      "errors": {
+        "loginRequired": "Login required",
+        "missingFields": "Missing fields",
+        "unauthorized": "Unauthorized",
+        "fallbackUser": "User",
+        "messageCreateFailed": "Could not create message",
+        "ticketCreateFailed": "Failed to create ticket",
+        "uploadFailed": "Upload failed: {detail}",
+        "metaInsertFailed": "Attachment meta insert failed: {detail}"
+      },
+      "loadingTitle": "Loading...",
+      "questionAttachments": "Question Attachments",
+      "status": "Status",
+      "goToOfferTitle": "Go to offer & SLA page",
+      "goToOfferAria": "Go to offer",
+      "answerStatus": "Answer Status",
+      "assignedConsultant": "Assigned Consultant:",
+      "contactHeader": "Contact us about this question",
+      "yourMessage": "Your message",
+      "messagePlaceholder": "Write your message",
+      "contactAttachments": "Contact Attachments",
+      "filePicker": {
+        "label": "Attachment(s)",
+        "choose": "Choose File(s)"
+      }
+    },
+    "filePicker": {
+      "label": "Attachment(s)",
+      "choose": "Choose File(s)",
+      "selected": "{count} selected",
+      "clear": "clear"
+    },
+    "list": {
+      "heading": "My Questions",
+      "noRecords": "No records found.",
+      "untitled": "Untitled"
+    }
+  },
+  "terms": {
+    "client": {
+      "consentHtml": "I have read and accept the <strong>Terms of Service</strong>",
+      "goToPaymentTitle": "Go to payment",
+      "continue": "Continue",
+      "redirecting": "Redirecting…"
+    },
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated",
+    "intro": "These Terms of Use (“Terms”) govern your access to and use of the services provided by Gümrük360. By using the platform, you agree to these Terms.",
+    "labels": {
+      "questionId": "Question ID",
+      "priceTL": "Fee (TRY)",
+      "requiredCredits": "Required Credits",
+      "balance": "Balance"
+    },
+    "sections": {
+      "info": {
+        "title": "Information",
+        "li1": "All advisory answers are prepared by competent/qualified experts.",
+        "li2": "The information/answers provided are not definitive or binding. You must verify with the relevant public authorities before taking action.",
+        "li3": "To the extent permitted by law, no liability is accepted for any loss (direct/indirect, special, incidental, or loss of profit/reputation/data) arising from the Platform or the Services.",
+        "li4": "Prices include VAT and are charged at the time of payment (via the authorized payment provider).",
+        "li5": "Given the digital nature of the service, fees or used credits are non-refundable. Only in case of an erroneous charge, a pro-rata refund or credit may be provided.",
+        "li6": "You are responsible for account security and for the accuracy of any information/documents you share.",
+        "li7": "The Platform is provided “as is/as available”; uninterrupted service is not guaranteed.",
+        "li8": "For details, please refer to the Terms of Service.",
+		"tos": "Terms of Service"
+      },
+      "approval": {
+        "checkbox": "<strong>I have read and understood the preliminary information; I acknowledge that the information is for informational purposes only, that I must verify with public authorities before making final decisions, that no liability is accepted, that prices include VAT and are charged instantly, and that there are no refunds for fees or used credits (except erroneous charges). I have read the Terms of Service.</strong>"
+      }
+    },
+    "actions": {
+      "cancel": "Cancel"
+    }
+  },
+  "offer": {
+    "title": "Offer Proposal",
+    "createdAt": "Created",
+    "notFound": {
+      "title": "Record not found",
+      "questionId": "Question ID",
+      "back": "Back to /ask"
+    },
+    "creditLine": "{amount} credits (min advantage {pct}%)"
+  },
+  "orgTopUp": {
+    "owner": "Insufficient credits. Top up",
+    "member": "Corporate credits insufficient. Click to inform admin.",
+    "sending": "Sending...",
+    "sent": "Message sent.",
+    "failed": "Failed"
+  },
+  "l2info": {
+    "title": "Information prepared based on the system check",
+    "intro": "The following notes are shared before the offer stage, based on an automated evaluation of your question and its attachments. If these do not apply to your case, please disregard them.",
+    "notReady": "No system check (L2) record is available yet.",
+    "none": "No items to display.",
+    "statusOk": "ok",
+    "groups": {
+      "required": "Required",
+      "should": "Recommended",
+      "info": "For your information"
+    },
+    "labels": {
+      "status": "Status",
+      "confidence": "Confidence",
+      "requiredMissing": "Required missing",
+      "shouldMissing": "Recommended missing",
+      "info": "For your information"
+    }
+  },
+  "downloadPdf": {
+    "title": "Download offer as PDF",
+    "label": "Download PDF"
+  },
+  "creditPay": {
+    "payWithCredits": "Pay with credits",
+    "topUp": "Insufficient credits. Top up",
+    "buyCredits": "Buy Credits"
+  },
+  "confirmPay": {
+    "info": "When you confirm, the amount will be deducted from the relevant credit balance and the question status will become <b>approved</b>.",
+    "openTermsTitle": "Open the terms in a new tab",
+    "terms": "",
+    "agreeTail": "I have read and understood the preliminary information; I acknowledge that the information is for informational purposes only, that I must verify with public authorities before making final decisions, that no liability is accepted, that prices include VAT and are charged instantly, and that there are no refunds for fees or used credits (except erroneous charges). I have read the Terms of Service.",
+    "confirmPay": "Confirm & Pay",
+    "processing": "Processing…",
+    "cancel": "Cancel"
+  },
+  "checkoutCancel": {
+    "title": "Payment Cancelled",
+    "message": "You have cancelled the payment."
+  },
+  "checkoutReturn": {
+    "title": "Payment Result",
+    "success": "Your payment has been received. Thank you!",
+    "redirectCountdown": "You will be redirected to the order details in {seconds} sec.",
+    "redirecting": "Redirecting…",
+    "goToOrder": "Go to Order",
+    "fail": "Payment could not be completed.",
+    "retry": "Try Again"
+  },
+  "checkoutPage": {
+	  "redirectingPaddle": "Redirecting...",
+    "title": "Checkout",
+    "error": {
+      "title": "Payment Initialization Failed",
+      "testHint": "For testing, append <code>?amount={amount}</code> to the URL (in cents) and try again."
+    },
+    "loading": {
+      "title": "Preparing Checkout…",
+      "wait": "Please wait."
+    },
+    "mock": {
+      "info": "MOCK payment screen (local development)",
+      "successBtn": "Mark Payment as Successful"
+    },
+    "cancel": "Cancel"
+  },
+  "ask": {
+    "confirmOrg": {
+		"sections": {
+        "info": {
+          "title": "Information",
+          "li1": "All advisory answers are prepared by competent/qualified experts.",
+          "li2": "The information/answers provided are not definitive or binding. You must verify with the relevant public authorities before taking action.",
+          "li3": "To the extent permitted by law, no liability is accepted for any loss (direct/indirect, special, incidental, or loss of profit/reputation/data) arising from the Platform or the Services.",
+          "li4": "Prices include VAT and are charged at the time of payment (via the authorized payment provider).",
+          "li5": "Given the digital nature of the service, fees or used credits are non-refundable. Only in case of an erroneous charge, a pro-rata refund or credit may be provided.",
+          "li6": "You are responsible for account security and for the accuracy of any information/documents you share.",
+          "li7": "The Platform is provided “as is/as available”; uninterrupted service is not guaranteed.",
+          "li8": "For details:"
+        },
+        "approval": {
+          "checkbox": "I have read and understood the preliminary information; I acknowledge that the information is for informational purposes only, that I must verify with public authorities before making final decisions, that no liability is accepted, that prices include VAT and are charged instantly, and that there are no refunds for fees or used credits (except erroneous charges). I have read the Terms of Service."
+        }
+      },
+      "title": "Payment Confirmation",
+      "questionId": "Question ID",
+      "priceTRY": "Price (TRY)",
+      "requiredCredits": "Required Credits",
+      "balance": "Balance",
+      "statusApproved": "approved",
+      "note": {
+        "before": "Once you confirm, the amount will be deducted from your organization credits and the question status will become ",
+        "after": "."
+      }
+    },
+    "confirmUser": {
+		"sections": {
+        "info": {
+          "title": "Information",
+          "li1": "All advisory answers are prepared by competent/qualified experts.",
+          "li2": "The information/answers provided are not definitive or binding. You must verify with the relevant public authorities before taking action.",
+          "li3": "To the extent permitted by law, no liability is accepted for any loss (direct/indirect, special, incidental, or loss of profit/reputation/data) arising from the Platform or the Services.",
+          "li4": "Prices include VAT and are charged at the time of payment (via the authorized payment provider).",
+          "li5": "Given the digital nature of the service, fees or used credits are non-refundable. Only in case of an erroneous charge, a pro-rata refund or credit may be provided.",
+          "li6": "You are responsible for account security and for the accuracy of any information/documents you share.",
+          "li7": "The Platform is provided “as is/as available”; uninterrupted service is not guaranteed.",
+          "li8": "For details:",
+		  "tos": "Terms of Service"
+        },
+        "approval": {
+          "checkbox": "I have read and understood the preliminary information; I acknowledge that the information is for informational purposes only, that I must verify with public authorities before making final decisions, that no liability is accepted, that prices include VAT and are charged instantly, and that there are no refunds for fees or used credits (except erroneous charges). I have read the Terms of Service."
+        }
+      },
+      "title": "Payment Confirmation",
+      "questionId": "Question ID",
+      "priceTRY": "Price (TRY)",
+      "requiredCredits": "Required Credits",
+      "balance": "Balance",
+      "statusApproved": "approved",
+      "note": {
+        "before": "Once you confirm, the amount will be deducted from your credits and the question status will become ",
+        "after": "."
+      }
+    },
+    "page": {
+      "header": {
+        "title": "Ask a Question",
+        "lead": "Upload attachments and describe your question; the system will calculate the price."
+      },
+      "urgent": {
+        "note": "When active, delivery time shortens and an urgent multiplier applies to the fee.",
+        "title": "Urgent",
+        "label": "Urgent"
+      },
+      "errors": {
+        "workersFetch": "Failed to fetch worker list",
+        "actionFailed": "Operation failed.",
+        "codeLabel": "Code",
+        "unexpected": "Unexpected error."
+      },
+      "precheck": {
+        "failed": "Precheck failed. Please try again.",
+        "notClear": "Your question isn’t clear. Please add specific item/HS code, transaction type, and context.",
+        "outOfScope": "Your question seems outside customs regulation scope.",
+        "error": "Precheck error. Please try again."
+      },
+      "busyAnalyzing": "Analyzing…",
+      "worker": {
+        "title": "Consultant Selection",
+        "label": "Consultant",
+        "selected": "Selected",
+        "loading": "Loading…",
+        "avatarAlt": "avatar",
+        "selectOptional": "Select (optional)",
+        "empty": "No records.",
+        "openPreview": "Open selected consultant’s CV preview",
+        "preview": "Preview",
+        "helpText": "You may select a consultant from the list. If you don’t, EasyCustoms360’s experienced team will handle your question."
+      },
+      "form": {
+		  "descHelp": {
+  "open": "Ask question tips",
+  "title": "Important Note",
+  "intro": "Provide concrete details for accurate pricing. File attachments clarify scope and can positively affect pricing. Open-ended questions may be treated broadly and increase the price.",
+  "bullets": {
+    "files": "",
+    "scope": "",
+    "work": "",
+    "lang": "Unless otherwise specified, your question will be answered in the language of the question. Specifying a different language or requesting answers in multiple languages may affect pricing.",
+    "time": "If the “Urgent” option is selected, the delivery time is reduced and an urgent fee multiplier is applied.",
+    "risk": "",
+    "open": ""
+  },
+  "closeWrite": "Close and start writing",
+  "close": "Close"
+},
+        "titleLabel": "Title",
+        "titlePlaceholder": "e.g., HS code classification – engine parts",
+        "descLabel": "Description",
+        "descPlaceholder": "Scope, regulation notes, expectations…"
+      },
+      "files": {
+        "choose": "Choose File",
+        "selectedList": "Selected files",
+        "remove": "remove",
+        "header": "Attachments",
+        "hint": "PDF, DOCX, XLSX, JPG, PNG…"
+      },
+      "submit": {
+        "calculating": "Calculating…",
+        "calcOffer": "Calculate Offer"
+      },
+      "result": {
+        "title": "Price Offer",
+        "mode": "Evaluation mode",
+        "estHours": "Estimated hours",
+        "daysNormal": "Days (normal)",
+        "daysUrgent": "Days (urgent)",
+        "hours": "hours",
+        "days": "days",
+        "price": "Price",
+        "currencyTRY": "TRY",
+        "targetDue": "Target delivery",
+        "calc": "Calc",
+        "minFee": "Min fee",
+        "urgentMult": "Urgent"
+      },
+      "cvPreview": {
+        "title": "CV Preview",
+        "close": "Close"
+      }
+    },
+    "precheckBlock": {
+      "warnTitle": "Precheck Warning",
+      "failed": "This record did not pass precheck.",
+      "notClearTitle": "Not Clear",
+      "notClearMsg": "Your question isn’t clear. Please add specific item/HS code, transaction type, and context.",
+      "outOfScopeTitle": "Out of Customs Scope",
+      "outOfScopeMsg": "Your question seems outside customs regulation scope.",
+      "errorTitle": "Precheck Error",
+      "errorMsg": "An error occurred during precheck. Please try again.",
+      "backToAsk": "Back to /ask"
+    },
+    "offerActions": {
+      "processing": "Processing…",
+      "accept": "Accept offer",
+      "acceptTitle": "Accept the offer",
+      "orgUseCredits": "Use Organization Credits",
+      "orgUseCreditsTitle": "Use Organization Credits",
+      "reject": "Reject offer",
+      "rejectTitle": "Reject the offer and go back to questions",
+      "cancelTitle": "Cancel",
+      "cancel": "Cancel",
+      "terms": {
+        "ownership": "Unless otherwise stated, the usage rights of the generated outputs belong to the customer.",
+        "compliance": "Provided information and documents will be used only in line with legal requirements and obligations."
+      }
+    },
+    "cvPreview": {
+      "title": "CV Preview",
+      "close": "Close"
+    },
+    "terms": {
+      "summary": {
+        "priceTL": "Price (TRY)",
+        "requiredCredits": "Required credits",
+        "balance": "Balance"
+      },
+      "client": {
+        "consentHtml": "I have read, understood and <strong>accept</strong> the terms of use.",
+        "goToPaymentTitle": "Proceed to payment",
+        "redirecting": "Redirecting…",
+        "continue": "Continue"
+      }
+    }
+  },
+  "email": {
+    "workerAssign": {
+      "subject": "{brand} Question assignment",
+      "questionId": "Question ID",
+      "paymentAmount": "Payment amount",
+      "creditAmount": "Credit amount",
+      "paymentMethod": "Payment method",
+      "goToPanel": "Go to panel",
+      "goToQuestion": "Go to question",
+      "bestRegards": "Best regards"
+    },
+    "receipt": {
+      "subject": "Payment Received – Order {orderId}",
+      "title": "Payment Received",
+      "thanks": "Thank you for your payment. Your order details are below.",
+      "orderId": "Order ID",
+      "questionId": "Question ID",
+      "amount": "Amount",
+      "viewOrder": "View Order",
+      "viewQuestion": "View Question",
+      "footer": "This email was sent by Gumruk360.",
+      "currencyNote": "All amounts are shown in"
+    },
+    "ticketReply": {
+      "subject": "Support Reply",
+      "subjectWithTitle": "Your reply: {title}",
+      "questionLabel": "Question",
+      "continueQuestionLink": "Continue your question here",
+      "viewSupport": "View your ticket here"
+    }
+  },
+  "slaBox": {
+    "heading": "Offer",
+    "notFound": "No SLA/price data found for this record.",
+    "creditHeading": "Credit",
+    "creditWillUse": "Credit to be used",
+    "price": "Price",
+    "currencyTRY": "TRY",
+    "creditAmount": "Credit Amount",
+    "targetDue": "Target delivery",
+    "selectedConsultant": "Selected consultant",
+    "teamFallback": "Gumruk360 Team",
+    "calc": "Calc",
+    "calcHourly": "Hourly",
+    "calcMin": "Min",
+    "calcUrgent": "Urgent ×"
+  },
+  "questionActions": {
+    "approve": "Approve offer",
+    "approving": "Approving…",
+    "approved": "Approved",
+    "reject": "Reject",
+    "rejecting": "Rejecting…",
+    "rejected": "Rejected",
+    "goToPayment": "Go to payment",
+    "errorPrefix": "Error",
+    "approvedInfo": "Approved. You will be redirected to the payment page; once payment completes, the status becomes paid."
+  },
+  "workerCv": {
+    "profile": {
+      "loading": "Loading...",
+      "labels": {
+        "displayName": "Display name",
+        "titleTR": "Title (TR)",
+        "titleEN": "Title (EN)",
+        "tags": "Tags",
+        "photo": "Photo"
+      },
+      "placeholders": {
+        "titleTR": "e.g., Gümrük Müşaviri",
+        "titleEN": "e.g., Customs Broker"
+      },
+      "tags": {
+        "help": "Add with Enter or comma. Up to 10 tags. A phrase counts as a single tag."
+      },
+      "buttons": {
+        "chooseFile": "Choose file",
+        "uploadPhoto": "Upload photo",
+        "deletePhoto": "Delete photo",
+        "save": "Save"
+      },
+      "ui": {
+        "previewAlt": "Preview",
+        "preview": "Preview"
+      },
+      "messages": {
+        "saveFailed": "Save failed.",
+        "saved": "Saved ✔",
+        "selectImage": "Please select an image.",
+        "uploadFailed": "Upload failed.",
+        "photoUploaded": "Photo uploaded.",
+        "deleteConfirm": "Are you sure you want to delete the photo?",
+        "deleteFailed": "Could not delete.",
+        "photoDeleted": "Photo deleted."
+      }
+    },
+    "preview": {
+      "title": "Preview",
+      "ui": {
+        "photoAlt": "profile"
+      },
+      "labels": {
+        "specialties": "Specific specialties"
+      },
+      "empty": "No content for this language."
+    },
+    "blocksEditor": {
+      "title": "CV Blocks",
+      "preview": "Preview",
+      "lang": "Language",
+      "type": "Type",
+      "select": "Select",
+      "order": "Order",
+      "content": "Content",
+      "contentPlaceholder": "You can paste Text/HTML or provide a JSON document.",
+      "save": "Save",
+      "delete": "Delete",
+      "saved": "Saved ✔",
+      "updateFailed": "Block could not be updated.",
+      "deleteFailed": "Delete failed.",
+      "deleteConfirm": "Are you sure you want to delete this CV block?"
+    },
+    "title": "CV Blocks"
+  },
+  "api": {
+    "precheck": {
+      "empty_text": "Question text is empty."
+    },
+    "file_not_found": "File not found",
+    "upload_error": "Upload error",
+    "invalid_path": "Invalid path",
+    "question_not_found": "Question not found.",
+    "pdf_generate_failed": "PDF could not be generated.",
+    "title_too_short": "Title must be at least 3 characters.",
+    "session_not_found": "Session not found.",
+    "question_create_failed": "Question could not be created.",
+    "delete_error": "Delete error",
+    "missing_question_id": "Question ID is required.",
+    "scope_answer_only": "Scope can only be 'answer'.",
+    "unknown_error": "Unexpected error"
+  },
+  "pdf": {
+    "title": {
+      "offer": "CUSTOMS CONSULTING OFFER"
+    },
+    "kv": {
+      "questionId": "Question ID:",
+      "createdAt": "Created at:",
+      "title": "Title:",
+      "assignedConsultant": "Assigned Consultant:",
+      "teamDefault": "Gümrük360 Team",
+      "creditAmount": "Credit Amount:",
+      "creditLine": "{credits} credits (your advantage min %{pct})",
+      "urgency": "Priority",
+      "urgent": "URGENT",
+      "deliveryTime": "Delivery Time",
+      "deliveryDays": "{count} business days",
+      "deliveryDate": "Delivery Date",
+      "offerAmount": "Offer Amount"
+    },
+    "sections": {
+    "scope": {
+      "heading": "SCOPE",
+      "intro": "This offer defines the framework of the customs and foreign trade advisory service for the subject/question specified above. The work is carried out by a competent/qualified team and includes the following steps:",
+      "step1": "Case Registration",
+      "step1_body": "Your question and any attached documents/information submitted to the Portal are recorded.",
+      "step1_note": "Missing items are not chased; the assessment is performed strictly based on the information you provide.",
+      "step2": "Pre-Review & Legislation Scan",
+      "step2_body": "A topic-specific review is conducted within the scope of the Customs Law, secondary legislation, communiqués/circulars, international rules and administrative practice."
+    },
+    "delivery": {
+      "heading": "DELIVERY",
+      "present": "Answer Delivery: The final advisory answer is published in the “Answer” section on the Portal and simultaneously sent to you by e-mail.",
+      "time": "Timeline: The target delivery date is indicated above. (It is based on the information/document set you provided.)",
+      "revision": "Revision: Within the initial scope and assumptions, one short revision right is available within 7 days after delivery. Sending new data/scenarios constitutes a scope change."
+    },
+    "terms": {
+      "heading": "TERMS & CONDITIONS",
+      "b1": "All advisory answers are prepared by competent/qualified experts.",
+      "b2": "The information/answers provided are not definitive or binding. You must verify with the relevant public authorities before taking action.",
+      "b3": "To the extent permitted by law, no liability is accepted for any loss (direct/indirect, special, incidental, or loss of profit/reputation/data) arising from the Platform or the Services.",
+      "b4": "Prices include VAT and are charged at the time of payment (via the authorized payment provider).",
+      "b5": "Given the digital nature of the service, fees or used credits are non-refundable. Only in case of an erroneous charge, a pro-rata refund or credit may be provided.",
+      "b6": "You are responsible for account security and for the accuracy of any information/documents you share.",
+      "b7": "The Platform is provided “as is/as available”; uninterrupted service is not guaranteed. See the Terms of Service for details."
+    },
+    "approval": {
+      "heading": "ACKNOWLEDGMENT",
+      "body": "I have read and understood the preliminary information under this offer; I acknowledge that the information is for informational purposes only, that I must verify with public authorities before making final decisions, that no liability is accepted, that prices include VAT and are charged instantly, and that there are no refunds for fees or used credits (except erroneous charges). I have read the Terms of Service."
+    }
+  },
+    "errors": {
+      "questionNotFound": "Question not found.",
+      "pdfFailed": "Failed to generate PDF."
+    },
+    "offer": {
+      "h1": "SLA • Pricing Result",
+      "questionId": "Question ID",
+      "createdAt": "Created at",
+      "title": "Title",
+      "pricingResult": "Pricing result",
+      "urgent": "Urgent",
+      "yes": "Yes",
+      "no": "No",
+      "price": "Price",
+      "selectedConsultant": "Selected consultant",
+      "team": "Team"
+    }
+  },
+  "mail": {
+    "welcome": {
+      "subject": "{{brandName}} - Welcome",
+      "bodyHtml": "<div style=\"font-family:Arial,sans-serif;font-size:14px;line-height:1.6;color:#111\"><h2 style=\"margin:0 0 12px\">Welcome{{name}}! 👋</h2><p>Your account has been created successfully. We’ll enrich this template with brand content soon.</p></div>"
+    },
+    "admin": {
+      "subject": "New Membership",
+      "text": "New user signup:\n  Email: {{email}}\n  Full name: {{fullName}}\n  Account type: {{accountType}}\n  Organization: {{organizationName}}"
+    }
+  },
+  "dashboardApi": {
+    "recentQuestions": {
+      "q101": {
+        "title": "What is the obligation to prove origin?"
+      },
+      "q102": {
+        "title": "Difference between ATR and EUR.1"
+      },
+      "q103": {
+        "title": "Extension of Inward Processing Regime period"
+      },
+      "q104": {
+        "title": "Guarantee on release for free circulation"
+      },
+      "q105": {
+        "title": "Transit regime penalties"
+      }
+    },
+    "alerts": {
+      "slaNear": {
+        "title": "Question approaching SLA",
+        "message": "ID {id} expires in about {hours} hours."
+      }
+    }
+  },
+  "meta": {
+    "title": "EasyCustoms360 — Customs & Trade Solutions",
+    "titleDefault": "EasyCustoms360 — Customs & Trade Solutions",
+    "titleTemplate": "%s — EasyCustoms360",
+    "descriptionDefault": "AI-assisted customs & trade advisory. Compliance, optimization, and seamless workflows in one place.",
+    "description": "AI-powered customs consultancy platform"
+  }
+}

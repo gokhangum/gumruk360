@@ -1,0 +1,2805 @@
+{
+	"rss": {
+    "title": "Gümrük360 Blog",
+    "description": "Son yazılar"
+  },
+	"contactmain": {
+		"dropzone": {
+    "title": "Dosyalarınızı buraya sürükleyip bırakın",
+    "or": "veya",
+    "browse": "Bilgisayardan seçin"
+  },
+    "hero": {
+      "title": "İletişim",
+      "subtitle": "Sorularınızı ve taleplerinizi iletin; en kısa sürede dönüş yapalım."
+    },
+    "fields": {
+      "email": {
+        "label": "E-posta",
+        "placeholder": "ornek@alan.com"
+      },
+      "phone": {
+        "label": "Telefon (isteğe bağlı)",
+        "placeholder": "+90 5XX XXX XX XX"
+      },
+      "subject": {
+        "label": "Başlık",
+        "placeholder": "Konu başlığı"
+      },
+      "message": {
+        "label": "Mesajınız",
+        "placeholder": "Bize iletmek istediğiniz mesaj..."
+      },
+      "attachments": {
+        "label": "Ekler (isteğe bağlı)",
+        "hint": "PDF, DOCX, XLSX, JPG, PNG dosyalarını ekleyebilirsiniz."
+      }
+    },
+    "actions": {
+      "send": "Gönder",
+      "sending": "Gönderiliyor..."
+    },
+    "success": "Mesajınız alınmıştır. Teşekkür ederiz! En geç bir iş günü içinde size dönüş sağlayacağız.",
+    "errors": {
+      "unexpected": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin."
+    },
+    "ref": "Talep No"
+	},
+
+	  "about": {
+    "hero": {
+      "title": "Hakkımızda"
+    },
+    "body_html": "<p>Gümrük ve dış ticaret; sürekli güncellenen mevzuat, belge trafiği ve zaman baskısı barındırır. Klasik yöntemler yavaş, takibi zor ve pahalı olabilir. Gümrük360.com, Consphera Teknoloji ve Danışmanlık Ltd. Şti.’nin mühendislik, danışmanlık ve yapay zekâyı bir araya getiren altyapısı üzerinde çalışan Gümrük Danışmanlığı Hizmet Platformudur.</p>\n<p>Amacımız; teknolojiyle gümrük uzmanlığını birleştirip, dış ticaret ve gümrük süreçleri ile ilgili ihtiyaç duyulan uzmanlığa hızlı, uzmanlığa dayalı, şeffaf, izlenebilir şekilde ulaşılabilmesine imkan sağlamaktır.</p>\n<p>Bu amaçla Gümrük360’ın kullandığı ve kendi geliştirdiğimiz Consphera PSA (Professional Services Automation) omurgası; başvuru toplama, ön değerlendirme, risk puanlama, AI destekli anında fiyatlama, SLA yönetimi, uzman seçimi, kalite kontrol, faturalama ve raporlama süreçlerini uçtan uca otomatikleştirir. Böylece danışmanlık akışı ilk temas anından teslimata kadar tek kaynaktan izlenebilir.</p>\n<h2>Gümrük360 ile Ne Yapıyoruz?</h2>\n<p>Karmaşık mevzuatı uzmanlıkla sadeleştirmek: Sorunlu ve destek gereken konuları uzmanların analizi ile anlaşılır kılmak ve uygulanabilir çözümler sunmak.</p>\n<p>Hızı standart hâle getirmek: Anında teklif, yanıt süreleri, anlık bildirimler ve takip ekranlarıyla öngörülebilir hizmet.</p>\n<p>Uzmanlıkla güven vermek: Konuya özel uzman seçebilme imkânı ve çift aşamalı kalite kontrol.</p>\n<p>Uygun maliyet ve esneklik: Soru başına veya kredi tabanlı model; tek seferlik ödeme ve abonelik senaryoları.</p>\n<p>İzlenebilirlik ve uyum: Süreçlerin tamamı kayıt altındadır ve KVKK/GDPR ilkeleriyle uyumludur. Rol tabanlı erişim ve şifreleme standartlarıyla veri güvenliği güçlendirilmiştir.</p>\n<h2>Vizyon</h2>\n<p>Dış ticaret ve gümrük danışmanlığını dijitalleştirip; hız, doğruluk ve güveni aynı pakette standart hâle getirmek. Bölgesel bir çözüm olmaktan çıkıp global olarak referans alınan, regülasyon-tabanlı danışmanlığın “yeni normu” olmak. Bunu; ölçeklenebilir mimari, ölçülebilir SLA’lar ve sürekli iyileştirme kültürüyle destekliyoruz.</p>\n<h2>Değerlerimiz</h2>\n<p>Güven: Doğru bilgi, net sözleşme, izlenebilir süreç.</p>\n<p>Yetkinlik: Konu uzmanı ekip, sürekli eğitim ve güncel mevzuat takibi.</p>\n<p>Hız: Kısa yanıt süreleri, etkin otomasyon, akıllı önceliklendirme.</p>\n<p>Gizlilik & Uyum: KVKK/GDPR ilke ve standartlarına uyumlu veri işleme.</p>\n<p>Sürekli İyileştirme: Kullanıcı geri bildirimleriyle yaşayan ürün. Her sürümde performans ve deneyim metriklerini izler, görünür iyileştirmeler sunarız.</p>\n<h2>Kurucumuz</h2>\n<p>Kurucumuz Gökhan Yurdakul kariyer hayatının ilk 10 yılında T.C. Ticaret Bakanlığında çalışmış, hem mevzuatın hem de uygulamayı yönlendiren düzenlemelerin hazırlanması aşamalarında etkin rol almıştır. Sonrasında PWC Türkiye’ye katılmış ve PWC’deki ikinci 10 yıllık kariyerinde, Kamu tarafındaki tecrübesini, özel sektörün ihtiyaç duyduğu ihtiyaçların tespiti ve uygulanabilir çözümler sunulması ile harmanlamıştır.</p>\n<p>Gümrük ve Dış Ticaret süreçlerinin sürekli gelişime ihtiyaç duyduğu, karşılaşılan veya planlanan konular ile ilgili bilgiye hızlıca ulaşılmasının yaratılacak katma değeri yüksek oranda arttıracağı ve klasik yöntemlerin bu açıdan yeterli olmadığını deneyimlediğinden Gümrük360.com'u kurmuştur.</p>"
+  },
+	"howItWorksIndividual": {
+	"intro_html": "<p>Gümrük360, gümrük danışmanlığını hızlı, izlenebilir ve şeffaf hale getiren çevrimiçi bir platformdur. Sorunuzu ve ilgili belgeleri yüklersiniz; sistem, verdiğiniz bilgi ve belgelere göre ön inceleme yapar, net bir teklif ve hedef teslim süresi (SLA) oluşturur. Ödemeyi yapar, cevabınızı portal üzerinden güvenle teslim alırsınız. Danışmanlıkla ilgili tüm adımları tek bir platformdan yönetirsiniz.</p><p>Sorunuz olursa lütfen <a href=\"/contact\" class=\"underline\">İletişim</a> bölümünden bize yazın.</p>",
+    "hero": {
+      "title": "Nasıl Çalışır - Bireysel Kullanıcılar"
+    },
+    "tabs": {
+      "tab1": "Soru & Yanıt Süreci",
+      "tab2": "Kredi İşlemleri"
+    },
+    "tab1_html": "<h3><b>A) Üyelik ve Profil Oluşturma</b></h3>• Hizmetten yararlanmak için <a href=\"/signup\" class=\"underline\">üye</a> olmanız gerekir.</p>\n<p>• Sağlıklı bilgilendirme ve faturalama için <a href=\"/dashboard/profile\" class=\"underline\">profil ve fatura</a>” bilgilerinizin güncel olması önemlidir.</p>\n<h3><b>B) Soru Oluşturma</b></h3>\n<p><b>1.</b> /ask sayfasını açın ve “<a href=\"/ask\" class=\"underline\">Soru Sor</a>” adımını başlatın. Açılan bilgilendirmeyi dikkatle okuyup onaylayın.</p>\n<p><b>2.</b> Sorunuzu açık ve somut biçimde yazın; varsa belgelerinizi ekleyin (PDF/DOCX/XLSX/JPG/PNG). Doğru fiyatlama için, açıklama alanının sağ üstündeki “Soru sorma ipuçları” bölümünü inceleyin.</p>\n<p><b>3.</b> Acil seçeneğini işaretleyebilirsiniz. Acil işlerde teslim süresi kısalır, ücrete acil çarpanı uygulanır.</p>\n<p><b>4.</b> “Teklifi Hesapla” dediğinizde sistem ön kontrolleri çalıştırır ve birçok kritere göre harcanacak zamanı tespit ederek fiyatı hesaplar: konu gümrük mevzuatıyla gerekçeli ilişkilendirilemezse veya bilgi eksikse sizi uyarır ve yönlendirir. Eksikler hem fiyatlandırmayı hem de cevabın kalitesini etkiler; uyarılara göre düzenleyip tekrar hesaplatın.</p>\n<p>Not: Eksikleri tamamlayabilir ya da eksiklerle devam ederek teklifi görebilirsiniz.</p>\n<h3><b>C) Teklif ve SLA</b></h3>\n<p>Teklif kutusunda şunları görürsünüz:</p>\n<p>• Tahmini süre ve hedef teslim zamanı</p>\n<p>• Normal ve Acil teslim seçenekleri</p>\n<p>• Ücret özeti (iş kapsamına göre dinamik hesaplanır)</p>\n<p>• Kredi gereksinimi (krediyle ödeme yapacaksanız)</p>\n<p>İsterseniz teklifi “PDF İndir” butonuna tıklayarak PDF olarak indirebilirsiniz.</p>\n<p>Teklifi Onaylayabilir veya Reddedebilirsiniz. Reddederseniz, <a href=\"/dashboard/questions\" class=\"underline\">Sorularım</a> ekranından ilgili soruya girip “Teklife Git” ile teklife tekrar ulaşabilirsiniz.</p>\n<h3><b>D) Ödeme Seçenekleri</b></h3>\n<p><b>1. Kartla ödeme (PayTR – TL):</b> Güvenli PayTR altyapısı kullanılır; kart bilgileriniz Gümrük360 tarafından işlenmez/saklanmaz. Başarılı işlem sonrası siparişiniz otomatik eşleşir; <a href=\"/dashboard/questions\" class=\"underline\">Sorularım</a> ekranında durum “Onaylandı” olur. Ödeme bilgilerinize <a href=\"/dashboard/orders\" class=\"underline\">Ödemelerim</a> menüsünden ulaşabilirsiniz.</p>\n<p><b>2. Krediyle ödeme:</b> Krediniz varsa “Kredi ile Öde” butonunu kullanın. Onay sonrası kredi bakiyeniz anında güncellenir. Krediniz yoksa <a href=\"/dashboard/credits\" class=\"underline\">“Kredi Satın Al”</a> ile hızlıca kredi yükleyebilirsiniz (bkz. “Bireysel Kredi İşlemleri” sekmesi).</p>\n<h3><b>E) Soru Paneli ve İletişim</b></h3>\n<p>Ödeme sonrası <a href=\"/dashboard/questions\" class=\"underline\">Sorularım</a> → ilgili soruda “Detay” ile paneli açın; tüm işlemleri buradan yönetirsiniz. Cevap durumu, çalışmanın devam ettiğini veya tamamlandığını gösterir. Gerekirse uzman, sizden ek bilgi/belge isteyebilir.Soru ile ilgili iletişimi de buradaki bölümden sağlayabilirsiniz. Sistem tarafından anında ilgili uzmana/danışmana iletilmektedir.  Tüm yazışmalar portal içinde kayıtlı kalır ve e-posta ile bildirilir.</p>\n<h3><b>F) Çalışma ve Teslim</b></h3>\n<p>Çalışma tamamlandığında yanıt panele yüklenir, durum “Gönderildi” olur ve e-posta ile bildirilirsiniz. Yanıtı portaldan görüntüleyebilir, PDF olarak indirebilirsiniz.</p>",
+    "tab2_html": "<h3><b>A) Kredi Satın Alma</b></h3>\n<p><b>1.</b> <a href=\"/dashboard/credits\" class=\"underline\">Kredi Yönetimi</a> menüsüne girin.</p>\n<p><b>2.</b> Mevcut Kredi bakiyenizi kontrol edin.</p>\n<p><b>3.</b> Kredi fiyatlandırmasını görüntüleyin; birim fiyat dönemsel olarak değişebilir ve yüksek miktarlarda daha avantajlı olabilir.</p>\n<p><b>4.</b> Yüklemek istediğiniz kredi miktarını girin ve “Kredi Yükle” butonuna basın.</p>\n<p><b>5.</b> Onay ekranındaki bilgileri kontrol edip onaylayın, ödeme sağlayıcı üzerinden işlemi tamamlayın.</p>\n<p><b>6.</b> Satın aldığınız krediler anında bakiyenize yansır.</p>\n<p><b>7.</b> Satın alma ve kullanım hareketlerini ilgili sekmelerden görüntüleyebilirsiniz.</p>\n<p>Not: Krediyle ödeme; teklifi onayladıktan sonra “Kredi ile Öde” diyerek hızlıca tamamlamanızı sağlar.</p>\n<h3><b>B) Faturalama</b></h3>\n<p>Faturanız, sistemde kayıtlı e-posta adresinize gönderilir. <a href=\"/dashboard/profile\" class=\"underline\">Profil</a> → Fatura Bilgileri alanını doğru ve güncel tutmanızı öneririz.</p></p>"
+  },
+  "howItWorksCorporate": {
+	  "intro_html": "<p>Gümrük360, gümrük danışmanlığını hızlı, izlenebilir ve şeffaf hale getiren çevrimiçi bir platformdur. Sorunuzu ve ilgili belgeleri yüklersiniz; sistem, verdiğiniz bilgi ve belgelere göre ön inceleme yapar, net bir teklif ve hedef teslim süresi (SLA) oluşturur. Ödemeyi yapar, cevabınızı portal üzerinden güvenle teslim alırsınız. Danışmanlıkla ilgili tüm adımları tek bir platformdan yönetirsiniz.</p><p>Sorunuz olursa lütfen <a href=\"/contact\" class=\"underline\">İletişim</a> bölümünden bize yazın.</p>",
+    "hero": {
+      "title": "Kurumsal — Nasıl Çalışır"
+    },
+    "tabs": {
+      "tab1": "Kurumsal Kredi & Yetkilendirme",
+      "tab2": "Soru & Yanıt Süreci"
+    },
+    "tab1_html": "<h3><b>A) Kurumsal kredi mantığı</b></h3>\n<p>Kurumsal kullanıcılar için önerilen ödeme yöntemi kurum kredisidir. Kredi bakiyesini şirket adına yüklersiniz; yetkilendirdiğiniz ekip üyeleri, sorular için bu bakiyeyi kullanabilir. Böylece tek tek kart işlemiyle uğraşmadan, hızlı ve kontrol edilebilir bir ödeme akışı sağlanır.</p>\n<h3><b>B) Kredi satın alma</b></h3>\n<p><b>1.</b> <a href=\"/dashboard/subscription\" class=\"underline\">Abonelik İşlemleri</a> menüsüne girin.</p>\n<p><b>2.</b> Mevcut kredi bakiyenizi kontrol edin.</p>\n<p><b>3.</b> Kredi fiyatlandırmasını görüntüleyin. (Birim fiyat dönemsel olarak değişebilir; yüksek miktarlarda daha avantajlı olabilir.)</p>\n<p><b>4.</b> Yüklemek istediğiniz kredi miktarını girin ve “Kredi Yükle” butonuna basın.</p>\n<p><b>5.</b> Onay ekranındaki bilgileri kontrol edip onaylayın; ödeme sağlayıcı üzerinden işlemi tamamlayın.</p>\n<p><b>6.</b> Satın aldığınız kredi anında bakiyenize yansır ve kullanıma hazır hale gelir.</p>\n<p><b>7.</b> Satın alma ve kullanım hareketlerini ilgili sekmelerden görüntüleyebilirsiniz.</p>\n<p>Not: Kurum kredisi yükleme ve plan/abonelik yönetimi yetkisi yalnızca Abonelik Yöneticisindedir (krediyi şirket adına yükleyen kullanıcı).</p>\n<h3><b>C) Kullanıcı yetkilendirme</b></h3>\n<p>• <a href=\"/dashboard/subscription\" class=\"underline\">Abonelik İşlemleri</a> → “Yetkilendir” butonuna tıklayın.</p>\n<p>• Kurum kredisiyle işlem yapabilecek kullanıcının sisteme kayıtlı e-posta adresini girip “Yetkilendir” deyin.</p>\n<p>• Kullanıcı listede görüntülenir; Sil ile yetkiyi iptal edebilirsiniz.</p>\n<p>• Yetkilendirilen kullanıcılar, kredi yükleme/plan bilgilerini göremez; sadece krediyi kullanarak soru ödemesi yapabilir.</p>\n<p>Ekip kullanım istatistikleri “Kullanım” butonundan görüntülenebilir ve Excel olarak indirilebilir.</p>\n<h3><b>D) Faturalama</b></h3>\n<p>• Faturanız, sistemde kayıtlı e-posta adresinize iletilir.</p>\n<p>• <a href=\"/dashboard/profile\" class=\"underline\">Profil</a> → Fatura Bilgileri alanını doğru ve güncel tutun.</p>",
+    "tab2_html": "<h3><b>A) Soru oluşturma</b></h3>\n<p><b>1.</b> <a href=\"/ask\" class=\"underline\">Soru Sor</a> adımını başlatın (bilgilendirmeyi okuyup onaylayın).</p>\n<p><b>2.</b> Sorunuzu net ve somut biçimde yazın; varsa ilgili belgeleri ekleyin (PDF/DOCX/XLSX/JPG/PNG).</p>\n<p>Doğru fiyatlama için, açıklama alanının sağ üstündeki “Soru sorma ipuçları” bölümünü inceleyin.</p>\n<p><b>3.</b> Danışman seçimi: İsterseniz listeden bir danışmanı seçebilirsiniz; seçim yapılmazsa sistem Gümrük360 ekibinde uygun bir uzmana atama yapar.</p>\n<p><b>4.</b> Acil seçeneğini işaretleyebilirsiniz. Acil işler daha kısa sürede teslim edilir; ücrete acil çarpanı uygulanır.</p>\n<h3><b>B) Ön kontrol, teklif ve SLA</b></h3>\n<p>• Teklifi Hesapla dediğinizde sistem ön kontrolleri çalıştırır ve birçok kritere göre harcanacak zamanı tespit ederek fiyatı hesaplar. Konu gümrük mevzuatıyla örtüşmüyorsa veya bilgi eksikse uyarı ve yönlendirme yapılır.</p>\n<p>• Eksikler hem fiyatı hem de cevabın kalitesini etkileyebilir; uyarılara göre düzenleyip yeniden hesaplayın.</p>\n<p>• Teklif kutusu: Tahmini süre ve hedef teslim; Normal/Acil teslim seçenekleri; iş kapsamına göre dinamik ücret özeti; kredi gereksinimi.</p>\n<p>İsterseniz teklifi PDF olarak indirebilirsiniz.</p>\n<p>Teklifi Onaylayabilir veya Reddedebilirsiniz. Reddederseniz, <a href=\"/dashboard/questions\" class=\"underline\">Sorularım</a> → Detay ile ilgili soruda “Teklife Git” ile teklife tekrar ulaşabilirsiniz.</p>\n<h3><b>C) Ödeme seçenekleri (kurumsal)</b></h3>\n<p><b>Öncelikli akış: Kurum kredisiyle ödeme</b></p>\n<p>• <b><i>Kredi yeterli ise:</i></b> “Kurumsal Krediyi Kullan” butonuna basın, onay ekranını kontrol edip onaylayın. Bakiye anında güncellenir.</p>\n<p><b><i>• Kredi yetersiz ise:</i></b> “Kurumsal Kredi Yükle” ile yeni kredi ekleyin (yalnızca Abonelik Yöneticisi). Ayrıca Kredi Miktarı yetersizse, yetkilendirilen ekip üyelerine görüntülenecek bildirime tıklandığında Abonelik Yöneticisine bu konuda bildirim sistem tarafından iletilmektedir.</p>\n<p><b>Alternatif akış: Kartla ödeme</b></p>\n<p>• İstisnai durumlarda soru ödemesi kartla da tamamlanabilir.</p>\n<p>• PayTR altyapısı kullanılır; kart bilgileriniz Gümrük360 tarafından işlenmez/saklanmaz.</p>\n<p>• Başarılı işlemden sonra sipariş otomatik eşleşir; <a href=\"/dashboard/questions\" class=\"underline\">Sorularım - Detay</a> ekranında soru durumu “Onaylandı” olur.</p>\n<p>• Ödeme özetine <a href=\"/dashboard/orders\" class=\"underline\">Ödemelerim</a> menüsünden ulaşabilirsiniz.</p>\n<h3><b>D) Soru paneli ve iletişim</b></h3>\n<p>• Ödemeden sonra <a href=\"/dashboard/questions\" class=\"underline\">Sorularım</a> → ilgili soruda “Detay” ile paneli açın; tüm işlemleri buradan yönetin.</p>\n<p>• Cevap durumu, çalışmanın devam ettiğini veya tamamlandığını gösterir.</p>\n<p>• Gerekirse uzman ek bilgiler isteyebilir. Soru ile ilgili iletişimi de buradaki bölümden sağlayabilirsiniz. Tüm yazışmalar portal içinde kayıtlıdır ve e-posta ile bildirilir.</p>\n<h3><b>E) Çalışma ve teslim</b></h3>\n<p>• Çalışma tamamlandığında yanıt panele yüklenir, durum “Gönderildi” olur ve e-posta ile bildirilirsiniz.</p>\n<p>• Yanıtı portaldan görüntüleyebilir, PDF olarak indirebilirsiniz.</p></p>"
+  },
+	"legal": {
+		"privacy": {
+      "meta": {
+        "title": "Kişisel Verilerin Korunması ve Gizlilik Bildirimi (KVKK)",
+        "description": "Consphera Teknoloji ve Danışmanlık Ltd. Şti. tarafından sunulan Gümrük360 hizmetleri kapsamında kişisel verilerin işlenmesine ilişkin KVKK aydınlatma metni."
+      },
+      "title": "Kişisel Verilerin Korunması ve Gizlilik Bildirimi (KVKK)",
+      "effective_date_label": "Yürürlük tarihi:",
+      "effective_date_value": "10.11.2025",
+      "last_update_label": "Son güncelleme:",
+      "last_update_value": "10.11.2025",
+      "content_html": "<p>Bu Aydınlatma Metni; <strong>gumruk360.com</strong> ve alt alan adları üzerinden sunulan Gümrük360 hizmetlerinde yürüttüğümüz kişisel veri işleme faaliyetlerine ilişkindir.</p><h2>1) Kapsam ve Kişi Grupları</h2><ul><li>Ziyaretçiler, kullanıcılar/üyeler</li><li>Müşteri ve potansiyel müşteri firma yetkilileri</li><li>Tedarikçi/iş ortağı yetkilileri</li><li>İş başvuru sahipleri</li></ul><h2>2) İşlediğimiz Kişisel Veri Kategorileri</h2><ul><li><strong>Kimlik &amp; İletişim:</strong> ad-soyad, unvan, firma, e-posta, telefon.</li><li><strong>Hesap &amp; Kullanım:</strong> kullanıcı adı, şifre (hash), tercih/ayarlar, oturum/aktivite kayıtları, destek talepleri.</li><li><strong>İşlem Güvenliği &amp; Teknik:</strong> IP, cihaz/tarayıcı bilgileri, zaman damgaları, hata kayıtları.</li><li><strong>Sözleşme &amp; Fatura:</strong> teklif/sipariş/ifa kayıtları, vergi/fatura bilgileri.</li><li><strong>Ödeme:</strong> kart verisi bizde saklanmaz; ödeme kuruluşu üzerinden işlenir.</li><li><strong>İçerik/Hizmet:</strong> ilettiğiniz belgeler, soru/yanıt içerikleri, ekler.</li><li><strong>Pazarlama Tercihleri:</strong> ticari ileti izni, bülten tercihleri, kampanya etkileşimleri.</li><li><strong>Çerezler:</strong> zorunlu, analitik, işlevsel ve (rıza verilmişse) pazarlama çerezleri.</li></ul><p><em>Hassas veri talep etmiyoruz. Paylaşılan belgelerde hassas veri varsa lütfen maskeleyin.</em></p><h2>3) Amaçlar</h2><ul><li>Sözleşmenin kurulması ve ifası: üyelik, hizmet sunumu, müşteri desteği, faturalama.</li><li>Hukuki yükümlülükler: mali/vergisel kayıtlar, resmi makam talepleri.</li><li>Meşru menfaatler: güvenlik ve dolandırıcılık önleme, ürün geliştirme, kalite ve eğitim.</li><li>Açık rıza gerektiren haller: ticari ileti, pazarlama çerezleri, gerektiğinde yurtdışına aktarım.</li><li>Yapay zekâ destekli süreçler: <em>fiyatlama ve iş yükü puanlama</em> (yanıtı uzmanlar verir).</li></ul><h2>4) Hukuki Sebepler (KVKK md. 5–6)</h2><ul><li>Sözleşmenin kurulması/ifası için zorunluluk</li><li>Hukuki yükümlülüğün yerine getirilmesi</li><li>Meşru menfaat (temel hak ve özgürlüklere zarar vermemek kaydıyla)</li><li>Kanunlarda açıkça öngörülmesi</li><li>Açık rıza (gerekli hallerde)</li></ul><p>Özel nitelikli veriler yalnızca kanuni zorunluluk ve gerekli ek tedbirlerle, ayrıca açık rızanız varsa işlenir.</p><h2>5) Toplama Yöntemleri</h2><ul><li>Web/mobil arayüz, formlar, destek kanalları, e-posta/telefon</li><li>Sistem logları ve entegrasyonlar</li><li>Çerezler ve benzeri teknolojiler (Bkz. Çerez Politikası)</li></ul><h2>6) Alıcı Grupları ve Aktarımlar</h2><p><strong>Yurtiçi:</strong> ödeme/banka, barındırma/veritabanı, e-posta, güvenlik/log, profesyonel danışmanlar, iş ortakları/alt yükleniciler ve yetkili kamu kurumları (gerekli ve sınırlı ölçüde).</p><p><strong>Yurtdışına Aktarım:</strong> bazı veri işleyenlerimiz (örn. barındırma, analitik, e-posta, ödeme, yapay zekâ servisleri) yurtdışında olabilir. Aktarım; KVKK md. 9 uyarınca uygun hukuki dayanaklarla ve sözleşmesel/teknik tedbirlerle yapılır (yeterlilik, taahhütname, <em>açık rıza</em> vb.).</p><p><em>Kart verisi ödeme kuruluşu tarafından işlenir/saklanır; biz kart verisi tutmayız.</em></p><h2>7) Saklama Süreleri</h2><table><thead><tr><th>Veri</th><th>Tipik süre</th><th>Dayanak</th></tr></thead><tbody><tr><td>Hesap/kimlik &amp; sözleşme/fatura</td><td>10 yıl</td><td>TTK &amp; VUK</td></tr><tr><td>Destek kayıtları &amp; sistem logları</td><td>2 yıla kadar</td><td>Meşru menfaat</td></tr><tr><td>Pazarlama izin/verileri</td><td>İzin geri alana kadar</td><td>Açık rıza</td></tr><tr><td>İş başvurusu verileri</td><td>Süreç + 1 yıl</td><td>Meşru menfaat / rıza</td></tr><tr><td>Çerez verileri</td><td>6–24 ay (türe göre)</td><td>Açık rıza / meşru menfaat</td></tr></tbody></table><h2>8) Otomatik Değerlendirme / Profil Çıkarımı</h2><p>İçerik sınıflandırma, iş yükü puanlama ve ön fiyatlama gibi otomatik değerlendirmeler kullanılır; bu çıktılar operasyonel kararları <em>destekler</em> ve tek başına bağlayıcı/hukuki sonuç doğurmaz.</p><h2>9) İlgili Kişi Hakları (KVKK md. 11)</h2><ul><li>İşlenip işlenmediğini öğrenme, bilgi talebi</li><li>Amacı ve amaca uygun kullanımı öğrenme</li><li>Aktarıldığı üçüncü kişileri bilme</li><li>Eksik/yanlışsa düzeltme</li><li>Silme/yok etme ve bildirim</li><li>Otomatik analiz sonuçlarına itiraz</li></ul><h2>10) Başvuru Usulü ve Süre</h2><p>Başvurularınızı aşağıdaki kanallarla yapabilirsiniz:<br/>Güvenli e-imza/mobil imza ile e-posta: destek@gumruk360.com<br/>Islak imzalı posta: Nisbetiye Mahallesi, Nisbetiye Caddesi No:24 Da:17 Beşiktaş /İSTANBUL</p><p>Başvurular en geç 30 gün içinde sonuçlandırılır.</p><h2>11) Çerezler ve Tercih Yönetimi</h2><p>Zorunlu çerezler (oturum/güvenlik) her zaman aktiftir. Analitik/performans ve pazarlama çerezleri için açık rıza tercihlerinize uyarız. Ayrıntılar ve tercih yönetimi için <a href=\"/cookies\">Çerez Politikası</a>’nı ziyaret edin.</p><h2>12) Güvenlik Önlemleri</h2><p>Teknik (şifreleme, erişim kontrolü, yedekleme, loglama, zafiyet yönetimi), idari (rol-tabanlı yetkilendirme, gizlilik taahhütleri, tedarikçi sözleşmeleri) ve süreçsel (veri minimizasyonu, saklama-silme politikaları, olay müdahale planı) tedbirler uygulanır. Veri ihlalinde yasal bildirimler yerine getirilir.</p><h2>13) Çocukların Verileri</h2><p>Hizmetlerimiz yetişkinlere yöneliktir; 18 yaş altına yönelik veri toplama hedefimiz yoktur. Tespit halinde veri silinir/yok edilir.</p><h2>14) Değişiklikler</h2><p>Bu metin güncellenebilir. En güncel sürümün yayımlanmasıyla yürürlüğe girer; önemli değişikliklerde uygun bildirim yapılır.</p><h2>15) İletişim</h2><p>Consphera Teknoloji ve Danışmanlık Ltd. Şti.<br/>Adres: Nisbetiye Mahallesi, Nisbetiye Caddesi No:24 Da:17 Beşiktaş /İSTANBUL<br/>E-posta: destek@gumruk360.com</p>"
+    },
+		 "terms": {
+      "meta": {
+        "title": "Hizmet Şartları",
+        "description": "Consphera Teknoloji ve Danışmanlık Ltd. Şti. tarafından sunulan Gümrük360 platformu ve hizmetleri için geçerli Hizmet Şartları."
+      },
+      "title": "Hizmet Şartları (Terms of Service)",
+      "effective_date_label": "Yürürlük tarihi:",
+      "effective_date_value": "10 Kasım 2025",
+      "last_update_label": "Son güncelleme:",
+      "last_update_value": "10 Kasım 2025",
+      "content_html": "<p>Bu Hizmet Şartları (“Şartlar”), Consphera Teknoloji ve Danışmanlık Ltd. Şti. (“Consphera”, “Şirket”, “biz”) tarafından sunulan Gümrük360 platformu, alan adları ve alt alan adları (birlikte “Platform”) ile bunlar üzerinden sunulan tüm ürün ve hizmetlerin (konusunda yetkin/uzman kişilerce sağlanan danışmanlık, içerik ve eğitimler, kredi/ücretlendirme, vb., birlikte “Hizmetler”) kullanımını düzenler. Platformu ziyaret eden veya kullanan gerçek/tüzel kişi (“Kullanıcı”, “müşteri” veya “siz”) bu Şartları kabul etmiş sayılır.</p><p>Bu Şartlar, Elektronik Ticaret, Tüketicinin Korunması, Borçlar Kanunu, Türk Ticaret Kanunu, KVKK (6698) ve ilgili mevzuat çerçevesinde hazırlanmıştır. B2C ve B2B kullanıma açıktır. Tüketici sıfatı taşıyan kullanıcılar için emredici hükümler saklıdır.</p><h2>1) Tanımlar</h2><p><strong>Tenant / Kiracı Alanı:</strong> Platformun çoklu müşteri (multi-tenant) mimarisinde her müşteri/organizasyon adına ayrılan mantıksal alan.<br/><strong>Kredi:</strong> Hizmetlerin belirli modüllerine erişim ve/veya işlem adedi için kullanılan sayısal kullanım birimi.<br/><strong>Danışmanlık Cevabı:</strong> Her zaman konusunda yetkin/uzman kişi(ler) tarafından hazırlanıp kontrol edilen nihai yanıt/rapor.<br/><strong>Fiyatlama Motoru:</strong> Sadece fiyatlama/puanlama amaçlı çalışan otomasyon/yapay zekâ bileşenleri (danışmanlık içeriği üretmez).<br/><strong>Üçüncü Taraflar:</strong> Ödeme sağlayıcısı, altyapı, kimlik, analitik, barındırma vb. sağlayıcılar.</p><h2>2) Sözleşmenin Kurulması ve Kapsam</h2><p>2.1. Platforma erişim, hesap oluşturma veya Hizmetleri kullanmaya başlama ile bu Şartlar kabul edilmiştir.<br/>2.2. Elektronik ortamda kurulan bu sözleşme yazılı şekil şartını karşılar; elektronik bildirimler hukuken geçerlidir.</p><h2>3) Hesap, Tenant ve Yetkilendirme</h2><p>3.1. Her müşteri için ayrı bir tenant tesis edilir. Yönetici kullanıcı davetlerini, rollerini ve yetkilerini belirler.<br/>3.2. Hesap güvenliği sizin sorumluluğunuzdadır. Yetkisiz erişimde derhâl bildirim yapın.</p><h2>4) Hizmetlerin Niteliği: Uzman Cevabı (AI içerik üretmez)</h2><p>4.1. Tüm danışmanlık cevapları konusunda yetkin/uzman kişi(ler) tarafından hazırlanır ve kontrol edilir.<br/>4.2. Fiyatlama Motoru, sadece fiyatlama/puanlama amacıyla kullanılır; hukuki/teknik içerik üretmez ve yanıt taslağı oluşturmaz.<br/>4.3. Gümrük, dış ticaret, vergi ve mevzuat sık değişir. Verilen cevaplar yalnızca bilgilendirme amaçlıdır; nihai/bağlayıcı görüş değildir.<br/>4.4. Müşteriler, verilecek kararlardan önce kamu kurumlarına başvurarak hususları kendileri netleştirmekle yükümlüdür.<br/>4.5. Resmî işlemler/başvurular için tarafımıza sağlanan bilgi-belgenin doğruluğu ve tamlığı Kullanıcıya aittir.</p><h2>5) Kabul Edilebilir Kullanım (AUP)</h2><p>5.1. Platform şu amaçlarla kullanılamaz:<br/>a) Mevzuata aykırı, yanıltıcı, üçüncü kişilerin haklarını ihlal eden içerikler,<br/>b) Kişisel verilerin hukuka aykırı işlenmesi/aktarılması,<br/>c) Hesap paylaşımı, kimlik taklidi, çoklu hesapla manipülasyon,<br/>d) Platform güvenliğini ihlal edecek tarama, tersine mühendislik, yetkisiz test,<br/>e) Yasa dışı ürün/hizmet tanıtımı,<br/>f) Kredi/ücretlendirme modelini dolanma girişimleri.<br/>5.2. Aykırılık halinde hesabı askıya alma/sonlandırma hakkımız saklıdır.</p><h2>6) Ücretlendirme, Kredi ve Ödemeler</h2><p>6.1. Kredi Tabanlı Kullanım: Belirli özellikler kredi tüketir.<br/>6.2. Fiyatlama: Fiyatlar, iç politika ve otomasyonlarımıza göre belirlenir; detay kriter açıklanmaz.<br/>6.3. KDV: Aksi belirtilmedikçe fiyatlar KDV dahildir.<br/>6.4. Tahsilat: Ödemeler, yetkili üçüncü taraf sağlayıcı üzerinden anında tahsil edilir.<br/>6.5. İade/İptal: Dijital hizmet niteliği gereği kullanılmış krediler iade edilmez. Hatalı tahsilatta oransal iade veya kredi iadesi yapılır.</p><h2>7) İçerik Ekosistemi (Blog, Haber, Kullanıcı İçerikleri)</h2><p>7.1. Blog/Haber içerikleri genel bilgilendirme amaçlıdır; doğruluk ve güncellik için taahhüt verilmez.<br/>7.2. Kullanıcı tarafından yüklenen içeriklerin hukuka uygunluğundan Kullanıcı sorumludur.<br/>7.3. Kullanıcı, yüklediği içerikler için dünya çapında, münhasır olmayan, bedelsiz kullanım lisansı verdiğini; içeriklerin Platform içinde gösterimine onay verdiğini kabul eder.</p><h2>8) Fikri Mülkiyet</h2><p>8.1. Platform, yazılım, tasarım, veri modelleri, eğitim materyalleri ve markalar Consphera veya lisans verenlere aittir.<br/>8.2. Tersine mühendislik, çoğaltma, yeniden satma, alt lisanslama yasaktır.<br/>8.3. Geri bildirim/öneriler için ücretsiz, devredilebilir, gayri münhasır kullanım hakkı verirsiniz.</p><h2>9) Veri Koruma, KVKK ve Güvenlik</h2><p>9.1. KVKK Aydınlatma Metni / Gizlilik Bildirimi ve Çerez Politikası bu Şartların ayrılmaz parçasıdır.<br/>9.2. Consphera, duruma göre veri sorumlusu ve/veya veri işleyen olabilir. Alt yükleniciler (barındırma, depolama, analitik, ödeme) kullanılabilir.<br/>9.3. Makul idari ve teknik tedbirler uygulanır; mutlak güvenlik taahhüdü verilmez.<br/>9.4. İşe özgü hassas bilgilerin platform dışında güvenli paylaşımı Kullanıcının sorumluluğundadır.</p><h2>10) Üçüncü Taraf Servisler</h2><p>10.1. Ödeme, kimlik doğrulama, depolama, analitik ve benzeri servisler üçüncü taraflarca sağlanabilir; bunların kendi şartları geçerlidir.<br/>10.2. Üçüncü taraf kesintileri veya değişikliklerinden kaynaklı doğrudan veya dolaylı hiçbir zarardan sorumlu olmayız.</p><h2>11) Hizmet Düzeyi, Bakım ve Değişiklik Hakkı</h2><p>11.1. Platform “olduğu gibi” ve “mevcut hâliyle” sunulur; kesintisiz hizmet taahhüdü verilmez.<br/>11.2. Bakım, sürüm yükseltme, özellik ekleme/çıkarma hakkı saklıdır; kritik değişikliklerde makul bildirim yapılır.</p><h2>12) Sorumluluk Reddi — Açık ve Geniş Kapsamlı Feragat</h2><p>12.1. Sağlanan tüm bilgi, içerik ve danışmanlık cevapları yalnızca bilgilendirme amaçlıdır; nihai/bağlayıcı görüş değildir.<br/>12.2. Kullanıcı, Platform ve Hizmetler’den elde ettiği bilgi/öneri/yorumlar ile yapacağı tüm işlem, başvuru, beyan, hesaplama ve kararlardan bizzat sorumludur; kamu kurumlarına başvurarak hususları kendisi netleştirir.<br/>12.3. Kanunun zorunlu kıldığı haller hariç, her türlü zarar (doğrudan, dolaylı, özel, arızi, netice kabilinden, kâr/itibar/veri kaybı dâhil) için hiçbir şekilde sorumluluk kabul edilmez.<br/>12.4. Üçüncü taraf servisler, altyapı sağlayıcıları, internet/iletişim ağları, kullanıcı hatası veya eksik/yanlış bilgi-belge gibi nedenlerle ortaya çıkabilecek her türlü sonuçtan sorumluluk kabul edilmez.<br/>12.5. Herhangi bir sorumluluk sınırı, tavanı, istisnası bu feragat kapsamında Kullanıcı lehine yorumlanmaz; azami yasal feragat uygulanır.<br/><em>Not: Tüketici sıfatı taşıyan kullanıcılar bakımından, emredici mevzuatın zorunlu kıldığı haller ve zorunlu haklar saklıdır.</em></p><h2>13) Sözleşmenin Süresi, Askıya Alma ve Fesih</h2><p>13.1. Şartlar kabul ile yürürlüğe girer.<br/>13.2. AUP ihlali, hukuka aykırılık veya güvenlik riski hâlinde hesabı askıya alma veya feshetme hakkımız vardır.<br/>13.3. Fesihte, mevzuat gereği veriler makul süre saklanabilir.</p><h2>14) Sözleşme Değişiklikleri</h2><p>14.1. Şartlar tek taraflı güncellenebilir; yürürlük tarihi güncellenir ve makul bildirim yapılır.<br/>14.2. Değişiklikten sonra Platformu kullanmaya devam etmeniz, değişiklikleri kabul ettiğiniz anlamına gelir.</p><h2>15) Uygulanacak Hukuk ve Yetki</h2><p>15.1. İşbu Şartlar Türk Hukuku’na tabidir.<br/>15.2. Uyuşmazlıklarda İstanbul (Merkez) Mahkemeleri ve İcra Daireleri yetkilidir.<br/>15.3. Tüketicilere ilişkin zorunlu yetki ve zorunlu hakem heyeti düzenlemeleri saklıdır.</p><h2>16) Bildirimler ve İletişim</h2><p>16.1. Sözleşmesel bildirimler; Platform içi bildirim, kayıtlı e-posta veya hesapta bildirilen e-posta adresine yapılabilir.<br/>16.2. İletişim: Consphera Teknoloji ve Danışmanlık Ltd. Şti.<br/>Adres: Nisbetiye Mahallesi, Nisbetiye Caddesi No:24 Da:17 Beşiktaş /İSTANBUL<br/>E-posta: destek@gumruk360.com</p><h2>17) Bölünebilirlik ve Devredilmezlik</h2><p>17.1. Hükümlerin bir kısmının geçersizliği, diğer hükümleri etkilemez.<br/>17.2. Kullanıcı, hak/yükümlülüklerini devredemez. Consphera, iş/devralma hallerinde sözleşmeyi devredebilir.</p><h2>18) Sözleşme Hiyerarşisi ve Ekler</h2><p>18.1. Bu Şartlar ile Gizlilik Bildirimi (KVKK/GDPR), Çerez Politikası, sipariş/teklif/plan (varsa) birlikte uygulanır.<br/>18.2. Çelişki halinde, özel düzenleme (teklif/protokol) → işbu Şartlar → politikalar sıralaması geçerlidir.</p><h3>Kabul Beyanı</h3><p>Platformu kullanarak bu Şartları okuduğunuzu, anladığınızı ve kabul ettiğinizi beyan edersiniz.</p>"
+    },
+    "cookies": {
+      "meta": {
+        "title": "Çerez Politikası",
+        "description": "Consphera Teknoloji ve Danışmanlık Ltd. Şti. tarafından işletilen alan adlarında kullanılan çerezler ve benzeri teknolojiler hakkında detaylı bilgi."
+      },
+      "title": "Çerez Politikası",
+      "effective_date_label": "Yürürlük tarihi:",
+      "effective_date_value": "10 Kasım 2025",
+      "last_update_label": "Son güncelleme:",
+      "last_update_value": "10 Kasım 2025",
+      "content_html": "<p>Bu Çerez Politikası, Consphera Teknoloji ve Danışmanlık Ltd. Şti. (“Şirket”, “biz”) tarafından işletilen aşağıdaki alan adlarında (“Site”) kullanılan çerezler ve benzeri teknolojiler hakkında bilgi verir:</p><ul><li><strong>gumruk360.com</strong> ve alt alan adları</li></ul><p>Bu metin, 6698 sayılı KVKK ve (uygulanabilir olduğunda) AB GDPR kapsamındaki aydınlatma yükümlülüklerimizi yerine getirmek amacıyla hazırlanmıştır.</p><h2>1) Çerez nedir? Benzer teknolojiler nelerdir?</h2><p>“Çerez”, bir web sitesini ziyaret ettiğinizde tarayıcınıza/cihazınıza kaydedilen küçük metin dosyasıdır. Benzer teknolojiler arasında yerel depolama (localStorage/sessionStorage), piksel etiketleri, SDK’lar ve çerez benzeri kimlikleyiciler bulunur. Bu teknolojiler; oturumun sürdürülmesi, güvenlik, tercihlerin hatırlanması ve Site performansının ölçülmesi gibi amaçlarla kullanılır.</p><h2>2) Çerez türleri</h2><p><em>Süreye göre</em></p><ul><li><strong>Oturum çerezleri:</strong> Tarayıcı kapanınca silinir.</li><li><strong>Kalıcı çerezler:</strong> Tanımlı süre boyunca cihazda kalır.</li></ul><p><em>Kaynağa göre</em></p><ul><li><strong>Birinci taraf:</strong> Doğrudan Site tarafından yerleştirilir.</li><li><strong>Üçüncü taraf:</strong> İş ortaklarımız/servis sağlayıcılarımızca yerleştirilir.</li></ul><p><em>Amaca göre</em></p><ul><li><strong>Zorunlu (temel):</strong> Site’nin çalışması, güvenlik, dolandırıcılık önleme. (Onay gerektirmez.)</li><li><strong>Tercih/İşlevsellik:</strong> Dil, para birimi, görünüm vb. tercihleri hatırlar.</li><li><strong>Performans/Analitik:</strong> Kullanımı ve etkileşimi ölçer, iyileştirmelere temel sağlar.</li><li><strong>Reklam/Hedefleme:</strong> İlgi alanına dayalı içerik ve ölçümleme yapar.</li></ul><h2>3) Hangi veriler işlenir?</h2><p>Çerez ve benzer teknolojiler üzerinden; maskelenmiş IP, cihaz/tarayıcı bilgileri, oturum/çerez kimliği, yönlendiren sayfa, tıklama akışı, görüntülenen sayfalar, form etkileşimleri, tercih edilen dil, zaman damgaları ve reklam kategorilerinde takma ad (pseudonymous) tanımlayıcılar işlenebilir. Kişisel verileriniz mümkün olduğunda toplu/anonim veya takma adlandırılmış biçimde işlenir.</p><h2>4) Çerez kullanım amaçlarımız</h2><ul><li>Kimlik doğrulama, oturum yönetimi, yük dengeleme ve güvenlik</li><li>Üyelik/hesap işlemleri, ödeme ve dolandırıcılık önleme</li><li>Dil/para birimi/tenant gibi tercihlerin hatırlanması</li><li>Performans/analitik ölçüm ve ürün/UX iyileştirmeleri</li><li>Kampanya, duyuru ve hizmet tanıtımlarının etkin gösterimi</li></ul><h2>5) Hukuki dayanak</h2><p><strong>Zorunlu çerezler:</strong> Kanuni yükümlülük ve/veya meşru menfaat (KVKK m.5/2; GDPR m.6/1(c)-(f)).<br/><strong>Tercih, Analitik, Reklam çerezleri:</strong> Açık rıza (KVKK m.5/1; GDPR m.6/1(a)).</p><p>Rızanızı Çerez Yönetim Paneli üzerinden dilediğiniz an verebilir, güncelleyebilir veya geri çekebilirsiniz.</p><p><strong>Önceden engelleme:</strong> Rıza gerektiren çerezler, rıza verilene kadar tetiklenmez.</p><h2>6) Üçüncü taraf sağlayıcılar ve uluslararası aktarım</h2><p>Site’de analitik, güvenlik, ödeme, pazarlama/iletişim ve barındırma amaçlarıyla üçüncü taraf hizmetler kullanılabilir. Bu sağlayıcıların yerleştirdiği çerezler kendi politika ve saklama rejimlerine tabidir; veriler yurt dışına aktarılabilir. Aktarımlarda uygun koruma mekanizmaları (ör. yeterlilik kararı, Standart Sözleşme Maddeleri – SCC, açık rıza) uygulanır.</p><ul><li><em>Analitik/Performans:</em> Google Analytics / Plausible / Vercel Analytics (IP anonimizasyonu etkinleştirilebilir).</li><li><em>Güvenlik/Performans:</em> Cloudflare, (gerekirse) reCAPTCHA.</li><li><em>Ödeme &amp; Vergi:</em> PayTR ve Paddle (işlem güvenliği, KDV/vergisel gereklilikler, fraud önleme).</li><li><em>Pazarlama/İletişim:</em> Meta Pixel, LinkedIn Insight Tag, e-posta servisleri.</li><li><em>Altyapı/Oturum:</em> Kimlik doğrulama, barındırma ve CDN hizmetleri (örn. Supabase Auth).</li></ul><h2>7) Çerezleri nasıl yönetebilirsiniz?</h2><ul><li><strong>Çerez Yönetim Paneli:</strong> Sayfanın altındaki bildirimden veya altbilgideki “Çerez Tercihleri” bağlantısından kategori bazında aç/kapa yapabilirsiniz.</li><li><strong>Tarayıcı ayarları:</strong> Çoğu tarayıcıda çerez engelleme/silme seçenekleri bulunur.</li><li><strong>Cihaz/reklam tercihleri:</strong> Mobil reklam tanımlayıcılarını sıfırlayabilir, ilgi alanına dayalı reklamları sınırlayabilirsiniz.</li></ul><p><em>Uyarı:</em> Zorunlu çerezlerin devre dışı bırakılması, Site’nin temel işlevlerini etkileyebilir ve hizmette kesintilere yol açabilir.</p><h2>8) Saklama süreleri</h2><ul><li><strong>Oturum çerezleri:</strong> Tarayıcı kapanana kadar.</li><li><strong>Kalıcı çerezler:</strong> Amaçla orantılı olarak 1 gün – 24 ay (sağlayıcıya göre değişir).</li></ul><p>Güncel ve ayrıntılı süreler Çerez Yönetim Paneli ve Ek A tablosunda yayınlanır.</p><h2>9) Rıza kayıtları, IP anonimizasyonu ve çok-kiracılı yapı</h2><ul><li><strong>Rıza kayıtları:</strong> Rıza tercihleri kategori bazında, zaman damgası ve teknik bir tanımlayıcıyla kayıt altına alınır. Rızanızı dilediğiniz an geri çekebilirsiniz.</li><li><strong>IP anonimizasyonu:</strong> Analitik araçlarında mümkün olduğunda IP kısaltma/maskeleme uygulanır.</li><li><strong>Çok-kiracılı not:</strong> Bu politika, yukarıda listelenen tüm alan adları ve bunların alt alan adları için geçerlidir. Kiracı/ülke bazlı farklılıklar Çerez Yönetim Paneli ve Ek A’da yansıtılır.</li></ul><h2>10) Haklarınız (KVKK ve GDPR)</h2><p>KVKK ve (uygulanıyorsa) GDPR kapsamında aşağıdaki haklara sahipsiniz:</p><ul><li>Erişim, düzeltme/güncelleme, silme (unutulma)</li><li>İşlemeyi kısıtlama, itiraz</li><li>Veri taşınabilirliği (GDPR)</li><li>Rızayı geri çekme</li><li>Uluslararası aktarım hakkında bilgi talebi</li></ul><p>Taleplerinizi İletişim bölümünde yer alan kanallar üzerinden bize iletebilirsiniz. Başvurular en geç 30 gün içinde sonuçlandırılır.</p><p><strong>Denetim otoritesi:</strong> Yanıtımızı yetersiz bulmanız halinde, Türkiye’de Kişisel Verileri Koruma Kurumu (KVKK)’na; AB’de ikamet ediyorsanız ilgili ülkenin Veri Koruma Otoritesi’ne şikâyette bulunabilirsiniz.</p><h2>11) Çocukların gizliliği</h2><p>Hizmetlerimiz yetişkin kullanıcılara yöneliktir; çocukları hedeflemeyiz. Çocuklara ait verilerin işlendiğini fark edersek, gereken tedbirleri alır ve veriyi mümkün olan en kısa sürede sileriz.</p><h2>12) Politika değişiklikleri</h2><p>Hizmetlerimiz veya mevzuattaki değişiklikler nedeniyle bu politika güncellenebilir. Güncel sürüm her zaman bu sayfada yayımlanır; yürürlük ve son güncelleme tarihleri en üstte yer alır. Gerekli hallerde ek bildirim yaparız.</p><h2>13) İletişim</h2><p><strong>Veri Sorumlusu:</strong> Consphera Teknoloji ve Danışmanlık Ltd. Şti.<br/><strong>Adres:</strong> Nisbetiye Mahallesi, Nisbetiye Caddesi No:24 Da:17 Beşiktaş /İSTANBUL<br/><strong>E-posta:</strong> destek@gumruk360.com</p><h3>Ek A — Kullanılan çerezler (örnek şablon; kurulumunuza göre güncelleyin)</h3><table><thead><tr><th>Çerez Adı</th><th>Sağlayıcı</th><th>Kategori</th><th>Amaç</th><th>Süre</th><th>Birinci/Üçüncü Taraf</th></tr></thead><tbody><tr><td>__Host-next-auth.csrf-token</td><td>Site</td><td>Zorunlu</td><td>Oturum güvenliği (CSRF koruması)</td><td>Oturum</td><td>Birinci</td></tr><tr><td>sb-access-token</td><td>Site (Supabase)</td><td>Zorunlu</td><td>Kimlik doğrulama</td><td>1 gün (örnek)</td><td>Birinci</td></tr><tr><td>sb-refresh-token</td><td>Site (Supabase)</td><td>Zorunlu</td><td>Oturum yenileme</td><td>7 gün (örnek)</td><td>Birinci</td></tr><tr><td>__cf_bm</td><td>Cloudflare</td><td>Zorunlu</td><td>Bot trafiğini ayrıştırma</td><td>~30 dk</td><td>Üçüncü</td></tr><tr><td>paddle_session</td><td>Paddle</td><td>Zorunlu</td><td>Ödeme oturumu, fraud önleme</td><td>Oturum</td><td>Üçüncü</td></tr><tr><td>_ga, _ga_*, _gid</td><td>Google Analytics</td><td>Analitik</td><td>Trafik &amp; etkileşim ölçümü (IP maskeleme etkin)</td><td>1g–24ay</td><td>Üçüncü</td></tr><tr><td>_fbp</td><td>Meta</td><td>Reklam</td><td>Ölçüm &amp; hedefleme</td><td>~90g</td><td>Üçüncü</td></tr><tr><td>li_fat_id (ör.)</td><td>LinkedIn</td><td>Reklam</td><td>Kampanya ölçümü</td><td>Sağlayıcıya göre</td><td>Üçüncü</td></tr></tbody></table><p><em>Not:</em> Çerez adları/süreleri sağlayıcı güncellemeleriyle değişebilir.</p>"
+    }
+  },
+	"news": {
+		"detail": {
+      "articleSection": "Haber"
+    },
+		"rss": {
+      "channelTitle": "Haberler",
+      "channelDescription": "En son haberler",
+      "errorDescription": "Hata"
+    },
+    "list": {
+      "suffix": "Haberler",
+      "pageH1": "Haberler & Duyurular",
+      "articleSection": "Haber"
+    }
+  },
+	"NewsLatestThree": {
+		"heading": "Haberler & Duyurular",
+		"readMore": "Devamını oku",
+		"viewAll": "Tümünü gör"
+	},
+	"LatestThree": {
+    "heading": "Son Yazılar",
+    "coverAlt": "Kapak görseli",
+    "readMore": "Devamını oku →",
+    "viewAll": "Tümünü gör"
+  },
+	"AuthorBlock": {
+		"avatarAria": "Yazar görseli",
+  "authorAlt": "Yazar",
+  "none": "Yok",
+  "aboutAuthor": "Yazar hakkında",
+  "allPosts": "Tüm yazıları",
+  "noImage": "Görsel yok",
+  "close": "Kapat",
+  "cvPreviewTitle": "CV Önizleme"
+},
+	"AuthorSelector": {
+		"label": "Yazar",
+  "loadError": "Yükleme hatası",
+  "pleaseEnterAuthorName": "Lütfen yazar adını girin.",
+  "avatarUploadFailed": "Avatar yükleme başarısız oldu",
+  "saveFailed": "Kayıt başarısız oldu",
+  "loading": "Yükleniyor...",
+  "selectAuthor": "Yazar seçin",
+  "groupProfiles": "Profiller (worker/worker360/admin)",
+  "groupCustomAuthors": "Özel Yazarlar (blog_authors)",
+  "addNew": "+ Yeni yazar ekle…",
+  "addNewAria": "Yeni yazar ekle",
+  "authorName": "Yazar adı",
+  "authorNamePh": "Ad Soyad",
+  "titleOptional": "Ünvan (opsiyonel)",
+  "titlePh": "Örn. Kıdemli Gümrük Müşaviri",
+  "bioOptional": "Bio (opsiyonel)",
+  "bioPh": "Kısa tanıtım metni...",
+  "avatarOptional": "Yazar Fotoğrafı (opsiyonel)",
+  "previewAlt": "Önizleme",
+  "none": "Yok",
+  "avatarHint": "Önerilen: kare (1:1), JPG/PNG/WEBP, <= 5MB",
+  "saveAndSelect": "Kaydet ve Seç",
+  "cancel": "İptal"
+},
+	"BlogForm": {
+		"defaultPostTitle": "Yeni Yazı",
+  "errorDraftCreate": "Taslak oluşturulamadı",
+  "errorUpload": "Yükleme hatası",
+  "coverUploaded": "Kapak yüklendi.",
+  "errorAssignAuthor": "Yazar atanamadı",
+  "pleaseSelectAuthor": "Lütfen yazar seçin.",
+  "errorGeneric": "Hata",
+  "saved": "Kaydedildi",
+  "errorSave": "Kaydetme hatası",
+  "pleaseSaveFirst": "Önce kaydedin.",
+  "submittedForReview": "İncelemeye gönderildi",
+  "published": "Yayınlandı",
+  "pickDateTime": "Tarih/saat seçin",
+  "scheduled": "Planlandı",
+  "labelseotitle": "SEO Başlığı",
+  "labelseodesc": "SEO Açıklaması",
+  "labelLang": "Dil",
+  "labelTenantOptional": "Tenant (opsiyonel)",
+  "optionGlobal": "(Global)",
+  "labelAuthor": "Yazar",
+  "authorLocked": "Yazar oturumunuza kilitlidir ve değiştirilemez.",
+  "labelTitle": "Başlık",
+  "labelSlugOptional": "Slug (opsiyonel)",
+  "labelSummary": "Özet",
+  "labelContent": "İçerik",
+  "labelSearchInternalLink": "İç link ara",
+  "btnAutoMeta": "Otomatik Doldur (SEO/Özet)",
+  "labelKeywordsComma": "Anahtar kelimeler (virgülle)",
+  "labelTagsComma": "Etiketler (virgülle)",
+  "labelCoverImage": "Kapak Görseli",
+  "pickImage": "Görsel seçin",
+  "imageHint": "PNG, JPG, WEBP (maks. 5MB)",
+  "coverAlt": "Kapak",
+  "btnChange": "Değiştir",
+  "btnDelete": "Sil",
+  "draftId": "Taslak ID",
+  "coverPath": "Kapak (path)",
+  "save": "Kaydet",
+  "submitForReview": "İncelemeye Gönder",
+  "publish": "Yayınla",
+  "schedule": "Planla"
+},
+	"ClientLinkPanel": {
+		"heading": "İlgili yazıya bağla",
+  "placeholder": "Başlık/metin gir (en az 3 harf)…",
+  "hintLinkInEditor": "Bir öneri seçtiğinde seçili metin linklenir (editörde).",
+  "hintCopyToClipboard": "Bir öneri seçtiğinde URL panoya kopyalanır."
+},
+	"CoverEditor": {
+		"inputPlaceholder": "depolama nesne yolu (blog/..../image.jpg)",
+  "btnClearTitle": "Kapağı temizle",
+  "btnClear": "Kapağı Sil",
+  "currentCoverPrefix": "Mevcut kapak:",
+  "noCover": "Kapak yok",
+  "clearFailed": "Kapak silinemedi",
+  "setFailed": "Kapak kaydedilemedi"
+},
+	"EditContentClient": {
+		  "labelTitle": "Başlık",
+  "placeholderTitle": "Yazı başlığı",
+  "save": "Kaydet",
+  "saving": "Kaydediliyor...",
+  "saved": "Kaydedildi.",
+  "saveError": "Kaydetme hatası",
+  "genericError": "Hata"
+},
+	"EditorTextarea": {
+		  "placeholder": "İçeriği yazın (düz yazı yazarsanız otomatik JSON'a çevrilir; JSON biliyorsanız doğrudan Tiptap JSON yapısı girin)."
+},
+	"LinkSuggestDrawer": {
+		"heading": "İç Link Önerileri",
+  "close": "Kapat",
+  "intro": "Aşağıda metinden çıkarılan adaylar ve her biri için uygun hedef yazı önerileri listelenir. Bir hedef seçtiğinde o ifade yazı içinde geçtiği her yerde linklenir. (Zaten linkli alanlar atlanır.)",
+  "candidates": "Aday ifadeler",
+  "loading": "Yükleniyor…",
+  "noSuggestions": "Öneri yok",
+  "selections": "Uygulanacak seçimler",
+  "noPicks": "Henüz seçim yapılmadı.",
+  "remove": "Kaldır",
+  "cancel": "Vazgeç",
+  "apply": "Uygula",
+  "applyTitle": "Seçimleri uygula"
+},
+	"LinkSuggester": {
+		  "heading": "İç Bağlantı Önerileri",
+  "loading": "Yükleniyor…"
+},
+	"RelatedAndNav": {
+		  "prev": "← Önceki",
+  "next": "Sonraki →",
+  "relatedHeading": "İlgili yazılar"
+},
+	"RichEditor": {
+  "btnLinkTitle": "Link ekle/düzenle",
+  "btnLink": "Link",
+		"placeholder": "Yazmaya başlayın…",
+  "alertSaveFirst": "Önce yazıyı kaydedip bir ID oluşturun, sonra görsel yükleyin.",
+  "uploadFailed": "Yükleme başarısız.",
+  "btnBulletList": "• Liste",
+  "btnOrderedList": "1. Liste",
+  "btnBlockquote": "“ Alıntı",
+  "btnInlineQuote": "“ Kısmi",
+  "btnUndo": "Geri",
+  "btnRedo": "İleri",
+  "btnEmojiTitle": "Emoji ekle",
+  "btnUnlinkTitle": "Linki kaldır",
+  "btnUnlink": "Unlink",
+  "btnLinkTitle": "Link ekle/düzenle",
+  "btnLink": "Link",
+  "btnAddImage": "Görsel Ekle",
+  "loading": "Yükleniyor…",
+  "characters": "Karakter",
+  "words": "Kelime",
+  "btnSuggestLinks": "İç link öner"
+},
+	"WorkerBlogList": {
+		"heading": "Yazılarım",
+  "newPost": "Yeni Yazı",
+  "empty": "Henüz bir yazınız yok.",
+  "thTitle": "Başlık",
+  "thLang": "Dil",
+  "thStatus": "Durum",
+  "thUpdated": "Güncellendi",
+  "thActions": "İşlemler",
+  "btnPublicView": "Yayındaki Görünüm",
+  "btnEdit": "Düzenle",
+  "status": {
+	  "published": "Yayında",
+  "scheduled": "Zamanlandı",
+  "in_review": "İncelemede",
+  "draft": "Taslak",
+  "archived": "Arşivlendi"
+  }
+},
+	"WorkerBlogNew": {
+		  "heading": "Yeni Blog Yazısı"
+},
+	"WorkerBlogEdit": {
+		  "heading": "Yazıyı Düzenle"
+},
+	"Seo": {
+		  "siteName": "Gümrük360",
+  "listTitle": "",
+  "listDescription": "Gümrük ve dış ticaret odaklı makaleler, rehberler ve haberler."
+},
+	"BlogIndex": {
+		"fallbackListTitle": "Blog",
+		"ogImageAlt": "{siteName} – Blog kapak görseli",
+  "breadcrumbHome": "Ana Sayfa",
+  "searchAria": "Blog arama",
+  "searchPlaceholder": "Ara…",
+  "tagPlaceholder": "etiket (opsiyonel)",
+  "searchInputAria": "Arama",
+  "tagInputAria": "Etiket",
+  "apply": "Uygula",
+  "noPosts": "Hiç yazı bulunamadı.",
+  "prevPage": "← Önceki",
+  "nextPage": "Sonraki →",
+  "prevPageAria": "Önceki sayfa",
+  "nextPageAria": "Sonraki sayfa",
+  "pageStatus": "Sayfa {page} / {total}",
+  "siteName": "Gümrük360",
+  "authors": "Yazarlar"
+},
+	"rss": {
+		  "title": "Blog RSS",
+  "description": "Gümrük360 Blog"
+},
+	"AuthorPosts": {
+		  "headingByAuthor": "{name}’nin tüm yazıları",
+  "headingAll": "Tüm yazılar",
+  "noPosts": "Bu yazarın yayımlanmış yazısı yok.",
+  "coverAlt": "Kapak görseli"
+	},
+  "common": {
+    "org": {
+      "companySuffix": " - Şirket",
+      "newOrganization": "Yeni Organizasyon"
+    },
+    "cvHoverPreview": {
+      "loading": "Önizleme yükleniyor…"
+    },
+    "appName": "Gümrük360",
+    "unknown": "Bilinmiyor",
+    "back": "Geri",
+    "untitled": "Başlıksız",
+    "loading": "Yükleniyor...",
+    "close": "Kapat",
+    "delete": "Sil",
+    "deleteFailed": "Silinemedi.",
+    "noRecords": "Kayıt bulunamadı.",
+    "detail": "Detay",
+    "goToEditor": "Editöre git",
+    "backToEditor": "Editöre dön",
+    "email": "E-posta",
+    "status": "Durum",
+    "answerStatus": "Cevap Durumu",
+    "assignedTo": "Atanan",
+    "preview": {
+      "failed": "Önizleme başarısız: {title}.",
+      "openFile": "Dosyayı aç",
+      "titleHtml": "HTML Önizleme"
+    },
+    "detailArrow": "Detay →",
+    "send": "Gönder",
+    "lastUpdated": "Son güncelleme",
+    "tagsInput": {
+      "placeholder": "Etiket yaz, Enter veya virgül ile ekle",
+      "tooLong": "Çok uzun (en fazla {max})",
+      "alreadyExists": "Zaten ekli",
+      "tooMany": "En fazla {max} etiket"
+    },
+    "busyOverlay": {
+      "processing": "İşleniyor…"
+    },
+    "level2Modal": {
+      "GTİP": "GTİP",
+      "Gümrük Tarife İstatistik Pozisyonu (GTİP)": "Gümrük Tarife İstatistik Pozisyonu (GTİP)",
+      "Vergi oranı ve belgeler için gerekli": "Vergi oranı ve belgeler için gerekli",
+      "Tam Menşe Ülkesi": "Tam Menşe Ülkesi",
+      "AB içindeki ülkeye göre farklı belgeler gerekebilir": "AB içindeki ülkeye göre farklı belgeler gerekebilir",
+      "Kesin Menşe Ülke": "Kesin Menşe Ülke",
+      "AB içinde farklı vergi oranları olabilir": "AB içinde farklı vergi oranları olabilir",
+      "Maliyet hesaplaması için faydalı": "Maliyet hesaplaması için faydalı",
+      "Vergi oranı ve belgeler için zorunlu": "Vergi oranı ve belgeler için zorunlu",
+      "Kesin Menşe": "Kesin Menşe",
+      "AB içindeki ülkeye göre vergi ve belgeler değişebilir": "AB içindeki ülkeye göre vergi ve belgeler değişebilir",
+      "Teslim Şartları": "Teslim Şartları",
+      "İşlem süresi ve maliyet hesaplaması için faydalı": "İşlem süresi ve maliyet hesaplaması için faydalı",
+      "title": "Eksik Bilgi/Belge Kontrolü",
+      "infoBanner": "Aşağıdaki bilgilendirme, sorunuz ve eklerinin sistem tarafından değerlendirilmesi neticesinde üretilmiştir. Düzenle butonuna basıp eksikleri tamamlayabilirsiniz. Sorunuzda bu eksikler yoksa dikkate almayınız. Devam Et butonuna bastığınızda teklifimiz iletilecektir.",
+      "noMissing": "Görüntülenecek eksik yok. Devam edebilirsiniz.",
+      "requiredTitle": "Zorunlu",
+      "recommendedTitle": "Önerilen",
+      "infoTitle": "Bilgilendirme",
+      "edit": "Düzenle",
+      "continue": "Eksiklerle Devam Et"
+    },
+    "cvPreview": {
+      "profileAlt": "profil",
+      "noPhoto": "Fotoğraf yok",
+      "unnamedConsultant": "İsimsiz Danışman",
+      "perHourShort": "₺/saat",
+      "hourlyNotSet": "Saatlik ücret belirtilmemiş",
+      "specificExpertise": "Spesifik uzmanlıklar:",
+      "noContent": "İçerik yok."
+    },
+    "cvPreviewById": {
+      "loading": "Önizleme yükleniyor…",
+      "loadFailed": "Önizleme getirilemedi: {error}"
+    },
+    "error": "Hata",
+    "login": "Giriş Yap",
+    "noDescription": "Açıklama yok"
+  },
+  "askAiNotice": {
+    "title": "AI Değerlendirme Bilgilendirmesi",
+    "intro": "Bu bölüm, göndereceğiniz soru ve eklerin nasıl işlendiğini şeffaf biçimde açıklar. Devam etmeden önce lütfen okuyup onaylayın.",
+    "bullets": {
+      "1": "Soru fiyatı değerlendirmesinde, soru ve ekleri AI tarafından analiz edilir.",
+      "2": "Değerlendirmede onlarca kriter (teknik zorluk, mevzuat kapsamı, doküman sayısı, aciliyet, yabancı dil, hesaplama ihtiyacı vb.) dikkate alınır.",
+      "3": "Bu nedenle, gönderdiğiniz içerik AI tarafından okunur ve yalnızca fiyat/iş yükü tahmini ile kalite ön kontrol amacıyla işlenir.",
+      "4": "Değerlendirme,",
+      "4b": "aracılığıyla gerçekleştirilir.",
+      "5a": "OpenAI, API üzerinden gönderilen verileri model eğitimi için kullanmaz",
+      "5b": "(iş veya platform API kullanımı için varsayılan). Kaynak:",
+      "6a": "OpenAI, kötüye kullanım/istismar izleme amacıyla API giriş/çıkış loglarını",
+      "6b": "süreyle tutabilir; sonrasında siler (yasal zorunluluklar hariç). Kaynak:",
+      "7a": "Gümrük360 olarak, içeriklerinizi",
+      "7b": "sadece fiyatlama ve kalite ön kontrol",
+      "7c": "amacıyla işler; başka bir amaçla kullanmayız ve izin vermeyiz.",
+      "8": "Ticari/sır bilgileriniz varsa lütfen gereksiz kişisel verileri (TC kimlik, doğum tarihi, IBAN vb.) çıkartarak paylaşın; hassas veriler için dosyaları maskelenmiş iletin.",
+      "9": "Detaylı aydınlatma metnimize ve KVKK/GDPR ilkelerimize “Nasıl Çalışır” sayfasından ulaşabilirsiniz."
+    },
+    "summary": {
+      "title": "Özet:",
+      "text": "“Gönderdiğim içerik, yalnızca fiyat/iş yükü tahmini ve kalite ön kontrol amacıyla AI ile işlenir; Gümrük360 veya OpenAI tarafından eğitim için kullanılmaz.”"
+    },
+    "consentLabel": "Okudum, anladım ve içeriklerimin bu amaçlarla işlenmesini onaylıyorum.",
+    "buttons": {
+      "exit": "Çıkış",
+      "approve": "Onaylıyorum"
+    },
+    "note": "Not: Bu pencereyi daha sonra tarayıcı verileri temizlenirse tekrar görebilirsiniz.",
+    "links": {
+      "dataControls": "Data Controls",
+      "howYourDataIsUsed": "How Your Data Is Used"
+    },
+    "common": {
+      "days": "gün"
+    }
+  },
+  "notFound": {
+    "metaTitle": "Sayfa bulunamadı",
+    "title": "Sayfa bulunamadı",
+    "body": "Aradığınız sayfa taşınmış, silinmiş ya da hiç var olmamış olabilir.",
+    "actions": {
+      "home": "Ana sayfa",
+      "contact": "İletişim"
+    }
+  },
+  "brand": {
+    "footer": {
+      "gumruk360": "Gümrük360",
+      "easycustoms360": "EasyCustoms360"
+    }
+  },
+  "marketing": {
+	  "brandName": "Gümrük360",
+    "og": {
+      "title": "Gümrük360",
+      "subtitle": "Gümrük danışmanlığında akıllı çözümler"
+    },
+    "twitter": {
+      "title": "Gümrük360",
+      "subtitle": "Yapay zekâ destekli gümrük danışmanlığı"
+    },
+    "home": {
+		"newsTitle": "Gümrük360 Haberler",
+		"hero_i18n": {
+        "title_part1": "Gümrük danışmanlığı",
+        "title_part2": "hızlı, izlenebilir, şeffaf",
+        "description": "Sorunuzu ve belgeleri yükleyin; sistem ön inceleme yapar, net bir teklif ve hedef teslim süresi (SLA) oluşturur.",
+        "cta_primary": "Soru Sor",
+        "cta_secondary": "Nasıl Çalışır?",
+		"cta_secondary2": "Kurumsal Üyelik",
+        "bullets": [
+          "Doğru beyan ve mevzuat uyumu ile risk ve maliyetlerin minimizayonu",
+		  "ConspheraPSA ile tam entegrasyon ile tek kanaldan tüm süreçlerin yönetimi", 
+          "Süreç şeffaflığı ve izlenebilirlik, kurumsal üyelikte ekip yönetimi",
+          "Hızlı teslim ve net SLA: Doğru bilgi tam zamanında, uygun maliyet"
+        ],
+        "cards": [
+          { "title": "Mevzuatsal Sorularınıza Hızlı Yanıt", "desc": "Konusunda uzman Danışman seçimi ile en doğru sonuçlar", "href": "/ask", "emoji": "⚖️" },
+          { "title": "Sorunuza Özel Anında Teklif", "desc": "Consphera PSA alt yaısı sorunuzu inceler ve sayısız kritere göre doğru fiyatlar. Süreç çok hızlanır", "href": "/ask", "emoji": "🚀" },
+          { "title": "Kurumsal Üyelik", "desc": "kurumal üye olarak ekibinizi yetkilendirebilirsiniz. Tüm ekibinizin sorularını, kullanımları tek bir panelden yönetirsiniz.", "href": "/dashboard/subscription", "emoji": "🏢" },
+          { "title": "Kredi ile Daha Avantajlı", "desc": "Toplu Kredi satın alarak aynı kalitede hizmeti artan oranlı indirimlerle alın.", "href": "dashboard/credits", "emoji": "🏷️" }
+        ],
+        "learn_more": "Detaylı Bilgi",
+        "learn_more_aria": "{title} - Detaylı Bilgi"
+      },
+		      "footer_i18n": {
+        "brandName": "Gümrük360"
+      },
+      "title": "Gümrük360 – Gümrük ve Dış Ticaret Çözümleri",
+      "hero": {
+        "title": "Gümrük ve dış ticaret operasyonlarınızı basitleştirin",
+        "subtitle": "Tek panel, akıllı ön-kontrol ve uzman ağı ile daha hızlı, daha güvenli süreçler.",
+        "cta": "Hemen başlayın"
+      },
+      "topbar": {
+        "security": "Güvenlik",
+        "fees": "Ücretler",
+        "contact": "İletişim",
+        "login": "Giriş"
+      },
+      "nav": {
+		  "logout": "Çıkış",
+		  "dashboard": "Kullanıcı Paneli", 
+		  "menu": "Menü",
+		  "blog": "Blog",
+        "solutions": "Çözümler",
+        "services": "Danışmanlık",
+        "resources": "Kaynaklar",
+        "about": "Hakkımızda",
+		"accountFallback": "Hesabım",
+        "ask": "Soru Sor",
+		"login": "Giriş Yap",
+	        "signup": "Üye Olun",
+        "welcome": "Hoş geldiniz: {name}",
+		 "home": "Ana Sayfa",
+        "howitworks": "Nasıl Çalışır",
+		 "howitworks_individual": "Bireysel Kullanıcılar",
+		  "howitworks_corporate": "Kurumsal Kullanıcılar",
+		"hbrdyr": "Haberler&Duyurular",
+        "faq": "SSS",
+        "about": "Hakkımızda",
+        "contact": "İletişim",
+        "legal": "Yasal",
+		        "legal_privacy": "Gizlilik / KVKK",
+        "legal_terms": "Kullanım Koşulları",
+        "legal_cookies": "Çerez Politikası"
+      },
+      "quickActions": {
+        "title": "Hızlı İşlemler",
+        "items": {
+          "tariff": "GTİP / Tarife Tespiti",
+          "origin": "Menşe Kuralı",
+          "taxes": "Vergi Hesabı",
+          "exemptions": "Muafiyet & İstisna",
+          "technical": "Teknik Düzenlemeler",
+          "docs": "Belge Kontrolü",
+          "otvkkdf": "ÖTV/KKDF",
+          "drawback": "Geri Ödeme (Drawback)"
+        }
+      },
+      "products": {
+        "title": "Öne Çıkan Hizmetler",
+        "cards": {
+          "fastQuestion": {
+            "title": "Hızlı Cevap Al",
+            "desc": "Uzman seç. Sorularına hızlı dönüş al.",
+            "cta": "Soru Sor"
+          },
+          "opinion": {
+            "title": "Detaylı Görüş",
+            "desc": "Belge ve mevzuat referanslı kapsamlı rapor.",
+            "cta": "Detayları Gör"
+          },
+          "docReview": {
+            "title": "Kurumsal Abonelik",
+            "desc": "Kurumunuzun Danışmanlık ihtiyacını tek kanaldan yönetin.",
+            "cta": "Hemen Başlayın"
+          }
+        }
+      },
+      "news": {
+        "title": "Gümrük360 Haberler",
+        "seeAll": "Tümünü Gör"
+      },
+      "blog": {
+        "title": "Blog",
+        "seeAll": "Tümünü Gör"
+      },
+      "footer_i18n": {
+        "aboutTitle": "Gümrük360",
+        "aboutDesc": "Gümrük ve dış ticaret danışmanlığında hızlı, güvenilir ve şeffaf dijital deneyim.",
+        "colProducts": "Ürünler",
+        "colResources": "Kaynaklar",
+        "colContact": "İletişim",
+        "links": {
+          "fastQuestion": "Soru Sor",
+		  "hiwind": "Nasıl Çalışır-Bireysel",
+		  "hiwcorp": "Nasıl Çalışır-Kurumsal",
+          "indcredit": "Bireysel Kredi",
+          "orgcredit": "Kurumsal Abonelik",
+          "guides": "Nasıl Çalışır",
+          "blog": "Blog",
+          "faq": "SSS",
+          "contact": "Bize Ulaşın",
+          "privacy": "KVKK & Gizlilik",
+          "terms": "Kullanım Koşulları"
+        },
+        "copyright": "© {year} Gümrük360. Tüm hakları saklıdır."
+      }
+    },
+    "about": {
+      "title": "Hakkımızda",
+      "body": "Gümrük360 olarak; ölçeklenebilir, güvenli ve mevzuata uyumlu çözümler sunuyoruz."
+    },
+    "contact": {
+      "title": "İletişim",
+      "body": "Bize contact@gumruk360.com adresinden ulaşabilirsiniz."
+    },
+    "faq": {
+      "title": "Sıkça Sorulan Sorular",
+      "items": [
+        {
+          "q": "Hangi hizmetleri sağlıyorsunuz?",
+          "a": "Gümrük danışmanlığı, ön-kontrol, mevzuat araştırma."
+        },
+        {
+          "q": "Ödemeler nasıl yapılır?",
+          "a": "Türkiye için PayTR; uluslararası ödemeler için alternatif sağlayıcılar."
+        },
+        {
+          "q": "Çoklu-tenant ve dil desteği var mı?",
+          "a": "Evet; domain bazlı tenant ve tr/en dil desteği mevcut."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Fiyatlandırma",
+      "subtitle": "Kredi bazlı esnek fiyatlandırma — görünümler host ve para birimine göre özelleşebilir.",
+      "cta": "Kredi satın al",
+      "notes": "Not: TR için TRY; EN site için farklı para birimleri sunulabilir."
+    },
+    "legal": {
+      "privacy": {
+        "title": "Gizlilik Politikası",
+        "body": "Kişisel veriler KVKK/GDPR kapsamında işlenir. İdari ve teknik tedbirler alınır."
+      },
+      "terms": {
+        "title": "Kullanım Koşulları",
+        "body": "Hizmet kapsamı, sorumluluklar ve kullanıcı yükümlülükleri bu sayfada özetlenir."
+      },
+      "cookies": {
+        "title": "Çerez Politikası",
+        "updated": "Güncellenme tarihi",
+        "date": "14 Ekim 2025",
+        "intro": "Bu sayfa; kullanılan çerez türlerini, amaçlarını ve tercihlerinizi nasıl yönetebileceğinizi açıklar.",
+        "sections": {
+          "what": {
+            "h": "1) Çerez Nedir?",
+            "p": "Çerezler, bir web sitesini ziyaret ettiğinizde tarayıcınıza yerleştirilen küçük metin dosyalarıdır."
+          },
+          "cats": {
+            "h": "2) Kategoriler",
+            "p": "Zorunlu, Tercih, İstatistik, Pazarlama."
+          },
+          "third": {
+            "h": "3) Üçüncü Taraflar",
+            "p": "Analitik ve pazarlama sağlayıcıları çerez koyabilir."
+          },
+          "ret": {
+            "h": "4) Saklama Süreleri",
+            "p": "Oturum çerezleri tarayıcı kapanınca silinir; kalıcı çerezler 1–24 ay kalabilir."
+          },
+          "manage": {
+            "h": "5) Tercih Yönetimi",
+            "p": "Tarayıcı ayarlarından silebilir/engelleyebilir; sitemizdeki banner’dan kategori bazlı onay verebilirsiniz."
+          },
+          "contact": {
+            "h": "6) İletişim",
+            "p": "Sorularınız için iletişim sayfamızı kullanın."
+          }
+        }
+      }
+    },
+    "footer": {
+      "links": {
+        "terms": "Kullanım Koşulları",
+        "kvkkGdpr": "KVKK / GDPR"
+      }
+    }
+  },
+  "unauthorized": {
+    "metaTitle": "{brand} • Yetkiniz Bulunmuyor",
+    "metaDesc": "Bu sayfayı görüntülemek için giriş yapmanız ve yetkili olmanız gerekir.",
+    "title": "Yetkiniz Bulunmuyor",
+    "heading": "{brand} – Yetkiniz bulunmamaktadır",
+    "desc": "Bu sayfaya erişmek için giriş yapın veya yetkili hesaba geçin.",
+    "login": "Giriş Yap",
+    "signup": "Kayıt Ol",
+    "backHome": "Ana sayfaya dön"
+  },
+  "creditPricing": {
+    "heading": {
+      "org": "Kredi Fiyatlandırması (Kurumsal)",
+      "user": "Kredi Fiyatlandırması (Bireysel)"
+    },
+    "range": "Aralık",
+    "unitPrice": "Birim Fiyat ({ccy})",
+    "loadError": "Fiyatlandırma yüklenemedi.",
+    "empty": "Kayıt bulunamadı."
+  },
+  "mail": {
+    "welcome": {
+      "subject": "{{brandName}} - Hoş geldiniz",
+      "bodyHtml": "<div style=\"font-family:Arial,sans-serif;font-size:14px;line-height:1.6;color:#111\"><h2 style=\"margin:0 0 12px\">Hoş geldiniz{{name}}! 👋</h2><p>Hesabınız başarıyla oluşturuldu. Yakında bu şablonu marka içerikleriyle zenginleştireceğiz.</p></div>"
+    },
+    "admin": {
+      "subject": "Yeni Üyelik",
+      "text": "Yeni üye kaydı:\n  Email: {{email}}\n  Ad Soyad: {{fullName}}\n  Hesap tipi: {{accountType}}\n  Kurum adı: {{organizationName}}"
+    }
+  },
+  "report": {
+    "headers": {
+      "credit": "Kredi",
+      "question_title": "Soru Başlığı",
+      "full_name": "Ad Soyad",
+      "date": "Tarih"
+    }
+  },
+  "dashboardApi": {
+    "recentQuestions": {
+      "q101": {
+        "title": "Menşe ispat yükümlülüğü nedir?"
+      },
+      "q102": {
+        "title": "ATR ile EUR.1 farkı"
+      },
+      "q103": {
+        "title": "Dahilde İşleme Rejimi süre uzatımı"
+      },
+      "q104": {
+        "title": "Serbest dolaşıma girişte teminat"
+      },
+      "q105": {
+        "title": "Transit rejimi cezaları"
+      }
+    },
+    "alerts": {
+      "slaNear": {
+        "title": "SLA yaklaşan soru",
+        "message": "ID {id} yaklaşık {hours} saat içinde doluyor."
+      }
+    }
+  },
+  "meta": {
+    "title": "Gümrük360 — Yapay zekâ destekli gümrük danışmanlığı",
+    "titleDefault": "Gümrük360 — Gümrük ve Dış Ticaret Çözümleri",
+    "titleTemplate": "%s — Gümrük360",
+    "descriptionDefault": "Yapay zekâ destekli gümrük ve dış ticaret danışmanlığı. Uyum, optimizasyon ve süreçler tek platformda.",
+    "description": "Yapay zekâ destekli gümrük danışmanlık platformu"
+  },
+  "orgInsufficient": {
+    "subject": "{brand} Kurumsal Kredi Yetersiz",
+    "intro": "Aşağıda bilgileri yer alan soru için kurumsal krediniz yeterli değildir.",
+    "userFullName": "Kullanıcı ad-soyad",
+    "questionId": "Soru id",
+    "questionTitle": "Soru başlığı",
+    "subsPage": "Kredi satın alma sayfası",
+    "email": {
+      "heading": "Kurumsal Kredi Yetersiz.",
+      "intro": "Krediniz yetersiz. Aşağıdaki bağlantıdan kredi satın alabilirsiniz.",
+      "userFullName": "Kullanıcı ad-soyad",
+      "questionId": "Soru id",
+      "questionTitle": "Soru başlığı",
+      "openQuestionCta": "Soruya Git",
+      "buyCreditsCta": "Kredi Satın Al"
+    }
+  },
+  "payCredit": {
+    "assign": {
+      "subject": "{brand} Soru ataması",
+      "heading": "{brand} Soru ataması",
+      "questionId": "Soru ID",
+      "paymentAmount": "Ödeme tutarı",
+      "creditAmount": "Kredi tutarı",
+      "paymentMethod": "Ödeme yöntemi",
+      "creditMethod": "Kredi",
+      "panelCta": "Panele git",
+      "openQuestionCta": "Soruya git",
+      "signoff": "İyi çalışmalar"
+    }
+  },
+  "payOrgCredit": {
+    "ownerNotice": {
+      "subject": "{brand} Kurumsal Kredi kullanımı",
+      "heading": "Kurumsal Kredi kullanımı",
+      "intro": "Aşağıda bilgileri yer alan kullanıcı ve soru için kurumsal kredi kullandı.",
+      "userFullName": "Kullanıcı ad-soyad",
+      "questionId": "Soru ID",
+      "questionTitle": "Soru başlığı",
+      "creditsUsed": "Kullanılan kredi",
+      "creditsBalance": "Kalan kredi",
+      "regards": "İyi günler dileriz.",
+      "team": "{brand} ekibi"
+    },
+    "assign": {
+		 "questionId": "Soru ID",
+      "amountWithCurrency": "{amount} {currency}",
+      "paymentMethod": "Ödeme yöntemi",
+      "paymentMethodCredits": "Kredi",
+      "subject": "{brand} Soru ataması",
+      "heading": "{brand} Soru ataması",
+      "paymentAmount": "Ödeme tutarı",
+      "creditAmount": "Kredi tutarı",
+      "panelCta": "Panele git",
+      "openQuestionCta": "Soruya git",
+      "signoff": "İyi çalışmalar"
+    }
+  },
+  "emails": {
+	  "payment": {
+      "subject": "Ödeme Onayı – Sipariş #{orderId}",
+      "greeting": "Merhaba,",
+      "paidSuccess": "Ödemeniz başarıyla alınmıştır.",
+      "orderNoText": "Sipariş No: {orderId}",
+      "amountText": "Tutar: {amount} {currency}",
+      "creditsText": "Satın alınan kredi: {credits}",
+      "orderNoLabel": "Sipariş No:",
+      "amountLabel": "Tutar:",
+      "creditsLabel": "Kredi:",
+      "thanks": "Teşekkür ederiz."
+    },
+    "orgAuthorize": {
+      "yourCompany": "Şirketiniz",
+      "subject": "{orgName} tarafından yetkilendirme",
+      "bodyMd": "{orgName} tarafından yetkilendirildiniz.\n\nSorunuzu \"Soru sor\" menüsünden iletebilirsiniz.",
+      "bodyHtml": "{orgName} tarafından yetkilendirildiniz.",
+      "bodyText": "{orgName} tarafından yetkilendirildiniz.\n\n{ctaUrl}",
+      "ctaLabel": "Sorunuzu sormak için buraya tıklayın"
+    },
+    "assignment": {
+      "subject": "Gümrük360 Soru Ataması",
+      "title": "Gümrük360 Soru Ataması",
+      "questionId": "Soru ID",
+      "paymentAmount": "Ödeme tutarı",
+      "creditAmount": "Kredi tutarı",
+      "paymentMethod": "Ödeme yöntemi",
+      "goToPanel": "Panele git",
+      "goToQuestion": "Soruya git",
+      "regards": "İyi çalışmalar"
+    }
+  },
+  "settings": {
+    "billing": {
+      "title": "Fatura Bilgileri",
+      "individual": "Bireysel",
+      "corporate": "Kurumsal",
+      "fullName": "Ad Soyad",
+      "companyName": "Şirket Adı",
+      "taxNumber": "Vergi No",
+      "taxOffice": "Vergi Dairesi",
+      "addressLine": "Adres",
+      "city": "Şehir",
+      "country": "Ülke",
+      "phone": "Telefon",
+      "eInvoice": "e-Fatura",
+      "loading": "Yükleniyor…",
+      "save": "Kaydet",
+      "saving": "Kaydediliyor…",
+      "saved": "Kaydedildi.",
+      "saveFailed": "Kaydedilemedi",
+      "back": "Geri"
+    }
+  },
+  "attachments": {
+    "title": "Ekler",
+    "backProfile": "← Profil",
+    "actions": {
+      "upload": "Yükle",
+      "download": "İndir"
+    },
+    "messages": {
+      "uploaded": "Yüklendi.",
+      "deleted": "Silindi."
+    },
+    "confirmDelete": "Bu dosyayı silmek istediğinize emin misiniz?",
+    "errors": {
+      "listFailedLogin": "Liste alınamadı. Giriş yapmanız gerekebilir.",
+      "chooseFile": "Dosya seçin.",
+      "uploadFailedDetail": "Yükleme başarısız: {detail}",
+      "downloadLinkFailedDetail": "İndirme linki alınamadı: {detail}",
+      "deleteFailedDetail": "Silme hatası: {detail}"
+    },
+    "form": {
+      "questionIdPlaceholder": "Soru ID (opsiyonel, UUID)",
+      "maxNote": "Maks 20 MB. İstersen ilgili Soru ID (UUID) ekleyebilirsin; boş bırakabilirsin."
+    },
+    "table": {
+      "name": "Ad",
+      "size": "Boyut",
+      "type": "Tip",
+      "questionId": "Soru ID",
+      "date": "Tarih",
+      "action": "İşlem",
+      "empty": "Henüz dosya yok."
+    }
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "intro": "Bu sayfayı zamanla genişleteceğiz. Sık sorulan bazı başlıklar:",
+    "items": [
+      {
+        "q": "Ücretler nasıl hesaplanır?",
+        "a": "Kısa cevap: GPT tabanlı fiyatlandırma modeli ile. Detaylar yakında."
+      },
+      {
+        "q": "Teslim süreleri nedir?",
+        "a": "Normal ve acil seçenekler vardır. Detaylar yakında."
+      }
+    ]
+  },
+  "confirmInfo": {
+    "title": "E-posta Doğrulama",
+    "intro": "E-postadaki doğrulama bağlantısına tıkladığınızda doğrulama otomatik yapılır ve hesabınıza giriş yapılır.",
+    "items": [
+      "Bağlantıdaki parametreler ({code} veya {token}) olmadan buraya gelirseniz doğrulama çalışmaz.",
+      "Bağlantı süresi dolmuşsa giriş sayfasına yönlendirilirsiniz."
+    ]
+  },
+  "cookies": {
+    "title": "Çerez Politikası",
+    "intro": "Bu Çerez Politikası, Gümrük360 tarafından kullanılan çerez türlerini ve tercihlerinizi nasıl yönetebileceğinizi açıklar.",
+    "sections": {
+      "what": {
+        "title": "1. Çerez Nedir?",
+        "body": "Çerezler, ziyaret ettiğiniz siteler tarafından tarayıcınıza yerleştirilen küçük metin dosyalarıdır. Oturum yönetimi, güvenlik, kişiselleştirme ve analitik amaçlarıyla kullanılır."
+      },
+      "types": {
+        "title": "2. Kullandığımız Çerez Türleri",
+        "items": [
+          {
+            "title": "Zorunlu çerezler",
+            "body": "Giriş, oturum yönetimi ve güvenlik için gereklidir."
+          },
+          {
+            "title": "Tercih çerezleri",
+            "body": "Dil ve görüntüleme gibi tercihlerinizi hatırlar."
+          },
+          {
+            "title": "Analitik çerezler",
+            "body": "Hizmeti iyileştirmek için anonim kullanım verileri toplar."
+          }
+        ]
+      },
+      "thirdParties": {
+        "title": "3. Üçüncü Taraflar",
+        "body": "Barındırma, analitik ve bildirim hizmet sağlayıcıları çerez veya benzeri teknolojiler kullanabilir."
+      },
+      "manage": {
+        "title": "4. Çerezleri Yönetme",
+        "body": "Tarayıcı ayarlarından çerezleri silebilir, engelleyebilir veya sınırlayabilirsiniz. Çerezleri devre dışı bırakmak bazı işlevlerin çalışmamasına neden olabilir."
+      }
+    },
+    "banner": {
+      "title": "Çerez Tercihleri",
+      "body": "Deneyiminizi iyileştirmek için çerezler kullanıyoruz. Kabul edebilir, reddedebilir veya tercihlerinizle özelleştirebilirsiniz."
+    },
+    "actions": {
+      "accept": "Kabul Et",
+      "reject": "Reddet",
+      "customize": "Tercihleri Yönet",
+      "save": "Kaydet",
+      "cancel": "Vazgeç"
+    },
+    "categories": {
+      "necessary": "Zorunlu",
+      "preferences": "Tercihler",
+      "analytics": "İstatistik",
+      "marketing": "Pazarlama"
+    }
+  },
+  "howItWorks": {
+    "title": "Nasıl çalışır?",
+    "intro": "Detaylar yakında eklenecek. Temel akış:",
+    "steps": [
+      "Adım 1: Soru oluşturun.",
+      "Adım 2: Teklifi inceleyin ve onaylayın.",
+      "Adım 3: Ödeme ve teslim."
+    ]
+  },
+  "kvkkGdpr": {
+    "title": "KVKK / GDPR Aydınlatma Metni",
+    "intro": "Bu Aydınlatma Metni, 6698 sayılı KVKK uyarınca veri sorumlusu sıfatıyla Gümrük360 tarafından hazırlanmıştır. İşlemenin GDPR kapsamına girdiği hallerde aşağıdaki ilkelere uyulur.",
+    "sections": {
+      "personalData": {
+        "title": "1. İşlenen Kişisel Veriler",
+        "items": [
+          "Kimlik ve iletişim: ad-soyad, e-posta, telefon.",
+          "Hesap verileri: profil, oturum ve yetkilendirme kayıtları.",
+          "İşlem kayıtları: destek talepleri, mesajlar, ekler, zaman damgaları.",
+          "Teknik veriler: IP adresi, tarayıcı bilgisi, çerezler."
+        ]
+      },
+      "purposes": {
+        "title": "2. Amaçlar",
+        "items": [
+          "Hizmetlerin sunulması ve hesabın yönetimi,",
+          "Destek/talep süreçlerinin yürütülmesi ve iletişim,",
+          "Güvenlik, sahtecilik/kötüye kullanımın önlenmesi,",
+          "Yasal yükümlülüklerin yerine getirilmesi ve denetim."
+        ]
+      },
+      "legalBases": {
+        "title": "3. Hukuki Sebepler",
+        "body": "KVKK md. 5/2 (b)-(c)-(f) ve gerekli hallerde açık rıza; GDPR bakımından m. 6/1(b), 6/1(c), 6/1(f) ve gerektiğinde 6/1(a)."
+      },
+      "transfers": {
+        "title": "4. Aktarımlar ve Yurt Dışı Aktarım",
+        "body": "Hizmet sağlayıcılarımıza (barındırma/bulut, e-posta, bildirim, analitik) ve yasal mercilere gerekli olduğu ölçüde aktarım yapılabilir. Yurt dışına aktarım gereken hallerde KVKK m.9 ve GDPR m.46 (Standart Sözleşme Maddeleri) güvenceleri uygulanır."
+      },
+      "retention": {
+        "title": "5. Saklama Süreleri",
+        "body": "Mevzuatta öngörülen süreler saklı kalmak üzere; veriler hizmetten yararlanıldığı süre boyunca ve makul süreyle saklanır, sonrasında silinir veya anonimleştirilir."
+      },
+      "rights": {
+        "title": "6. Haklarınız",
+        "body": "KVKK m.11 ve GDPR m.15–22 kapsamındaki erişim, düzeltme, silme, işlemeyi kısıtlama, itiraz ve veri taşınabilirliği haklarınızı aşağıdaki iletişim kanalı üzerinden iletebilirsiniz."
+      },
+      "contact": {
+        "title": "7. İletişim",
+        "controller": "Veri Sorumlusu",
+        "email": "E-posta"
+      }
+    }
+  },
+  "checkout": {
+	  "info": {
+      "title": "Bilgilendirme",
+      "li1": "Tüm danışmanlık yanıtları konusunda yetkin/uzman kişilerce hazırlanır.",
+      "li2": "Sunulan bilgi/cevaplar nihai veya bağlayıcı görüş değildir. İşlem yapmadan önce ilgili kamu kurumlarıyla bizzat doğrulama yapmanız gerekir.",
+      "li3": "Kanunların emredici hükümleri saklı kalmak kaydıyla, Platform ve Hizmetlerden doğan her türlü zarardan (doğrudan/dolaylı, özel, arızi, kâr/itibar/veri kaybı dâhil) sorumluluk kabul edilmez.",
+      "li4": "Fiyatlar KDV dahildir ve ödeme anında tahsil edilir (yetkili ödeme sağlayıcısı üzerinden).",
+      "li5": "Hizmet dijital nitelikte olduğundan ücretler veya kullanılmış krediler iade edilmez. Yalnızca hatalı tahsilat durumunda oransal iade veya kredi iadesi yapılır.",
+      "li6": "Hesap güvenliğinden ve paylaştığınız bilgi-belgelerin doğruluğundan siz sorumlusunuz.",
+      "li7": "Platform “olduğu gibi/mevcut hâliyle” sunulur; kesintisiz hizmet taahhüdü verilmez.",
+      "li8": "Detaylar için:",
+	  "tos": "Kullanım koşulları"
+    },
+    "title": "Ödeme",
+    "subscriptionType": "Abonelik türü",
+    "org": "Kurumsal",
+    "user": "Bireysel",
+    "creditsToBuy": "Satın alınacak kredi",
+    "unitPrice": "1 Kredi Fiyatı",
+    "totalPayable": "Ödenecek Tutar",
+    "back": "Geri",
+    "redirecting": "Yönlendiriliyor…",
+    "goToPayment": "Ödemeye Git",
+    "priceFetchFail": "Fiyat bilgisi alınamadı",
+    "paymentStartFail": "Ödeme başlatılamadı",
+    "networkError": "Bağlantı hatası",
+    "redirectNote": "Ödeme sayfasına yönlendirileceksiniz. Ödeme başarılı olursa krediniz otomatik yüklenecektir."
+  },
+  "orders": {
+	   "provider": "Sağlayıcı",
+    "date": "Tarih",
+    "payment": {
+      "provider": "Sağlayıcı:",
+      "amount": "Tutar:",
+      "status": "Durum:",
+      "date": "Tarih:"
+    },
+    "detailTitle": "Sipariş Detayı",
+    "orderId": "Sipariş ID",
+    "status": "Durum",
+    "lastestPayment": "Son Ödeme",
+    "amount": "Tutar",
+    "createdAt": "Oluşturulma",
+    "paidAt": "Ödeme Zamanı",
+    "relatedQuestion": "İlişkili Soru",
+    "goToQuestion": "Soru Detayına Git",
+    "paymentSummary": "Ödeme Özeti",
+    "provider": "Sağlayıcı",
+    "paymentRef": "Referans",
+    "paymentStatus": "Ödeme Durumu",
+    "statusMap": {
+      "paid": "Ödendi",
+      "pending": "Beklemede",
+      "failed": "Başarısız"
+    }
+  },
+  "nav": {
+	  "dashwellcome": "Hoşgeldiniz,",
+      "dashlogin": "Giriş",
+      "dashsignup": "Kayıt ol",
+	  "homepage": "Site Anasayfası", 
+    "dashboard": "Kullanıcı Paneli",
+    "ask": "Soru Sor",
+    "myQuestions": "Sorularım",
+    "myPayments": "Ödemelerim",
+    "profile": "Profil",
+    "logout": "Çıkış",
+    "admin": "Admin",
+    "worker": "Worker",
+    "workerAssigned": "Bana atanan",
+    "assignmentRequests": "Atama talepleri",
+    "workerPool": "Atama havuzu",
+    "workerDone": "Tamamlananlar",
+    "requests": "Talepler",
+    "siteStats": "Site İstatistikleri",
+    "finance": "Finans",
+    "users": "Kullanıcılar",
+    "settings": "Ayarlar",
+    "logs": "Log kayıtları",
+    "gptModule": "GPT Modülü",
+    "creditManagement": "Kredi Yönetimi",
+    "subscriptionManagement": "Abonelik Yönetimi",
+    "howItWorks": "Nasıl çalışır?",
+    "announcements": "Bildirimler & Haberler",
+    "contact": "İletişim",
+    "support": "Mesaj Kutusu",
+    "faq": "Sık Sorulan Sorular",
+    "kvkkGdpr": "KVKK/GDPR",
+    "terms": "Kullanım Koşulları",
+    "cookies": "Çerez Politikası"
+  },
+  "admin": {
+	  "blog": {
+		  "api": {
+              "createDraft": {
+                  "meta": {
+                     "knownTags": [
+                      "gümrük",
+                      "ithalat",
+                      "ihracat",
+                      "beyanname",
+                      "antrepo",
+                      "vergiler",
+                      "muafiyet",
+                      "ceza"
+            ]
+          }
+        }
+      },
+          "edit": { "title": "Yazıyı Düzenle" },
+          "new":  { "title": "Yeni Blog Yazısı" },
+          "review": {
+               "title": "Blog Listesi",
+               "filters":{ 
+		           "q": {
+                      "placeholder": "Başlık veya slug ara…"
+                        },
+                   "status": { 
+				      "all": "Tüm durumlar" 
+		                 },
+                   "lang": {   
+		              "all": "Tümü (Dil)" 
+		                },
+                   "tenant": { 
+		              "all": "Tümü (Tenant)" 
+		                },
+                   "submit": "Filtrele" 
+                         },
+        "empty": "Kayıt bulunamadı. Farklı bir filtre deneyebilir veya filtreleri temizleyebilirsin.",
+        "table": {
+			"emptyCell": "-",
+          "count": "{total} kayıt • {selected} seçili",
+          "aria": { 
+		  "select": "{title} satırını seç",
+		   "selectAll": "Tümünü seç"
+		  }
+        },
+        "bulk": {
+          "scheduling": "Planlanıyor...",
+          "schedule":   "Toplu Planla",
+          "archiving":  "Arşivleniyor...",
+          "archive":    "Toplu Arşivle",
+          "review":     "Toplu → Review",
+          "reverting":  "Geri alınıyor...",
+		      "publishing": "Yayınlanıyor...",
+          "publish": "Toplu Yayınla",
+       "review": {
+      "label": "Toplu → Review",
+      "title": "Seçili yayınları Review statüsüne geri al"
+    }
+        },
+        "col": {
+          "tenant": "Tenant",
+          "status": "Durum",
+		        "title": "Başlık",
+          "lang": "Dil",
+          "scheduled": "Planlanan",
+          "updated": "Güncellendi",
+          "actions": "İşlemler"
+        },
+        "link": {
+          "viewPublic": "Yayını Gör",
+          "edit": "✎ Düzenle"
+        },
+        "row": { "by": "{name} tarafından" },
+		"status": {
+    "in_review": "İnceleme",
+    "draft": "Taslak",
+    "scheduled": "Planlandı",
+    "published": "Yayında",
+    "archived": "Arşivde"
+  },
+        "actions": {
+			"addNew": "Yeni Yazı",
+          "publish": "Yayınla",
+          "schedule": "Planla",
+          "toReview": "→ Review",
+            "toReview": {
+      "label": "→ Review",
+      "title": "Yayından Review statüsüne geri al"
+    },
+          "archive": "Arşivle",
+          "delete": {
+            "label": "Sil",
+            "title": "Kalıcı olarak sil",
+            "confirm": "Silinsin mi?\n\n{title}"
+          }
+        }
+      }
+    },
+	  "request": {
+      "editor": {
+		  		"send": {
+          "open": "Önizle ve Gönder",
+          "openTitle": "Önizleme ve gönderim",
+          "disabledTitle": "Bu özellik worker için kapalı",
+          "preparing": "Hazırlanıyor…",
+          "modalTitle": "E-posta Önizleme",
+          "close": "Kapat",
+          "toPlaceholder": "alici@firma.com",
+          "subjectPlaceholder": "Konu",
+          "attachmentsHeader": "Ekler",
+          "noAttachments": "Eklenecek dosya yok.",
+          "previewOrDownloadTitle": "Önizle/indir",
+          "downloadTitle": "İndir",
+          "sending": "Gönderiliyor…",
+          "sent": "Mesaj gönderildi",
+          "sendFailed": "Mesaj gönderilemedi",
+          "sendBtn": "Gönder",
+          "cancelBtn": "Vazgeç",
+          "previewFailed": "Önizleme başarısız",
+          "previewError": "Önizleme hatası: {message}",
+          "sendError": "Gönderim hatası: {message}",
+          "validation": {
+            "toAndSubjectRequired": "Alıcı e-posta ve konu zorunlu."
+          }
+        },
+		       "progress": {
+          "completing": "Tamamlanıyor…"
+        },
+		     "editorView": {
+          "loading": "Yükleniyor…",
+          "loadError": "Yükleme hatası: {message}",
+		  "genericError": "Yükleme hatası",
+		  "contentNotFound": "Editör içeriği bulunamadı."
+        },
+		  "buttons": {
+          "quickDraft": "Taslak Üret",
+          "reviseDone": "Revize tamamlandı",
+          "revisions": "Revizyonlar"
+        },
+        "labels": {
+          "editor": "Editör",
+		        "messagingDisabled": "Mesaj gönderimi kapalı",
+          "questionId": "Soru ID",
+          "latestDraft": "Son Taslak"
+        },
+        "errors": {
+          "noReviseActions": "Revizyon aksiyonları bulunamadı.",
+          "questionTextNotFound": "⚠️ Soru metni bulunamadı."
+        },
+        "draft": {
+          "empty": "⚠️ Taslak içeriği boş olamaz.",
+		            "manualPrompt": "Kaydedilecek içerik (JSON veya metin):",
+          "savedAndIngested": "Taslak kaydedildi ve revizyona çevrildi (#{no}).",
+          "autoIngestHint": "(Kaydettikten sonra otomatik revizyon)",
+          "saveFailed": "⚠️ Taslak kaydedilemedi. Sunucu hatası.",
+          "genFailed": "⚠️ Taslak üretimi başarısız.",
+          "generated": "Taslak üretildi ve editöre yüklendi.",
+          "generatedEmpty": "Taslak üretildi fakat içerik boş döndü.",
+		  "saved": "Taslak kaydedildi.",
+          "genUnexpected": "⚠️ Taslak üretimi sırasında beklenmeyen bir hata oluştu.",
+          "saveBusy": "Kaydediliyor…",
+		  "saveFailedShort": "Kayıt başarısız",
+          "save": "Taslağı Kaydet"
+        },
+        "revise": {
+          "lastFetchFailed": "⚠️ Son revizyon alınamadı.",
+          "lastEmpty": "⚠️ Son revizyon boş görünüyor.",
+		   "saveError": "✗ Hata: {message}",
+          "savedInfo": "✓ Kaydedildi (revizyon #{no})",
+          "summaryCreated": "Özet oluşturuldu (son revizyon) ve editöre yüklendi.",
+          "summaryEmpty": "Özetleme yapıldı fakat içerik boş döndü.",
+          "summaryUnexpected": "⚠️ Özetleme sırasında beklenmeyen bir hata oluştu.",
+          "doneButtonNotFound": "“Revize tamamlandı” butonu bulunamadı.",
+		   "createFailed": "Revizyon oluşturulamadı"
+        },
+        "pdf": {
+          "createFailed": "⚠️ PDF oluşturulamadı.",
+          "createFailedServer": "⚠️ PDF oluşturulamadı. Sunucu hatası.",
+          "opinionLetter": "Görüş Yazısı",
+          "subtitleFromLastRevision": "Resmî yanıt — son editör revizyonundan üretildi",
+          "noContentToExport": "Dışa aktarılacak içerik yok.",
+          "uploadFailed": "Yükleme başarısız.",
+          "createdAttached": "PDF oluşturuldu ve eklendi.",
+          "busy": "PDF oluşturuluyor…",
+          "create": "PDF oluştur",
+          "fromLastRevisionTitle": "Son revizyondan PDF oluştur ve ek olarak kaydet"
+        },
+		"attachments": {
+          "header": "Ekler",
+          "addFile": "Dosya ekle",
+          "select": "Seç",
+          "delete": "Sil",
+		  "empty": "Henüz ek yok.",
+          "loadAuthError": "Ekler yüklenemedi: yetki veya yönlendirme hatası.",
+          "loadFailed": "Ekler yüklenemedi.",
+          "uploadFailed": "Yükleme başarısız.",
+          "deleteFailed": "Silme başarısız.",
+		            "headerQuestion": "Soru Ekleri",
+          "count": "{count} ek",
+          "loading": "Yükleniyor…",
+          "emptyForQuestion": "Bu soruya ait ek bulunamadı.",
+          "previewDownload": "Önizle / indir",
+          "linkFailed": "Link oluşturulamadı",
+          "kb": "KB"
+        },
+        "tooltips": {
+          "quickGen": "Soru ve ekleriyle Hızlı Üretim sayfasını aç",
+          "saveDraft": "Taslağı answer_drafts tablosuna kaydet",
+          "applyReviseDone": "Revize tamamlandı işlemini uygula",
+          "history": "Revizyon geçmişi, diff ve geri al",
+          "featureToggleHint": "Admin → Ayarlar sayfasından açılabilir"
+        }
+      }
+    },
+    "title": "Admin",
+    "requestsSubtitle": "Gelen soruların listesi ve yönetimi",
+    "settings": {
+      "messageSending": "Mesaj gönderimi",
+      "on": "Açık",
+      "off": "Kapalı",
+      "hint": "Worker editöründe e-posta gönderim butonunu kontrol eder."
+    },
+    "gptModule": {
+      "title": "GPT Modülü",
+      "tabs": {
+        "config": "Konfigürasyon",
+        "versions": "Versiyonlar",
+        "calc": "Örnek Hesap"
+      },
+      "config": {
+        "sectionFees": "Temel Ücret Parametreleri",
+        "hourly": "Saatlik Ücret (TRY)",
+        "min": "Min Ücret (TRY)",
+        "urgentMult": "Acil Çarpanı",
+        "roundStep": "Yuvarlama Adımı",
+        "sectionFormula": "Formül Konfigürasyonu",
+        "pph": "Points per Hour",
+        "progressive": "Kademeli (Progressive) Bantlar",
+        "gtip": "GTİP",
+        "legalLanguage": "Hukuki / Dil",
+        "criteriaWeights": "Kriter Ağırlıkları (toplam 100)",
+        "active": "aktif",
+        "enabled": "aktif",
+        "saveVersion": "Yeni Versiyon Oluştur ve Aktifleştir"
+      },
+      "calc": {
+        "title": "Örnek Hesap",
+        "question": "Soru",
+        "lang": "Dil",
+        "urgent": "Acil",
+        "gtipCount": "GTİP adedi",
+        "gtipDifficulty": "GTİP zorluğu (0-10)",
+        "legalScore": "Hukuki (0-10)",
+        "langDiffScore": "Dil farkı (0-10)",
+        "gptSubjective": "GPT subjektif (0-15)",
+        "run": "Ücret Oluştur"
+      },
+      "result": {
+        "price": "Tutar (TRY)",
+        "hours": "Saat",
+        "termDays": "Termin (gün)",
+        "details": "Hesap detayları"
+      }
+    },
+    "subscription": {
+      "title": "Abonelik Ayarları",
+      "creditsPerPoint": "1 Kredi Kaç Puan?",
+      "creditsPerPointHint": "Yuvarlama yok. Örn: 1 kredi = 10 puan ise 10.0000 girin.",
+      "lowBalanceThresholdUser": "Bireysel düşük bakiye eşiği",
+      "lowBalanceThresholdOrg": "Kurumsal düşük bakiye eşiği",
+      "notifyEmails": "Bildirim e-postaları (virgülle)",
+      "notifyEmailsHint": "Eşik altına düşünce bilgilendirilecek adresler.",
+      "save": "Kaydet",
+      "back": "Geri"
+    },
+    "contact": {
+      "detail": {
+        "title": "İletişim Detayı",
+        "back": "Listeye dön",
+        "labels": {
+          "ticketId": "Ticket ID",
+          "sender": "Gönderen",
+          "question": "Soru",
+          "subject": "Konu",
+          "status": "Durum",
+          "date": "Tarih"
+        },
+        "status": {
+          "open": "Açık",
+          "answered": "Yanıtlandı",
+          "closed": "Kapalı"
+        },
+        "sections": {
+          "messages": "Mesajlar",
+          "attachments": "Ekler"
+        },
+        "empty": {
+          "noMessages": "Henüz mesaj yok.",
+          "noAttachments": "Ek yok."
+        },
+        "attachments": {
+          "fallback": "ek"
+        },
+        "form": {
+          "body": {
+            "label": "Cevap (HTML serbest)",
+            "placeholder": "<p>Yanıtınız...</p>"
+          },
+          "submit": "Yanıtla"
+        }
+      }
+    }
+  },
+  "home": {
+    "appName": "{appName}",
+    "tagline": "GPT destekli gümrük danışmanlık platformu",
+    "customerPanel": "Müşteri paneli",
+    "adminPanel": "Admin paneli",
+    "workerPanel": "Çalışan paneli",
+    "logoutDesc": "Oturumu kapat",
+    "activeLocale": "Aktif dil"
+  },
+  "dashboard": {
+	  "checkout": {
+      "paddle": {
+        "title": "Paddle Ödeme",
+        "go_now": "Hemen Git",
+        "order_detail": "Sipariş Detayı",
+        "order_no": "Sipariş No",
+        "txn_no": "İşlem No",
+		"err_open_modal": "Ödeme penceresi açılamadı.",
+        "msg_redirecting": "Ödeme yönlendiriliyor…",
+        "msg_opening_modal": "Paddle ödeme penceresi açılıyor…",
+        "msg_success_redirect": "Ödeme başarılı! Sipariş sayfasına yönlendiriliyor…",
+        "msg_closed_redirect": "Ödeme penceresi kapatıldı. Sipariş sayfasına yönlendiriliyor…",
+        "msg_failed_redirect": "Ödeme başarısız. Sipariş sayfasına yönlendiriliyor…",
+        "msg_canceled_redirect": "Ödeme iptal edildi. Sipariş sayfasına yönlendiriliyor…",
+        "msg_error_redirect": "Bir hata oluştu. Sipariş sayfasına yönlendiriliyor…",
+        "msg_starting_payment": "Ödeme başlatılıyor…",
+        "msg_txn_not_found_redirect": "İşlem bulunamadı. Sipariş sayfasına yönlendiriliyor…"
+      }
+    },
+    "questionDescription": "Soru açıklaması",
+    "createdAt": "Oluşturma",
+    "amount": "Tutar",
+    "currency": "Para birimi",
+    "subscription": {
+      "onlyOwnerCanView": "Sadece abonelik yöneticisi görüntüleyebilir",
+      "removeMemberTitle": "Kurumsal üyelikten çıkar",
+      "removeMemberConfirm": "Üyeyi kurumsal üyelikten silmek istediğinize emin misiniz?",
+      "title": "Abonelik Yönetimi",
+      "orgBalanceLabel": "Kurum kredisi",
+      "loadCredits": "Kredi Yükle",
+      "tabs": {
+        "purchases": "Satın Almalar",
+        "usage": "Kullanım",
+        "members": "Yetkilendir"
+      },
+      "historyLink": "Tüm işlemler",
+      "exportExcel": "Excel'e Aktar",
+      "questionFallback": "Soru",
+      "invite": "Yetkilendir",
+      "inviteSent": "Davet gönderildi / eklendi",
+      "errorGeneric": "Hata",
+      "noMembers": "Üye yok"
+    }
+  },
+  "worker": {
+    "questions": {
+      "ui": {
+        "workerAttachments": {
+          "title": "Ekler",
+          "loading": "Yükleniyor…",
+          "questionAttachments": "Soru Ekleri",
+          "answerAttachments": "Cevap Ekleri",
+          "noFiles": "Ek bulunmuyor",
+          "download": "İndir",
+          "empty": "Ek bulunmuyor",
+          "previewDownload": "Önizle / İndir",
+          "kb": "KB",
+          "linkCreateFailed": "Link oluşturulamadı",
+          "loadFailed": "Ekler alınamadı"
+        }
+      }
+    },
+    "answer": "Cevap",
+    "noAnswerYet": "Cevap henüz eklenmemiş",
+    "assigned": {
+      "heading": "Bana atananlar",
+      "table": {
+        "id": "ID",
+        "title": "Başlık",
+        "status": "Durum",
+        "left": "Kalan süre",
+        "action": "İşlem",
+        "noRecords": "Kayıt bulunamadı.",
+        "goEditor": "Editöre git"
+      },
+      "status": {
+        "submitted": "Gönderildi",
+        "approved": "Onaylandı",
+        "rejected": "Reddedildi",
+        "paid": "Ödendi"
+      },
+      "time": {
+        "dayShort": "gün",
+        "hourShort": "saat",
+        "minuteShort": "dk",
+        "leftSuffix": "kaldı",
+        "overduePrefix": "Geçti",
+        "overdueSuffix": ""
+      }
+    },
+    "pool": "Atama havuzu",
+    "done": "Tamamlananlar",
+    "sent": "Gönderildi",
+    "openEditor": "Editörü aç",
+    "revisions": "Revizyonlar",
+    "view": "Görüntüle",
+    "messagingDisabled": "Mesaj gönderimi kapalı",
+    "requestAssignment": "Atama Talep Et",
+    "requesting": "Gönderiliyor…",
+    "assignmentRequested": "Atama talebi iletildi",
+    "assignmentRejected": "Atama reddedildi",
+    "assignmentApproved": "Atama onaylandı",
+    "attachments": "Ekler",
+    "noAttachments": "Herhangi bir ek bulunamadı.",
+    "backToPool": "Havuza dön",
+    "nav": {
+		"homepage": "Site Anasayfası",
+      "panelTitle": "Danışman Paneli",
+      "paymentmanagement": "Ödeme Yönetimi",
+      "payments": "Ödeme Yönetimi",
+      "assigned": "Atananlar",
+      "done": "Tamamlananlar",
+      "contact": "İletişim",
+      "inbox": "Mesaj Kutusu",
+      "announcements": "Bildirim & Haberler",
+      "cvEdit": "CV Düzenle",
+	  "blog": "Blog Yazılarım",
+      "profilePage": "Profil",
+      "logout": "Çıkış"
+    },
+    "payments": {
+      "tabMake": "Ödeme talebi yap",
+      "tabList": "Talepler ve ödemeler",
+      "agreementRate": "Anlaşma oranı",
+      "agreementRateNA": "Tanımlı değil",
+      "colQuestionId": "Soru ID",
+      "colDate": "Soru tarihi",
+      "colCurrency": "Para birimi",
+      "colAmount": "Ödeme tutarı",
+      "colKur": "Kur",
+      "colFx": "FX (tarihindeki USD/TRY)",
+      "colFinal": "Nihai tutar",
+      "colAgreement": "Anlaşma",
+      "colHakedis": "Hakediş",
+      "totalHakedis": "Toplam hakediş",
+      "createRequest": "Ödeme talebi oluştur",
+      "noRows": "Kayıt yok.",
+      "createdOk": "Ödeme talebi oluşturuldu: {code}",
+      "colReqCode": "Ödeme talebi kodu",
+      "colTotal": "Toplam",
+      "colStatus": "Durum",
+      "colPayRef": "Ödeme referansı",
+      "status": {
+        "pending": "Beklemede",
+        "approved": "Onaylandı",
+        "needs_fix": "Düzeltme talep edildi",
+        "rejected": "Reddedildi"
+      }
+    },
+    "support": {
+		    "adminEmail": {
+      "userReply": {
+        "subtitle": "Kullanıcıdan yeni cevap",
+        "linkAdmin": "Talebe git (Admin)",
+        "subject": "Yeni kullanıcı cevabı"
+      },
+      "resolved": {
+        "subject": "Kullanıcı bildirimi: Çözüldü olarak işaretlendi",
+        "questionIdLabel": "Soru ID",
+        "ticketLabel": "Talep",
+        "reportedBy": "Bildirimi yapan",
+        "body": "Bu talep kullanıcı tarafından çözüldü olarak işaretlenmiştir."
+      }
+    },
+      "title": "Destek Taleplerim",
+      "loginToContinue": "Devam etmek için lütfen giriş yapın.",
+      "newTicket": "Yeni talep oluştur",
+      "listError": "Liste hatası",
+      "table": {
+        "date": "Tarih",
+        "subject": "Konu",
+        "question": "Soru",
+        "status": "Durum",
+        "action": "İşlem"
+      },
+      "status": {
+        "open": "Açık",
+        "answered": "Yanıtlandı",
+        "closed": "Kapalı"
+      },
+      "action": {
+        "open": "Aç",
+        "markResolved": "Çözüldü",
+        "delete": "Sil"
+      },
+      "empty": "Henüz talep yok.",
+      "errors": {
+        "loginRequired": "Giriş gerekli",
+        "missingId": "Eksik id",
+        "unauthorized": "Yetkisiz işlem",
+        "missingFields": "Eksik alan",
+        "messageSaveFailed": "Mesaj kaydedilemedi",
+        "attachmentUploadFailed": "Ek yüklenemedi",
+        "attachmentMetaFailed": "Ek meta kaydı hatası"
+      },
+      "mail": {
+        "resolvedSubject": "Kullanıcı bildirimi: Çözüldü olarak işaretlendi",
+        "labels": {
+          "questionId": "Soru ID",
+          "reporter": "Bildirimi yapan"
+        },
+        "resolvedInfo": "Bu talep kullanıcı tarafından çözüldü olarak işaretlenmiştir.",
+        "userFallbackName": "Kullanıcı"
+      },
+      "detail": {
+		    "messages": "Mesaj(lar)",
+        "title": "Destek Talebi",
+        "back": "Listeye dön",
+        "labels": {
+          "ticketId": "Ticket ID",
+          "subject": "Konu",
+          "status": "Durum",
+          "date": "Tarih",
+          "question": "Soru"
+        },
+        "noMessages": "Henüz mesaj yok.",
+        "noAttachments": "Ek yok.",
+        "by": {
+          "me": "Ben",
+          "admin": "Admin"
+        }
+      },
+	   "common": {
+        "customer": "Customer"
+      },
+      "ui": {
+		   "messages": "Messages",
+        "markResolved": {
+          "title": "Mark as resolved",
+          "button": "Resolved"
+        },
+        "reply": {
+          "title": "Reply",
+          "messageLabel": "Your message",
+          "placeholder": "Type your message…",
+          "send": "Send"
+        },
+        "attachments": "Ekler",
+        "filePicker": {
+          "title": "Ek(ler)",
+          "button": "Dosya seç",
+          "selectedList": "{count} seçildi"
+        }
+      },
+      "reply": {
+        "title": "Cevabınız (HTML serbest)",
+        "placeholder": "Mesajınız…",
+        "send": "Gönder"
+      }
+    },
+    "editor": {
+      "labels": {
+        "question": "Soru",
+        "noQuestion": "Soru metni yok.",
+        "originalAttachments": "Ekler"
+      },
+      "actions": {
+        "generateDraftFast": "Taslak Üret"
+      },
+      "editorAttachments": {
+        "loading": "Yükleniyor…",
+        "loadFailed": "Ekler alınamadı.",
+        "empty": "Bu soruya ait ek bulunamadı.",
+        "previewDownload": "Önizle / indir",
+        "linkCreateFailed": "Link oluşturulamadı",
+        "kb": "KB"
+      },
+      "fast": {
+        "errors": {
+          "notFound": "Soru bulunamadı: {detail}"
+        },
+        "ui": {
+          "title": "HIZLI TASLAK",
+          "styleLabel": "Stil",
+          "questionLabel": "Soru",
+          "resultLabel": "Sonuç",
+          "sourcesLabel": "Kaynaklar",
+          "styleOption": {
+            "teknik": "Teknik",
+            "resmi": "Resmî"
+          },
+          "extraTexts": {
+            "label": "Ek Metinler",
+            "add": "Ekle",
+            "remove": "Sil"
+          },
+          "files": {
+            "label": "Dosya Ekleri",
+            "choose": "Dosya Seç",
+            "typeFallback": "dosya",
+            "remove": "Kaldır"
+          },
+          "buttons": {
+            "generate": "Üret",
+            "generating": "Üretiliyor…",
+            "generateEng": "ENG üret",
+            "summarize": "Özetle",
+            "summarizing": "Özetleniyor…",
+            "copy": "Kopyala",
+            "copied": "Kopyalandı",
+            "goToEditor": "Editöre Git"
+          },
+          "errors": {
+            "runFailed": "Üretim başarısız",
+            "runException": "Üretim istisnası: {detail}",
+            "sumFailed": "Özetleme başarısız",
+            "sumException": "Özet istisnası: {detail}",
+            "copyFailed": "Kopyalama başarısız"
+          },
+          "markdown": {
+            "resultTitle": "Sonuç",
+            "sourcesTitle": "Kaynaklar"
+          }
+        }
+      }
+    }
+  },
+  "revisions": {
+    "title": "Revizyonlar",
+    "view": "Görüntüle",
+    "backToEditor": "Editöre dön",
+    "content": "İçerik",
+    "table": {
+      "no": "No",
+      "date": "Tarih",
+      "action": "İşlem"
+    },
+    "empty": "Revizyon bulunamadı.",
+    "detail": {
+      "heading": "Revizyon #{no}",
+      "labels": {
+        "question": "Soru",
+        "date": "Tarih"
+      },
+      "emptyContent": "(boş)"
+    }
+  },
+  "profile": {
+    "loading": "Yükleniyor…",
+    "title": "Profilim",
+    "accountInfo": "Üyelik bilgileriniz",
+    "personalInfo": "Kişisel Bilgiler",
+    "organizationInfo": "Kurum",
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "phone": "Cep telefonu",
+    "country": "Ülke",
+    "address": "Adres",
+    "orgName": "Kurum adı",
+    "taxNo": "Vergi numarası",
+    "save": "Kaydet",
+    "saving": "Kaydediliyor…",
+    "saved": "Kaydedildi",
+    "changePassword": "Şifre değişikliği",
+    "currentPassword": "Mevcut şifre",
+    "newPassword": "Yeni şifre",
+    "newPassword2": "Yeni şifre (tekrar)",
+    "updatePassword": "Şifreyi değiştir",
+    "updating": "Güncelleniyor…",
+    "updated": "Şifre güncellendi",
+    "birthDate": "Doğum tarihi",
+    "passwordMinHint": "En az 8 karakter",
+    "otherDial": "+ (Diğer)",
+    "errors": {
+      "required": "Bu alan zorunludur.",
+      "invalidEmail": "Geçersiz e-posta adresi.",
+      "passwordsMismatch": "Şifreler uyuşmuyor.",
+      "minLength": "Minimum uzunluk sağlanamadı.",
+      "invalidCurrentPassword": "Mevcut şifre hatalı.",
+      "phoneTenDigits": "Lütfen 10 haneli giriniz.",
+      "loadFailed": "Profil yüklenemedi.",
+      "saveFailed": "Kaydedilemedi.",
+      "unknown": "Bir hata oluştu."
+    },
+    "billing": {
+      "title": "Fatura Bilgileri",
+      "loading": "Yükleniyor…",
+      "isCorporate": "Tüzel kişi (Şirket)",
+      "companyName": "Şirket adı",
+      "fullName": "Ad Soyad",
+      "tcknLabel": "T.C. Kimlik No",
+      "tcknPlaceholder": "11 haneli",
+      "taxOffice": "Vergi Dairesi",
+      "vknLabel": "Vergi No",
+      "vknPlaceholder": "Vergi numarası",
+      "country": "Ülke",
+      "countries": {
+        "TR": "Türkiye",
+        "DE": "Almanya",
+        "UK": "Birleşik Krallık",
+        "US": "ABD",
+        "FR": "Fransa",
+        "IT": "İtalya"
+      },
+      "otherCountry": "Diğer",
+      "city": "Şehir",
+      "select": "Seçiniz",
+      "cityPlaceholder": "Şehir",
+      "address": "Adres",
+      "addressPlaceholder": "Açık adres",
+      "phone": "Telefon",
+      "otherDial": "+ (Diğer)",
+      "eInvoice": "e-Fatura Mükellefiyim",
+      "save": "Kaydet",
+      "saving": "Kaydediliyor…",
+      "saved": "Kaydedildi",
+      "saveFailed": "Kayıt başarısız.",
+      "errors": {
+        "phoneTenDigits": "Lütfen 10 haneli giriniz.",
+        "tcknElevenDigits": "TCKN 11 haneli olmalıdır.",
+        "vknFifteenDigits": "Vergi numarası 15 haneli olmalıdır."
+      }
+    }
+  },
+  "logout": "Çıkış",
+  "precheck": {
+    "checking": "Ön kontrol yapılıyor…",
+    "meaninglessTitle": "Anlaşılır değil",
+    "meaninglessMsg": "Sorunuz anlaşılır değil. Lütfen somut konu, eşya/GTİP, işlem türü ve bağlam ekleyin.",
+    "nonCustomsTitle": "Gümrük kapsamı dışında",
+    "nonCustomsMsg": "Sorunuz gümrük mevzuatı kapsamı dışında görünüyor.",
+    "continueEdit": "Düzenlemeye dön",
+    "tryAgain": "Tekrar dene"
+  },
+  "auth": {
+	   "confirmInfo": {
+      "title": "Hesabınız doğrulanıyor…",
+      "desc_redirect": "Lütfen bekleyin, birkaç saniye içinde otomatik olarak yönlendirileceksiniz."
+    },
+    "reset": {
+      "sendHint": "E-posta adresinizi yazın, sıfırlama bağlantısı gönderelim.",
+      "emailPh": "E-posta adresiniz",
+      "sendBtn": "Bağlantıyı Gönder",
+      "setNew": "Yeni şifrenizi belirleyin",
+      "newPwd": "Yeni şifre",
+      "newPwd2": "Yeni şifre (tekrar)",
+      "saveBtn": "Kaydet",
+      "unexpected": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.",
+      "sent": "Sıfırlama e-postası gönderildi. Gelen kutunuzu kontrol edin.",
+      "failed": "İşlem başarısız oldu. Lütfen bilgilerinizi kontrol edip tekrar deneyin.",
+      "errPwdLen": "Şifre en az 8 karakter olmalıdır.",
+      "errPwdMatch": "Şifreler eşleşmiyor.",
+      "okRedirect": "Şifreniz güncellendi. Yönlendiriliyorsunuz…",
+      "title": "Yeni Şifre",
+      "verifying": "Bağlantı doğrulanıyor…",
+      "placeholders": {
+        "new": "Yeni şifre (min 8)",
+        "new2": "Yeni şifre (tekrar)"
+      },
+      "submit": "Şifreyi Güncelle",
+      "successUpdatedRedirect": "Şifreniz güncellendi. Giriş sayfasına yönlendiriliyorsunuz…",
+      "errors": {
+        "invalidOrExpiredLink": "Geçersiz veya süresi dolmuş bağlantı. Lütfen yeniden isteyin.",
+        "unexpected": "Beklenmeyen bir hata oluştu.",
+        "passwordMin": "Şifre en az 8 karakter olmalı.",
+        "passwordsMismatch": "Şifreler eşleşmiyor.",
+        "updateFailed": "Güncelleme sırasında hata oluştu."
+      }
+    },
+    "login": {
+      "title": "Giriş",
+      "email": "E-posta",
+      "password": "Şifre",
+      "forgot": "Şifremi unuttum?",
+      "loggingIn": "Giriş yapılıyor...",
+      "login": "Giriş Yap",
+      "noAccount": "Hesabın yok mu?",
+      "signup": "Kayıt ol",
+      "errors": {
+        "invalidCredentials": "E-posta veya şifre hatalı.",
+        "emailNotConfirmed": "E-posta doğrulanmamış. Lütfen e-postanızdaki doğrulama bağlantısına tıklayın.",
+        "loginFailed": "Giriş başarısız"
+      }
+    },
+    "signup": {
+      "title": "Kayıt Ol",
+      "individual": "Bireysel",
+      "corporate": "Kurumsal",
+      "fullName": "Ad Soyad",
+      "email": "E-posta",
+      "password": "Şifre",
+      "password2": "Şifre (tekrar)",
+      "orgName": "Kurum adı",
+      "creatingAccount": "Kaydediliyor…",
+      "signUp": "Kayıt Ol",
+      "success": "Giriş yapmadan önce e-postanızı doğrulayın. (Doğrulama e-postası gönderildi)",
+      "errors": {
+        "emailAndPasswordRequired": "E-posta ve şifre zorunlu.",
+        "passwordsMismatch": "Şifreler uyuşmuyor.",
+        "fullNameRequired": "Ad Soyad zorunlu.",
+        "orgNameRequired": "Kurum adı zorunlu.",
+        "signupFailed": "Kayıt sırasında hata"
+      }
+    }
+  },
+   "dash": {
+    "subscriptionHistory": {
+		"sr_purchases": "Satın Almalar (tam liste)",
+      "sr_usage": "Kullanımlar (tam liste)",
+      "title": "Geçmiş İşlemler",
+      "backLink": "Abonelik sayfasına dön",
+      "tabs": {
+        "purchases": "Satın Almalar",
+        "usage": "Kullanımlar",
+        "countSuffix": " ({count})"
+      },
+      "loading": "Yükleniyor…",
+      "onlyOwner": "Sadece Kurum Yöneticisi görüntüleyebilir",
+      "empty": "Kayıt yok",
+      "purchasesTable": {
+        "date": "Tarih",
+        "creditPlus": "Kredi (+)"
+      },
+      "usageTable": {
+        "date": "Tarih",
+        "description": "Açıklama",
+        "question": "Soru",
+        "asker": "Soran",
+        "creditMinus": "Kredi (-)"
+      }
+    }
+  },
+  "terms": {
+    "client": {
+      "consentHtml": " <strong>Kullanım Koşulları</strong>nı okudum ve kabul ediyorum",
+      "goToPaymentTitle": "Ödemeye git",
+      "continue": "Devam et",
+      "redirecting": "Yönlendiriliyor…"
+    },
+    "title": "Hizmet Şartları",
+    "lastUpdated": "Son güncelleme",
+    "intro": "Bu Kullanım Koşulları (“Koşullar”), Gümrük360 tarafından sunulan hizmetlere erişiminizi ve kullanımınızı düzenler. Platformu kullanarak bu Koşulları kabul etmiş sayılırsınız.",
+    "labels": {
+      "questionId": "Soru ID",
+      "priceTL": "Ücret (TL)",
+      "requiredCredits": "Gerekli Kredi",
+      "balance": "Bakiye"
+    },
+"sections": {
+      "info": {
+        "title": "Bilgilendirme",
+        "li1": "Tüm danışmanlık yanıtları konusunda yetkin/uzman kişilerce hazırlanır.",
+        "li2": "Sunulan bilgi/cevaplar nihai veya bağlayıcı görüş değildir. İşlem yapmadan önce ilgili kamu kurumlarıyla bizzat doğrulama yapmanız gerekir.",
+        "li3": "Kanunların emredici hükümleri saklı kalmak kaydıyla, Platform ve Hizmetlerden doğan her türlü zarardan (doğrudan/dolaylı, özel, arızi, kâr/itibar/veri kaybı dâhil) sorumluluk kabul edilmez.",
+        "li4": "Fiyatlar KDV dahildir ve ödeme anında tahsil edilir (yetkili ödeme sağlayıcısı üzerinden).",
+        "li5": "Hizmet dijital nitelikte olduğundan ücretler veya kullanılmış krediler iade edilmez. Yalnızca hatalı tahsilat durumunda oransal iade veya kredi iadesi yapılır.",
+        "li6": "Hesap güvenliğinden ve paylaştığınız bilgi-belgelerin doğruluğundan siz sorumlusunuz.",
+        "li7": "Platform “olduğu gibi/mevcut hâliyle” sunulur; kesintisiz hizmet taahhüdü verilmez.",
+        "li8": "Detaylar için: Terms of Service bağlantısını inceleyin.",
+		"tos": "Kullanım Koşulları"
+      },
+      "approval": {
+        "checkbox": "Ön bilgilendirmeyi okudum, anladım; bilgilerin yalnızca bilgilendirme amacıyla sunulduğunu, nihai karar öncesi kamu kurumlarıyla doğrulama yapmam gerektiğini, sorumluluk kabul edilmediğini, fiyatların KDV dâhil ve ödemenin anında tahsil edildiğini, ücret ve kullanılmış krediler için iade olmadığını (hatalı tahsilat hariç) kabul ediyorum ve Kullanım Koşullarını okudum."
+      }
+    },
+    "actions": {
+      "cancel": "Vazgeç"
+    }
+  },
+  "support": {
+	  "detail": {
+		  "labels": {
+          "ticketId": "Ticket ID",
+          "sender": "Gönderen",
+          "question": "Soru",
+          "subject": "Konu",
+          "status": "Durum",
+          "date": "Tarih"
+		  }
+        },
+    "title": "Mesaj Kutusu",
+    "pleaseLogin": "Devam etmek için lütfen giriş yapın.",
+    "createNew": "Yeni talep oluştur",
+    "listError": "Liste hatası",
+    "view": "Görüntüle",
+    "resolved": "Çözüldü",
+    "delete": "Sil",
+    "empty": "Henüz talep yok.",
+    "table": {
+      "date": "Tarih",
+      "subject": "Konu",
+      "question": "Soru",
+      "status": "Durum",
+      "actions": "İşlem"
+    },
+    "status": {
+      "open": "Açık",
+      "answered": "Yanıtlandı",
+      "closed": "Kapalı"
+    },
+    "email": {
+      "resolvedSubject": "Kullanıcı bildirimi: Çözüldü olarak işaretlendi",
+      "questionId": "Soru ID",
+      "ticket": "Ticket",
+      "reportedBy": "Bildirimi yapan",
+      "markedResolved": "Bu ticket kullanıcı tarafından çözüldü olarak işaretlenmiştir.",
+      "userFallbackName": "Kullanıcı"
+    },
+    "errors": {
+      "loginRequired": "Giriş gerekli",
+      "missingId": "Eksik id",
+      "unauthorized": "Yetkisiz işlem"
+    },
+    "common": {
+      "user": "Kullanıcı",
+      "customer": "Müşteri"
+    },
+    "adminEmail": {
+      "userReply": {
+        "subtitle": "Kullanıcıdan yeni cevap",
+        "linkAdmin": "Talebe git (Admin)",
+        "subject": "Yeni kullanıcı cevabı"
+      },
+      "resolved": {
+        "subject": "Kullanıcı bildirimi: Çözüldü olarak işaretlendi",
+        "questionIdLabel": "Soru ID",
+        "ticketLabel": "Talep",
+        "reportedBy": "Bildirimi yapan",
+        "body": "Bu talep kullanıcı tarafından çözüldü olarak işaretlenmiştir."
+      }
+    },
+    "ui": {
+      "titleFallback": "Destek bileti",
+      "messages": "Mesajlar",
+      "attachments": "Ekler",
+      "filePicker": {
+        "button": "Dosya seç",
+        "title": "Dosya ekle",
+        "helper": "Birden fazla dosya seçebilirsin.",
+        "clear": "Temizle",
+        "selectedCount": "{count} seçildi"
+      },
+      "markResolved": {
+        "title": "Talebi çözüldü olarak işaretle",
+        "button": "Çözüldü"
+      },
+      "reply": {
+        "title": "Cevabınız",
+        "messageLabel": "Mesajınız",
+        "placeholder": "Mesajınızı yazın",
+        "send": "Gönder"
+      },
+      "htmlPreview": {
+        "title": "HTML Önizleme",
+        "error": "Önizleme başarısız."
+      }
+    }
+  },
+  "ann": {
+    "list": {
+		      "noTenantKey": "Kullanıcı için tenant_key bulunamadı.",
+      "tenantNotFound": "Tenant bulunamadı.",
+      "title": "Bildirimler & Haberler"
+    },
+    "loginToContinue": "Devam etmek için giriş yapın.",
+    "errors": {
+      "listFailed": "Liste hatası:"
+    },
+    "table": {
+      "title": "Başlık",
+      "status": "Durum"
+    },
+    "readStatus": {
+      "read": "Okundu",
+      "unread": "Okunmadı"
+    },
+    "empty": "Kayıt yok.",
+    "detail": {
+      "back": "Listeye dön",
+      "content": "İçerik"
+    },
+    "attachments": {
+      "title": "Ekler",
+      "empty": "Ek yok."
+    }
+  },
+  "cred": {
+    "table": {
+      "questionFallback": "Soru"
+    },
+    "range": {
+      "plus": "{count}+ adet alımlar",
+      "between": "{min} - {max} adet arası alımlar",
+      "plusPurchases": "{min}+ adet alımlar",
+      "betweenPurchases": "{min} - {max} adet arası alımlar"
+    },
+    "page": {
+      "title": "Kredi Yönetimi",
+      "balanceLabel": "Mevcut kredi:",
+      "loadButton": "Kredi Yükle"
+    },
+    "pricing": {
+      "open": "Kredi Fiyatlandırması",
+      "titleOrg": "Kurumsal Kredi Fiyatlandırması",
+      "titleUser": "Bireysel Kredi Fiyatlandırması",
+      "range": "Aralık",
+      "unitPriceTry": "Birim Fiyat (₺)",
+      "unitPriceWithCurrency": "Birim fiyat ({currency})"
+    },
+    "notFound": "Kayıt bulunamadı.",
+    "common": {
+      "error": "Hata",
+      "close": "Kapat"
+    },
+    "purchases": {
+      "titleRecent3": "Satın Almalar (son 3)"
+    },
+    "units": {
+      "credit": "kredi"
+    },
+    "buy": {
+      "enterValidAmount": "Geçerli bir kredi miktarı girin",
+      "minPurchase": "Min alım miktarı {count} adet'tir."
+    },
+    "loading": "Yükleniyor…",
+    "empty": "Kayıt yok",
+    "usage": {
+      "title": "Kullanım (sorulara göre düşümler)",
+      "questionFallback": "Soru",
+      "purchase": "Satın alma",
+      "openQuestion": "Soruyu aç"
+    },
+    "recent": {
+      "title": "Son satın almalar",
+      "error": "İşlem başarısız",
+      "loading": "Son satın almalar yükleniyor…",
+      "loadFailed": "Son satın almalar alınamadı",
+      "empty": "Son 10 işlemde kredi satın alımı bulunmadı.",
+      "table": {
+        "date": "Tarih",
+        "credits": "Kredi",
+        "unitTry": "Birim ₺",
+        "total": "Tutar",
+        "order": "Sipariş"
+      }
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "subject": "Konu",
+    "subjectPlaceholder": "Konu",
+    "message": "Mesaj",
+    "messagePlaceholder": "Mesajınız",
+    "send": "Gönder",
+    "cancel": "İptal",
+    "errors": {
+      "loginRequired": "Lütfen giriş yapın.",
+      "subjectMessageRequired": "Konu ve mesaj zorunlu.",
+      "ticketCreateFailed": "Ticket oluşturulamadı.",
+      "messageCreateFailed": "Mesaj kaydedilemedi",
+      "attachmentUploadFailed": "Ek yüklenemedi",
+      "attachmentMetaFailed": "Ek meta kaydı hatası"
+    },
+    "email": {
+      "newRequestSubject": "Yeni iletişim talebi",
+      "newRequestPreheader": "Yeni bir iletişim talebi oluşturuldu."
+    }
+  },
+  "progress": {
+    "processing": "İşleniyor…"
+  },
+  "questions": {
+    "status": {
+      "new": "Yeni",
+      "submitted": "Gönderildi",
+      "approved": "Onaylandı",
+      "rejected": "Reddedildi",
+      "paid": "Ödendi",
+      "pending": "Beklemede",
+      "priced": "Fiyatlandı",
+      "closed": "Kapalı"
+    },
+    "answerStatus": {
+      "drafting": "Taslak hazırlanıyor",
+      "in_review": "İncelemede",
+      "completed": "Tamamlandı",
+      "sent": "Gönderildi",
+      "reopened": "Yeniden açıldı"
+    },
+    "email": {
+      "adminEmailSubject": "Kullanıcı İletişimi – Soru {shortId}",
+      "newMessageBanner": "Yeni mesaj (soru)",
+      "questionId": "Soru ID",
+      "sender": "Gönderen",
+      "subjectWithTitle": "Soru: {title}",
+      "subjectGeneric": ""
+    },
+    "detail": {
+      "loadingTitle": "Yükleniyor...",
+      "questionAttachments": "Soru Ekleri",
+      "status": "Durum",
+      "goToOfferTitle": "Teklif ve SLA sayfasına git",
+      "goToOfferAria": "Teklife git",
+      "answerStatus": "Cevap Durumu",
+      "assignedConsultant": "Atanan Danışman:",
+      "contactHeader": "Bu soru hakkında iletişime geç",
+      "yourMessage": "Mesajınız",
+      "messagePlaceholder": "Mesajınızı yazın",
+      "contactAttachments": "İletişim Ekleri",
+      "filePicker": {
+        "label": "Ek(ler)",
+        "choose": "Dosya Seç"
+      },
+      "answerHeader": "Cevap",
+      "answerAttachments": "Cevap Ekleri",
+      "goToOfferCta": "Teklife git",
+      "email": {
+        "adminEmailSubject": "Kullanıcı İletişimi – Soru {shortId}",
+        "newMessageBanner": "Yeni mesaj (soru)",
+        "questionId": "Soru ID",
+        "sender": "Gönderen",
+        "subjectWithTitle": "Soru: {title}",
+        "subjectGeneric": "Soru hakkında iletişim"
+      },
+      "errors": {
+        "loginRequired": "Giriş gerekli",
+        "messageCreateFailed": "Mesaj kaydedilemedi",
+        "missingFields": "Eksik alan",
+        "unauthorized": "Yetkisiz işlem",
+        "fallbackUser": "Kullanıcı",
+        "ticketCreateFailed": "Ticket oluşturulamadı",
+        "uploadFailed": "Ek yüklenemedi: {detail}",
+        "metaInsertFailed": "Ek meta kaydı hatası: {detail}"
+      }
+    },
+    "filePicker": {
+      "label": "Ek(ler)",
+      "choose": "Dosya Seç",
+      "selected": "{count} seçildi",
+      "clear": "temizle"
+    },
+    "list": {
+      "heading": "Sorularım",
+      "noRecords": "Kayıt bulunamadı.",
+      "untitled": "Başlıksız"
+    }
+  },
+  "offer": {
+    "title": "Ücret Teklifi",
+    "createdAt": "Oluşturma",
+    "notFound": {
+      "title": "Kayıt bulunamadı",
+      "questionId": "Soru ID",
+      "back": "/ask sayfasına dön"
+    },
+    "creditLine": "{amount} kredi (avantajınız min {pct}%)"
+  },
+  "orgTopUp": {
+    "owner": "Krediniz yetersiz. Kredi yükle",
+    "member": "Kurumsal kredi yetersiz. Yetkiliye bilgi vermek için tıklayın.",
+    "sending": "Gönderiliyor...",
+    "sent": "Mesaj gönderildi.",
+    "failed": "Gönderilemedi"
+  },
+  "l2info": {
+    "title": "Sistem kontrolü neticesinde yapılan bilgilendirme",
+    "intro": "Aşağıdaki bilgilendirme, sorunuz ve eklerinin sistem tarafından değerlendirilmesi neticesinde teklif aşamasından önce tarafınıza iletilmiştir. Sorunuzda bu eksikler yoksa lütfen dikkate almayınız.",
+    "notReady": "Henüz sistem kontrolü (L2) kaydı bulunamadı.",
+    "none": "Görüntülenecek eksik yok.",
+    "statusOk": "ok",
+    "groups": {
+      "required": "Zorunlu",
+      "should": "Olmalı (önerilir)",
+      "info": "Bilgilendir"
+    },
+    "labels": {
+      "status": "Durum",
+      "confidence": "Güven",
+      "requiredMissing": "Zorunlu eksik",
+      "shouldMissing": "Olmalı eksik",
+      "info": "Bilgilendir"
+    }
+  },
+  "downloadPdf": {
+    "title": "Teklifi PDF olarak indir",
+    "label": "PDF indir"
+  },
+  "creditPay": {
+    "payWithCredits": "Kredi ile Öde",
+    "topUp": "Krediniz yetersiz. Kredi yükle",
+    "buyCredits": "Kredi Satın Al"
+  },
+  "confirmPay": {
+    "info": "Bu işlemi onayladığınızda ilgili kredi bakiyesinden düşülecek ve soru durumu <b>approved</b> olacaktır.",
+    "openTermsTitle": "Kullanım koşullarını yeni sekmede aç",
+    "terms": "",
+    "agreeTail": "Ön bilgilendirmeyi okudum, anladım; bilgilerin yalnızca bilgilendirme amacıyla sunulduğunu, nihai karar öncesi kamu kurumlarıyla doğrulama yapmam gerektiğini, sorumluluk kabul edilmediğini, fiyatların KDV dâhil ve ödemenin anında tahsil edildiğini, ücret ve kullanılmış krediler için iade olmadığını (hatalı tahsilat hariç) kabul ediyorum ve Kullanım Koşulları belgesini okudum.",
+    "confirmPay": "Onayla ve Öde",
+    "processing": "İşleniyor…",
+    "cancel": "Vazgeç"
+  },
+  "checkoutCancel": {
+    "title": "Ödeme İptal Edildi",
+    "message": "Ödeme işlemini iptal ettiniz."
+  },
+  "checkoutReturn": {
+    "title": "Ödeme Sonucu",
+    "success": "Ödemeniz alındı. Teşekkürler!",
+    "redirectCountdown": "Sipariş detayına {seconds} sn içinde yönlendirileceksiniz.",
+    "redirecting": "Yönlendiriliyor…",
+    "goToOrder": "Siparişe Git",
+    "fail": "Ödeme tamamlanamadı.",
+    "retry": "Tekrar Dene"
+  },
+  "checkoutPage": {
+	  "redirectingPaddle": "Yönlendiriliyor...",
+    "title": "Ödeme",
+    "error": {
+      "title": "Ödeme Başlatılamadı",
+      "testHint": "Test için URL’ye <code>?amount={amount}</code> ekleyerek (kuruş) tekrar deneyebilirsin."
+    },
+    "loading": {
+      "title": "Ödeme Hazırlanıyor…",
+      "wait": "Lütfen bekleyin."
+    },
+    "mock": {
+      "info": "MOCK ödeme ekranı (yerel geliştirme)",
+      "successBtn": "Ödemeyi Başarılı Say"
+    },
+    "cancel": "İptal"
+  },
+  "ask": {
+    "page": {
+      "header": {
+        "title": "Soru Sor",
+        "lead": "Ekleri yükleyip sorunu yaz; sistem fiyat hesaplasın."
+      },
+      "urgent": {
+        "note": "Aktif olduğunda teslim süresi kısalır ve ücret acil çarpanı ile hesaplanır.",
+        "title": "Acil durum",
+        "label": "Acil"
+      },
+      "errors": {
+        "workersFetch": "Worker listesi alınamadı",
+        "actionFailed": "İşlem başarısız.",
+        "codeLabel": "Kod",
+        "unexpected": "Beklenmeyen hata."
+      },
+      "precheck": {
+        "failed": "Ön kontrol yapılamadı. Lütfen tekrar deneyin.",
+        "notClear": "Sorunuz yeterince açık değil. Lütfen somut konu, eşya/GTİP, işlem türü ve bağlam ekleyin.",
+        "outOfScope": "Sorunuz gümrük mevzuatı kapsamı dışında görünüyor.",
+        "error": "Ön kontrol hatası. Lütfen tekrar deneyin."
+      },
+      "busyAnalyzing": "Değerlendiriliyor…",
+      "worker": {
+        "title": "Danışman Seçimi",
+        "label": "Danışman",
+        "selected": "Seçildi",
+        "loading": "Yükleniyor…",
+        "selectOptional": "Seçiniz (opsiyonel)",
+        "empty": "Kayıt yok.",
+        "openPreview": "Seçili danışmanın CV önizlemesini aç",
+        "preview": "CV İncele",
+        "avatarAlt": "avatar",
+        "helpText": "Açılır listeden danışman seçebilirsiniz; seçmezseniz Gümrük360 deneyimli ekibi sorunuza yanıt verecektir."
+      },
+      "form": {
+		  "descHelp": {
+  "open": "Soru sorma ipuçları",
+  "title": "Önemli Not",
+  "intro": "Doğru fiyat hesaplaması için açıklamayı somutlaştırın. Ek dosyalar kapsamını netleştirir ve fiyatlamayı olumlu etkileyebilir. Ucu açık sorularda kapsam geniş değerlendirilebilir ve fiyat artabilir.",
+  "bullets": {
+    "files": "",
+    "scope": "",
+    "work": "",
+    "lang": "Aksi belirtilmedikçe sorunuz, sorunun dilinde cevaplanacaktır. Farklı dil belirtilmesi veya birçok dilde cevap istenmesi fiytalamayı etkileyebilir.",
+    "time": "“Acil” seçeneği işaretlenirse teslim süresi azalır ve acil ücret çarpanı uygulanır.",
+    "risk": "",
+    "open": ""
+  },
+  "closeWrite": "Kapat ve yazmaya başla",
+  "close": "Kapat"
+},
+        "titleLabel": "Başlık",
+        "titlePlaceholder": "Örn: GTİP tespiti - motorlu aksam",
+        "descLabel": "Açıklama",
+        "descPlaceholder": "Kapsam, mevzuat notları, beklenti…"
+      },
+      "files": {
+        "choose": "Dosya seç",
+        "selectedList": "Seçilen dosyalar",
+        "remove": "kaldır",
+        "header": "Ek dosyalar",
+        "hint": "PDF, DOCX, XLSX, JPG, PNG…"
+      },
+      "submit": {
+        "calculating": "Hesaplanıyor…",
+        "calcOffer": "Teklifi Hesapla"
+      },
+      "cvPreview": {
+        "title": "CV Önizleme",
+        "close": "Kapat"
+      },
+      "result": {
+        "title": "Ücret Teklifi",
+        "mode": "Değerlendirme modu",
+        "estHours": "Tahmini süre",
+        "daysNormal": "Gün (normal)",
+        "daysUrgent": "Gün (acil)",
+        "hours": "saat",
+        "days": "gün",
+        "price": "Ücret",
+        "currencyTRY": "TL",
+        "targetDue": "Hedef teslim",
+        "calc": "Hesap",
+        "minFee": "Min ücret",
+        "urgentMult": "Acil"
+      }
+    },
+    "precheckBlock": {
+      "warnTitle": "Ön kontrol uyarısı",
+      "failed": "Bu kayıt ön kontrolü geçmedi.",
+      "notClearTitle": "Anlaşılır Değil",
+      "notClearMsg": "Sorunuz yeterince açık değil. Lütfen somut konu, eşya/GTİP, işlem türü ve bağlam ekleyin.",
+      "outOfScopeTitle": "Gümrük Kapsamı Dışında",
+      "outOfScopeMsg": "Sorunuz gümrük mevzuatı kapsamı dışında görünüyor.",
+      "errorTitle": "Ön Kontrol Hatası",
+      "errorMsg": "Ön kontrol sırasında bir hata oluştu. Lütfen tekrar deneyin.",
+      "backToAsk": "/ask sayfasına dön"
+    },
+    "offerActions": {
+      "processing": "İşleniyor…",
+      "accept": "Teklifi kabul et",
+      "acceptTitle": "Teklifi kabul et",
+      "orgUseCredits": "Kurum Kredisi Kullan",
+      "orgUseCreditsTitle": "Kurum Kredisi Kullan",
+      "reject": "Teklifi reddet",
+      "rejectTitle": "Teklifi reddet ve sorular listesine dön",
+      "cancelTitle": "Vazgeç",
+      "cancel": "Vazgeç",
+      "terms": {
+        "ownership": "Aksi belirtilmedikçe üretilen çıktıların kullanım hakkı müşteriye aittir.",
+        "compliance": "Sağlanan bilgi ve belgeler mevzuat gereklilikleri ve yasal yükümlülükler dışında kullanılmaz."
+      }
+    },
+    "cvPreview": {
+      "title": "CV Önizleme",
+      "close": "Kapat"
+    },
+    "terms": {
+      "summary": {
+        "priceTL": "Ücret (TL)",
+        "requiredCredits": "Gerekli Kredi",
+        "balance": "Bakiye"
+      },
+      "client": {
+        "consentHtml": "kullanım koşullarını okudum, anladım ve <strong>kabul ediyorum</strong>.",
+        "goToPaymentTitle": "Ödeme adımına geç",
+        "redirecting": "Yönlendiriliyor…",
+        "continue": "Devam et"
+      }
+    },
+    "confirmOrg": {
+		"sections": {
+        "info": {
+          "title": "Bilgilendirme",
+          "li1": "Tüm danışmanlık yanıtları konusunda yetkin/uzman kişilerce hazırlanır.",
+          "li2": "Sunulan bilgi/cevaplar nihai veya bağlayıcı görüş değildir. İşlem yapmadan önce ilgili kamu kurumlarıyla bizzat doğrulama yapmanız gerekir.",
+          "li3": "Kanunların emredici hükümleri saklı kalmak kaydıyla, Platform ve Hizmetlerden doğan her türlü zarardan (doğrudan/dolaylı, özel, arızi, kâr/itibar/veri kaybı dâhil) sorumluluk kabul edilmez.",
+          "li4": "Fiyatlar KDV dahildir ve ödeme anında tahsil edilir (yetkili ödeme sağlayıcısı üzerinden).",
+          "li5": "Hizmet dijital nitelikte olduğundan ücretler veya kullanılmış krediler iade edilmez. Yalnızca hatalı tahsilat durumunda oransal iade veya kredi iadesi yapılır.",
+          "li6": "Hesap güvenliğinden ve paylaştığınız bilgi-belgelerin doğruluğundan siz sorumlusunuz.",
+          "li7": "Platform “olduğu gibi/mevcut hâliyle” sunulur; kesintisiz hizmet taahhüdü verilmez.",
+          "li8": "Detaylar için:"
+        },
+        "approval": {
+          "checkbox": "Ön bilgilendirmeyi okudum, anladım; bilgilerin yalnızca bilgilendirme amacıyla sunulduğunu, nihai karar öncesi kamu kurumlarıyla doğrulama yapmam gerektiğini, sorumluluk kabul edilmediğini, fiyatların KDV dâhil ve ödemenin anında tahsil edildiğini, ücret ve kullanılmış krediler için iade olmadığını (hatalı tahsilat hariç) kabul ediyorum ve Terms of Service belgesini okudum."
+        }
+      },
+      "title": "Ödeme Onayı",
+      "questionId": "Soru ID",
+      "priceTRY": "Ücret (TL)",
+      "requiredCredits": "Gerekli Kredi",
+      "balance": "Bakiye",
+      "statusApproved": "onaylandı",
+      "note": {
+        "before": "Bu işlemi onayladığınızda ilgili tutar kurum kredi bakiyesinden düşülecek ve soru durumu ",
+        "after": " olacaktır."
+      }
+    },
+    "confirmUser": {
+		"sections": {
+        "info": {
+          "title": "Bilgilendirme",
+          "li1": "Tüm danışmanlık yanıtları konusunda yetkin/uzman kişilerce hazırlanır.",
+          "li2": "Sunulan bilgi/cevaplar nihai veya bağlayıcı görüş değildir. İşlem yapmadan önce ilgili kamu kurumlarıyla bizzat doğrulama yapmanız gerekir.",
+          "li3": "Kanunların emredici hükümleri saklı kalmak kaydıyla, Platform ve Hizmetlerden doğan her türlü zarardan (doğrudan/dolaylı, özel, arızi, kâr/itibar/veri kaybı dâhil) sorumluluk kabul edilmez.",
+          "li4": "Fiyatlar KDV dahildir ve ödeme anında tahsil edilir (yetkili ödeme sağlayıcısı üzerinden).",
+          "li5": "Hizmet dijital nitelikte olduğundan ücretler veya kullanılmış krediler iade edilmez. Yalnızca hatalı tahsilat durumunda oransal iade veya kredi iadesi yapılır.",
+          "li6": "Hesap güvenliğinden ve paylaştığınız bilgi-belgelerin doğruluğundan siz sorumlusunuz.",
+          "li7": "Platform “olduğu gibi/mevcut hâliyle” sunulur; kesintisiz hizmet taahhüdü verilmez.",
+          "li8": "Detaylar için:",
+		  "tos": "Kullanım Koşulları"
+        },
+        "approval": {
+          "checkbox": "Ön bilgilendirmeyi okudum, anladım; bilgilerin yalnızca bilgilendirme amacıyla sunulduğunu, nihai karar öncesi kamu kurumlarıyla doğrulama yapmam gerektiğini, sorumluluk kabul edilmediğini, fiyatların KDV dâhil ve ödemenin anında tahsil edildiğini, ücret ve kullanılmış krediler için iade olmadığını (hatalı tahsilat hariç) kabul ediyorum ve Terms of Service belgesini okudum."
+        }
+      },
+      "title": "Ödeme Onayı",
+      "questionId": "Soru ID",
+      "priceTRY": "Ücret (TL)",
+      "requiredCredits": "Gerekli Kredi",
+      "balance": "Bakiye",
+      "statusApproved": "onaylandı",
+      "note": {
+        "before": "Bu işlemi onayladığınızda ilgili tutar kredi bakiyenizden düşülecek ve soru durumu ",
+        "after": " olacaktır."
+      }
+    }
+  },
+  "email": {
+    "ticketReply": {
+      "subject": "Destek Yanıtı",
+      "subjectWithTitle": "Yanıtınız: {title}",
+      "questionLabel": "Soru",
+      "continueQuestionLink": "Sorunuza buradan devam edin",
+      "viewSupport": "Talebinizi buradan görüntüleyin"
+    },
+    "workerAssign": {
+      "subject": "{brand} Soru ataması",
+      "questionId": "Soru ID",
+      "paymentAmount": "Ödeme tutarı",
+      "creditAmount": "Kredi Tutarı",
+      "paymentMethod": "Ödeme yöntemi",
+      "goToPanel": "Panele git",
+      "goToQuestion": "Soruya git",
+      "bestRegards": "İyi çalışmalar"
+    },
+    "receipt": {
+      "subject": "Ödeme Alındı – Sipariş {orderId}",
+      "title": "Ödeme Alındı",
+      "thanks": "Ödemeniz için teşekkürler. Sipariş detaylarınız aşağıdadır.",
+      "orderId": "Sipariş No",
+      "questionId": "Soru ID",
+      "amount": "Tutar",
+      "viewOrder": "Siparişi Gör",
+      "viewQuestion": "Soruyu Gör",
+      "footer": "Bu e-posta Gumruk360 tarafından gönderildi.",
+      "currencyNote": "Tutar para birimi"
+    }
+  },
+  "slaBox": {
+    "heading": "Ücret Teklifi",
+    "notFound": "Bu kayıt için SLA/fiyat verisi bulunamadı.",
+    "creditHeading": "Kredi",
+    "creditWillUse": "Kullanılacak kredi",
+    "price": "Ücret",
+    "currencyTRY": "TL",
+    "creditAmount": "Kredi Tutarı",
+    "targetDue": "Hedef teslim",
+    "selectedConsultant": "Seçilen danışman",
+    "teamFallback": "Gümrük360 Ekibi",
+    "calc": "Hesap",
+    "calcHourly": "Saatlik",
+    "calcMin": "Min",
+    "calcUrgent": "Acil ×"
+  },
+  "questionActions": {
+    "approve": "Teklifi Onayla",
+    "approving": "Onaylanıyor…",
+    "approved": "Onaylandı",
+    "reject": "Reddet",
+    "rejecting": "Reddediliyor…",
+    "rejected": "Reddedildi",
+    "goToPayment": "Ödemeye Git",
+    "errorPrefix": "Hata",
+    "approvedInfo": "Onaylandı. Ödeme sayfasına yönlendirileceksiniz; ödeme tamamlanınca durum paid olur."
+  },
+  "workerCv": {
+    "profile": {
+      "loading": "Yükleniyor...",
+      "labels": {
+        "displayName": "Görünen Ad",
+        "titleTR": "Ünvan (TR)",
+        "titleEN": "Title (EN)",
+        "tags": "Etiketler",
+        "photo": "Fotoğraf"
+      },
+      "placeholders": {
+        "titleTR": "Örn: Gümrük Müşaviri",
+        "titleEN": "e.g., Customs Broker"
+      },
+      "tags": {
+        "help": "Enter veya virgül ile ekle. En fazla 10 etiket. Kelime öbeği tek etiket sayılır."
+      },
+      "buttons": {
+        "chooseFile": "Dosya Seç",
+        "uploadPhoto": "Fotoğraf Yükle",
+        "deletePhoto": "Fotoğrafı Sil",
+        "save": "Kaydet"
+      },
+      "ui": {
+        "previewAlt": "Önizleme",
+        "preview": "Önizleme"
+      },
+      "messages": {
+        "saveFailed": "Kayıt başarısız.",
+        "saved": "Kaydedildi ✔",
+        "selectImage": "Lütfen bir görsel seçin.",
+        "uploadFailed": "Yükleme başarısız.",
+        "photoUploaded": "Fotoğraf yüklendi.",
+        "deleteConfirm": "Fotoğrafı silmek istediğinize emin misiniz?",
+        "deleteFailed": "Silinemedi.",
+        "photoDeleted": "Fotoğraf silindi."
+      }
+    },
+    "preview": {
+      "title": "Önizleme",
+      "ui": {
+        "photoAlt": "profil"
+      },
+      "labels": {
+        "specialties": "Spesifik Uzmanlıklar"
+      },
+      "empty": "Bu dil için içerik yok."
+    },
+    "blocksEditor": {
+      "title": "CV Blokları",
+      "preview": "Önizleme",
+      "lang": "Dil",
+      "type": "Tür",
+      "select": "Seçiniz",
+      "order": "Sıra",
+      "content": "İçerik",
+      "contentPlaceholder": "Metin/HTML yapıştırabilir veya JSON doküman verebilirsiniz.",
+      "save": "Kaydet",
+      "delete": "Sil",
+      "saved": "Kaydedildi ✔",
+      "updateFailed": "Blok güncellenemedi.",
+      "deleteFailed": "Silme başarısız.",
+      "deleteConfirm": "Bu CV bloğunu silmek istediğinize emin misiniz?"
+    },
+    "title": "CV Blokları"
+  },
+  "api": {
+    "precheck": {
+      "empty_text": "Soru metni boş."
+    },
+    "file_not_found": "Dosya bulunamadı",
+    "missing_question_id": "Soru ID gerekli.",
+    "question_not_found": "Soru bulunamadı.",
+    "pdf_generate_failed": "PDF oluşturulamadı.",
+    "scope_answer_only": "Scope yalnızca 'answer' olabilir.",
+    "title_too_short": "Başlık en az 3 karakter olmalı.",
+    "session_not_found": "Oturum bulunamadı.",
+    "question_create_failed": "Soru oluşturulamadı.",
+    "upload_error": "Yükleme hatası",
+    "invalid_path": "Geçersiz yol",
+    "delete_error": "Silme hatası",
+    "unknown_error": "Beklenmeyen hata"
+  },
+  "pdf": {
+    "offer": {
+      "h1": "SLA • Fiyatlandırma Sonucu",
+      "questionId": "Soru ID",
+      "createdAt": "Oluşturma",
+      "title": "Başlık",
+      "pricingResult": "Fiyatlama sonucu",
+      "urgent": "Acil",
+      "yes": "Evet",
+      "no": "Hayır",
+      "price": "Ücret",
+      "selectedConsultant": "Seçilen danışman",
+      "team": "Ekibi"
+    },
+    "title": {
+      "offer": "GÜMRÜK DANIŞMANLIK TEKLİFİ"
+    },
+    "kv": {
+      "questionId": "Soru ID:",
+      "createdAt": "Oluşturulma:",
+      "urgency": "Önem Derecesi",
+      "urgent": "ACİL",
+      "deliveryTime": "Teslim Süresi",
+      "deliveryDays": "{count} iş günü",
+      "deliveryDate": "Teslim Tarihi",
+      "offerAmount": "Teklif Tutarı",
+      "title": "Başlık:",
+      "assignedConsultant": "Seçilen Danışman:",
+      "teamDefault": "Gümrük360 Ekibi",
+      "creditAmount": "Kredi Tutarı:",
+      "creditLine": "{credits} kredi (avantajınız min %{pct})"
+    },
+    "sections": {
+    "scope": {
+      "heading": "KAPSAM",
+      "intro": "Bu teklif, yukarıda belirtilen soru/konu başlığına ilişkin gümrük ve dış ticaret danışmanlığı hizmetinin çerçevesini tanımlar. Çalışma, konusunda yetkin/uzman ekip tarafından yürütülür ve aşağıdaki adımları kapsar:",
+      "step1": "Konu Kaydı",
+      "step1_body": "Portale ilettiğiniz soru ve ekli belge/bilgiler kayda alınır.",
+      "step1_note": "Eksikler iletilmez; verilen bilgilerle işlem yapılır. Değerlendirme, yalnızca paylaştığınız mevcut veriler esas alınarak gerçekleştirilir.",
+      "step2": "Ön İnceleme & Mevzuat Tarama",
+      "step2_body": "Gümrük Kanunu, ikincil mevzuat, tebliğ/genelge, uluslararası düzenlemeler ve idari uygulamalar çerçevesinde konuya özgü mevzuat taraması yapılır."
+    },
+    "delivery": {
+      "heading": "TESLİM ŞEKLİ",
+      "present": "Cevabın Sunumu: Nihai danışmanlık cevabı Portal üzerinden “Cevap” alanında yayınlanır ve eşzamanlı olarak e-posta ile tarafınıza iletilir.",
+      "time": "Süre: Hedef teslim tarihi üstte belirtilmiştir. (Verilen bilgi/belge seti esas alınır.)",
+      "revision": "Revizyon: İlk kapsam ve varsayımlar çerçevesinde, teslimden itibaren 7 gün içinde 1 kısa revizyon hakkı bulunur. Yeni veri/senaryo iletilmesi, kapsam değişikliğidir."
+    },
+    "terms": {
+      "heading": "ŞARTLAR VE KOŞULLAR",
+      "b1": "Tüm danışmanlık yanıtları konusunda yetkin/uzman kişilerce hazırlanır.",
+      "b2": "Sunulan bilgi/cevaplar nihai veya bağlayıcı görüş değildir. İşlem yapmadan önce ilgili kamu kurumlarıyla bizzat doğrulama yapmanız gerekir.",
+      "b3": "Kanunların emredici hükümleri saklı kalmak kaydıyla, Platform ve Hizmetlerden doğan her türlü zarardan (doğrudan/dolaylı, özel, arızi, kâr/itibar/veri kaybı dâhil) sorumluluk kabul edilmez.",
+      "b4": "Fiyatlar KDV dahildir ve ödeme anında tahsil edilir (yetkili ödeme sağlayıcısı üzerinden).",
+      "b5": "Hizmet dijital nitelikte olduğundan ücretler veya kullanılmış krediler iade edilmez. Yalnızca hatalı tahsilat durumunda oransal iade veya kredi iadesi yapılır.",
+      "b6": "Hesap güvenliğinden ve paylaştığınız bilgi-belgelerin doğruluğundan siz sorumlusunuz.",
+      "b7": "Platform “olduğu gibi/mevcut hâliyle” sunulur; kesintisiz hizmet taahhüdü verilmez. Detaylar için Terms of Service bağlantısını inceleyin."
+    },
+    "approval": {
+      "heading": "ONAY",
+      "body": "Teklif kapsamında sunulan ön bilgilendirmeyi okudum, anladım; bilgilerin yalnızca bilgilendirme amacıyla sunulduğunu, nihai karar öncesi kamu kurumlarıyla doğrulama yapmam gerektiğini, sorumluluk kabul edilmediğini, fiyatların KDV dâhil ve ödemenin anında tahsil edildiğini, ücret ve kullanılmış krediler için iade olmadığını (hatalı tahsilat hariç) kabul ediyorum ve Terms of Service belgesini okudum."
+    }
+  },
+    "errors": {
+      "questionNotFound": "Soru bulunamadı.",
+      "pdfFailed": "PDF oluşturulamadı."
+    }
+  },
+  "cookieConsent": {
+    "cookies": {
+      "banner": {
+        "title": "Çerez Tercihleri",
+        "body": "Deneyiminizi iyileştirmek için çerezler kullanıyoruz. Kabul edebilir, reddedebilir veya tercihlerinizi özelleştirebilirsiniz."
+      },
+      "actions": {
+        "accept": "Kabul Et",
+        "reject": "Reddet",
+        "customize": "Tercihleri Yönet",
+        "save": "Kaydet",
+        "cancel": "Vazgeç"
+      },
+      "categories": {
+        "necessary": "Zorunlu",
+        "preferences": "Tercihler",
+        "analytics": "İstatistik",
+        "marketing": "Pazarlama"
+      }
+    }
+  }
+}
