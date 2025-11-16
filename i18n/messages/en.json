@@ -521,7 +521,7 @@
         "description": "Upload your question and documents; the system pre-checks and generates a clear quote with a target SLA.",
         "cta_primary": "Ask a Question",
         "cta_secondary": "How It Works",
-		"cta_secondary2": "Corporate Membership",
+		"cta_secondary2": "Corporate",
         "bullets": [
           "Minimisation of risks and costs through accurate declaration and regulatory compliance",
 		  "Full integration with ConspheraPSA for managing all processes through a single channel",
@@ -1965,7 +1965,7 @@
         "labels": {
           "ticketId": "Ticket ID",
           "sender": "Sender",
-          "question": "Question",
+          "question": "Question Ref",
           "subject": "Subject",
           "status": "Status",
           "date": "Date"

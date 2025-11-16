@@ -501,7 +501,7 @@
         "description": "Sorunuzu ve belgeleri yükleyin; sistem ön inceleme yapar, net bir teklif ve hedef teslim süresi (SLA) oluşturur.",
         "cta_primary": "Soru Sor",
         "cta_secondary": "Nasıl Çalışır?",
-		"cta_secondary2": "Kurumsal Üyelik",
+		"cta_secondary2": "Kurumsal",
         "bullets": [
           "Doğru beyan ve mevzuat uyumu ile risk ve maliyetlerin minimizayonu",
 		  "ConspheraPSA ile tam entegrasyon ile tek kanaldan tüm süreçlerin yönetimi", 
@@ -2025,7 +2025,7 @@
 		  "labels": {
           "ticketId": "Ticket ID",
           "sender": "Gönderen",
-          "question": "Soru",
+          "question": "Soru Ref",
           "subject": "Konu",
           "status": "Durum",
           "date": "Tarih"

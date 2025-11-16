@@ -227,17 +227,22 @@ export async function POST(req: NextRequest, ctx: { params: Promise<{ id: string
 </body>
 </html>`;
 
-    // 3) Headless Chromium ile PDF'e dönüştür
-    // Yerelde 'puppeteer', serverless'ta 'puppeteer-core + @sparticuz/chromium'
-const useCore = process.env.USE_CHROMIUM_CORE === '1'
+const useCore = process.env.USE_CHROMIUM_CORE === '1' || process.env.VERCEL === '1'
 let puppeteer: any = null
 let chromium: any = null
+
 if (useCore) {
-  puppeteer = await import('puppeteer-core')
-  chromium = await import('@sparticuz/chromium')
+  const pCore = await import('puppeteer-core')
+  const ch = await import('@sparticuz/chromium')
+
+  // default export varsa onu kullan, yoksa modülün kendisini
+  puppeteer = (pCore as any).default ?? pCore
+  chromium = (ch as any).default ?? ch
 } else {
-  puppeteer = await import('puppeteer')
+  const p = await import('puppeteer')
+  puppeteer = (p as any).default ?? p
 }
+
 
     // Windows/yerel: PUPPETEER_EXECUTABLE_PATH verilmişse onu kullan (kurulu Chrome)
 const localChrome = process.env.PUPPETEER_EXECUTABLE_PATH // ör: C:\Program Files\Google\Chrome\Application\chrome.exe
