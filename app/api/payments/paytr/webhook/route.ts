@@ -202,9 +202,11 @@ export async function POST(req: Request) {
 
     const order = orderSel.data || null;
     if (!order) {
-      await audit("paytr.webhook.order_not_found", { merchant_oid, ...clientInfo });
-      return NextResponse.json({ ok: false, error: "order_not_found" }, { status: 404 });
-    }
+     // Bizde karşılığı olmayan / daha önce silinmiş siparişler için
+     // ekstra log üretmeden ve PayTR'ın tekrar denemesini tetiklemeden
+     // sessizce 200 OK dön.
+     return new Response("OK", { status: 200, headers: { "Content-Type": "text/plain" } });
+ }
 
     // 4) Tutar uyarlaması
     const posted = parseKurus(total_amount);
