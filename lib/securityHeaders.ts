@@ -32,8 +32,24 @@ export function buildSecurityHeaders(opts?: {
     "'self'",
     "https://www.google-analytics.com",
     "https://region1.google-analytics.com",
-    ...(opts?.cspExtraConnectSrc || []),
+  
   ];
+  const supaUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+   if (supaUrl) {
+    // https://utbgmxcuokaeyohgftwx.supabase.co gibi tam origin'i ekle
+    connectSrc.push(supaUrl);
+    try {
+      const u = new URL(supaUrl);
+       // Realtime/WebSocket bağlantıları için
+     connectSrc.push(`wss://${u.host}`);
+    } catch {
+    // URL parse edilemezse sessizce geç
+    }
+   }
+
+  if (opts?.cspExtraConnectSrc?.length) {
+    connectSrc.push(...opts.cspExtraConnectSrc);
+  }
   cspParts.push("connect-src " + connectSrc.join(" "));
 
   const imgSrc = [
