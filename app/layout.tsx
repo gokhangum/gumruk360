@@ -53,7 +53,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const brandName =
     (shortLocale === "tr" ? BRAND?.nameTR : BRAND?.nameEN) ??
     (shortLocale === "tr" ? "Gümrük360" : "EasyCustoms360");
-
+  const faviconPath =
+  shortLocale === "en"
+     ? "/brand/easycustoms360.ico"
+      : "/brand/gumruk360.ico";
   // ---- Wildcard SEO kaydını çek (tenant_seo, route="*", is_active=true) ----
   let wildcard: {
     title?: string | null;
@@ -80,6 +83,10 @@ export async function generateMetadata(): Promise<Metadata> {
     description: descriptionDefault,
     alternates: self ? { canonical: self } : undefined,
     metadataBase: baseUrl ? new URL(baseUrl) : undefined,
+  icons: {
+    icon: faviconPath,
+     shortcut: faviconPath,
+    },
     openGraph: {
       title: titleDefault,
       description: descriptionDefault,

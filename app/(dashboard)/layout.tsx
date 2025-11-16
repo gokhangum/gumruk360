@@ -85,13 +85,14 @@ export default async function DashboardLayout({ children }: { children: React.Re
 
   const emailQuery = userEmail ? `?email=${encodeURIComponent(userEmail)}` : "";
 
-  // Host -> dil ve logolar
+  // Host -> dil ve logolar (tenant bazlı)
   const hdrs = await headers();
   const host = (hdrs.get("x-forwarded-host") || hdrs.get("host") || "").toLowerCase();
-  const isEN = host.startsWith("127.0.0.1");
+  const tenant = tenantFromHost(host);
+  const isEN = tenant === "EN";
   const dashLogo = isEN ? "/brand/easycustoms360wh-opt.svg" : "/brand/gumruk360wh-opt.svg";
    const dashAlt = isEN ? "EasyCustoms360" : "Gümrük360";
-   const dashLogoMobile = isEN ? "/brand/easycustoms360wh-opt.svg" : "/brand/gumruk360wh-opt.svg";
+  const dashLogoMobile = dashLogo;
 
   const howItWorksHref = showSubscription ? "/dashboard/how-it-works/corporate" : "/dashboard/how-it-works/individual";
 
