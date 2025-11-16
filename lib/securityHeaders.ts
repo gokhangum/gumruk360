@@ -62,6 +62,7 @@ export function buildSecurityHeaders(opts?: {
   const frameSrc = [
     "'self'",
     "https://www.googletagmanager.com",
+	"https://www.paytr.com",
     ...(opts?.cspExtraFrameSrc || []),
   ];
 

@@ -5,6 +5,7 @@ import { ChevronDown, Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import ActiveLink from "@/components/nav/ActiveLink";
 import { createClient } from "@supabase/supabase-js";
+import { tenantFromHost } from "@/lib/brand";
 const NAV_BG = "#1159BF";
 const NAV_FG = "#FFFFFF";
 
@@ -29,16 +30,23 @@ useEffect(() => {
   };
 }, [open]);
 
-  // Header logo (white) – host'a göre
+  // Header logo (white) – tenant'a göre
   const [headerLogo, setHeaderLogo] = useState<string | null>(null);
   useEffect(() => {
-    const host = typeof window !== "undefined" ? window.location.hostname : "";
-    setHeaderLogo(host === "127.0.0.1" ? "/brand/easycustoms360wh-opt.svg" : "/brand/gumruk360wh-opt.svg");
-  }, []);
-  
+    if (typeof window === "undefined") return;
+    const host = window.location.hostname;
+   const tenant = tenantFromHost(host);
+    const logo =
+     tenant === "EN"
+       ? "/brand/easycustoms360wh-opt.svg"
+       : "/brand/gumruk360wh-opt.svg";
+    setHeaderLogo(logo);
+   }, []);
+
   const tf = (key: string, fallback: string) => {
     try { return tHome(key) as unknown as string; } catch { return fallback; }
-  };
+   };
+
 
   const signupLabel = tf("nav.signup", "Üye Olun");
   const loginLabel = tf("nav.login", "Giriş Yap");

@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import ActiveLink from "@/components/nav/ActiveLink";
 import { supabaseServer } from "@/lib/supabase/server";
 import MobileDrawer from "./MobileDrawer";
+import { tenantFromHost } from "@/lib/brand";
 
 /** Inline transparent, stroke-only icons */
 function I({ name, className = "h-4 w-4 opacity-70", strokeWidth = 1.5 }: { name: string; className?: string; strokeWidth?: number }) {
@@ -86,11 +87,11 @@ export default async function DashboardLayout({ children }: { children: React.Re
 
   // Host -> dil ve logolar
   const hdrs = await headers();
-  const host = (hdrs.get("x-forwarded-host") || hdrs.get("host") || "").toLowerCase();
-  const isEN = host.startsWith("127.0.0.1");
+   const host = (hdrs.get("x-forwarded-host") || hdrs.get("host") || "").toLowerCase();
+   const isEN = host.startsWith("127.0.0.1");
   const dashLogo = isEN ? "/brand/easycustoms360wh-opt.svg" : "/brand/gumruk360wh-opt.svg";
   const dashAlt = isEN ? "EasyCustoms360" : "Gümrük360";
-  const dashLogoMobile = isEN ? "/brand/easycustoms360wh-opt.svg" : "/brand/gumruk360wh-opt.svg";
+   const dashLogoMobile = isEN ? "/brand/easycustoms360wh-opt.svg" : "/brand/gumruk360wh-opt.svg";
 
   const howItWorksHref = showSubscription ? "/dashboard/how-it-works/corporate" : "/dashboard/how-it-works/individual";
 

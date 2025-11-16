@@ -6,6 +6,7 @@ import { supabaseServer } from "@/lib/supabase/server";
 import PermissionWatcher from "./PermissionWatcher";
 import { headers } from "next/headers";
 import MobileDrawer from "./MobileDrawer";
+import { tenantFromHost } from "@/lib/brand";
 /** Inline transparent, stroke-only icons */
 function I({ name, className = "h-4 w-4 opacity-70", strokeWidth = 1.5 }: { name: string; className?: string; strokeWidth?: number }) {
   const common = { fill: "none", stroke: "currentColor", strokeWidth, strokeLinecap: "round", strokeLinejoin: "round" } as const;
@@ -70,12 +71,14 @@ export default async function WorkerLayout({ children }: { children: React.React
   }
 
   const t = await getTranslations('worker.nav');
-// Worker sidebar üst logo (white) – host'a göre
+ // Worker sidebar üst logo (white) – tenant'a göre
   const hdrs = await headers();
-  const host = (hdrs.get("x-forwarded-host") || hdrs.get("host") || "").toLowerCase();
-  const isEN = host.startsWith("127.0.0.1");
-  const workerLogo = isEN ? "/brand/easycustoms360wh-opt.svg" : "/brand/gumruk360wh-opt.svg";
+   const host = (hdrs.get("x-forwarded-host") || hdrs.get("host") || "").toLowerCase();
+ const tenant = tenantFromHost(host);
+  const isEN = tenant === "EN";
+   const workerLogo = isEN ? "/brand/easycustoms360wh-opt.svg" : "/brand/gumruk360wh-opt.svg";
   const workerAlt = isEN ? "EasyCustoms360" : "Gümrük360";
+
   return (
     <div className="flex min-h-screen">
         <aside className="sidenav w-60 border-r border-black/10 p-4 hidden md:block">

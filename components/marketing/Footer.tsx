@@ -2,17 +2,24 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-
-export default function Footer() {
+import { tenantFromHost } from "@/lib/brand";
+ export default function Footer() {
   const t = useTranslations("marketing.home.footer_i18n");
   const tb = useTranslations("marketing");
-    // Footer logo (black) – host'a göre
-  const [footerLogo, setFooterLogo] = useState<string | null>(null);
-  useEffect(() => {
-    const host = typeof window !== "undefined" ? window.location.hostname : "";
-    setFooterLogo(host === "127.0.0.1" ? "/brand/easycustoms360bl-opt.svg" : "/brand/gumruk360bl-opt.svg");
-  }, []);
+  // Footer logo (black) – tenant'a göre
+ const [footerLogo, setFooterLogo] = useState<string | null>(null);
+   useEffect(() => {
+   if (typeof window === "undefined") return;
+   const host = window.location.hostname;
+     const tenant = tenantFromHost(host);
+   const logo =
+      tenant === "EN"
+       ? "/brand/easycustoms360bl-opt.svg"
+        : "/brand/gumruk360bl-opt.svg";
+    setFooterLogo(logo);
+ }, []);
   return (
+
     <footer className="border-t border-slate-200 mt-16">
       <div className="max-w-[clamp(320px,90vw,1280px)] mx-auto px-4 md:px-8 py-10 grid grid-cols-2 md:grid-cols-5 gap-8 text-sm">
         <div>
