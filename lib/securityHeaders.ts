@@ -19,12 +19,14 @@ export function buildSecurityHeaders(opts?: {
   cspParts.push("object-src 'none'");
 
   const scriptSrc = [
-    "'self'",
-    "https://www.googletagmanager.com",
-    "https://www.google-analytics.com",
+   "'self'",
+    "'unsafe-inline'",          // ✅ inline script'lere izin ver
+   "https://www.googletagmanager.com",
+  "https://www.google-analytics.com",
     ...(opts?.cspExtraScriptSrc || []),
   ];
-  cspParts.push("script-src " + scriptSrc.join(" "));
+ cspParts.push("script-src " + scriptSrc.join(" "));
+
 
   const connectSrc = [
     "'self'",
