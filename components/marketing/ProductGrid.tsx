@@ -17,7 +17,8 @@ const btnClass = (key: typeof cards[number]["key"]) =>
     docReview:   "bg-orange-500 hover:bg-orange-600 text-white focus:outline-none focus:ring-2 focus:ring-orange-200",
   }[key] ?? "bg-blue-600 hover:bg-blue-700 text-white");
   return (
-    <section className="py-8 md:py-12 bg-slate-50 border-t border-b border-slate-200">
+	<section className="hidden md:block py-8 md:py-12 bg-slate-50 border-t border-b border-slate-200">
+	   {/* hidden md:block silersen mobilde görünür */}
       <div className="mx-auto max-w-[clamp(320px,90vw,1280px)] px-4 md:px-8">
         <h2 className="text-lg font-semibold mb-6">{t("title")}</h2>
         <div className="grid md:grid-cols-3 gap-4 md:gap-6">

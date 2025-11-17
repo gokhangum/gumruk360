@@ -88,35 +88,42 @@ const cards = t.raw("cards") as Card[];
           {/* Right side: 2x2 card grid */}
           <div className="relative">
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              {cards.map((c, idx) => (
-               <div
-  key={idx}
-  className="group aspect-[4/3] rounded-2xl border border-slate-200 ring-1 ring-black/0 hover:ring-black/5
-             bg-gradient-to-br from-slate-50 to-white
-             flex items-center justify-center relative overflow-hidden
-             transform-gpu will-change-transform
-             shadow-[0_10px_0_0_rgba(226,232,240,1),0_24px_36px_rgba(2,6,23,0.12)]
-             hover:-translate-y-1
-             hover:shadow-[0_8px_0_0_rgba(226,232,240,1),0_20px_30px_rgba(2,6,23,0.16)]
-             active:translate-y-0
-             active:shadow-[0_6px_0_0_rgba(226,232,240,1),0_12px_18px_rgba(2,6,23,0.20)]
-             transition-transform duration-200"
->
-
-                  <div className="text-center px-3 sm:px-4 md:px-6 break-words pointer-events-none">
-                    <div className="text-4xl sm:text-5xl md:text-6xl">{c.emoji}</div>
-                    <div className="mt-3 md:mt-4 font-medium text-sm sm:text-base break-words">{c.title}</div>
-                    <div className="text-slate-600 text-xs md:text-sm mt-1 break-words">{c.desc}</div>
+             {cards.map((c, idx) => (
+            <Link
+               key={idx}
+                 href={c.href}
+                className="block"
+             aria-label={t("learn_more_aria", { title: c.title })}
+             >
+                <div
+                className="group aspect-[4/3] rounded-2xl border border-slate-200 ring-1 ring-black/0 hover:ring-black/5
+           bg-gradient-to-br from-slate-50 to-white
+          flex items-center justify-center relative overflow-hidden
+           transform-gpu will-change-transform
+           shadow-[0_10px_0_0_rgba(226,232,240,1),0_24px_36px_rgba(2,6,23,0.12)]
+              hover:-translate-y-1
+           hover:shadow-[0_8px_0_0_rgba(226,232,240,1),0_20px_30px_rgba(2,6,23,0.16)]
+            active:translate-y-0
+          active:shadow-[0_6px_0_0_rgba(226,232,240,1),0_12px_18px_rgba(2,6,23,0.20)]
+            transition-transform duration-200"
+                >
+                    <div className="text-center px-3 sm:px-4 md:px-6 break-words pointer-events-none">
+                     <div className="text-4xl sm:text-5xl md:text-6xl">{c.emoji}</div>
+                    <div className="mt-3 md:mt-4 font-medium text-sm sm:text-base break-words">
+                     {c.title}
+                    </div>
+                  <div className="text-slate-600 text-xs md:text-sm mt-1 break-words">
+                    {c.desc}
+                 </div>
                   </div>
-                  <Link
-                    href={c.href}
-                    className="absolute bottom-3 md:bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-rose-600 text-white text-xs md:text-sm px-3 md:px-4 py-1.5 md:py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                    aria-label={t("learn_more_aria", { title: c.title })}
-                  >
-                   {t("learn_more")}
-                  </Link>
-                </div>
-              ))}
+                 <span
+                      className="absolute bottom-3 md:bottom-4 left-3 right-3 inline-flex items-center justify-center rounded-full bg-slate-900 text-white text-xs md:text-sm px-3 py-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                     >
+                     {t("learn_more")}
+                     </span>
+                  </div>
+                </Link>
+             ))}
             </div>
           </div>
         </div>
