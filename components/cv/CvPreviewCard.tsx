@@ -151,12 +151,11 @@ export default function CvPreviewCard(props: CvPreviewCardProps) {
 const t = useTranslations("common.cvPreview");
   return (
     <div className="w-full max-w-3xl mx-auto rounded-2xl border border-neutral-200 shadow-sm bg-white overflow-hidden">
-      <div className="flex gap-4 p-6 items-center">
+      <div className="flex flex-col sm:flex-row gap-4 p-6 items-start sm:items-center">
         {/* Photo 5x6 cm box */}
-        <div
-          className="shrink-0 rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200"
-          style={{ width: "5cm", height: "6cm" }}
-        >
+     <div
+       className="shrink-0 rounded-xl overflow-hidden bg-neutral-100 border border-neutral-200 w-24 h-28 sm:w-[5cm] sm:h-[6cm]"
+      >
           {photoUrl ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={photoUrl} alt={displayName ?? t("profileAlt")} className="w-full h-full object-cover" />

@@ -568,7 +568,7 @@ if (!l2Pass) {
     {/* backdrop */}
     <div className="absolute inset-0 bg-black/40" onClick={() => setShowCv(false)} />
     {/* dialog */}
-    <div className="absolute inset-0 grid place-items-center p-4">
+    <div className="absolute inset-0 grid items-start justify-center p-4 pt-20 sm:items-center sm:pt-4">
       <div className="w-full max-w-full md:max-w-4xl bg-white rounded-2xl shadow-xl border overflow-hidden">
         <div className="flex items-center justify-between border-b px-4 py-3">
           <div className="text-sm font-medium">{t("cvPreview.title")}</div>
