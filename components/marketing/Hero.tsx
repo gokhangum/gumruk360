@@ -96,16 +96,16 @@ const cards = t.raw("cards") as Card[];
              aria-label={t("learn_more_aria", { title: c.title })}
              >
                 <div
-                className="group aspect-[4/3] rounded-2xl border border-slate-200 ring-1 ring-black/0 hover:ring-black/5
-           bg-gradient-to-br from-slate-50 to-white
-          flex items-center justify-center relative overflow-hidden
+                className="group rounded-2xl border border-slate-200 ring-1 ring-black/0 hover:ring-black/5
+          bg-gradient-to-br from-slate-50 to-white
+         flex items-stretch justify-center relative overflow-hidden
            transform-gpu will-change-transform
            shadow-[0_10px_0_0_rgba(226,232,240,1),0_24px_36px_rgba(2,6,23,0.12)]
               hover:-translate-y-1
-           hover:shadow-[0_8px_0_0_rgba(226,232,240,1),0_20px_30px_rgba(2,6,23,0.16)]
+            hover:shadow-[0_8px_0_0_rgba(226,232,240,1),0_20px_30px_rgba(2,6,23,0.16)]
             active:translate-y-0
           active:shadow-[0_6px_0_0_rgba(226,232,240,1),0_12px_18px_rgba(2,6,23,0.20)]
-            transition-transform duration-200"
+             transition-transform duration-200 min-h-[220px] md:min-h-[260px] lg:min-h-0 lg:aspect-[4/3]"
                 >
                     <div className="text-center px-3 sm:px-4 md:px-6 break-words pointer-events-none">
                      <div className="text-4xl sm:text-5xl md:text-6xl">{c.emoji}</div>

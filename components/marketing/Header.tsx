@@ -134,7 +134,7 @@ useEffect(() => {
 </Link>
 
 
-          <nav className="topnav hidden md:flex items-center gap-6 text-sm">
+          <nav className="topnav hidden xl:flex items-center gap-6 text-sm">
 <ActiveLink href="/" variant="topnav">{tf("nav.home", "Ana Sayfa")}</ActiveLink>
             {/* How it works dropdown */}
             <div className="relative group">
@@ -193,7 +193,7 @@ useEffect(() => {
         </div>
 
         {/* Right: Actions */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-3">
         {isAuth ? (
   <div className="flex items-center gap-2">
 <span className="text-sm font-medium text-white/90">
@@ -239,7 +239,7 @@ useEffect(() => {
      {/* Mobile */}
  <button
   aria-label="Open menu"
-  className="md:hidden min-h-[44px] p-2 rounded hover:bg-white/10 text-white"
+  className="xl:hidden min-h-[44px] p-2 rounded hover:bg-white/10 text-white"
   aria-expanded={open}
   aria-controls="mobile-menu"
   onClick={() => setOpen(v => !v)}
@@ -253,7 +253,7 @@ useEffect(() => {
      {/* Overlay */}
 {open && (
   <div
-    className="fixed inset-0 z-40 bg-black/40 md:hidden"
+    className="fixed inset-0 z-40 bg-black/40 xl:hidden"
     onClick={() => setOpen(false)}
     aria-hidden="true"
   />
@@ -265,7 +265,7 @@ useEffect(() => {
     id="mobile-menu"
     role="dialog"
     aria-label={tf("nav.menu", "Ana menü")}
-    className="fixed top-[56px] left-0 right-0 z-50 md:hidden border-t border-black/10 px-4 pb-4 bg-white text-slate-900 max-h-[70vh] overflow-y-auto"
+    className="fixed top-[56px] left-0 right-0 z-50 xl:hidden border-t border-black/10 px-4 pb-4 bg-white text-slate-900 max-h-[70vh] overflow-y-auto"
   >
    <div className="grid gap-2 py-2 text-sm">
 

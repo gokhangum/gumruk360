@@ -274,7 +274,7 @@ const listWithKeys = list.map((p: any, i: number) => ({ ...p, __key: p?.id ?? p?
 	     const supa = await supabaseServer();
   // [EKLE] Aktif tenant ve dil:
      const activeTenantId = await resolveTenantIdFromHost();
-    const currentLang = val(sp, "lang") || "tr-TR";
+  
 
 
    // [DEĞİŞTİR] Yalnızca aktif tenant (veya global) + currentLang eşleşen postlar
@@ -283,7 +283,7 @@ const listWithKeys = list.map((p: any, i: number) => ({ ...p, __key: p?.id ?? p?
       .select("slug, id, author_id, tenant_id, status, lang")
        .in("slug", slugs)
        .eq("status", "published")
-      .eq("lang", currentLang);
+   
 
    if (activeTenantId) {
        pm = pm.or(`tenant_id.is.null,tenant_id.eq.${activeTenantId}`);

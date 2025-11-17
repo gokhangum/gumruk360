@@ -510,9 +510,9 @@
         ],
         "cards": [
           { "title": "Mevzuatsal Sorularınıza Hızlı Yanıt", "desc": "Konusunda uzman Danışman seçimi ile en doğru sonuçlar", "href": "/ask", "emoji": "⚖️" },
-          { "title": "Sorunuza Özel Anında Teklif", "desc": "Consphera PSA alt yaısı sorunuzu inceler ve sayısız kritere göre doğru fiyatlar. Süreç çok hızlanır", "href": "/ask", "emoji": "🚀" },
+          { "title": "Sorunuza Özel Anında Teklif", "desc": "Consphera PSA alt yaısı sorunuzu inceler ve sayısız kritere göre doğru fiyatlar. Süreç çok hızlanır", "href": "/ask", "emoji": "⚡️" },
           { "title": "Kurumsal Üyelik", "desc": "kurumal üye olarak ekibinizi yetkilendirebilirsiniz. Tüm ekibinizin sorularını, kullanımları tek bir panelden yönetirsiniz.", "href": "/dashboard/subscription", "emoji": "🏢" },
-          { "title": "Kredi ile Daha Avantajlı", "desc": "Toplu Kredi satın alarak aynı kalitede hizmeti artan oranlı indirimlerle alın.", "href": "dashboard/credits", "emoji": "🏷️" }
+          { "title": "Kredi Yükleme ile Daha Avantajlı", "desc": "Toplu Kredi satın alarak aynı kalitede hizmeti artan oranlı indirimlerle alın.", "href": "dashboard/credits", "emoji": "🔋" }
         ],
         "learn_more": "Detaylı Bilgi",
         "learn_more_aria": "{title} - Detaylı Bilgi"
