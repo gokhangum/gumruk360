@@ -24,13 +24,20 @@ export default function PaddleBoot() {
 
       if (!mounted || !window.Paddle) return;
 
-      // Sandbox’a al
-      try { window.Paddle.Environment.set("sandbox"); } catch {}
-      // Client token ile init
-      const token = process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN;
-      if (token) {
-        try { window.Paddle.Initialize({ token }); } catch {}
-      }
+       const envRaw =
+     (process.env.NEXT_PUBLIC_PADDLE_ENV as string) ||
+       (process.env.PADDLE_ENV as string) ||
+        "sandbox";
+      const isLive = envRaw.toLowerCase() === "live";
+      try { window.Paddle.Environment.set(isLive ? "production" : "sandbox"); } catch {}
+     const token = isLive
+      ? ((process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN_LIVE as string) ||
+         (process.env.PADDLE_CLIENT_TOKEN_LIVE as string) || "")
+      : ((process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN as string) ||
+          (process.env.PADDLE_CLIENT_TOKEN_SANDBOX as string) || "");
+    if (token) {
+       try { window.Paddle.Initialize({ token }); } catch {}
+     }
 
       // Hızlı debug
       try {

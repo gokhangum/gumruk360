@@ -21,8 +21,14 @@ async function ensurePaddleLoaded(clientToken: string) {
       document.head.appendChild(s)
     })
   }
-  try { window.Paddle?.Environment?.set?.('sandbox') } catch {}
-  try { if (window.Paddle && clientToken) window.Paddle.Initialize({ token: clientToken }) } catch {}
+  const envRaw =
+    (process.env.NEXT_PUBLIC_PADDLE_ENV as string) ||
+     (process.env.PADDLE_ENV as string) ||
+     "sandbox";
+   const isLive = envRaw.toLowerCase() === "live";
+ try { window.Paddle?.Environment?.set?.(isLive ? "production" : "sandbox"); } catch {}
+   try { if (window.Paddle && clientToken) window.Paddle.Initialize({ token: clientToken }) } catch {}
+
 }
 
 type StatusKind = 'idle' | 'opening' | 'success' | 'closed' | 'canceled' | 'failed' | 'error'

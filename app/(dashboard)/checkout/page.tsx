@@ -17,8 +17,13 @@ declare global {
      s.onload = () => resolve(); s.onerror = () => reject(new Error('paddle_js_load_failed')); document.head.appendChild(s)
     })
    }
-   // Sandbox ortamını açıkça ayarla (sandbox token kullanıyoruz)
-  try { window.Paddle?.Environment?.set?.('sandbox') } catch {}
+    const envRaw =
+    (process.env.NEXT_PUBLIC_PADDLE_ENV as string) ||
+     (process.env.PADDLE_ENV as string) ||
+   'sandbox';
+  const isLive = envRaw.toLowerCase() === 'live';
+  try { window.Paddle?.Environment?.set?.(isLive ? 'production' : 'sandbox'); } catch {}
+
   // Token varsa initialize et (NEXT_PUBLIC_* olması gerekiyor)
    try { if (window.Paddle && clientToken) window.Paddle.Initialize({ token: clientToken }) } catch {}
 

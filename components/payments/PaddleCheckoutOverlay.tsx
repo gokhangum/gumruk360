@@ -41,17 +41,29 @@ export default function PaddleCheckoutOverlay({ transactionId, checkoutUrl, auto
         await ensureScript()
         if (!window.Paddle) throw new Error("paddle_js_missing")
 
-        for (let i=0;i<5;i++) {
-          try { window.Paddle.Environment.set("sandbox") } catch {}
-          const cur = window.Paddle.Environment.get?.()
-          if (cur === "sandbox") break
-          await new Promise(r => setTimeout(r, 30))
-        }
-        console.log("[paddle] env:", window.Paddle.Environment.get?.())
+        const envRaw =
+       (process.env.NEXT_PUBLIC_PADDLE_ENV as string) ||
+         (process.env.PADDLE_ENV as string) ||
+          "sandbox";
+       const isLive = envRaw.toLowerCase() === "live";
+      const targetEnv = isLive ? "production" : "sandbox";
 
-        const token = process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN
-        if (!token) throw new Error("client_token_missing (NEXT_PUBLIC_PADDLE_CLIENT_TOKEN)");
-        window.Paddle.Initialize({ token })
+      for (let i = 0; i < 5; i++) {
+          try { window.Paddle.Environment.set(targetEnv); } catch {}
+         const cur = window.Paddle.Environment.get?.();
+           if (cur === targetEnv) break;
+          await new Promise(r => setTimeout(r, 30));
+       }
+         console.log("[paddle] env:", window.Paddle.Environment.get?.());
+
+        const token = isLive
+         ? ((process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN_LIVE as string) ||
+              (process.env.PADDLE_CLIENT_TOKEN_LIVE as string) || "")
+         : ((process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN as string) ||
+           (process.env.PADDLE_CLIENT_TOKEN_SANDBOX as string) || "");
+      if (!token) throw new Error("client_token_missing");
+       window.Paddle.Initialize({ token });
+
         window.Paddle.Update?.({ debug: true, eventCallback: (evt: any) => {
           try { console.log("[paddle:event]", evt?.name || evt, evt?.data || evt) } catch {}
         }})
