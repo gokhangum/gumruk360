@@ -116,11 +116,11 @@ const cards = t.raw("cards") as Card[];
                     {c.desc}
                  </div>
                   </div>
-                 <span
-                      className="absolute bottom-3 md:bottom-4 left-3 right-3 inline-flex items-center justify-center rounded-full bg-slate-900 text-white text-xs md:text-sm px-3 py-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                     >
-                     {t("learn_more")}
-                     </span>
+   <span
+                   className="pointer-events-none hidden md:inline-flex absolute bottom-3 left-1/2 -translate-x-1/2 items-center justify-center rounded-full bg-red-600 text-white text-[14px] px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                 >
+                   {t("learn_more")}
+                 </span>
                   </div>
                 </Link>
              ))}
