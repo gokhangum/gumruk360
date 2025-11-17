@@ -581,7 +581,7 @@ if (!l2Pass) {
             {t("cvPreview.close")}
           </button>
         </div>
-        <div className="max-h-[80vh] overflow-y-auto overflow-x-auto p-4">
+        <div className="max-h-[80vh] overflow-y-auto overflow-x-hidden sm:overflow-x-auto p-4">
           <CvPreviewById workerId={selectedWorkerId} />
         </div>
       </div>

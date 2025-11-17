@@ -50,7 +50,7 @@ const t = useTranslations("common.cvPreviewById");
   if (error) return <div className="text-sm text-red-600 p-4 border rounded-xl bg-white shadow-sm">{t("loadFailed", { error })}</div>;
 
   return (
-    <div className="w-[720px]">
+    <div className="w-full sm:w-[720px]">
       <CvPreviewCard
         photoUrl={photoUrl}
         displayName={profile?.display_name ?? null}
