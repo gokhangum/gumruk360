@@ -76,7 +76,7 @@ export default function ContactPage() {
 
   return (
     <div className="bg-gradient-to-b from-white to-slate-0 py-1">
-      <div className="w-full max-w-[clamp(320px,80vw,928px)] mx-auto px-4 md:px-6 lg:px-8 py-6">
+      <div className="w-full px-0 py-4 md:max-w-[clamp(320px,80vw,928px)] md:mx-auto md:px-6 lg:px-8 md:py-6">
         <div className="card-surface shadow-colored p-5 md:p-6 space-y-6">
           <header>
             <h1 className="text-2xl font-semibold tracking-tight">{t("hero.title")}</h1>

@@ -127,7 +127,7 @@ export default function BlocksEditor() {
   }
 
   return (
-    <div className="border rounded p-4 space-y-4">
+    <div className="border rounded space-y-4 px-1 py-3 md:px-5 md:py-4">
       {/* Başlık satırı + sağda Önizleme butonu */}
       <div className="flex items-center justify-between">
         <div className="font-medium">{t("title")}</div>

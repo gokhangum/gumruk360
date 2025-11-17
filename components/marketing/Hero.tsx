@@ -68,13 +68,13 @@ const cards = t.raw("cards") as Card[];
               {t("description")}
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/ask" className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300">
+              <Link href="/ask" className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-2 py-3 md:px-5 md:py-3 focus:outline-none focus:ring-2 focus:ring-blue-300">
                 {t("cta_primary")}
               </Link>
-              <Link href="/how-it-works/individual" className="rounded-full bg-sky-500 hover:bg-sky-600 text-white px-5 py-3 focus:outline-none focus:ring-2 focus:ring-sky-200">
+              <Link href="/how-it-works/individual" className="rounded-full bg-sky-500 hover:bg-sky-600 text-white px-2 py-3 md:px-5 md:py-3 focus:outline-none focus:ring-2 focus:ring-sky-200">
                 {t("cta_secondary")}
               </Link>
-			     <Link href="/how-it-works/corporate" className="rounded-full bg-green-600 hover:bg-green-700 text-white px-5 py-3 focus:outline-none focus:ring-2 focus:ring-green-200">
+			     <Link href="/how-it-works/corporate" className="rounded-full bg-green-600 hover:bg-green-700 text-white px-2 py-3 md:px-5 md:py-3 focus:outline-none focus:ring-2 focus:ring-green-200">
                 {t("cta_secondary2")}
               </Link>
             </div>

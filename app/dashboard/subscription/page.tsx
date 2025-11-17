@@ -234,24 +234,31 @@ const goTab = (tabId: 'purchases' | 'usage' | 'members') => {
         <div className="card-surface shadow-colored p-5 md:p-6 space-y-5">
       <h1 className="text-lg font-semibold tracking-tight">{tDash("title")}</h1>
 
-
-      <div className="rounded-xl bg-blue-50/80 border border-blue-200/60 px-4 py-3 flex items-center gap-4">
-        <div><b>{tDash("orgBalanceLabel")}</b>: {orgBalance != null ? fmt0(orgBalance) : "—"}</div>
-        <div className="flex items-center gap-2">
-          <input value={creditsToBuy} onChange={(e)=>setCreditsToBuy(e.target.value)} className="border rounded-md p-2 w-32" />
-          <button className="btn btn--primary btn--cta" onClick={goCheckout}>{tDash("loadCredits")}</button>
-
-          <button
-            type="button"
-            onClick={() => setPricingOpen(true)}
-            className="px-3 py-2 rounded border text-sm hover:bg-gray-50"
-            title={tCred("pricing.open")}
+     <div className="rounded-xl bg-blue-50/80 border border-blue-200/60 px-4 py-3 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+       <div className="flex items-center gap-2">
+        <div>
+             <b>{tDash("orgBalanceLabel")}</b>: {orgBalance != null ? fmt0(orgBalance) : "—"}
+         </div>
+         <input
+            value={creditsToBuy}
+            onChange={(e) => setCreditsToBuy(e.target.value)}
+         className="border rounded-md p-2 w-24 md:w-32"
+          />
+     </div>
+        <div className="flex gap-2">
+           <button className="btn btn--primary btn--cta" onClick={goCheckout}>
+             {tDash("loadCredits")}
+        </button>
+         <button
+           type="button"
+         onClick={() => setPricingOpen(true)}
+            className="px-3 py-2 rounded-lg border text-sm hover:bg-gray-50"
+          title={tCred("pricing.open")}
           >
             {tCred("pricing.open")}
           </button>
         </div>
-      </div>
-
+     </div>
 
       <div className="flex gap-3">
         <button className={"btn btn--ghost text-sm " + (tab==='purchases' ? 'aria-pressed' : '')} onClick={()=>setTab('purchases')}>{tDash("tabs.purchases")}</button>

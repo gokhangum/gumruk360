@@ -15,12 +15,12 @@ const [active, setActive] = React.useState<typeof items[number]['id']>(items[0].
 
   return (
     <div className="bg-gradient-to-b from-white to-slate-0 py-1">
-      <div className="w-full max-w-[clamp(320px,80vw,928px)] mx-auto px-4 md:px-6 lg:px-8 py-6">
+    <div className="w-full px-0 py-4 md:max-w-[clamp(320px,80vw,928px)] md:mx-auto md:px-6 lg:px-8 md:py-6">
         <div className="card-surface shadow-colored p-5 md:p-6 space-y-4">
-	<div className="relative pl-28 md:pl-28 lg:pl-28">
+	<div className="relative pl-0 md:pl-28 lg:pl-28">
   <div
      aria-hidden
-     className="pointer-events-none absolute inset-y-0 left-0 w-24"
+     className="pointer-events-none absolute inset-y-0 left-0 w-24 hidden md:block"
      style={{
       backgroundImage: "url('/edge-accent-network-orange-fade-v3-fixed-grey-opt.svg')",
        backgroundRepeat: "repeat-y",

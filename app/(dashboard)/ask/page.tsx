@@ -569,7 +569,7 @@ if (!l2Pass) {
     <div className="absolute inset-0 bg-black/40" onClick={() => setShowCv(false)} />
     {/* dialog */}
     <div className="absolute inset-0 grid place-items-center p-4">
-      <div className="w-full max-w-none md:max-w-4xl bg-white rounded-2xl shadow-xl border overflow-hidden">
+      <div className="w-full max-w-full md:max-w-4xl bg-white rounded-2xl shadow-xl border overflow-hidden">
         <div className="flex items-center justify-between border-b px-4 py-3">
           <div className="text-sm font-medium">{t("cvPreview.title")}</div>
           <button
@@ -581,7 +581,7 @@ if (!l2Pass) {
             {t("cvPreview.close")}
           </button>
         </div>
-        <div className="max-h-[80vh] overflow-auto p-4">
+        <div className="max-h-[80vh] overflow-y-auto overflow-x-auto p-4">
           <CvPreviewById workerId={selectedWorkerId} />
         </div>
       </div>

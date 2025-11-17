@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ActiveLink from "@/components/nav/ActiveLink";
+import AdminMobileDrawer from "./MobileDrawer";
 /** Inline transparent, stroke-only icons */
 function I({ name, className = "h-4 w-4 opacity-70", strokeWidth = 1.5 }: { name: string; className?: string; strokeWidth?: number }) {
   const common = { fill: "none", stroke: "currentColor", strokeWidth, strokeLinecap: "round", strokeLinejoin: "round" } as const;
@@ -42,10 +43,16 @@ function I({ name, className = "h-4 w-4 opacity-70", strokeWidth = 1.5 }: { name
   }
 }
 
-export default function AdminLayout({ children }: { children: React.ReactNode }) {
+ export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen grid grid-cols-[240px_1fr]">
-      <aside className="sidenav w-60 border-r border-black/10 p-4">
+    <div className="min-h-screen">
+      {/* Mobil üst bar + hamburger */}
+    <div className="flex items-center justify-between border-b border-black/10 px-4 py-3 md:hidden">
+       <div className="font-semibold">Admin</div>
+        <AdminMobileDrawer />
+      </div>
+    <div className="grid md:grid-cols-[240px_1fr]">
+      <aside className="sidenav w-60 border-r border-black/10 p-4 hidden md:block">
         <div className="title font-semibold mb-4">Admin</div>
         <nav className="flex flex-col gap-1 text-sm">
           
@@ -76,9 +83,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <a href="/logout" className="link">Çıkış</a>
           {/* Abonelik Ayarları (isteğe bağlı) */}
   {/* <ActiveLink href="/admin/subscription-settings"><span className="nav-icon">💳</span><span className="link-label">Abonelik Ayarları</span></ActiveLink> */}
-        </nav>
-      </aside>
-      <main className="p-6 surface max-w-screen-xl mx-auto">{children}</main>
+       </nav>
+    </aside>
+    <main className="p-4 md:p-6 surface max-w-screen-xl mx-auto">
+       {children}
+      </main>
+      </div>
     </div>
   );
-}
+ }

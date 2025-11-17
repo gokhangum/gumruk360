@@ -182,8 +182,8 @@ export default async function DashboardLayout({ children }: { children: React.Re
           {children}
         </div>
       </main>
-	   {/* Mobile Bottom Action Bar */}
-      <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/75 shadow-[0_-4px_10px_rgba(0,0,0,0.04)]">
+	 {/* Mobile Bottom Action Bar */}
+     <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/75 shadow-[0_-4px_10px_rgba(0,0,0,0.04)]">
         <div className="mx-auto max-w-[clamp(320px,100vw,1036px)] px-3 pt-2 pb-[calc(env(safe-area-inset-bottom)+8px)]">
           <div className="grid grid-cols-2 gap-2">
             <Link
@@ -196,7 +196,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
 
             <Link
               href={showSubscription ? '/dashboard/how-it-works/corporate' : '/dashboard/how-it-works/individual'}
-              className="inline-flex items-center justify-center h-11 px-4 rounded-xl text-sm font-medium text-white bg-[--brand-700] hover:bg-[--brand-800] transition-colors"
+              className="btn btn--outline h-11 text-sm"
               title={isEN ? 'How it works' : 'Nasıl Çalışır'}
             >
               {isEN ? 'How it works' : 'Nasıl Çalışır'}

@@ -16,7 +16,7 @@ export default async function CookiesPage() {
 
   return (
     <div className="bg-gradient-to-b from-white to-slate-0 py-1">
-    <div className="w-full max-w-[clamp(320px,80vw,1200px)] mx-auto px-4 md:px-6 lg:px-8 py-6">
+    <div className="w-full px-0 py-4 md:max-w-[clamp(320px,80vw,928px)] md:mx-auto md:px-6 lg:px-8 md:py-6">
       <div className="card-surface shadow-colored p-5 md:p-6 space-y-5 w-full max-w-[clamp(320px,80vw,928px)] mx-auto prose prose-slate max-w-none prose-img:my-0">
     <main className="max-w-[clamp(320px,90vw,840px)] mx-auto px-0 md:px-0 lg:px-0 py-1 text-[15px] md:text-[15.5px] leading-relaxed">
       <header className="mb-6">

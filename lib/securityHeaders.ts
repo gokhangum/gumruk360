@@ -15,7 +15,7 @@ export function buildSecurityHeaders(opts?: {
   cspParts.push("default-src 'self'");
   cspParts.push("base-uri 'self'");
   cspParts.push("form-action 'self'");
-    cspParts.push("frame-ancestors 'none'");
+  cspParts.push("frame-ancestors 'self'");
   cspParts.push("object-src 'none'");
 
   const scriptSrc = [
@@ -90,7 +90,7 @@ export function buildSecurityHeaders(opts?: {
 
 
   const headers: Record<string, string> = {
-    "X-Frame-Options": "DENY",
+    "X-Frame-Options": "SAMEORIGIN",
     "X-Content-Type-Options": "nosniff",
     "Referrer-Policy": "strict-origin-when-cross-origin",
   "Permissions-Policy":

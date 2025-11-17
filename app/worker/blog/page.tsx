@@ -195,7 +195,7 @@ const statusLabels: Record<string, string> = {
       </div>
 
       {/* === Desktop table (unchanged) === */}
-      <div className="hidden md:block">
+       <div className="hidden md:block overflow-x-auto">
        <table className="min-w-full text-sm">
           <thead className="bg-gray-50">
             <tr className="text-left text-sm font-semibold text-gray-700">

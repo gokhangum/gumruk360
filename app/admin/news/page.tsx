@@ -60,8 +60,9 @@ export default async function AdminNewsListPage() {
         <Link href="/admin/news/new" className="px-4 py-2 rounded-lg bg-blue-600 text-white">Yeni</Link>
       </div>
       <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
-        <table className="w-full text-sm">
-          <thead>
+        <div className="overflow-x-auto">
+         <table className="w-full text-sm">
+           <thead>
             <tr className="text-left border-b">
               <th className="p-3">Başlık</th>
               <th className="p-3">Dil</th>
@@ -128,5 +129,6 @@ export default async function AdminNewsListPage() {
         </table>
       </div>
     </div>
+	</div> 
   );
 }
