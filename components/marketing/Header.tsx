@@ -72,13 +72,13 @@ useEffect(() => {
     setRole(r);
     if (r === "admin") {
       setCtaHref("/admin");
-      setCtaLabel(tf("Dasboard", "Kullanıcı Paneli"));
+      setCtaLabel(tf("Dashboard", "Kullanıcı Paneli"));
     } else if (r === "worker" || r === "worker360") {
       setCtaHref("/worker");
-      setCtaLabel(tf("Dasboard", "Kullanıcı Paneli"));
+      setCtaLabel(tf("Dashboard", "Kullanıcı Paneli"));
     } else {
       setCtaHref("/ask");
-      setCtaLabel(tf("Dasboard", "Kullanıcı Paneli"));
+      setCtaLabel(tf("Dashboard", "Kullanıcı Paneli"));
     }
   };
 
