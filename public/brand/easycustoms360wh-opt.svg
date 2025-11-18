@@ -14,8 +14,10 @@
   </filter>
  </defs>
  <g id="Background" transform="translate(-159.51 -204.92)">
-  <g transform="translate(-10.479 8.1501)">
-   <rect x="169.99" y="196.77" width="1341.3" height="326" fill="#fff" stroke-width=".51953"/>
+  <g fill="none">
+   <g transform="translate(-10.479 8.1501)" fill="none">
+    <rect x="169.99" y="196.77" width="1341.3" height="326" fill="none" stroke-width=".51953"/>
+   </g>
   </g>
  </g>
  <g id="Wordmark" transform="translate(-159.51 -204.92)">
