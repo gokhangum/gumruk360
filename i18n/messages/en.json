@@ -464,7 +464,7 @@
       "5b": "(default for business/platform API usage). Sources:",
       "6a": "OpenAI may retain API input/output logs for abuse monitoring for up to",
       "6b": "then deletes them (except where required by law). Source:",
-      "7a": "At Gümrük360, we process your content",
+      "7a": "At EasyCustoms360, we process your content",
       "7b": "only for pricing and quality pre-check",
       "7c": "and we do not use it for any other purpose nor allow such use.",
       "8": "If you include trade secrets, please remove unnecessary personal data (IDs, birth dates, IBAN, etc.); mask sensitive details in files.",
@@ -472,7 +472,7 @@
     },
     "summary": {
       "title": "Summary :",
-      "text": "“My content is processed by AI only for price/workload estimation and quality pre-check; it is not used for model training by Gümrük360 or OpenAI.”"
+      "text": "“My content is processed by AI only for price/workload estimation and quality pre-check; it is not used for model training by EasyCustoms360 or OpenAI.”"
     },
     "consentLabel": "I have read and understood, and I consent to the processing of my content for these purposes.",
     "buttons": {
@@ -499,7 +499,7 @@
   },
   "brand": {
     "footer": {
-      "gumruk360": "Gümrük 360",
+      "gumruk360": "EasyCustoms360",
       "easycustoms360": "Easycustoms 360"
     }
   },
@@ -515,7 +515,7 @@
     },
     "home": {
 		"Dashboard": "Dashboard",
-		 "newsTitle": "Gümrük360 News",
+		 "newsTitle": "EasyCustoms360 News",
 		"hero_i18n": {
         "title_part1": "Turkish Customs Consultancy:",
         "title_part2": "local expertise, fast, traceable, transparent",
@@ -623,7 +623,7 @@
         "seeAll": "View All"
       },
       "footer_i18n": {
-        "aboutTitle": "Gümrük360",
+        "aboutTitle": "EasyCustoms360",
         "aboutDesc": "Fast, reliable and transparent digital experience in customs & trade advisory.",
         "colProducts": "Products",
         "colResources": "Resources",
@@ -909,7 +909,7 @@
   },
   "cookies": {
     "title": "Cookie Policy",
-    "intro": "This Cookie Policy explains the types of cookies used by Gümrük360 and how you can manage your preferences.",
+    "intro": "This Cookie Policy explains the types of cookies used by EasyCustoms360 and how you can manage your preferences.",
     "sections": {
       "what": {
         "title": "1. What Are Cookies?",
@@ -984,7 +984,7 @@
   },
   "kvkkGdpr": {
     "title": "Privacy Notice (KVKK / GDPR)",
-    "intro": "This Privacy Notice is provided by Gümrük360 as the data controller under applicable law. When processing falls within the scope of the EU GDPR, we follow the principles below.",
+    "intro": "This Privacy Notice is provided by EasyCustoms360 as the data controller under applicable law. When processing falls within the scope of the EU GDPR, we follow the principles below.",
     "sections": {
       "personalData": {
         "title": "1. Categories of Personal Data",
@@ -2245,7 +2245,7 @@
     },
     "title": "Terms of Service",
     "lastUpdated": "Last updated",
-    "intro": "These Terms of Use (“Terms”) govern your access to and use of the services provided by Gümrük360. By using the platform, you agree to these Terms.",
+    "intro": "These Terms of Use (“Terms”) govern your access to and use of the services provided by EasyCustoms360. By using the platform, you agree to these Terms.",
     "labels": {
       "questionId": "Question ID",
       "priceTL": "Fee (TRY)",
@@ -2697,7 +2697,7 @@
       "createdAt": "Created at:",
       "title": "Title:",
       "assignedConsultant": "Assigned Consultant:",
-      "teamDefault": "Gümrük360 Team",
+      "teamDefault": "EasyCustoms360 Team",
       "creditAmount": "Credit Amount:",
       "creditLine": "{credits} credits (your advantage min %{pct})",
       "urgency": "Priority",
