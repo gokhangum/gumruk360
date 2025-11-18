@@ -8,7 +8,8 @@
    <stop stop-color="#1159BF" offset=".55"/>
    <stop stop-color="#59A7FF" offset="1"/>
   </linearGradient>
-  <filter id="connGlow" x="-.024103" y="-.376" width="1.0482" height="1.752">
+  <!-- BURASI DÜZELTİLDİ: filter alanını büyüttük -->
+  <filter id="connGlow" x="-0.2" y="-0.5" width="1.4" height="2">
    <feGaussianBlur result="b" stdDeviation="8"/>
    <feColorMatrix in="b" values="0 0 0 0 0.07                 0 0 0 0 0.45                 0 0 0 0 0.95                 0 0 0 0 0.65 0"/>
   </filter>
@@ -17,7 +18,9 @@
   <rect x="81.501" y="-17.464" width="1800" height="900" fill="none"/>
  </g>
  <g id="Wordmark" transform="translate(-232.4,-302.5)">
-  <text class="wm" x="262.12161" y="491.09961" fill="#0f172a" font-size="146.67px" letter-spacing=".5"><tspan fill="#ffffff">EasyCustoms360</tspan></text>
+  <text class="wm" x="262.12161" y="491.09961" fill="#0f172a" font-size="146.67px" letter-spacing=".5">
+    <tspan fill="#ffffff">EasyCustoms360</tspan>
+  </text>
  </g>
  <g id="ConnectionArc" transform="translate(-232.4,-302.5)">
   <path d="m250 380c290-100 890-100 1170 0" fill="none" filter="url(#connGlow)" stroke="url(#connGrad)" stroke-linecap="round" stroke-width="18"/>

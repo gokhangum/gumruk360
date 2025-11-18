@@ -67,7 +67,7 @@ const cards = t.raw("cards") as Card[];
             <p className="mt-4 text-slate-700 text-base md:text-lg">
               {t("description")}
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-2">
               <Link href="/ask" className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-2 py-3 md:px-5 md:py-3 focus:outline-none focus:ring-2 focus:ring-blue-300">
                 {t("cta_primary")}
               </Link>
