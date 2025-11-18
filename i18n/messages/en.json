@@ -514,6 +514,7 @@
       "subtitle": "Trusted, intelligent trade compliance"
     },
     "home": {
+		"Dashboard": "Dashboard",
 		 "newsTitle": "Gümrük360 News",
 		"hero_i18n": {
         "title_part1": "Turkish Customs Consultancy:",

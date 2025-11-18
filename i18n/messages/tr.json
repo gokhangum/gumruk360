@@ -494,6 +494,7 @@
       "subtitle": "Yapay zekâ destekli gümrük danışmanlığı"
     },
     "home": {
+		"Dashboard": "Kullanıcı Paneli",
 		"newsTitle": "Gümrük360 Haberler",
 		"hero_i18n": {
         "title_part1": "Gümrük danışmanlığı",
