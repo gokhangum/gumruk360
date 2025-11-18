@@ -32,11 +32,11 @@
    <polygon points="-15.6 9 -15.6 -9 0 -18 15.6 -9 15.6 9 0 18" fill="#fff" stroke="#1159bf" stroke-width="4"/>
    <circle r="4" fill="#1159bf"/>
   </g>
-  <g id="ClientRing" transform="translate(1420,380)">
+  <g id="ClientRing" transform="translate(900,380)">
    <circle r="12" fill="#fff" stroke="#1159bf" stroke-width="4"/>
    <circle r="5" fill="#1159bf"/>
   </g>
-  <g id="SignalWaves" transform="translate(1420,380)" fill="none" stroke="#1159bf" stroke-linecap="round" stroke-width="6">
+  <g id="SignalWaves" transform="translate(900,380)" fill="none" stroke="#1159bf" stroke-linecap="round" stroke-width="6">
    <path d="m18-8a28 28 0 0 1 0 16" opacity=".55"/>
    <path d="m36-12a44 44 0 0 1 0 24" opacity=".35"/>
    <path d="m56-16a64 64 0 0 1 0 32" opacity=".2"/>

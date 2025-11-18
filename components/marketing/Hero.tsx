@@ -67,7 +67,7 @@ const cards = t.raw("cards") as Card[];
             <p className="mt-4 text-slate-700 text-base md:text-lg">
               {t("description")}
             </p>
-            <div className="mt-6 flex flex-wrap gap-1">
+            <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/ask" className="rounded-full bg-blue-600 hover:bg-blue-700 text-white px-2 py-3 md:px-5 md:py-3 focus:outline-none focus:ring-2 focus:ring-blue-300">
                 {t("cta_primary")}
               </Link>
@@ -96,9 +96,9 @@ const cards = t.raw("cards") as Card[];
              aria-label={t("learn_more_aria", { title: c.title })}
              >
                 <div
-                className="group rounded-2xl border border-slate-200 ring-1 ring-black/0 hover:ring-black/5
+             className="group rounded-2xl border border-slate-200 ring-1 ring-black/0 hover:ring-black/5
           bg-gradient-to-br from-slate-50 to-white
-         flex items-stretch justify-center relative overflow-hidden
+         flex items-center justify-center relative overflow-hidden
            transform-gpu will-change-transform
            shadow-[0_10px_0_0_rgba(226,232,240,1),0_24px_36px_rgba(2,6,23,0.12)]
               hover:-translate-y-1
@@ -107,9 +107,9 @@ const cards = t.raw("cards") as Card[];
           active:shadow-[0_6px_0_0_rgba(226,232,240,1),0_12px_18px_rgba(2,6,23,0.20)]
              transition-transform duration-200 min-h-[220px] md:min-h-[260px] lg:min-h-0 lg:aspect-[4/3]"
                 >
-                    <div className="text-center px-3 sm:px-4 md:px-6 break-words pointer-events-none">
-                     <div className="text-4xl sm:text-5xl md:text-6xl">{c.emoji}</div>
-                    <div className="mt-3 md:mt-4 font-medium text-sm sm:text-base break-words">
+                    <div className="flex flex-col justify-center h-full text-center px-3 sm:px-4 md:px-1 break-words pointer-events-none">
+                    <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">{c.emoji}</div>
+                    <div className="mt-2 md:mt-3 font-medium text-sm sm:text-base break-words">
                      {c.title}
                     </div>
                   <div className="text-slate-600 text-xs md:text-sm mt-1 break-words">

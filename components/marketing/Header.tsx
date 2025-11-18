@@ -125,7 +125,7 @@ useEffect(() => {
       <div className="h-16 px-4 md:px-8 flex items-center justify-between" style={{ color: NAV_FG }}>
         {/* Left: Logo + Primary Nav */}
         <div className="flex items-center gap-6 min-w-0">
-        <Link href="/" className="whitespace-nowrap flex-shrink-0 pr-1" style={{ color: NAV_FG }} aria-label={tGlobal("brandName")}>
+        <Link href="/" className="whitespace-nowrap" style={{ color: NAV_FG }} aria-label={tGlobal("brandName")}>
   {headerLogo ? (
     <img src={headerLogo} alt={tGlobal("brandName")} className="h-10 w-auto block" />
   ) : (
