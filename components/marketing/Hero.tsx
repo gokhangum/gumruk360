@@ -56,7 +56,7 @@ const cards = t.raw("cards") as Card[];
     {/* Üstten çok hafif karartma, okunabilirliği artırır (desktop) */}
      <span className="absolute inset-0 z-0 hidden md:block bg-gradient-to-b from-slate-900/10 via-transparent to-white/0" />
 
-   <div className="relative z-10 mx-auto max-w-[clamp(320px,90vw,1280px)] px-4 md:px-8">
+  <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-8">
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center py-12 md:py-20">
           {/* Left text */}
