@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1262" height="282" version="1.1" viewBox="0 0 1262 282" xmlns="http://www.w3.org/2000/svg">
+<svg width="1800" height="900" version="1.1" viewBox="0 0 1800 900" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <style>.wm { font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto; font-weight: 700; }
       .sub { font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto; font-weight: 500; }</style>
@@ -13,36 +13,36 @@
    <feColorMatrix in="b" values="0 0 0 0 0.07                 0 0 0 0 0.45                 0 0 0 0 0.95                 0 0 0 0 0.65 0"/>
   </filter>
  </defs>
- <g id="Background" transform="translate(-223,-319)">
-  <rect width="1800" height="900" fill="none"/>
- </g>
- <g id="Wordmark" transform="translate(-223,-319)">
-  <text class="wm" x="265.6145" y="515.5498" fill="#0f172a" font-size="146.67px" letter-spacing=".5"><tspan fill="#ffffff">EasyCustoms360</tspan></text>
- </g>
- <g id="ConnectionArc" transform="translate(-223,-319)">
-  <path d="m250 380c290-100 890-100 1170 0" fill="none" filter="url(#connGlow)" stroke="url(#connGrad)" stroke-linecap="round" stroke-width="18"/>
-  <path d="m251.16 411.44c290-100 890-100 1170 0" fill="none" opacity=".85" stroke="#cfe3ff" stroke-linecap="round" stroke-width="5"/>
-  <g fill="#59a7ff">
+ <g fill="none">
+  <g id="Background">
+   <rect width="1800" height="900" fill="none"/>
+  </g>
+  <g id="Wordmark">
+   <text class="wm" x="265.6145" y="515.5498" fill="none" font-size="146.67px" letter-spacing=".5"><tspan fill="none">EasyCustoms360</tspan></text>
+  </g>
+  <g id="ConnectionArc">
+   <path d="m250 380c290-100 890-100 1170 0" filter="url(#connGlow)" stroke="url(#connGrad)" stroke-linecap="round" stroke-width="18"/>
+   <path d="m251.16 411.44c290-100 890-100 1170 0" opacity=".85" stroke="#cfe3ff" stroke-linecap="round" stroke-width="5"/>
    <circle cx="610" cy="325" r="6" opacity=".95"/>
    <circle cx="880" cy="310" r="5" opacity=".9"/>
    <circle cx="1160" cy="320" r="5" opacity=".85"/>
    <circle cx="1320" cy="355" r="4.5" opacity=".8"/>
+   <g id="ConsultantHex" transform="translate(250,380)">
+    <polygon points="-15.6 9 -15.6 -9 0 -18 15.6 -9 15.6 9 0 18" stroke="#1159bf" stroke-width="4"/>
+    <circle r="4"/>
+   </g>
+   <g id="ClientRing" transform="translate(1423.5,409.11)">
+    <circle r="12" stroke="#1159bf" stroke-width="4"/>
+    <circle r="5"/>
+   </g>
+   <g id="SignalWaves" transform="translate(1422.3,410.27)" stroke="#1159bf" stroke-linecap="round" stroke-width="6">
+    <path d="m18-8a28 28 0 0 1 0 16" opacity=".55"/>
+    <path d="m36-12a44 44 0 0 1 0 24" opacity=".35"/>
+    <path d="m56-16a64 64 0 0 1 0 32" opacity=".2"/>
+   </g>
   </g>
-  <g id="ConsultantHex" transform="translate(250,380)">
-   <polygon points="15.6 9 0 18 -15.6 9 -15.6 -9 0 -18 15.6 -9" fill="#fff" stroke="#1159bf" stroke-width="4"/>
-   <circle r="4" fill="#1159bf"/>
+  <g id="Guides">
+   <rect x="224" y="320" width="1260" height="280" fill="none" opacity=".25" stroke="#1159bf" stroke-dasharray="10, 8" stroke-width="2"/>
   </g>
-  <g id="ClientRing" transform="translate(1423.5 409.11)">
-   <circle r="12" fill="#fff" stroke="#1159bf" stroke-width="4"/>
-   <circle r="5" fill="#1159bf"/>
-  </g>
-  <g id="SignalWaves" transform="translate(1422.3 410.27)" fill="none" stroke="#1159bf" stroke-linecap="round" stroke-width="6">
-   <path d="m18-8a28 28 0 0 1 0 16" opacity=".55"/>
-   <path d="m36-12a44 44 0 0 1 0 24" opacity=".35"/>
-   <path d="m56-16a64 64 0 0 1 0 32" opacity=".2"/>
-  </g>
- </g>
- <g id="Guides" transform="translate(-223,-319)">
-  <rect x="224" y="320" width="1260" height="280" fill="none" opacity=".25" stroke="#1159bf" stroke-dasharray="10, 8" stroke-width="2"/>
  </g>
 </svg>
