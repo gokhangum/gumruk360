@@ -14,10 +14,10 @@
   </filter>
  </defs>
  <g id="Background" transform="translate(-180.47 -276.8)">
-  <rect x="180.47" y="291.07" width="1315.7" height="329.5" fill="#fff" stroke-width=".51729"/>
+  <rect x="180.47" y="291.07" width="1315.7" height="329.5" fill="none" stroke-width=".51729"/>
  </g>
  <g id="Wordmark" transform="translate(-180.47 -276.8)">
-  <text class="wm" x="262.12161" y="491.09961" fill="#0f172a" font-size="146.67px" letter-spacing=".5"><tspan fill="#ffffff">EasyCustoms360</tspan></text>
+  <text class="wm" x="262.12161" y="491.09961" fill="none" font-size="146.67px" letter-spacing=".5"><tspan fill="none">EasyCustoms360</tspan></text>
  </g>
  <g id="ConnectionArc" transform="translate(-180.47 -276.8)">
   <path d="m250 380c290-100 890-100 1170 0" fill="none" filter="url(#connGlow)" stroke="url(#connGrad)" stroke-linecap="round" stroke-width="18"/>
