@@ -113,7 +113,7 @@ const locale = await getLocale();
                   <img
                     src={cover}
                     alt={t("coverAlt")}
-                    className="w-32 h-20 md:w-40 md:h-24 object-cover rounded-lg border"
+                    className="w-full md:w-40 h-40 md:h-24 object-cover rounded-lg border"
                   />
                 ) : null}
                 <div className="flex-1 min-w-0">
