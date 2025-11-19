@@ -1,263 +1,48 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   width="1307.5131"
-   height="322"
-   viewBox="0 0 1307.5131 322"
-   version="1.1"
-   id="svg12"
-   sodipodi:docname="Conspherapsa-opt.svg"
-   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview12"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.85888889"
-     inkscape:cx="761.4489"
-     inkscape:cy="171.73351"
-     inkscape:window-width="1920"
-     inkscape:window-height="991"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="Wordmark" />
-  <defs
-     id="defs3">
-    <style
-       id="style1">
-      .wm { font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto; font-weight: 700; }
-      .sub { font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto; font-weight: 500; }
-    </style>
-    <!-- Futuristic arc gradient -->
-    <linearGradient
-       id="arcGrad"
-       x1="417.69186"
-       y1="307.11981"
-       x2="650.03802"
-       y2="307.11981"
-       gradientTransform="scale(0.97871194,1.0217511)"
-       gradientUnits="userSpaceOnUse">
-      <stop
-         offset="0%"
-         stop-color="#0D47A1"
-         id="stop1" />
-      <stop
-         offset="55%"
-         stop-color="#1159BF"
-         id="stop2" />
-      <stop
-         offset="100%"
-         stop-color="#59A7FF"
-         id="stop3" />
-    </linearGradient>
-    <!-- Glow for the connection arc -->
-    <filter
-       id="arcGlow"
-       x="-0.14971429"
-       y="-0.14162162"
-       width="1.2994286"
-       height="1.2832432">
-      <feGaussianBlur
-         stdDeviation="8"
-         result="blur"
-         id="feGaussianBlur3" />
-      <feColorMatrix
-         in="blur"
-         type="matrix"
-         values="0 0 0 0 0.07                 0 0 0 0 0.45                 0 0 0 0 0.95                 0 0 0 0.7 0"
-         id="feColorMatrix3" />
-    </filter>
-  </defs>
-  <!-- ===== LAYER: Background ===== -->
-  <g
-     id="Background"
-     inkscape:groupmode="layer"
-     inkscape:label="Background"
-     transform="translate(-98.19793,-278.52134)" />
-  <!-- ===== LAYER: Symbol ===== -->
-  <g
-     id="Symbol"
-     inkscape:groupmode="layer"
-     inkscape:label="Symbol"
-     transform="translate(-98.19793,-278.52134)">
-    <!-- Base C Ring (unchanged) -->
-    <g
-       id="C-Ring"
-       inkscape:label="C-Ring"
-       transform="translate(-260.80207,-10.478655)">
-      <circle
-         cx="520"
-         cy="450"
-         r="150"
-         fill="none"
-         stroke="#1159bf"
-         stroke-width="22"
-         id="circle3" />
-      <!-- Gap to form the 'C' -->
-      <path
-         d="m 610,340 a 150,150 0 0 1 0,220"
-         fill="none"
-         stroke="#ffffff"
-         stroke-width="44"
-         stroke-linecap="round"
-         id="path3" />
-      <!-- Node at opening (client ring) -->
-      <g
-         id="ClientNode"
-         inkscape:label="Client Node"
-         transform="translate(610,340)">
-        <circle
-           cx="0"
-           cy="0"
-           r="14"
-           fill="#ffffff"
-           stroke="#1159bf"
-           stroke-width="4"
-           id="circle4" />
-        <circle
-           cx="0"
-           cy="0"
-           r="6"
-           fill="#1159bf"
-           id="circle5" />
-      </g>
-    </g>
-    <!-- === Redesigned Connection Arc (consultant -> client) === -->
-    <g
-       id="ConnectionArc"
-       inkscape:label="Connection Arc"
-       transform="translate(-260.80207,-10.478655)">
-      <!-- Consultant node (hex) at start -->
-      <g
-         id="ConsultantNode"
-         inkscape:label="Consultant Node"
-         transform="translate(435,525)">
-        <polygon
-           points="0,16 -13.9,8 -13.9,-8 0,-16 13.9,-8 13.9,8 "
-           fill="#ffffff"
-           stroke="#1159bf"
-           stroke-width="4"
-           id="polygon5" />
-        <circle
-           cx="0"
-           cy="0"
-           r="4"
-           fill="#1159bf"
-           id="circle6" />
-      </g>
-      <!-- Futuristic gradient arc with subtle glow -->
-      <path
-         d="M 435,525 C 470,455 520,395 610,340"
-         fill="none"
-         stroke="url(#arcGrad)"
-         stroke-width="14"
-         stroke-linecap="round"
-         filter="url(#arcGlow)"
-         id="path6"
-         style="stroke:url(#arcGrad)" />
-      <!-- Thin highlight on top of the arc -->
-      <path
-         d="M 438,522 C 472,455 522,398 608,342"
-         fill="none"
-         stroke="#cfe3ff"
-         stroke-width="4"
-         stroke-linecap="round"
-         opacity="0.85"
-         id="path7" />
-      <!-- Data pulses (small packets) along the arc -->
-      <circle
-         cx="475"
-         cy="470"
-         r="4"
-         fill="#59a7ff"
-         opacity="0.95"
-         id="circle7" />
-      <circle
-         cx="515"
-         cy="425"
-         r="4"
-         fill="#59a7ff"
-         opacity="0.8"
-         id="circle8" />
-      <circle
-         cx="555"
-         cy="395"
-         r="4"
-         fill="#59a7ff"
-         opacity="0.7"
-         id="circle9" />
-    </g>
-    <!-- Remote Service: Signal Waves at opening (unchanged) -->
-    <g
-       id="Remote"
-       inkscape:label="Remote (Signal Waves)"
-       transform="translate(-260.80207,-10.478655)">
-      <path
-         d="m 630,340 a 40,40 0 0 1 0,40"
-         fill="none"
-         stroke="#1159bf"
-         stroke-width="6"
-         opacity="0.55"
-         stroke-linecap="round"
-         id="path9" />
-      <path
-         d="m 650,340 a 60,60 0 0 1 0,60"
-         fill="none"
-         stroke="#1159bf"
-         stroke-width="6"
-         opacity="0.35"
-         stroke-linecap="round"
-         id="path10" />
-      <path
-         d="m 670,340 a 80,80 0 0 1 0,80"
-         fill="none"
-         stroke="#1159bf"
-         stroke-width="6"
-         opacity="0.2"
-         stroke-linecap="round"
-         id="path11" />
-    </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1307.5" height="322" version="1.1" viewBox="0 0 1307.5 322" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.wm { font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto; font-weight: 700; }
+      .sub { font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto; font-weight: 500; }</style>
+  <linearGradient id="arcGrad" x1="417.69" x2="650.04" y1="307.12" y2="307.12" gradientTransform="scale(.97871 1.0218)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#0D47A1" offset="0"/>
+   <stop stop-color="#1159BF" offset=".55"/>
+   <stop stop-color="#59A7FF" offset="1"/>
+  </linearGradient>
+  <filter id="arcGlow" x="-.14971" y="-.14162" width="1.2994" height="1.2832">
+   <feGaussianBlur result="blur" stdDeviation="8"/>
+   <feColorMatrix in="blur" values="0 0 0 0 0.07                 0 0 0 0 0.45                 0 0 0 0 0.95                 0 0 0 0.7 0"/>
+  </filter>
+ </defs>
+ <g id="Symbol" transform="translate(-98.198 -278.52)">
+  <g id="C-Ring" transform="translate(-260.8 -10.479)">
+   <circle cx="520" cy="450" r="150" fill="none" stroke="#1159bf" stroke-width="22"/>
+   <path d="m610 340a150 150 0 0 1 0 220" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="44"/>
+   <g id="ClientNode" transform="translate(610,340)">
+    <circle r="14" fill="#fff" stroke="#1159bf" stroke-width="4"/>
+    <circle r="6" fill="#1159bf"/>
+   </g>
   </g>
-  <!-- ===== LAYER: Wordmark ===== -->
-  <g
-     id="Wordmark"
-     inkscape:groupmode="layer"
-     inkscape:label="Wordmark"
-     transform="translate(-98.19793,-278.52134)">
-    <text
-       x="284.96765"
-       y="499.10736"
-       class="wm"
-       font-size="144px"
-       letter-spacing="1.2"
-       fill="#0f172a"
-       id="text11"
-       style="font-size:213.333px;fill:#66bca3;fill-opacity:1">onsphera<tspan
-   style="font-size:96px;fill:#09277e;fill-opacity:1"
-   id="tspan1">PSA</tspan></text>
-    <text
-       x="423.51874"
-       y="587.05042"
-       class="sub"
-       font-size="42px"
-       fill="#334155"
-       id="text12"
-       style="font-size:48px"><tspan
-         style="fill:#33339e;fill-opacity:0.924658"
-         id="tspan13">Consultancy · Intelligence · Trust</tspan></text>
+  <g id="ConnectionArc" transform="translate(-260.8 -10.479)">
+   <g id="ConsultantNode" transform="translate(435,525)">
+    <polygon points="0 16 -13.9 8 -13.9 -8 0 -16 13.9 -8 13.9 8" fill="#fff" stroke="#1159bf" stroke-width="4"/>
+    <circle r="4" fill="#1159bf"/>
+   </g>
+   <path d="m435 525c35-70 85-130 175-185" fill="none" filter="url(#arcGlow)" stroke="url(#arcGrad)" stroke-linecap="round" stroke-width="14"/>
+   <path d="m438 522c34-67 84-124 170-180" fill="none" opacity=".85" stroke="#cfe3ff" stroke-linecap="round" stroke-width="4"/>
+   <g fill="#59a7ff">
+    <circle cx="475" cy="470" r="4" opacity=".95"/>
+    <circle cx="515" cy="425" r="4" opacity=".8"/>
+    <circle cx="555" cy="395" r="4" opacity=".7"/>
+   </g>
   </g>
-  <!-- ===== LAYER: Guides (toggle) ===== -->
-  <g
-     id="Guides"
-     inkscape:groupmode="layer"
-     inkscape:label="Guides (toggle)"
-     transform="translate(-98.19793,-278.52134)" />
+  <g id="Remote" transform="translate(-260.8 -10.479)" fill="none" stroke="#1159bf" stroke-linecap="round" stroke-width="6">
+   <path d="m630 340a40 40 0 0 1 0 40" opacity=".55"/>
+   <path d="m650 340a60 60 0 0 1 0 60" opacity=".35"/>
+   <path d="m670 340a80 80 0 0 1 0 80" opacity=".2"/>
+  </g>
+ </g>
+ <g id="Wordmark" transform="translate(-98.198 -278.52)">
+  <text class="wm" x="295.44629" y="493.28592" fill="#66bca3" letter-spacing="1.2"><tspan font-size="186.67px">onsphera</tspan><tspan fill="#09277e" font-size="80px">PSA</tspan></text>
+  <text class="sub" x="423.51874" y="587.05042" fill="#334155" font-size="48px"><tspan fill="#33339e" fill-opacity=".92466">Consultancy · Intelligence · Trust</tspan></text>
+ </g>
 </svg>

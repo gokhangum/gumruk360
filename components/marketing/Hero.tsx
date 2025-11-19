@@ -109,10 +109,10 @@ const cards = t.raw("cards") as Card[];
                 >
                     <div className="flex flex-col justify-center h-full text-center px-3 sm:px-4 md:px-1 break-words pointer-events-none">
                     <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">{c.emoji}</div>
-                    <div className="mt-2 md:mt-3 font-medium text-sm sm:text-base break-words">
+                    <div className="mt-2 md:mt-3 font-medium md:text-sm sm:text-base break-words">
                      {c.title}
                     </div>
-                  <div className="text-slate-600 text-xs md:text-sm mt-1 break-words">
+                  <div className="text-slate-600 text-base md:text-sm mt-1 break-words">
                     {c.desc}
                  </div>
                   </div>

@@ -108,7 +108,7 @@ const locale = await getLocale();
               key={p.id}
               className="rounded-2xl border border-gray-200 bg-white p-4 md:p-5 shadow-sm"
             >
-              <div className="flex gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 {cover ? (
                   <img
                     src={cover}
