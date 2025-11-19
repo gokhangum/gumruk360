@@ -199,7 +199,7 @@ export async function POST(req: Request) {
       currency: "TRY",
       sla_due_at: pricing.slaDueAt,
       pricing,
-      assigned_to: assignedTo ?? "441a871c-5e08-4af8-917d-fa0af4c30c74",
+            assigned_to: assignedTo ?? process.env.DEFAULT_QUESTION_OWNER_ID ?? null,
 	       difficulty_score,
       gpt_confidence,
       k_technical_difficulty,
