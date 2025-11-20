@@ -4,6 +4,18 @@
     "description": "Latest posts"
   },
 	"contactmain": {
+		"company": {
+  "title": "Company contact details",
+  "subtitle": "You can also reach us directly using the details below.",
+  "nameLabel": "Company",
+  "emailLabel": "Email",
+  "phoneLabel": "Phone",
+  "addressLabel": "Address",
+  "name": "Consphera Technology and Management Consultancy Ltd.",
+  "email": "support@easycustoms360.com",
+  "phone": "+9 0530 961 66 27",
+  "address": "Nisbetiye, Nisbetiye Street No:24 Apartment:17, Beşiktaş / Istanbul, Türkiye"
+},
 		"dropzone": {
     "title": "Drag & drop your files here",
     "or": "or",

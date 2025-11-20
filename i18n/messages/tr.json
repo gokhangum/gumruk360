@@ -4,6 +4,18 @@
     "description": "Son yazılar"
   },
 	"contactmain": {
+		"company": {
+  "title": "Firma iletişim bilgileri",
+  "subtitle": "Aşağıdaki bilgilerden bize doğrudan ulaşabilirsiniz.",
+  "nameLabel": "Firma",
+  "emailLabel": "E-posta",
+  "phoneLabel": "Telefon",
+  "addressLabel": "Adres",
+  "name": "Consphera Teknoloji ve Yönetim Danışmanlığı Ltd. Şti.",
+  "email": "destek@gumruk360.com",
+  "phone": "0530 961 66 27",
+  "address": "Nisbetiye Mahallesi, Nisbetiye Caddesi No:24 Daire:17 Beşiktaş / İSTANBUL"
+},
 		"dropzone": {
     "title": "Dosyalarınızı buraya sürükleyip bırakın",
     "or": "veya",

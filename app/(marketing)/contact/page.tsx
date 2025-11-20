@@ -82,7 +82,69 @@ export default function ContactPage() {
             <h1 className="text-2xl font-semibold tracking-tight">{t("hero.title")}</h1>
             <p className="text-slate-600 mt-2">{t("hero.subtitle")}</p>
           </header>
+ <section className="rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3 md:px-5 md:py-4 space-y-3">
+           <div className="flex items-center gap-2">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-amber-100 text-amber-700">
+              <span className="text-lg" aria-hidden="true">
+                 ☎
+               </span>
+             </div>
+             <div>
+                <h2 className="text-sm font-semibold tracking-tight md:text-base">
+                  {t("company.title")}
+               </h2>
+              <p className="text-xs text-slate-500 md:text-sm">
+                {t("company.subtitle")}
+               </p>
+              </div>
+            </div>
 
+           <dl className="grid gap-3 text-sm md:grid-cols-2 md:text-[0.95rem]">
+             <div className="space-y-0.5">
+               <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                {t("company.nameLabel")}
+               </dt>
+              <dd className="font-medium text-slate-900">
+                {t("company.name")}
+                </dd>
+              </div>
+
+              <div className="space-y-0.5">
+                <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                   {t("company.emailLabel")}
+              </dt>
+              <dd>
+               <a
+                  href={`mailto:${t("company.email")}`}
+                   className="text-slate-900 underline-offset-2 hover:underline"
+                  >
+                    {t("company.email")}
+                  </a>
+               </dd>
+             </div>
+
+              <div data-nosnippet="true" className="space-y-0.5">
+              <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                  {t("company.phoneLabel")}
+               </dt>
+                <dd
+                 className="font-mono text-slate-900 select-none"
+                aria-label={t("company.phone")}
+                >
+                {t("company.phone")}
+               </dd>
+              </div>
+
+              <div className="space-y-0.5 md:col-span-2">
+               <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                  {t("company.addressLabel")}
+                </dt>
+               <dd className="text-slate-900">
+                 {t("company.address")}
+                </dd>
+               </div>
+          </dl>
+          </section>
           <form onSubmit={onSubmit} className="grid grid-cols-1 gap-4">
             <div className="grid md:grid-cols-2 gap-4">
               <label className="flex flex-col gap-1">
