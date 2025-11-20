@@ -78,7 +78,8 @@ export function buildSecurityHeaders(opts?: {
   const frameSrc = [
     "'self'",
     "https://www.googletagmanager.com",
-	"https://www.paytr.com",
+    "https://www.paytr.com",
+    "https:",                     // 🔑 Tüm HTTPS iframe’lere izin ver
     ...(opts?.cspExtraFrameSrc || []),
   ];
 
