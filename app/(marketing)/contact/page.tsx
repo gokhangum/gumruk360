@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";      
 import { useTranslations, useLocale } from "next-intl";
 
 type Status = { ok: boolean; message: string; ref?: string; errors?: Record<string, string> };
@@ -8,6 +9,7 @@ type Status = { ok: boolean; message: string; ref?: string; errors?: Record<stri
 export default function ContactPage() {
   const t = useTranslations("contactmain");
   const locale = useLocale();
+  const telImageSrc = locale === "tr" ? "/tel/tr_tel.png" : "/tel/eng_tel.png";
   const [status, setStatus] = React.useState<Status | null>(null);
   const [submitting, setSubmitting] = React.useState(false);
   const [files, setFiles] = React.useState<File[]>([]);
@@ -119,16 +121,23 @@ export default function ContactPage() {
                </dd>
              </div>
 
-              <div data-nosnippet="true" className="space-y-0.5">
-              <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">
+            <div data-nosnippet="true" className="space-y-0.5">
+                <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">
                   {t("company.phoneLabel")}
-               </dt>
+                </dt>
                 <dd
-                 className="font-mono text-slate-900 select-none"
-                aria-label={t("company.phone")}
+                  className="select-none"
+                  aria-label={t("company.phoneLabel")}
                 >
-                {t("company.phone")}
-               </dd>
+            <Image
+  src={telImageSrc}
+  alt={t("company.phoneLabel")}
+  width={120}
+  height={17} // Next.js için zorunlu; gerçek boyut CSS'ten gelecek
+  className="w-[120px] h-auto pointer-events-none select-none"
+  draggable={false}
+/>
+                </dd>
               </div>
 
               <div className="space-y-0.5 md:col-span-2">
