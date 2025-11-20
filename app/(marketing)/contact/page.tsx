@@ -84,11 +84,7 @@ export default function ContactPage() {
           </header>
  <section className="rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3 md:px-5 md:py-4 space-y-3">
            <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-amber-100 text-amber-700">
-              <span className="text-lg" aria-hidden="true">
-                 ☎
-               </span>
-             </div>
+
              <div>
                 <h2 className="text-sm font-semibold tracking-tight md:text-base">
                   {t("company.title")}

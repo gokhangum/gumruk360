@@ -5,8 +5,8 @@
   },
 	"contactmain": {
 		"company": {
-  "title": "Firma iletişim bilgileri",
-  "subtitle": "Aşağıdaki bilgilerden bize doğrudan ulaşabilirsiniz.",
+  "title": "",
+  "subtitle": "",
   "nameLabel": "Firma",
   "emailLabel": "E-posta",
   "phoneLabel": "Telefon",

@@ -5,8 +5,8 @@
   },
 	"contactmain": {
 		"company": {
-  "title": "Company contact details",
-  "subtitle": "You can also reach us directly using the details below.",
+  "title": "",
+  "subtitle": "",
   "nameLabel": "Company",
   "emailLabel": "Email",
   "phoneLabel": "Phone",
