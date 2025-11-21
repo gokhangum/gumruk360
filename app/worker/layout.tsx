@@ -129,7 +129,7 @@ export default async function WorkerLayout({ children }: { children: React.React
         t={{
           homepage: t("homepage"), assigned: t("assigned"), done: t("done"),
           contact: t("contact"), inbox: t("inbox"), announcements: t("announcements"),
-          cvEdit: t("cvEdit"), blog: t("blog"), profilePage: t("profilePage"), logout: t("logout")
+          cvEdit: t("cvEdit"), blog: t("blog"), profilePage: t("profilePage"), logout: t("logout"), welcome: t("dashwellcome")
         }}
       />
     </div>
