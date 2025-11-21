@@ -8,7 +8,7 @@ import { headers } from "next/headers";
 import { unstable_setRequestLocale, getMessages, getTranslations } from "next-intl/server";
 import { resolveTenantFromHost } from "@/lib/tenant";
 import { BRAND } from "@/lib/config/appEnv";
-
+import PageContextTracker from "@/components/analytics/PageContextTracker";
 import ConsentBootstrap from "@/components/analytics/ConsentBootstrap";
 import { GtmHead } from "@/components/analytics/GtmHead";
 import CookieBanner from "@/components/cookies/CookieBanner";
@@ -136,6 +136,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const host = h.get("x-forwarded-host") || h.get("host") || "";
 const { code, locale: resolvedLocale } = await getTenantByHost(host || undefined);
 const locale = toShortLocale(resolvedLocale) || (code?.toLowerCase().startsWith("en") ? "en" : "tr");
+ const fullLocale = (resolvedLocale as string | undefined) || (locale === "en" ? "en-US" : "tr-TR");
 
   const proto = (h.get("x-forwarded-proto") || "http").toLowerCase();
  const isLocal = host.includes("localhost") || host.includes("127.0.0.1");
@@ -164,6 +165,11 @@ const locale = toShortLocale(resolvedLocale) || (code?.toLowerCase().startsWith(
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
+  <PageContextTracker
+    host={host}
+    tenant={code}
+    locale={fullLocale}
+  />
           {children}
           <footer className="">
        

@@ -4,6 +4,7 @@
 import { useSearchParams, useParams, useRouter } from "next/navigation"
 import { useEffect, useMemo, useState } from "react"
 import { useTranslations } from "next-intl";
+import { pushEvent } from "@/lib/datalayer"
 export default function CheckoutReturnPage() {
   const sp = useSearchParams()
   const { id } = useParams<{ id: string }>()
@@ -20,6 +21,19 @@ const t = useTranslations("checkoutReturn")
   // SAYAÇ: sadece azalt, yönlendirmeyi burada yapma!
   useEffect(() => {
     if (status !== "success" || !orderId) return
+	 try {
+      const host = typeof window !== "undefined" ? window.location.hostname : ""
+     const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+      const locale = tenant === "easycustoms360" ? "en-US" : "tr-TR"
+
+    pushEvent("payment_success", {
+        tenant,
+        locale,
+        order_id: orderId,
+     })
+    } catch {
+      // analytics hatası yönlendirmeyi bozmamalı
+  }
     setSeconds(5) // her girişte reset
     const t = setInterval(() => {
       // sadece state güncelle — yan etki yok

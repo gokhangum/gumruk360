@@ -10,6 +10,7 @@ import Level2Modal from "@/components/precheck/Level2Modal"
 import { useTranslations, useLocale } from "next-intl"
 import AskAiNoticeModal from "@/components/AskAiNoticeModal"
 import Modal from "@/components/ui/Modal"
+import { pushEvent } from "@/lib/datalayer"
 // --- Types ---
 type Pricing = {
   estHours: number
@@ -289,6 +290,19 @@ if (!l2Pass) {
     }
 
     if (pj.status === 'passed') {
+		  try {
+       const host = typeof window !== "undefined" ? window.location.hostname : ""
+     const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+       const fullLocale = locale === "en" ? "en-US" : "tr-TR"
+
+     pushEvent("question_submitted", {
+       tenant,
+     locale: fullLocale,
+     question_id: id,
+     })
+   } catch {
+     // analytics hatası soru akışını bozmamalı
+   }
       return router.replace(`/ask/${id}`)
     }
     if (pj.status === 'meaningless') {

@@ -1,6 +1,6 @@
 // lib/datalayer.ts
-// Additive: simple helper to push context to dataLayer on route changes
-'use client';
+"use client";
+
 export type PageContext = {
   host?: string;
   tenant?: string;
@@ -8,9 +8,27 @@ export type PageContext = {
   userRole?: string;
   path?: string;
 };
-export function pushPageContext(ctx: PageContext) {
+
+declare global {
+  interface Window {
+    dataLayer?: any[];
+  }
+}
+
+function safeDataLayerPush(payload: any) {
   try {
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    (window as any).dataLayer.push({ event: 'page_context', ...ctx });
-  } catch {}
+    if (typeof window === "undefined") return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(payload);
+  } catch {
+    // errors swallow
+  }
+}
+
+export function pushPageContext(ctx: PageContext) {
+  safeDataLayerPush({ event: "page_context", ...ctx });
+}
+
+export function pushEvent(eventName: string, params: Record<string, any> = {}) {
+  safeDataLayerPush({ event: eventName, ...params });
 }
