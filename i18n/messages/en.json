@@ -845,8 +845,8 @@
       "ctaLabel": "Click here to ask your question"
     },
     "assignment": {
-      "subject": "Gumruk360 Question Assignment",
-      "title": "Gumruk360 Question Assignment",
+      "subject": "EasyCustoms360 Question Assignment",
+      "title": "EasyCustoms360360 Question Assignment",
       "questionId": "Question ID",
       "paymentAmount": "Payment amount",
       "creditAmount": "Credit amount",
@@ -1126,7 +1126,7 @@
     }
   },
   "nav": {
-	  "dashwellcome": "Wellcome,",
+	  "dashwellcome": "Welcome,",
       "dashlogin": "Login",
       "dashsignup": "Signup",
 	  "homepage": "Site Homepage", 
@@ -2579,7 +2579,7 @@
       "amount": "Amount",
       "viewOrder": "View Order",
       "viewQuestion": "View Question",
-      "footer": "This email was sent by Gumruk360.",
+      "footer": "This email was sent by EasyCustoms360.",
       "currencyNote": "All amounts are shown in"
     },
     "ticketReply": {
@@ -2600,7 +2600,7 @@
     "creditAmount": "Credit Amount",
     "targetDue": "Target delivery",
     "selectedConsultant": "Selected consultant",
-    "teamFallback": "Gumruk360 Team",
+    "teamFallback": "EasyCustoms360 Team",
     "calc": "Calc",
     "calcHourly": "Hourly",
     "calcMin": "Min",
