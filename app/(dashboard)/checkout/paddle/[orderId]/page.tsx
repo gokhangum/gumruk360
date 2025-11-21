@@ -130,18 +130,21 @@ const t = useTranslations('dashboard.checkout.paddle')
 
       // Event’ler
       const onCompleted = () => {
-		   // GA4 payment_success event
-    try {
-        const host = typeof window !== "undefined" ? window.location.hostname : ""
-        const tenant = host.includes("easycustoms360") ? "easycustoms360" : "gumruk360"
-        const locale = tenant === "easycustoms360" ? "en-US" : "tr-TR"
+		   // GA4 / GTM: Paddle ödeme başarı
+        try {
+          const host = typeof window !== "undefined" ? window.location.hostname : ""
+          const tenant = host.includes("easycustoms360") ? "easycustoms360" : "gumruk360"
+          const locale = tenant === "easycustoms360" ? "en-US" : "tr-TR"
 
-        pushEvent("payment_success", {
+          pushEvent("payment_success", {
             tenant,
             locale,
-            order_id: orderId,   // mevcut parametre
-        })
-    } catch {}
+            order_id: orderId,
+            provider: "paddle",
+          })
+        } catch {
+          // analytics app'i bozmasın
+        }
         setStatus('success')
         setMessage(t('msg_success_redirect'))
         startCountdown(targetOnSuccess)
