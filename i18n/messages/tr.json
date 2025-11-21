@@ -1580,6 +1580,7 @@
     "noAttachments": "Herhangi bir ek bulunamadı.",
     "backToPool": "Havuza dön",
     "nav": {
+		"dashwellcome": "Hoşgeldiniz,",
 		"homepage": "Site Anasayfası",
       "panelTitle": "Danışman Paneli",
       "paymentmanagement": "Ödeme Yönetimi",

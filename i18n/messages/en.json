@@ -1584,6 +1584,7 @@
     "noAttachments": "No attachments found.",
     "backToPool": "Back to pool",
     "nav": {
+		"dashwellcome": "Hoşgeldiniz,",
 		"homepage": "Site Homepage",
       "panelTitle": "Consultant Panel",
       "paymentmanagement": "Payment Management",
