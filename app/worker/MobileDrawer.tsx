@@ -13,6 +13,7 @@ type T = {
   blog: string;
   profilePage: string;
   logout: string;
+  welcome: string;
 };
 
 export default function MobileDrawer({
@@ -66,7 +67,7 @@ export default function MobileDrawer({
               {/* Welcome & Logout */}
               {displayName ? (
                 <div className="flex items-center justify-between py-2">
-                  <div className="text-sm font-medium">Welcome, {displayName}</div>
+                  <div className="text-sm font-medium">{t.welcome}, {displayName}</div>
                   <button
                     onClick={() => { setOpen(false); window.location.href = "/logout"; }}
                     className="inline-flex items-center rounded border border-slate-300 px-3 py-2"
