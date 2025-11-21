@@ -5,6 +5,7 @@ import { use, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { pushEvent } from "@/lib/datalayer"
 declare global {
   interface Window { Paddle?: any }
 }
@@ -129,6 +130,18 @@ const t = useTranslations('dashboard.checkout.paddle')
 
       // Event’ler
       const onCompleted = () => {
+		   // GA4 payment_success event
+    try {
+        const host = typeof window !== "undefined" ? window.location.hostname : ""
+        const tenant = host.includes("easycustoms360") ? "easycustoms360" : "gumruk360"
+        const locale = tenant === "easycustoms360" ? "en-US" : "tr-TR"
+
+        pushEvent("payment_success", {
+            tenant,
+            locale,
+            order_id: orderId,   // mevcut parametre
+        })
+    } catch {}
         setStatus('success')
         setMessage(t('msg_success_redirect'))
         startCountdown(targetOnSuccess)

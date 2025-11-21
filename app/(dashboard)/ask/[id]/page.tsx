@@ -7,6 +7,7 @@ import BuyCreditsIfZero from "./BuyCreditsIfZero"
 import { headers } from "next/headers"
 import { APP_DOMAINS } from "@/lib/config/appEnv"
 import { getTranslations } from "next-intl/server"
+import PricingShownTracker from "@/components/analytics/PricingShownTracker"
 export const dynamic = "force-dynamic"
 export const runtime = "nodejs"
 
@@ -200,7 +201,11 @@ try {
           <BuyCreditsIfZero questionId={(q as any).id} />
         </div>
       )}
-
+<PricingShownTracker
+        questionId={(q as any).id}
+      price={displayAmount}
+        currency={displayCurrency}
+      />
       {/* İşlemler */}
      <div className="card-surface p-4 space-y-2">
         <AskOfferActions

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import CreditPayButtons from "./CreditPayButtons";
 import OrgTopUpButton from "./OrgTopUpButton";
 import { useTranslations, useLocale } from "next-intl"
-
+import { pushEvent } from "@/lib/datalayer";
 type Props = {
   questionId: string
   status?: string | null
@@ -65,6 +65,16 @@ const locale = useLocale()
   async function acceptOffer() {
     setBusy("acc")
     try {
+		const host = typeof window !== "undefined" ? window.location.hostname : "";
+    const tenant = host.includes("easycustoms360") ? "easycustoms360" : "gumruk360";
+    const locale = tenant === "easycustoms360" ? "en-US" : "tr-TR";
+
+    // Fiyat bu komponentte yoksa, minimum olarak question_id ve tenant/locale yollayalım
+    pushEvent("offer_accepted", {
+      tenant,
+      locale,
+      question_id: questionId,
+    });
       router.push(`/ask/${questionId}/terms`)
     } finally {
       setBusy(null)

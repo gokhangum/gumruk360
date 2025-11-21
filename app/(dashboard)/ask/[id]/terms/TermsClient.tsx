@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation"
 import { useState, useTransition } from "react"
 import { useTranslations } from "next-intl";
 import type { ReactNode } from "react";
-
+import { pushEvent } from "@/lib/datalayer";
 export default function TermsClient({ questionId, displayCurrency, children }: { questionId: string; displayCurrency?: string; children?: ReactNode }) {
 
   const router = useRouter()
@@ -16,6 +16,17 @@ export default function TermsClient({ questionId, displayCurrency, children }: {
     if (!checked) return
     start(async () => {
       try {
+	        const host = typeof window !== "undefined" ? window.location.hostname : ""
+     const tenant = host.includes("easycustoms360") ? "easycustoms360" : "gumruk360"
+     const locale = tenant === "easycustoms360" ? "en-US" : "tr-TR"
+
+     // Ödeme akışı (PayTR / Paddle) buradan başlıyor
+      pushEvent("payment_started", {
+         tenant,
+        locale,
+        question_id: questionId,
+          source_step: "terms",
+       })
         // 1) ToS kabul kaydı
         await fetch(`/api/ask/${questionId}/tos-accept`, { method: "POST" }).catch(() => {})
 

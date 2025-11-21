@@ -3,6 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { pushEvent } from "@/lib/datalayer";
 export default function ConfirmPay({
   questionId,
   mode, // 'user' | 'org'
@@ -21,6 +22,18 @@ export default function ConfirmPay({
     setLoading(true);
     setError(null);
     try {
+	     const host = typeof window !== "undefined" ? window.location.hostname : "";
+   const tenant = host.includes("easycustoms360") ? "easycustoms360" : "gumruk360";
+      const locale = tenant === "easycustoms360" ? "en-US" : "tr-TR";
+
+    // krediyle ödeme başlatıldı
+      pushEvent("payment_started", {
+       tenant,
+       locale,
+      question_id: questionId,
+        method: "credits",
+     mode,
+      });
       const url = mode === "user"
         ? `/api/ask/${questionId}/pay-credit`
         : `/api/ask/${questionId}/pay-org-credit`;
