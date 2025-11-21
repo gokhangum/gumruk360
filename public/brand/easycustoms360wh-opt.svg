@@ -17,7 +17,7 @@
   <rect x="81.501" y="-17.464" width="1800" height="900" fill="none"/>
  </g>
  <g id="Wordmark" transform="translate(-232.4,-302.5)">
-  <text class="wm" x="307.91971" y="483.2034" fill="#ffffff" font-size="146.67px" letter-spacing=".5"><tspan>E</tspan><tspan font-size="133.33px">asyCustoms360</tspan></text>
+  <text class="wm" x="313.44705" y="494.25812" fill="#ffffff" font-size="133.33px" letter-spacing=".5">EasyCustoms360</text>
  </g>
  <g id="ConnectionArc" transform="translate(-232.4,-302.5)">
   <path d="m250 380c290-100 890-100 1170 0" fill="none" filter="url(#connGlow)" stroke="url(#connGrad)" stroke-linecap="round" stroke-width="18"/>
