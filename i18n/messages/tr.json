@@ -2015,6 +2015,8 @@
     },
 "sections": {
       "info": {
+		  "paytr": "Ödemeler PayTR altyapısıyla güvenli şekilde alınır.",
+		  "paddle": "Ödemeler Paddle altyapısıyla güvenli şekilde alınır.",
         "title": "Bilgilendirme",
         "li1": "Tüm danışmanlık yanıtları konusunda yetkin/uzman kişilerce hazırlanır.",
         "li2": "Sunulan bilgi/cevaplar nihai veya bağlayıcı görüş değildir. İşlem yapmadan önce ilgili kamu kurumlarıyla bizzat doğrulama yapmanız gerekir.",

@@ -136,8 +136,33 @@ const displayCurrency = (resolved?.currency ?? "TRY").toUpperCase()
      <L2InfoMaybe id={id} />
 
       <div className="card-surface p-4 space-y-2 edge-underline edge-blue edge-taper edge-rise-2mm">
-       <div className="prose prose-sm max-w-none">
+	  {/* Sağ üstte ödeme altyapısı bilgisi + logo (diğer içeriği itmesin diye absolute) */}
+        <div className="absolute right-4 top-4 flex items-start justify-end">
+          {displayCurrency === "TRY" ? (
+            <div className="inline-flex flex-col items-end gap-1 text-[11px] leading-snug text-slate-900">
+              <span>{t("sections.info.paytr")}</span>
+              <img
+                src="/pay/paytrlogo.png"
+                alt="PayTR"
+                className="h-6 md:h-7 w-auto"
+                loading="lazy"
+              />
+            </div>
+          ) : (
+            <div className="inline-flex flex-col items-end gap-1 text-[11px] leading-snug text-slate-900">
+              <span>{t("sections.info.paddle")}</span>
+              <img
+                src="/pay/paddlelogo.png"
+                alt="Paddle"
+                className="h-6 md:h-7 w-auto"
+                loading="lazy"
+              />
+            </div>
+          )}
+        </div>
+      <div className="prose prose-sm max-w-none mt-16 md:mt-0">
          <h2>{t("sections.info.title")}</h2>
+
         <ul>
           <li>{t("sections.info.li1")}</li>
          <li>{t("sections.info.li2")}</li>

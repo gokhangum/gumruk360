@@ -2267,6 +2267,8 @@
     },
     "sections": {
       "info": {
+		"paytr": "Payments are securely processed by PayTr.",
+		"paddle": "Payments are securely processed by Paddle.",
         "title": "Information",
         "li1": "All advisory answers are prepared by competent/qualified experts.",
         "li2": "The information/answers provided are not definitive or binding. You must verify with the relevant public authorities before taking action.",
