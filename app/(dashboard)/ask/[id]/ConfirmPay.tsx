@@ -40,14 +40,6 @@ export default function ConfirmPay({
       const res = await fetch(url, { method: "POST" });
       const j = await res.json();
       if (!j.ok) throw new Error(j.error || "payment_failed");
-	   // krediyle ödeme başarıyla tamamlandı
-       pushEvent("payment_success", {
-       tenant,
-       locale,
-       question_id: questionId,
-        method: "credits",
-       mode,
-    });
       const target = (mode === "org" && typeof j.redirectTo === "string" && j.redirectTo)
          ? j.redirectTo : (mode === "user" ? "/dashboard/credits" : "/dashboard/questions");
        router.replace(target);
