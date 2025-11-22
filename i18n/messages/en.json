@@ -544,7 +544,7 @@
         "cards": [
           { "title": "Fast Answers to Regulatory Questions", "desc": "Accurate outcomes through expert consultant matching.", "href": "/ask", "emoji": "⚖️" },
           { "title": "Instant, Tailored Quote for Your Question", "desc": "The Consphera PSA engine reviews your case and prices it against dozens of criteria, speeding up the process.", "href": "/ask", "emoji": "⚡️" },
-          { "title": "Corporate Membership", "desc": "Authorize your team and manage all questions and usage from a single dashboard.", "href": "/dashboard/subscription", "emoji": "🏢" },
+          { "title": "Corporate Membership", "desc": "Authorize your team and manage all questions and usage from a single dashboard.", "href": "/signup", "emoji": "🏢" },
           { "title": "More Value with Credits", "desc": "Buy credits in bulk and get the same quality with tiered discounts.", "href": "dashboard/credits", "emoji": "🔋" }
         ],
         "learn_more": "Learn More",
