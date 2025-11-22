@@ -126,7 +126,7 @@ export default function ContactPage() {
                   {t("company.phoneLabel")}
                 </dt>
                 <dd
-                  className="select-none"
+                  className="select-none flex items-center gap-2"
                   aria-label={t("company.phoneLabel")}
                 >
             <Image
@@ -137,6 +137,14 @@ export default function ContactPage() {
   className="w-[120px] h-auto pointer-events-none select-none"
   draggable={false}
 />
+<Image
+                  src="/tel/WhatsApp.svg"
+                  alt="WhatsApp"
+                  width={20}
+                  height={20}
+                  className="w-[30px] h-auto pointer-events-none select-none"
+                  draggable={false}
+                />
                 </dd>
               </div>
 

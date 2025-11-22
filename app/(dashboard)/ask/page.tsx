@@ -259,28 +259,77 @@ if (id) {
             setPrecheckBusy(false)
     
     // L2: required varsa teklife geçişi durdur → modal
-    try {
-      if (pj?.auto?.l2Enabled === false) { /* L2 kapalı */ };
-        const requiredCount = Array.isArray(pj?.auto?.l2MissingEffective?.required) ? pj.auto.l2MissingEffective.required.length : (Array.isArray(pj?.l2?.result?.missing?.required) ? pj.l2.result.missing.required.length : 0);
-      
-const shouldCount = Array.isArray(pj?.auto?.l2MissingEffective?.should) ? pj.auto.l2MissingEffective.should.length : (Array.isArray(pj?.l2?.result?.missing?.should) ? pj.l2.result.missing.should.length : 0);
-const policyEff = pj?.auto?.l2PolicyEffective || pj?.auto?.l2Policy || { mode: 'required_only', should_max: 0 };
-const l2Pass = (typeof pj?.auto?.l2Pass === 'boolean')
-  ? pj.auto.l2Pass
-  : (policyEff.mode === 'required_and_should' ? (requiredCount === 0 && shouldCount <= (policyEff.should_max ?? 0)) : (requiredCount === 0));
-if (!l2Pass) {
-  setShowL2(true);
-  setL2Data({ status: 'ok', missing: pj?.auto?.l2MissingEffective || pj?.l2?.result?.missing || { required: [], should: [], info: [] } });
-  setLastQuestionId(id);
-  return;
-}
+  try {
+     if (pj?.auto?.l2Enabled === false) { /* L2 kapalı */ }
 
-        if (requiredCount > 0) {
-        setShowL2(true);
-        setL2Data(pj.l2.result);
-        setLastQuestionId(id);
-        return;
+     const missingEff = pj?.auto?.l2MissingEffective || pj?.l2?.result?.missing || { required: [], should: [], info: [] }
+       const requiredCount = Array.isArray(missingEff.required) ? missingEff.required.length : 0
+      const shouldCount = Array.isArray(missingEff.should) ? missingEff.should.length : 0
+      const policyEff = pj?.auto?.l2PolicyEffective || pj?.auto?.l2Policy || { mode: "required_only", should_max: 0 }
+     const l2Pass = (typeof pj?.auto?.l2Pass === "boolean")
+      ? pj.auto.l2Pass
+      : (policyEff.mode === "required_and_should"
+           ? (requiredCount === 0 && shouldCount <= (policyEff.should_max ?? 0))
+           : (requiredCount === 0))
+
+     // L2 zorunlu ise: L1 → L2 required + L2 modal gösterildi event'i
+    if (!l2Pass) {
+      try {
+         const host = typeof window !== "undefined" ? window.location.hostname : ""
+          const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+         const fullLocale = locale === "en" ? "en-US" : "tr-TR"
+
+     pushEvent("l1_l2_required", {
+         tenant,
+          locale: fullLocale,
+          question_id: id,
+           l2_required_count: requiredCount,
+       l2_should_count: shouldCount,
+           l2_mode: policyEff.mode || "required_only",
+       })
+       pushEvent("l2_shown", {
+           tenant,
+           locale: fullLocale,
+           question_id: id,
+         })
+     } catch {
+          // analytics hatası akışı bozmamalı
+        }
+
+       setShowL2(true)
+       setL2Data({ status: "ok", missing: missingEff })
+        setLastQuestionId(id)
+      return
       }
+
+     if (requiredCount > 0) {
+        try {
+          const host = typeof window !== "undefined" ? window.location.hostname : ""
+         const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+          const fullLocale = locale === "en" ? "en-US" : "tr-TR"
+
+         pushEvent("l1_l2_required", {
+           tenant,
+          locale: fullLocale,
+           question_id: id,
+           l2_required_count: requiredCount,
+          l2_should_count: shouldCount,
+         l2_mode: policyEff.mode || "required_only",
+       })
+           pushEvent("l2_shown", {
+          tenant,
+           locale: fullLocale,
+         question_id: id,
+         })
+      } catch {
+         // analytics hatası akışı bozmamalı
+        }
+
+     setShowL2(true)
+      setL2Data(pj.l2?.result || { status: "ok", missing: missingEff })
+       setLastQuestionId(id)
+       return
+     }
     } catch {}
 
 
@@ -294,7 +343,12 @@ if (!l2Pass) {
        const host = typeof window !== "undefined" ? window.location.hostname : ""
      const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
        const fullLocale = locale === "en" ? "en-US" : "tr-TR"
-
+  // L1 başarı
+        pushEvent("l1_passed", {
+          tenant,
+          locale: fullLocale,
+          question_id: id,
+       })
      pushEvent("question_submitted", {
        tenant,
      locale: fullLocale,
@@ -306,6 +360,20 @@ if (!l2Pass) {
       return router.replace(`/ask/${id}`)
     }
     if (pj.status === 'meaningless') {
+     try {
+      const host = typeof window !== "undefined" ? window.location.hostname : ""
+      const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+        const fullLocale = locale === "en" ? "en-US" : "tr-TR"
+
+       pushEvent("l1_meaningless", {
+          tenant,
+         locale: fullLocale,
+          question_id: id,
+        })
+    } catch {
+       // analytics hatası akışı bozmamalı
+     }
+
       alert(locale === 'tr'
         ? t("precheck.notClear")
         : 'Your question is not sufficiently clear. Please add item/HS code, procedure, and context.'
@@ -313,6 +381,19 @@ if (!l2Pass) {
       return
     }
     if (pj.status === 'non_customs') {
+      try {
+       const host = typeof window !== "undefined" ? window.location.hostname : ""
+      const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+       const fullLocale = locale === "en" ? "en-US" : "tr-TR"
+
+        pushEvent("l1_non_customs", {
+        tenant,
+         locale: fullLocale,
+         question_id: id,
+     })
+    } catch {
+      // analytics hatası akışı bozmamalı
+     }
       alert(locale === 'tr'
         ? t("precheck.outOfScope")
         : 'Your question appears outside the scope of customs regulations.'
@@ -685,10 +766,59 @@ if (!l2Pass) {
         {showL2 && (
                <Level2Modal
          data={l2Data || { status: 'ok', missing: { required: [], should: [], info: [] } }}
-            onEdit={() => { setShowL2(false); }}
-            onContinue={() => { setShowL2(false); if (lastQuestionId) router.replace(`/ask/${lastQuestionId}`); }}
-            onClose={() => setShowL2(false)}
-        />
+          onEdit={() => {
+              try {
+           const host = typeof window !== "undefined" ? window.location.hostname : ""
+              const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+              const fullLocale = locale === "en" ? "en-US" : "tr-TR"
+               if (lastQuestionId) {
+                 pushEvent("l2_rejected", {
+                tenant,
+                    locale: fullLocale,
+                   question_id: lastQuestionId,
+                  })
+               }
+               } catch {
+              // analytics hatası akışı bozmamalı
+            }
+             setShowL2(false)
+          }}
+           onContinue={() => {
+            try {
+              const host = typeof window !== "undefined" ? window.location.hostname : ""
+               const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+                const fullLocale = locale === "en" ? "en-US" : "tr-TR"
+               if (lastQuestionId) {
+                 pushEvent("l2_accepted", {
+                    tenant,
+                    locale: fullLocale,
+                     question_id: lastQuestionId,
+                 })
+               }
+              } catch {
+               // analytics hatası akışı bozmamalı
+             }
+              setShowL2(false)
+            if (lastQuestionId) router.replace(`/ask/${lastQuestionId}`)
+          }}
+          onClose={() => {
+             try {
+                const host = typeof window !== "undefined" ? window.location.hostname : ""
+                const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+                const fullLocale = locale === "en" ? "en-US" : "tr-TR"
+               if (lastQuestionId) {
+                  pushEvent("l2_closed", {
+                   tenant,
+                   locale: fullLocale,
+                   question_id: lastQuestionId,
+               })
+              }
+             } catch {
+               // analytics hatası akışı bozmamalı
+            }
+             setShowL2(false)
+           }}
+		           />
         )}
 </div></div></div>
   )

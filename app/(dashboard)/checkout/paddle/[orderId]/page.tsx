@@ -86,6 +86,20 @@ const t = useTranslations('dashboard.checkout.paddle')
           status === 'paid' || status === 'completed' || status === 'success'
 
         if (paid) {
+		      try {
+        const host = typeof window !== "undefined" ? window.location.hostname : ""
+         const tenant = host.includes("easycustoms360") ? "easycustoms360" : "gumruk360"
+          const locale = tenant === "easycustoms360" ? "en-US" : "tr-TR"
+
+           pushEvent("payment_success", {
+           tenant,
+           locale,
+             order_id: oid,
+         provider: "paddle",
+           })
+      } catch {
+          // analytics hatası ödeme akışını bozmamalı
+        }
           setStatus('success')
           setMessage(t('msg_success_redirect'))
           startCountdown(targetOnSuccess)

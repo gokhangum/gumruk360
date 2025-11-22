@@ -84,6 +84,15 @@ const locale = useLocale()
   async function rejectOffer() {
     setBusy("rej")
     try {
+	       const host = typeof window !== "undefined" ? window.location.hostname : ""
+   const tenant = host.includes("easycustoms360") ? "easycustoms360" : "gumruk360"
+      const locale = tenant === "easycustoms360" ? "en-US" : "tr-TR"
+
+      pushEvent("offer_rejected", {
+      tenant,
+       locale,
+       question_id: questionId,
+      })
       await fetch(`/api/ask/${questionId}/status`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
