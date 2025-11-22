@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import { pushEvent } from "@/lib/datalayer";
 type PurchaseRow = { id: string; change: number; created_at: string; reason?: string; order_id?: string|null }
 type LedgerRow   = {
   id: string;
@@ -289,7 +290,20 @@ if (!isFinite(val) || val <= 0) return alert(t('buy.enterValidAmount'))
     if (Number.isFinite(minUserPurchase) && val < Number(minUserPurchase)) return alert(t('buy.minPurchase', { count: minUserPurchase }))
 
     if (Number.isFinite(minUserPurchase) && val < Number(minUserPurchase)) return alert(t('buy.minPurchase', { count: minUserPurchase }))
+   try {
+    const host = typeof window !== "undefined" ? window.location.hostname : ""
+      const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+     const fullLocale = locale === "en" ? "en-US" : "tr-TR"
 
+      pushEvent("credits_topup_checkout", {
+        tenant,
+         locale: fullLocale,
+      scope_type: "user",
+        credits: val,
+     })
+  } catch {
+       // analytics hatası akışı bozmamalı
+   }
     const emailQs = emailParam ? `&email=${encodeURIComponent(emailParam)}` : ''
     window.location.href = `/checkout?scope_type=user&credits=${val}${emailQs}`
   }

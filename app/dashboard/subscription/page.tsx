@@ -4,7 +4,8 @@ import { useEffect, useState, useMemo, useRef } from 'react'
 import MembersDeleteButton from './MembersDeleteButton'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { useRouter } from 'next/navigation'
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { pushEvent } from "@/lib/datalayer";
 function parseLowerBoundFromRange(r: string | null): number {
   if (!r) return Infinity
   const m = r.match(/^\s*[\[\(]\s*([0-9]+)(?:\.[0-9]+)?\s*,/)
@@ -51,7 +52,7 @@ const tCred = useTranslations("cred");
 const tCommon = useTranslations("common");
 const tProgress = useTranslations("progress");
 const tQuestions = useTranslations("questions.detail");
-
+const locale = useLocale();
   const [tab, setTab] = useState<'purchases'|'usage'|'members'>('purchases')
   const [purchases, setPurchases] = useState<PurchaseRow[]>([])
   const [usage, setUsage] = useState<LedgerRow[]>([])
@@ -177,6 +178,20 @@ try {
 if (!isFinite(val) || val <= 0) return alert(tCred("buy.enterValidAmount"));
 if (Number.isFinite(minValue) && val < Number(minValue)) return alert(tCred("buy.minPurchase", { count: minValue }));
 if (Number.isFinite(minOrgPurchase) && val < Number(minOrgPurchase)) return alert(tCred("buy.minPurchase", { count: minOrgPurchase }));
+    try {
+      const host = typeof window !== "undefined" ? window.location.hostname : ""
+      const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+     const fullLocale = locale === "en" ? "en-US" : "tr-TR"
+ 
+      pushEvent("credits_topup_checkout", {
+       tenant,
+        locale: fullLocale,
+         scope_type: "org",
+       credits: val,
+      })
+   } catch {
+     // analytics hatası akışı bozmamalı
+   }
 
     window.location.href = `/checkout?scope_type=org&credits=${val}`
   }

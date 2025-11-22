@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { pushEvent } from "@/lib/datalayer"
 type Scope = 'user' | 'org'
 
 // --- Paddle overlay için minimal yardımcılar ---
@@ -96,6 +97,23 @@ const nf0 = new Intl.NumberFormat(locale, { minimumFractionDigits: 0, maximumFra
            const m = String(retUrl).match(/\/checkout\/([^/?#]+)/)
           if (m) oid = m[1]
           }
+		         try {
+         const host = typeof window !== "undefined" ? window.location.hostname : ""
+           const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+           const fullLocale = locale === "en" ? "en-US" : "tr-TR"
+
+          pushEvent("credits_topup_payment_success", {
+            tenant,
+           locale: fullLocale,
+         scope_type: scope,
+           credits,
+           currency: ccy,
+           provider: "paddle",
+           order_id: oid || null,
+          })
+        } catch {
+          // analytics hatası akışı bozmamalı
+        }
           router.replace(oid ? `/dashboard/orders/${oid}` : '/dashboard/orders')
 } else if (name === "checkout.closed") {
   // Completed mesajı gelmese bile kullanıcıyı güvenli hedefe taşı
@@ -119,6 +137,22 @@ const nf0 = new Intl.NumberFormat(locale, { minimumFractionDigits: 0, maximumFra
      setSubmitting(true)
     setError(null)
     try {
+	       const host = typeof window !== "undefined" ? window.location.hostname : ""
+    const tenant = /easycustoms360\.com$/i.test(host) ? "easycustoms360" : "gumruk360"
+    const fullLocale = locale === "en" ? "en-US" : "tr-TR"
+
+      try {
+      pushEvent("credits_topup_payment_started", {
+         tenant,
+         locale: fullLocale,
+          scope_type: scope,
+          credits,
+          currency: ccy,
+          provider: ccy === "USD" ? "paddle" : "paytr",
+         })
+       } catch {
+         // analytics hatası akışı bozmamalı
+       }
 if (ccy === 'USD') {
   // --- Paddle (USD) ---
   const res = await fetch('/api/payments/paddle/with-credits', {
