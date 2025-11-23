@@ -99,9 +99,13 @@ export default function CookieBanner() {
   };
 
 
- if (!open) {
-    // consent_status = "accepted" veya "rejected" -> banner kapalı,
-    // ama kullanıcı isterse buradan tekrar açabilsin
+  if (!open) {
+    // consent_status = "accepted" ise hiçbir şey gösterme
+    if (status === "accepted") {
+      return null;
+    }
+
+    // consent_status = "unknown" veya "rejected" -> küçük buton göster
     return (
       <button
         type="button"
@@ -112,6 +116,7 @@ export default function CookieBanner() {
       </button>
     );
   }
+
 
 
   return (
