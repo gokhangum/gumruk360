@@ -9,7 +9,7 @@ type ConsentState = {
   analytics: boolean;
   marketing: boolean;
 };
-
+type ConsentStatus = "unknown" | "accepted" | "rejected";
 const STORAGE_KEY = "cookieConsent";
 
 function readConsent(): ConsentState | null {
@@ -38,47 +38,81 @@ function gtagUpdate(c: ConsentState) {
 function defaultDenied(): ConsentState {
   return { necessary: true, preferences: false, analytics: false, marketing: false };
 }
-
+function deriveStatus(c: ConsentState | null): ConsentStatus {
+  if (!c) return "unknown";
+  const anyOptional = c.preferences || c.analytics || c.marketing;
+  return anyOptional ? "accepted" : "rejected";
+}
 export default function CookieBanner() {
   const t = useTranslations();
   const [open, setOpen] = useState(false);
   const [modal, setModal] = useState(false);
   const [state, setState] = useState<ConsentState>(defaultDenied());
+  const [status, setStatus] = useState<ConsentStatus>("unknown");
 
   useEffect(() => {
     const c = readConsent();
-    if (!c) {
+    const s = deriveStatus(c);
+     setStatus(s);
+ 
+     if (!c) {
+       // consent_status = "unknown" -> her girişte banner açık
+     setState(defaultDenied());
       setOpen(true);
-      setState(defaultDenied());
     } else {
-      setOpen(false);
       setState(c);
-    }
-  }, []);
+      // Daha önce seçim yapılmışsa, GA/GTM için mevcut tercihi hemen uygula
+      gtagUpdate(c);
+     // accepted veya rejected ise banner kapalı başlasın
+      setOpen(false);
+   }
+ }, []);
 
-  const acceptAll = () => {
+
+
+    const acceptAll = () => {
     const next = { necessary: true, preferences: true, analytics: true, marketing: true };
     saveConsent(next);
     gtagUpdate(next);
     setState(next);
+    setStatus("accepted");
     setOpen(false);
   };
+
   const rejectAll = () => {
     const next = defaultDenied();
     saveConsent(next);
     gtagUpdate(next);
     setState(next);
+    setStatus("rejected");
     setOpen(false);
   };
+
   const saveCustom = () => {
     const next = { ...state, necessary: true };
     saveConsent(next);
     gtagUpdate(next);
+    setState(next);
+    setStatus(deriveStatus(next));
     setOpen(false);
     setModal(false);
   };
 
-  if (!open) return null;
+
+ if (!open) {
+    // consent_status = "accepted" veya "rejected" -> banner kapalı,
+    // ama kullanıcı isterse buradan tekrar açabilsin
+    return (
+      <button
+        type="button"
+        className="fixed bottom-3 left-3 z-[900] rounded-full bg-slate-900/80 px-3 py-1 text-xs text-slate-50 shadow-lg hover:bg-slate-900"
+        onClick={() => setOpen(true)}
+      >
+        {t('cookies.manageLabel') || 'Çerezler'}
+      </button>
+    );
+  }
+
 
   return (
    <div className="fixed inset-x-0 bottom-0 z-[1000] pb-[env(safe-area-inset-bottom)]">
