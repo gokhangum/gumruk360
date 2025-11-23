@@ -363,6 +363,7 @@
 },
   "cookieConsent": {
     "cookies": {
+		"manageLabel": "Cookie settings",
       "banner": {
         "title": "Cookie Preferences",
         "body": "We use cookies to improve your experience. You can accept, reject, or customize your preferences."

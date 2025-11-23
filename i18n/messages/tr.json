@@ -2799,6 +2799,7 @@
   },
   "cookieConsent": {
     "cookies": {
+		"manageLabel": "Çerez ayarları",
       "banner": {
         "title": "Çerez Tercihleri",
         "body": "Deneyiminizi iyileştirmek için çerezler kullanıyoruz. Kabul edebilir, reddedebilir veya tercihlerinizi özelleştirebilirsiniz."
