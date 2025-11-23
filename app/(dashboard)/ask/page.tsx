@@ -713,7 +713,7 @@ if (id) {
                (window as any).__openAskAiNoticeModal?.();
               } catch {}
             }}
-           className="mt-1 text-sm text-indigo-700 hover:underline"
+           className="mt-1 text-sm text-indigo-700 hover:underline text-left block"
          >
             {t("form.descHelp.aiNoticeLink")}
           </button>

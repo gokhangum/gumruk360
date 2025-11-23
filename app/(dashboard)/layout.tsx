@@ -161,7 +161,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
           myPayments: t("myPayments"), subscriptionManagement: t("subscriptionManagement"),
           creditManagement: t("creditManagement"), announcements: t("announcements"), contact: t("contact"),
           support: t("support"), profile: t("profile"), kvkkGdpr: t("kvkkGdpr"), terms: t("terms"),
-          cookies: t("cookies"), logout: t("logout")
+          cookies: t("cookies"), legal: t("legal"), logout: t("logout")
         }}
         howItWorksHref={howItWorksHref}
         emailQuery={emailQuery}

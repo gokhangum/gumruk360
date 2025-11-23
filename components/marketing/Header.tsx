@@ -324,11 +324,12 @@ useEffect(() => {
          {tf("nav.home", "Ana Sayfa")}
        </Link>
 
-     <div className="bg-slate-100 rounded px-3 pt-2 pb-3 mt-1">
 
-        <div className="text-xs text-slate-500 mb-1">
+
+        <div className="py-1 block">
           {tf("nav.howitworks", "Nasıl Çalışır")}
         </div>
+		    <div className="bg-slate-100 rounded px-3 pt-2 pb-3 mt-1">
         <Link href="/how-it-works/individual" className="py-1 block" onClick={() => setOpen(false)}>
           {tf("nav.howitworks_individual", "Bireysel Kullanıcılar")}
         </Link>
@@ -342,10 +343,11 @@ useEffect(() => {
       <Link href="/contact" className="py-2 block" onClick={() => setOpen(false)}>{tf("nav.contact", "İletişim")}</Link>
       <Link href="/about" className="py-2 block" onClick={() => setOpen(false)}>{tf("nav.about", "Hakkımızda")}</Link>
 
-      <div className="bg-slate-100 rounded px-3 pt-2 pb-3 mt-1">
-        <div className="text-xs text-slate-500 mb-1">
+   
+        <div className="py-1 block">
           {tf("nav.legal", "Yasal")}
         </div>
+		<div className="bg-slate-100 rounded px-3 pt-2 pb-3 mt-1">
         <Link href="/legal/privacy" className="py-1 block" onClick={() => setOpen(false)}>
           {tf("nav.legal_privacy", "Gizlilik / KVKK")}
         </Link>

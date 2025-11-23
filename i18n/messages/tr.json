@@ -1148,6 +1148,7 @@
     "support": "Mesaj Kutusu",
     "faq": "Sık Sorulan Sorular",
     "kvkkGdpr": "KVKK/GDPR",
+	"legal": "Yasal",
     "terms": "Kullanım Koşulları",
     "cookies": "Çerez Politikası"
   },
@@ -2440,7 +2441,7 @@
   "open": "Soru sorma ipuçları",
   "title": "Önemli Not",
   "intro": "Doğru fiyat hesaplaması için açıklamayı somutlaştırın. Ek dosyalar kapsamını netleştirir ve fiyatlamayı olumlu etkileyebilir. Ucu açık sorularda kapsam geniş değerlendirilebilir ve fiyat artabilir.",
-  "aiNoticeLink": "AI Değerlendirme Bilgilendirmesini okuyunuz",
+  "aiNoticeLink": "AI Değerlendirme Bilgilendirmesini okuyunuz.",
   "bullets": {
     "files": "",
     "scope": "",

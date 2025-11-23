@@ -20,7 +20,9 @@ type T = {
   kvkkGdpr: string;
   terms: string;
   cookies: string;
+  legal: string;
   logout: string;
+    
 };
 
 export default function MobileDrawer({
@@ -118,14 +120,12 @@ export default function MobileDrawer({
               {t.homepage}
             </Link>
 
-            <div className="bg-slate-100 rounded px-3 pt-2 pb-3 mt-1">
-              <div className="text-xs text-slate-500 mb-1">
-                {t.howItWorks}
-              </div>
-              <Link href={howItWorksHref} className="py-1 block" onClick={() => setOpen(false)}>
+
+
+              <Link href={howItWorksHref} className="py-2 block" onClick={() => setOpen(false)}>
                 {t.howItWorks}
               </Link>
-            </div>
+
 
             {/* Dashboard links */}
             <Link href="/dashboard/questions" className="py-2 block" onClick={() => setOpen(false)}>{t.myQuestions}</Link>
@@ -140,10 +140,9 @@ export default function MobileDrawer({
             <Link href="/dashboard/support" className="py-2 block" onClick={() => setOpen(false)}>{t.support}</Link>
             <Link href="/dashboard/profile" className="py-2 block" onClick={() => setOpen(false)}>{t.profile}</Link>
 
-            <div className="bg-slate-100 rounded px-3 pt-2 pb-3 mt-1">
-              <div className="text-xs text-slate-500 mb-1">
-                Yasal
-              </div>
+        
+ 
+			     <div className="bg-slate-100 rounded px-3 pt-2 pb-3 mt-1">
               <Link href="/dashboard/kvkk-gdpr" className="py-1 block" onClick={() => setOpen(false)}>{t.kvkkGdpr}</Link>
               <Link href="/dashboard/terms" className="py-1 block" onClick={() => setOpen(false)}>{t.terms}</Link>
               <Link href="/dashboard/cookies" className="py-1 block" onClick={() => setOpen(false)}>{t.cookies}</Link>

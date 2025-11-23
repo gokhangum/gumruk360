@@ -3,6 +3,7 @@ export const runtime = 'nodejs';
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
+import { supabaseAdmin } from "@/lib/supabase/serverAdmin";
 import OpenAI from "openai";
 
 async function makeSupabase() {
@@ -211,10 +212,13 @@ async function callGpt(question: string, criteriaRows: any[], ext: any, attachme
 }
 
 export async function POST(req: NextRequest) {
-  const supabase = await makeSupabase();
+  const supabase = supabaseAdmin;
   const { question, isUrgent, attachmentsMeta = [] } = await req.json();
 
-  const { data: v, error: ve } = await supabase.from("v_pricing_active_version").select("*").single();
+  const { data: v, error: ve } = await supabase
+    .from("v_pricing_active_version")
+    .select("*")
+    .single();
   if (ve) return NextResponse.json({ error: ve.message }, { status: 500 });
 
   const { data: crit, error: ce } = await supabase

@@ -1159,6 +1159,7 @@
     "support": "Inbox",
     "faq": "FAQ",
     "kvkkGdpr": "KVKK/GDPR",
+	"legal": "Legal",
     "terms": "Terms of Service",
     "cookies": "Cookie Policy"
   },
@@ -2472,7 +2473,7 @@
   "open": "Ask question tips",
   "title": "Important Note",
   "intro": "Provide concrete details for accurate pricing. File attachments clarify scope and can positively affect pricing. Open-ended questions may be treated broadly and increase the price.",
-  "aiNoticeLink": "Read the AI Evaluation Notice",
+  "aiNoticeLink": "Read the AI Evaluation Notice.",
   "bullets": {
     "files": "",
     "scope": "",

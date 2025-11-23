@@ -40,9 +40,7 @@ const t = await getTranslations({ locale, namespace: 'offer' })
       "currency",
       "sla_due_at",
       "pricing",
-      "assigned_to",
-	  "last_pricing_estimate_id",
-	  ].join(","))
+      "assigned_to"].join(","))
     .eq("id", id)
     .maybeSingle()
 
@@ -55,21 +53,7 @@ const t = await getTranslations({ locale, namespace: 'offer' })
       </div>
     )
   }
- // Admin GPT estimate snapshot (debug için)
-  let pricingDetails: any = null
-   try {
-    const lastSnapId = (q as any).last_pricing_estimate_id
-    if (lastSnapId) {
-      const { data: snap } = await supabaseAdmin
-         .from("question_pricing_estimates")
-       .select("details_json")
-       .eq("id", lastSnapId)
-      .maybeSingle()
-       if (snap && (snap as any).details_json) {
-       pricingDetails = (snap as any).details_json
-      }
-    }
-  } catch {}
+
   // === Kullanıcının account_type'ını auth.users -> user_metadata.account_type'tan al ===
   let accountType: string | undefined = undefined
   try {
@@ -208,55 +192,6 @@ try {
         displayCurrency={displayCurrency}
         consultantName={consultantName}
       />
-  {/* DEBUG: Admin GPT kriter tablosu – telifin altında */}
-      {pricingDetails?.perCriterion && (
-        <div className="mt-4 border rounded-lg p-4 space-y-3 text-xs md:text-sm">
-       <h3 className="font-semibold mb-2">Kriter Puanları (debug)</h3>
-         <div className="overflow-auto">
-            <table className="min-w-[720px] w-full text-xs">
-             <thead>
-               <tr className="text-left border-b">
-                <th className="p-2">Kriter</th>
-                 <th className="p-2">% Ağırlık</th>
-                 <th className="p-2">Skor (0-10)</th>
-               <th className="p-2">Katkı</th>
-              </tr>
-             </thead>
-             <tbody>
-              {pricingDetails.perCriterion.map((r: any, i: number) => (
-                 <tr key={i} className="border-b">
-                 <td className="p-2">{r.title}</td>
-                   <td className="p-2">
-                  {typeof r.weight_pct === "number"
-                       ? `${(r.weight_pct * 100).toFixed(1)}%`
-                       : "-"}
-                    </td>
-                     <td className="p-2">{r.score0_10}</td>
-                   <td className="p-2">{r.contribution}</td>
-                 </tr>
-                ))}
-               </tbody>
-           </table>
-          </div>
-          <div className="border rounded-lg p-3 mt-3">
-            <h4 className="font-semibold mb-1">Opsiyoneller</h4>
-             <pre className="text-[10px] md:text-xs bg-gray-50 p-2 rounded-lg overflow-auto">
-              {JSON.stringify(pricingDetails.optionals ?? null, null, 2)}
-            </pre>
-           {Array.isArray(pricingDetails.attachments_meta) && pricingDetails.attachments_meta.length > 0 && (
-             <div className="text-[10px] md:text-xs text-gray-600 mt-2">
-               Ekler: {pricingDetails.attachments_meta.map((a: any) => a.name).join(", ")}
-              </div>
-            )}
-         </div>
-          <div className="text-right text-xs md:text-sm font-semibold">
-           Sonuç (TL):{" "}
-           {pricingDetails.price_final ??
-              (pricingDetails as any).price_final_tl ??
-             (q as any).price_final_tl}
-         </div>
-        </div>
-      )}
 
       {/* Kredi Tutarı satırının hemen altı:
           - Sadece bireysel kullanıcılarda, bakiye=0 ise gösterilsin.
