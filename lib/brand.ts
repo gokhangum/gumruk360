@@ -43,6 +43,29 @@ const COMPANY_INFO: Record<Tenant, CompanyInfo> = {
   },
 };
 
+ export type SocialLinks = {
+  linkedin: string;
+  twitter: string;
+  instagram: string;
+ };
+ 
+ const SOCIAL_LINKS: Record<Tenant, SocialLinks> = {
+   TR: {
+     linkedin: "https://www.linkedin.com/company/gumruk-360", // TODO: gerçek Gümrük360 hesabını yaz
+    twitter: "https://x.com/gumruk360",   // TODO: gerçek Gümrük360 hesabını yaz
+     instagram: "https://www.instagram.com/gumruk360/", // TODO: gerçek Gümrük360 hesabını yaz
+   },
+   EN: {
+     linkedin: "https://www.linkedin.com/company/easycustoms360", // TODO: gerçek EasyCustoms360 hesabını yaz
+    twitter: "https://x.com/EasyCustoms360",   // TODO: gerçek EasyCustoms360 hesabını yaz
+     instagram: "https://www.instagram.com/easycustoms360/", // TODO: gerçek EasyCustoms360 hesabını yaz
+   },
+ };
+
+ export function getSocialLinks(t: Tenant): SocialLinks {
+   return SOCIAL_LINKS[t];
+ }
+
 export function getCompanyInfo(t: Tenant): CompanyInfo {
   return COMPANY_INFO[t] ?? COMPANY_INFO.TR;
 }

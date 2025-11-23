@@ -2,12 +2,14 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { tenantFromHost } from "@/lib/brand";
+import { tenantFromHost, getSocialLinks, type SocialLinks } from "@/lib/brand";
+import { Linkedin, Twitter, Instagram } from "lucide-react";
  export default function Footer() {
   const t = useTranslations("marketing.home.footer_i18n");
   const tb = useTranslations("marketing");
   // Footer logo (black) – tenant'a göre
  const [footerLogo, setFooterLogo] = useState<string | null>(null);
+ const [social, setSocial] = useState<SocialLinks | null>(null);
    useEffect(() => {
    if (typeof window === "undefined") return;
    const host = window.location.hostname;
@@ -17,6 +19,7 @@ import { tenantFromHost } from "@/lib/brand";
        ? "/brand/easycustoms360bl-opt.svg"
         : "/brand/gumruk360bl-opt.svg";
     setFooterLogo(logo);
+	setSocial(getSocialLinks(tenant));
  }, []);
   return (
 
@@ -49,14 +52,53 @@ import { tenantFromHost } from "@/lib/brand";
 			<li><Link href="/blog">{t("links.blog")}</Link></li>
           </ul>
         </div>
-        <div>
-          <div className="font-semibold mb-3">{t("colContact")}</div>
-          <ul className="space-y-2 text-slate-700">
-            <li><Link href="/contact">{t("links.contact")}</Link></li>
-            <li><Link href="/legal/privacy">{t("links.privacy")}</Link></li>
-            <li><Link href="/legal/terms">{t("links.terms")}</Link></li>
-          </ul>
-        </div>
+       <div>
+        <div className="font-semibold mb-3">{t("colContact")}</div>
+     <ul className="space-y-2 text-slate-700">
+        <li><Link href="/contact">{t("links.contact")}</Link></li>
+       <li><Link href="/legal/privacy">{t("links.privacy")}</Link></li>
+          <li><Link href="/legal/terms">{t("links.terms")}</Link></li>
+        </ul>
+
+       {social && (
+         <div className="mt-3 flex items-center gap-3 text-slate-500">
+             {social.linkedin && (
+              <a
+              href={social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="inline-flex p-1 rounded-full hover:bg-slate-100"
+             >
+                <Linkedin className="h-4 w-4" />
+              </a>
+            )}
+            {social.twitter && (
+             <a
+                 href={social.twitter}
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Twitter"
+                 className="inline-flex p-1 rounded-full hover:bg-slate-100"
+               >
+                <Twitter className="h-4 w-4" />
+              </a>
+             )}
+            {social.instagram && (
+              <a
+                href={social.instagram}
+                target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Instagram"
+                 className="inline-flex p-1 rounded-full hover:bg-slate-100"
+               >
+                  <Instagram className="h-4 w-4" />
+               </a>
+            )}
+          </div>
+         )}
+      </div>
+
                 {/* En sağda sabit Consphera logosu (tüm sitelerde aynı) */}
           <div className="col-span-2 md:col-span-1 flex items-start md:justify-end justify-start mt-8 md:mt-14 overflow-visible pr-2">
 		

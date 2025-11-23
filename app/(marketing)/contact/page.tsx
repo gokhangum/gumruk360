@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";      
+import Image from "next/image";     
+import { Linkedin, Twitter, Instagram } from "lucide-react"; 
 import { useTranslations, useLocale } from "next-intl";
+import { tenantFromHost, getSocialLinks, type SocialLinks } from "@/lib/brand";
 
 type Status = { ok: boolean; message: string; ref?: string; errors?: Record<string, string> };
 
@@ -14,6 +16,14 @@ export default function ContactPage() {
   const [submitting, setSubmitting] = React.useState(false);
   const [files, setFiles] = React.useState<File[]>([]);
   const dzRef = React.useRef<HTMLLabelElement | null>(null);
+ const [social, setSocial] = React.useState<SocialLinks | null>(null);
+
+ React.useEffect(() => {
+   if (typeof window === "undefined") return;
+   const host = window.location.hostname;
+   const tenant = tenantFromHost(host);
+  setSocial(getSocialLinks(tenant));
+ }, []);
 
   function onFilesSelected(list: FileList | null) {
     if (!list) return;
@@ -148,15 +158,54 @@ export default function ContactPage() {
                 </dd>
               </div>
 
-              <div className="space-y-0.5 md:col-span-2">
-               <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">
-                  {t("company.addressLabel")}
+            <div className="space-y-0.5 md:col-span-2">
+             <dt className="text-xs font-medium uppercase tracking-wide text-slate-500">
+                 {t("company.addressLabel")}
                 </dt>
-               <dd className="text-slate-900">
-                 {t("company.address")}
-                </dd>
-               </div>
-          </dl>
+              <dd className="text-slate-900">
+                {t("company.address")}
+            </dd>
+          </div>
+        </dl>
+
+        {social && (
+        <div className="mt-3 flex items-center gap-3 text-slate-600">
+             {social.linkedin && (
+               <a
+                 href={social.linkedin}
+                 target="_blank"
+                  rel="noopener noreferrer"
+               aria-label="LinkedIn"
+                className="inline-flex p-1 rounded-full hover:bg-slate-100"
+          >
+                <Linkedin className="h-4 w-4" />
+              </a>
+         )}
+             {social.twitter && (
+              <a
+                 href={social.twitter}
+                 target="_blank"
+                 rel="noopener noreferrer"
+                  aria-label="Twitter"
+                   className="inline-flex p-1 rounded-full hover:bg-slate-100"
+             >
+                 <Twitter className="h-4 w-4" />
+            </a>
+         )}
+          {social.instagram && (
+                <a
+                 href={social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+               aria-label="Instagram"
+               className="inline-flex p-1 rounded-full hover:bg-slate-100"
+           >
+                  <Instagram className="h-4 w-4" />
+                </a>
+              )}
+         </div>
+          )}
+
           </section>
           <form onSubmit={onSubmit} className="grid grid-cols-1 gap-4">
             <div className="grid md:grid-cols-2 gap-4">

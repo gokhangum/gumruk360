@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
-import { ChevronDown, Menu } from "lucide-react";
+import { ChevronDown, Menu, Linkedin, Twitter, Instagram } from "lucide-react";
 import { useTranslations } from "next-intl";
 import ActiveLink from "@/components/nav/ActiveLink";
 import { createClient } from "@supabase/supabase-js";
-import { tenantFromHost } from "@/lib/brand";
+import { tenantFromHost, getSocialLinks, type SocialLinks } from "@/lib/brand";
 const NAV_BG = "#1159BF";
 const NAV_FG = "#FFFFFF";
 
@@ -32,6 +32,7 @@ useEffect(() => {
 
   // Header logo (white) – tenant'a göre
   const [headerLogo, setHeaderLogo] = useState<string | null>(null);
+  const [social, setSocial] = useState<SocialLinks | null>(null);
   useEffect(() => {
     if (typeof window === "undefined") return;
     const host = window.location.hostname;
@@ -41,6 +42,7 @@ useEffect(() => {
        ? "/brand/easycustoms360wh-opt.svg"
        : "/brand/gumruk360wh-opt.svg";
     setHeaderLogo(logo);
+	setSocial(getSocialLinks(tenant));
    }, []);
 
   const tf = (key: string, fallback: string) => {
@@ -192,48 +194,63 @@ useEffect(() => {
           </nav>
         </div>
 
-        {/* Right: Actions */}
-        <div className="hidden xl:flex items-center gap-3">
+       {/* Right: Actions */}
+       <div className="hidden xl:flex items-center gap-4">
+         {social && (
+          <div className="flex items-center gap-2 text-white/80">
+           {social.linkedin && (
+               <a
+                href={social.linkedin}
+               target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                  className="inline-flex p-1 rounded-full hover:bg-white/10"
+               >
+                 <Linkedin className="h-4 w-4" />
+              </a>
+          )}
+           
+            </div>
+        )}
+
         {isAuth ? (
-  <div className="flex items-center gap-2">
-<span className="text-sm font-medium text-white/90">
-  {welcomeText}
-</span>
-    <button
-      onClick={handleLogout}
-      className="px-3 py-2 rounded-full border border-white/80 text-white hover:bg-white/10 text-sm font-medium"
-     aria-label={tf("nav.logout", "Çıkış")}
-    >
-      {tf("nav.logout", "Çıkış")}
-    </button>
-  </div>
-) : (
-  <>
-    <Link
-      href="/login"
-      className="px-4 py-2 rounded-full border border-white/80 text-white hover:bg-white/10 text-sm font-medium"
-    >
-      {loginLabel}
-    </Link>
-    <Link
-      href="/signup"
-      className="px-4 py-2 rounded-full border border-white/80 text-white hover:bg-white/10 text-sm font-medium"
-    >
-      {signupLabel}
-    </Link>
-  </>
-)}
-
-
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium text-white/90">
+               {welcomeText}
+            </span>
+            <button
+                onClick={handleLogout}
+             className="px-3 py-2 rounded-full border border-white/80 text-white hover:bg-white/10 text-sm font-medium"
+                aria-label={tf("nav.logout", "Çıkış")}
+             >
+                {tf("nav.logout", "Çıkış")}
+             </button>
+          </div>
+         ) : (
+          <>
+             <Link
+                href="/login"
+               className="px-4 py-2 rounded-full border border-white/80 text-white hover:bg-white/10 text-sm font-medium"
+             >
+              {loginLabel}
+               </Link>
+            <Link
+              href="/signup"
+             className="px-4 py-2 rounded-full border border-white/80 text-white hover:bg-white/10 text-sm font-medium"
+              >
+              {signupLabel}
+             </Link>
+            </>
+         )}
 
          <Link
-             href={ctaHref}
-             className="px-4 py-2 rounded-full bg-white text-sm font-medium hover:opacity-90 whitespace-nowrap"
+            href={ctaHref}
+           className="px-4 py-2 rounded-full bg-white text-sm font-medium hover:opacity-90 whitespace-nowrap"
              style={{ color: NAV_BG }}
           >
            {ctaLabel}
           </Link>
-        </div>
+       </div>
 
     
      {/* Mobile */}
