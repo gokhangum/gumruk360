@@ -42,7 +42,7 @@ export default function AskAiNoticeModal() {
     try {
       localStorage.removeItem(LS_KEY);
     } catch {}
-    router.replace("dashboard/how-it-works");
+    router.replace("/");
   };
 
   if (!open) return null;
