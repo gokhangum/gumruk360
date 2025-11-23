@@ -116,7 +116,18 @@ export async function POST(req: Request) {
     const est_days_normal       = toInt(form.get("est_days_normal"), 0)
     const est_days_urgent       = toInt(form.get("est_days_urgent"), 0)
     // Admin GPT pricing
-    const payload = { title, description, pages, isUrgent }
+	    // Form'daki dosyalardan attachmentsMeta üret
+    const filesField = form.getAll("files") || []
+    const attachmentsMeta = filesField
+      .map((f: any) => ({
+        name: String((f as any)?.name || ""),
+        size: Number((f as any)?.size || 0),
+        type: String((f as any)?.type || "") || "application/octet-stream",
+      }))
+      .filter(m => m.name)
+
+    const questionForGpt = [title, description].map(v => v.trim()).filter(Boolean).join("\n\n")
+    const payload = { question: questionForGpt, isUrgent, attachmentsMeta }
     const { details } = await callAdminPricing(origin, payload)
 
     // Hourly override (worker -> pricing_versions -> admin default)

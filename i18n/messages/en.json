@@ -584,7 +584,7 @@
         "howitworks": "How It Works",
 				 "howitworks_individual": "Individual Users",
 		  "howitworks_corporate": "Corporate Users",
-		"hbrdyr": "News& Announcements",
+		"hbrdyr": "News",
         "faq": "FAQ",
         "about": "About",
         "contact": "Contact",
@@ -2472,6 +2472,7 @@
   "open": "Ask question tips",
   "title": "Important Note",
   "intro": "Provide concrete details for accurate pricing. File attachments clarify scope and can positively affect pricing. Open-ended questions may be treated broadly and increase the price.",
+  "aiNoticeLink": "Read the AI Evaluation Notice",
   "bullets": {
     "files": "",
     "scope": "",

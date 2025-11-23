@@ -563,7 +563,7 @@
         "howitworks": "Nasıl Çalışır",
 		 "howitworks_individual": "Bireysel Kullanıcılar",
 		  "howitworks_corporate": "Kurumsal Kullanıcılar",
-		"hbrdyr": "Haberler&Duyurular",
+		"hbrdyr": "Haberler",
         "faq": "SSS",
         "about": "Hakkımızda",
         "contact": "İletişim",
@@ -2440,6 +2440,7 @@
   "open": "Soru sorma ipuçları",
   "title": "Önemli Not",
   "intro": "Doğru fiyat hesaplaması için açıklamayı somutlaştırın. Ek dosyalar kapsamını netleştirir ve fiyatlamayı olumlu etkileyebilir. Ucu açık sorularda kapsam geniş değerlendirilebilir ve fiyat artabilir.",
+  "aiNoticeLink": "AI Değerlendirme Bilgilendirmesini okuyunuz",
   "bullets": {
     "files": "",
     "scope": "",

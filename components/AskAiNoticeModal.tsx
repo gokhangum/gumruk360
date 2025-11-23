@@ -19,7 +19,18 @@ export default function AskAiNoticeModal() {
       window.localStorage.getItem(LS_KEY) === "yes";
     setOpen(!accepted);
   }, []);
-
+ useEffect(() => {
+   const handler = () => {
+     setOpen(true);
+   };
+   (window as any).__openAskAiNoticeModal = handler;
+   return () => {
+       if ((window as any).__openAskAiNoticeModal === handler) {
+       // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
+       delete (window as any).__openAskAiNoticeModal;
+      }
+   };
+  }, []);
   const handleApprove = () => {
     try {
       localStorage.setItem(LS_KEY, "yes");

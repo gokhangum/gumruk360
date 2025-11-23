@@ -706,6 +706,17 @@ if (id) {
             {t("form.descHelp.title")}
           </h2>
           <p className="mt-1 text-[15px]">{t("form.descHelp.intro")}</p>
+		   <button
+           type="button"
+            onClick={() => {
+              try {
+               (window as any).__openAskAiNoticeModal?.();
+              } catch {}
+            }}
+           className="mt-1 text-sm text-indigo-700 hover:underline"
+         >
+            {t("form.descHelp.aiNoticeLink")}
+          </button>
         </div>
       </div>
 
