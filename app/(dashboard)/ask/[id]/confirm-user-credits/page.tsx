@@ -62,14 +62,48 @@ const nf0 = new Intl.NumberFormat(locale, { minimumFractionDigits: 0, maximumFra
   // Soru bilgisi
   const { data: q } = await supabase
     .from("questions")
-    .select("id, title, price_final_tl, price_tl")
+    .select("id, title, price_final_tl, price_tl, user_id")
     .eq("id", id)
     .maybeSingle();
 
-  const price = Number((q as any)?.price_final_tl ?? (q as any)?.price_tl ?? 0);
+   const price = Number((q as any)?.price_final_tl ?? (q as any)?.price_tl ?? 0);
+   // ---- Para birimi: tenants.currency'ye göre USD/TRY hesapla ----
+   const hostForFx = detectDomain(h);
+   const userId = (q as any)?.user_id as string | null;
+
+  let displayCurrency = "TRY";
+  let pricingMultiplier = 1;
+  let displayAmount = price; // varsayılan TRY
+
+   if (userId) {
+     const { resolveTenantCurrency, fxBaseTry, computeLockedFromTRY } =
+      await import("@/lib/fx/resolveTenantCurrency");
+
+     const resolved = await resolveTenantCurrency({ userId, host: hostForFx });
+    displayCurrency = (resolved?.currency ?? "TRY").toUpperCase();
+     pricingMultiplier = Number(resolved?.pricing_multiplier ?? 1);
+
+    if (displayCurrency !== "TRY") {
+      const { rate } = await fxBaseTry(displayCurrency);
+      if (Number.isFinite(rate) && rate > 0) {
+         displayAmount = computeLockedFromTRY({
+           tryAmount: price,
+          baseCurrency: displayCurrency,
+           fxRateBaseTry: rate,
+          multiplier: pricingMultiplier,
+        });
+       }
+    }
+   }
+
+  const priceLabel =
+     (locale as string).startsWith("tr")
+      ? `Ücret (${displayCurrency})`
+      : `Fee (${displayCurrency})`;
 
   const required = credit?.requiredUserCredits ?? 0;
-  const balance  = credit?.userBalance ?? 0;
+   const balance  = credit?.userBalance ?? 0;
+
 
   return (
  
@@ -82,10 +116,11 @@ const nf0 = new Intl.NumberFormat(locale, { minimumFractionDigits: 0, maximumFra
         <div className="text-sm text-gray-600">{t("questionId")}</div>
         <div className="font-medium">{id}</div>
 
-        <div className="mt-3 grid grid-cols-2 md:grid-cols-3 gap-3">
-          <div>
-            <div className="text-sm text-gray-600">{t("priceTRY")}</div>
-            <div className="font-medium">{nf2.format(price)}</div>
+       <div className="mt-3 grid grid-cols-2 md:grid-cols-3 gap-3">
+        <div>
+            <div className="text-sm text-gray-600">{priceLabel}</div>
+        <div className="font-medium">{nf2.format(displayAmount)}</div>
+
           </div>
           <div>
             <div className="text-sm text-gray-600">{t("requiredCredits")}</div>

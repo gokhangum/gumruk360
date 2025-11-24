@@ -35,14 +35,21 @@ const t = await getTranslations({ locale: loc, namespace: "l2info" })
   // Read visibility settings (optional)
   let show = { required: true, should: true, info: true }
   try {
-    const { data: s } = await supabaseAdmin
+   const { data: s } = await supabaseAdmin
       .from('gpt_precheck_settings')
-      .select('l2_visible_groups')
+       .select('l2_visible_groups')
       .eq('domain', domain)
       .eq('locale', loc)
       .maybeSingle()
-    if (s?.l2_visible_groups) show = { required: s.l2_visible_groups.required ?? true, should: s.l2_visible_groups.should ?? true, info: s.l2_visible_groups.info ?? true }
-  } catch {}
+    if (s?.l2_visible_groups) {
+   const vg = s.l2_visible_groups as any
+    show = {
+       required: vg.required ?? true,
+        should:   vg.should   ?? true,
+       info:     vg.info     ?? true,
+      }
+    }
+   } catch {}
 
   const hasAny = (show.required && required.length>0) || (show.should && should.length>0) || (show.info && info.length>0)
 
