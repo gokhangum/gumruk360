@@ -19,46 +19,6 @@ function round50(n: number) { return Math.round(n / 50) * 50 }
    return Number.isFinite(n) ? n : def
  }
  function clamp010(n: any) { return Math.max(0, Math.min(10, Number(n) || 0)) }
-function pickDefaultOwnerForTenant(tenantCode: string | null, rawEnv?: string | null): string | null {
-  if (!rawEnv) return null
-
-  // Eski stil: tek UUID ise direkt dön
-  if (!rawEnv.includes(":") && !rawEnv.includes(",")) {
-    return rawEnv
-  }
-
-  const parts = rawEnv.split(",")
-
-  // Tenant kodu yoksa (ör: local host eşleşmedi), multi formatta ilk geçerli UUID'i dön
-  if (!tenantCode) {
-    for (const part of parts) {
-      const v = part.trim()
-      if (!v) continue
-      const idx = v.indexOf(":")
-      if (idx === -1) continue
-      const id = v.slice(idx + 1).trim()
-      if (id && id.length >= 10) {
-        return id
-      }
-    }
-    return null
-  }
-
-  // Tenant kodu varsa: o koda karşılık gelen UUID'i bul
-  for (const part of parts) {
-    const v = part.trim()
-    if (!v) continue
-    const [code, id] = v.split(":").map(s => s.trim())
-    if (!code || !id) continue
-    if (code === tenantCode && id.length >= 10) {
-      return id
-    }
-  }
-
-  return null
-}
-
- 
 async function callAdminPricing(origin: string, payload: any) {
   const base = process.env.INTERNAL_BASE_URL || origin
   const url = base.replace(/\/$/, "") + "/api/admin/gpt-pricing/estimate"
@@ -155,41 +115,6 @@ export async function POST(req: Request) {
     const est_hours             = toInt(form.get("est_hours"), 0)
     const est_days_normal       = toInt(form.get("est_days_normal"), 0)
     const est_days_urgent       = toInt(form.get("est_days_urgent"), 0)
-    // Tenant-based default owner fallback (mapped by tenants.code -> user id)
-   let defaultOwnerId: string | null = null
-     if (!assignedTo) {
-     try {
-         const urlObj = new URL(req.url)
-        const rawHost = (req.headers.get("x-forwarded-host") || urlObj.host || "").toLowerCase()
-         let host = rawHost.trim()
-         // Birden fazla değer geldiyse (x-forwarded-host: "a.com, b.com") ilkini al
-       if (host.includes(",")) host = host.split(",")[0].trim()
-       // Port’u at (aaa.com:3000 -> aaa.com)
-         if (host.includes(":")) host = host.split(":")[0]
-        // Basit IPv6 normalizasyonu (lib/tenant.ts ile uyumlu)
-         if (host.startsWith("[") && host.includes("]")) {
-          const end = host.indexOf("]")
-          host = host.slice(1, end) + host.slice(end + 1)
-       }
- 
-       const { data: td, error: tdErr } = await supabaseAdmin
-          .from("tenant_domains")
-           .select("host, tenant_id, tenants:tenant_id ( code )")
-         .eq("host", host)
-          .maybeSingle()
-
-         if (!tdErr) {
-          const tenantCode = (td as any)?.tenants?.code ?? null
-          defaultOwnerId = pickDefaultOwnerForTenant(
-             tenantCode,
-           process.env.DEFAULT_QUESTION_OWNER_ID ?? null,
-           )
-         }
-       } catch {
-        // Sessiz fallback: defaultOwnerId null kalır, altta global env fallback’i de var
-       }
-     }
-
     // Admin GPT pricing
 	    // Form'daki dosyalardan attachmentsMeta üret
     const filesField = form.getAll("files") || []
@@ -285,10 +210,7 @@ export async function POST(req: Request) {
       currency: "TRY",
       sla_due_at: pricing.slaDueAt,
       pricing,
-      assigned_to:
-        assignedTo
-        ?? defaultOwnerId
-        ?? pickDefaultOwnerForTenant(null, process.env.DEFAULT_QUESTION_OWNER_ID ?? null),
+            assigned_to: assignedTo ?? process.env.DEFAULT_QUESTION_OWNER_ID ?? null,
 	       difficulty_score,
       gpt_confidence,
       k_technical_difficulty,
