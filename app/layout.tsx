@@ -7,7 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { headers } from "next/headers";
 import { unstable_setRequestLocale, getMessages, getTranslations } from "next-intl/server";
 import { resolveTenantFromHost } from "@/lib/tenant";
-import { BRAND } from "@/lib/config/appEnv";
+import { tenantFromHost, brandName as tenantBrandName } from "@/lib/brand";
 import PageContextTracker from "@/components/analytics/PageContextTracker";
 import ConsentBootstrap from "@/components/analytics/ConsentBootstrap";
 import { GtmHead } from "@/components/analytics/GtmHead";
@@ -50,9 +50,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const descriptionDefault = t("description");
 
   const baseUrl = host ? `${(h.get("x-forwarded-proto") || "http").toLowerCase()}://${host}` : undefined;
-  const brandName =
-    (shortLocale === "tr" ? BRAND?.nameTR : BRAND?.nameEN) ??
-    (shortLocale === "tr" ? "Gümrük360" : "EasyCustoms360");
+  const tenantForBrand = tenantFromHost(host || undefined);
+ const brandName = tenantBrandName(tenantForBrand);
   const faviconPath =
   shortLocale === "en"
      ? "/brand/easycustoms360.ico"
@@ -144,12 +143,7 @@ const locale = toShortLocale(resolvedLocale) || (code?.toLowerCase().startsWith(
   const { gtmId } = getAnalyticsConfigFromEnv();
   const disabledGtm = isLikelyStagingHost(host);
 
-  // Domain/tenant → locale eşlemesi
 
- const brandName =
-    (locale === "tr" ? BRAND?.nameTR : BRAND?.nameEN) ??
-   (locale === "tr" ? "Gümrük360" : "EasyCustoms360");
-  // next-intl: bu request’in localesini set et
   unstable_setRequestLocale(locale);
 
   // i18n/request.ts içindeki messages yüklenir (plugin sayesinde)
