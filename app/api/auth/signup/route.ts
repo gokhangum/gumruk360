@@ -87,9 +87,6 @@ function resolveBaseUrl(req: Request) {
  return `${proto}://${host}`
  }
 
- function extractEmail(addr: string) {
-
-
 function extractEmail(addr: string) {
   const m = String(addr||"").match(/<\s*([^>]+@[^>]+)\s*>/)
   if (m && m[1]) return m[1].trim()
@@ -122,21 +119,43 @@ function domainAllowed(fromDomain: string, allowedCsv: string) {
   return false
 }
 
-async function sendWithResend({ from, to, subject, html, replyTo }: { from: string, to: string, subject: string, html: string, replyTo?: string }) {
+ async function sendWithResend({
+  from,
+  to,
+  subject,
+   html,
+   replyTo,
+ }: {
+   from: string
+  to: string
+   subject: string
+   html: string
+   replyTo?: string
+ }) {
   const apiKey = process.env.RESEND_API_KEY
   if (!apiKey) return { ok: false, error: "mail_not_configured" }
-
-  const res = await fetch("https://api.resend.com/emails", {
+ 
+   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
     body: JSON.stringify({ from, to, subject, html, reply_to: replyTo }),
-  })
-  const text = await res.text().catch(()=> "")
-  if (!res.ok) return { ok:false, status: res.status, error:`resend_failed(${res.status})`, detail: text }
-  let id: string | null = null
-  try { const j = JSON.parse(text); id = j?.id || j?.data?.id || null } catch {}
-  return { ok:true, id }
-}
+   })
+   const text = await res.text().catch(() => "")
+  if (!res.ok) {
+   return {
+      ok: false,
+     status: res.status,
+     error: `resend_failed(${res.status})`,
+     detail: text,
+  }
+ }
+   let id: string | null = null
+  try {
+    const j = JSON.parse(text)
+   id = j?.id || j?.data?.id || null
+  } catch {}
+ return { ok: true, id }
+ }
 
 export async function POST(req: Request) {
   const startedAt = Date.now()
