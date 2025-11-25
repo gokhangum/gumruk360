@@ -71,26 +71,43 @@ function inferLangFromHost(req: Request, bodyLang?: string | null): "tr" | "en" 
   return "tr"
 }
 
- function resolveBaseUrl(req: Request) {
-  // 1) Önce Host header'ını kullan → multi-tenant: hangi domain'den geldiyse o domain
-  const host = currentHost(req)
- if (host) {
-    const proto =
-      (header(req, "x-forwarded-proto") || "https").split(",")[0].trim() || "https"
-   return `${proto}://${host}`
+ function resolveBaseUrl(lang: "tr" | "en", req: Request) {
+  // 1) Dile göre env’den canonical tenant URL’i seç
+  const envUrl =
+    lang === "en"
+      ? (process.env.APP_BASE_URL_EN ||
+         process.env.NEXT_PUBLIC_SITE_URL_EN ||
+         "")
+      : (process.env.APP_BASE_URL_TR ||
+         process.env.NEXT_PUBLIC_SITE_URL_TR ||
+         process.env.NEXT_PUBLIC_BASE_URL ||
+         "");
+
+  if (envUrl) {
+    try {
+      const u = new URL(envUrl);
+      // host + protokolü normalize et, sondaki slash’i at
+      return `${u.protocol}//${u.host}`.replace(/\/$/, "");
+    } catch {
+      return envUrl.replace(/\/$/, "");
+    }
   }
 
-  // 2) Host yoksa (nadir edge durumları) origin'e düş
-  const origin = header(req, "origin")
- if (origin) return origin.replace(/\/$/, "")
- 
- // 3) En son global fallback (tek domainli/local ortam için)
- const fallback =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    process.env.NEXT_PUBLIC_SITE_URL ||
-   "http://localhost:3000"
-   return fallback.replace(/\/$/, "")
- }
+  // 2) Env yoksa host header’a düş
+  const host = currentHost(req);
+  if (host) {
+    const proto =
+      (header(req, "x-forwarded-proto") || "https").split(",")[0].trim() || "https";
+    return `${proto}://${host}`;
+  }
+
+  // 3) Origin fallback
+  const origin = header(req, "origin");
+  if (origin) return origin.replace(/\/$/, "");
+
+  // 4) Son çare: local
+  return "http://localhost:3000";
+}
 
 function extractEmail(addr: string) {
   const m = String(addr||"").match(/<\s*([^>]+@[^>]+)\s*>/)
@@ -158,7 +175,7 @@ export async function POST(req: Request) {
     if (!email) return NextResponse.json({ ok: false, error: "missing_email" }, { status: 400 })
     if (!password) return NextResponse.json({ ok: false, error: "missing_password" }, { status: 400 })
 
-    const baseUrl = resolveBaseUrl(req)
+    const baseUrl = resolveBaseUrl(lang, req)
     const redirectUrl = new URL("/auth/confirm", baseUrl)
     redirectUrl.searchParams.set("e", email)
     redirectUrl.searchParams.set("lang", lang)
