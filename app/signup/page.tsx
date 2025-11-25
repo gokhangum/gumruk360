@@ -1,7 +1,7 @@
 'use client'
 
 
-import { useMemo, useState, useEffect } from 'react'
+import { useMemo, useState, useEffect, useRef } from 'react'
 import { useTranslations } from "next-intl";
 
 export default function SignupPage() {
@@ -14,6 +14,10 @@ export default function SignupPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string|null>(null)
   const [signupOpen, setSignupOpen] = useState<boolean|null>(null)
+   const [captchaToken, setCaptchaToken] = useState<string | null>(null)
+
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY || ''
+  const captchaRef = useRef<HTMLDivElement | null>(null)
 const t = useTranslations("auth.signup");
 
   const langParam = useMemo(() => {
@@ -41,6 +45,46 @@ const t = useTranslations("auth.signup");
     })()
     return () => { canceled = true }
   }, [])
+    useEffect(() => {
+    if (!turnstileSiteKey) return
+    if (typeof window === 'undefined') return
+
+    const render = () => {
+      if (!captchaRef.current) return
+      const w = window as any
+      if (!w.turnstile) return
+      w.turnstile.render(captchaRef.current, {
+        sitekey: turnstileSiteKey,
+        callback: (token: string) => setCaptchaToken(token),
+        'error-callback': () => setCaptchaToken(null),
+        'expired-callback': () => setCaptchaToken(null),
+      })
+    }
+
+    const existing = document.getElementById('cf-turnstile-script') as HTMLScriptElement | null
+
+    if (existing) {
+      const w = window as any
+      if (w.turnstile) {
+        render()
+      } else {
+        existing.addEventListener('load', render)
+      }
+      return
+    }
+
+    const s = document.createElement('script')
+    s.id = 'cf-turnstile-script'
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit'
+    s.async = true
+    s.addEventListener('load', render)
+    document.head.appendChild(s)
+
+    return () => {
+      s.removeEventListener('load', render)
+    }
+  }, [turnstileSiteKey])
+
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -77,6 +121,7 @@ if (signupOpen === false) { setError('Şuanda yeni kayıt alınamamaktadır'); r
         headers: {
           'Content-Type': 'application/json',
           ...(langParam ? { 'x-lang': langParam } : {}),
+		  ...(captchaToken ? { 'x-captcha-token': captchaToken } : {}),
         },
         body: JSON.stringify({
           email,
@@ -161,7 +206,7 @@ if (signupOpen === false) { setError('Şuanda yeni kayıt alınamamaktadır'); r
   onChange={e=>setOrgName(e.target.value)} />
 
         )}
-
+ <div ref={captchaRef} className="mt-2" />
         {error && <div className="text-sm text-red-600">{error}</div>}
 
          <button disabled={loading || signupOpen === false} className={"w-full py-2 rounded text-white " + ((loading || signupOpen === false) ? 'bg-gray-400' : 'bg-black')}>
