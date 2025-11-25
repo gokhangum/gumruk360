@@ -245,7 +245,22 @@ const origin_host = currentHost(req)
     }
 
 
-    const confirmUrl: string = (data as any)?.properties?.action_link || redirectUrl.toString()
+// Supabase'in action_link'ini kullanmıyoruz; sadece hashed_token'i alıp
+    // kendi /auth/confirm linkimizi kuruyoruz (multi-tenant + tam kontrol)
+    const props = (data as any)?.properties ?? {}
+    const tokenHash: string | undefined = (props as any).hashed_token || undefined
+
+    const confirmUrlObj = new URL("/auth/confirm", baseUrl)
+    confirmUrlObj.searchParams.set("e", email)
+    confirmUrlObj.searchParams.set("lang", lang)
+    confirmUrlObj.searchParams.set("next", next)
+    if (tokenHash) {
+      // app/api/auth/confirm/route.ts içindeki verifyOtp bunu kullanıyor
+      confirmUrlObj.searchParams.set("token_hash", tokenHash)
+      confirmUrlObj.searchParams.set("type", "signup")
+    }
+
+    const confirmUrl = confirmUrlObj.toString()
 
     // Pre-create organization & membership for corporate accounts (before email verification)
     let createdOrgId: string | null = null;
