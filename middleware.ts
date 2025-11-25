@@ -34,7 +34,8 @@ const sec = buildSecurityHeaders({
     // Paddle için gerekli CSP kaynakları
     cspExtraScriptSrc: [
       "https://cdn.paddle.com",
-      "https://cdn.paddle.com/paddle" // v2 path dahil
+      "https://cdn.paddle.com/paddle", // v2 path dahil
+	  "https://challenges.cloudflare.com"
     ],
     cspExtraFrameSrc: [
       "https://sandbox-buy.paddle.com", // Sandbox overlay/iframe
