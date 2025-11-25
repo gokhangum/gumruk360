@@ -69,18 +69,26 @@ function inferLangFromHost(req: Request, bodyLang?: string | null): "tr" | "en" 
 
   // 7) Fallback
   return "tr"
-}
+ }
 
 function resolveBaseUrl(req: Request) {
-  // prefer explicit site URL to build absolute redirect
+  // 1) Tarayıcıdan gelen origin'i her zaman önceliklendirelim (tenant'a göre doğru domain)
+  const origin = header(req, "origin")
+ if (origin) return origin.replace(/\/$/, "")
+
+ // 2) Origin yoksa (ör. server-side tetiklenirse) global base URL'e düş
   const explicit = process.env.NEXT_PUBLIC_SITE_URL || ""
   if (explicit) return explicit.replace(/\/$/, "")
-  const origin = header(req, "origin")
-  if (origin) return origin.replace(/\/$/, "")
+
+ // 3) Son çare: host + proto üzerinden kur
   const host = currentHost(req) || "localhost:3000"
-  const proto = (header(req, "x-forwarded-proto") || "http").split(",")[0].trim() || "http"
-  return `${proto}://${host}`
-}
+  const proto =
+     (header(req, "x-forwarded-proto") || "http").split(",")[0].trim() || "http"
+ return `${proto}://${host}`
+ }
+
+ function extractEmail(addr: string) {
+
 
 function extractEmail(addr: string) {
   const m = String(addr||"").match(/<\s*([^>]+@[^>]+)\s*>/)
