@@ -69,28 +69,28 @@ function inferLangFromHost(req: Request, bodyLang?: string | null): "tr" | "en" 
 
   // 7) Fallback
   return "tr"
- }
+}
 
  function resolveBaseUrl(req: Request) {
-  // 1) Tarayıcıdan gelen origin'i her zaman önceliklendirelim (tenant'a göre doğru domain)
-  const origin = header(req, "origin")
-  if (origin) return origin.replace(/\/$/, "")
-
-  // 2) Origin yoksa host + proto üzerinden kur (multi-tenant için doğru domain)
-   const host = currentHost(req)
-   if (host) {
-     const proto =
-       (header(req, "x-forwarded-proto") || "https").split(",")[0].trim() || "https"
-    return `${proto}://${host}`
+  // 1) Önce Host header'ını kullan → multi-tenant: hangi domain'den geldiyse o domain
+  const host = currentHost(req)
+ if (host) {
+    const proto =
+      (header(req, "x-forwarded-proto") || "https").split(",")[0].trim() || "https"
+   return `${proto}://${host}`
   }
 
-   // 3) Son çare: global base URL'e düş (ör. CLI/cron çağrıları)
-   const explicit = process.env.NEXT_PUBLIC_SITE_URL || ""
-   if (explicit) return explicit.replace(/\/$/, "")
-
-  return "http://localhost:3000"
+  // 2) Host yoksa (nadir edge durumları) origin'e düş
+  const origin = header(req, "origin")
+ if (origin) return origin.replace(/\/$/, "")
+ 
+ // 3) En son global fallback (tek domainli/local ortam için)
+ const fallback =
+    process.env.NEXT_PUBLIC_BASE_URL ||
+    process.env.NEXT_PUBLIC_SITE_URL ||
+   "http://localhost:3000"
+   return fallback.replace(/\/$/, "")
  }
-
 
 function extractEmail(addr: string) {
   const m = String(addr||"").match(/<\s*([^>]+@[^>]+)\s*>/)
@@ -124,43 +124,21 @@ function domainAllowed(fromDomain: string, allowedCsv: string) {
   return false
 }
 
- async function sendWithResend({
-  from,
-  to,
-  subject,
-   html,
-   replyTo,
- }: {
-   from: string
-  to: string
-   subject: string
-   html: string
-   replyTo?: string
- }) {
+async function sendWithResend({ from, to, subject, html, replyTo }: { from: string, to: string, subject: string, html: string, replyTo?: string }) {
   const apiKey = process.env.RESEND_API_KEY
   if (!apiKey) return { ok: false, error: "mail_not_configured" }
- 
-   const res = await fetch("https://api.resend.com/emails", {
+
+  const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
     body: JSON.stringify({ from, to, subject, html, reply_to: replyTo }),
-   })
-   const text = await res.text().catch(() => "")
-  if (!res.ok) {
-   return {
-      ok: false,
-     status: res.status,
-     error: `resend_failed(${res.status})`,
-     detail: text,
-  }
- }
-   let id: string | null = null
-  try {
-    const j = JSON.parse(text)
-   id = j?.id || j?.data?.id || null
-  } catch {}
- return { ok: true, id }
- }
+  })
+  const text = await res.text().catch(()=> "")
+  if (!res.ok) return { ok:false, status: res.status, error:`resend_failed(${res.status})`, detail: text }
+  let id: string | null = null
+  try { const j = JSON.parse(text); id = j?.id || j?.data?.id || null } catch {}
+  return { ok:true, id }
+}
 
 export async function POST(req: Request) {
   const startedAt = Date.now()
