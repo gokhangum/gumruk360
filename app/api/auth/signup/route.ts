@@ -71,21 +71,26 @@ function inferLangFromHost(req: Request, bodyLang?: string | null): "tr" | "en" 
   return "tr"
  }
 
-function resolveBaseUrl(req: Request) {
+ function resolveBaseUrl(req: Request) {
   // 1) Tarayıcıdan gelen origin'i her zaman önceliklendirelim (tenant'a göre doğru domain)
   const origin = header(req, "origin")
- if (origin) return origin.replace(/\/$/, "")
+  if (origin) return origin.replace(/\/$/, "")
 
- // 2) Origin yoksa (ör. server-side tetiklenirse) global base URL'e düş
-  const explicit = process.env.NEXT_PUBLIC_SITE_URL || ""
-  if (explicit) return explicit.replace(/\/$/, "")
+  // 2) Origin yoksa host + proto üzerinden kur (multi-tenant için doğru domain)
+   const host = currentHost(req)
+   if (host) {
+     const proto =
+       (header(req, "x-forwarded-proto") || "https").split(",")[0].trim() || "https"
+    return `${proto}://${host}`
+  }
 
- // 3) Son çare: host + proto üzerinden kur
-  const host = currentHost(req) || "localhost:3000"
-  const proto =
-     (header(req, "x-forwarded-proto") || "http").split(",")[0].trim() || "http"
- return `${proto}://${host}`
+   // 3) Son çare: global base URL'e düş (ör. CLI/cron çağrıları)
+   const explicit = process.env.NEXT_PUBLIC_SITE_URL || ""
+   if (explicit) return explicit.replace(/\/$/, "")
+
+  return "http://localhost:3000"
  }
+
 
 function extractEmail(addr: string) {
   const m = String(addr||"").match(/<\s*([^>]+@[^>]+)\s*>/)
