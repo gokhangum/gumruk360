@@ -2,11 +2,12 @@
 import { NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabase/server";
 import { getCurrentTenantId } from "@/lib/tenant/current";
+import { supabaseAdmin } from "@/lib/supabase/serverAdmin";
 
 export const runtime = "nodejs";
 
 export async function GET() {
-  const supabase = await supabaseServer();
+  const supabase = supabaseAdmin;
   const tenantId = await getCurrentTenantId();
 
   const { data, error } = await supabase
