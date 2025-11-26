@@ -619,7 +619,7 @@ try {
                 {showOfferLink && (
                   <Link
                     href={`/ask/${q.id}`}
-                    className="btn btn--outline text-xs sm:text-sm whitespace-nowrap"
+                    className="btn text-s px-2 py-2 bg-orange-600 hover:bg-orange-700 text-white"
                     title={t("goToOfferTitle")}
                     aria-label={t("goToOfferAria")}
                   >
