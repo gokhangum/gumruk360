@@ -1,3 +1,10 @@
+import { NextResponse } from "next/server";
+import { getTranslations } from "next-intl/server";
+import { supabaseServer } from "../../../../../lib/supabase/server";
+import { supabaseAdmin } from "../../../../../lib/supabase/serverAdmin";
+import { APP_DOMAINS, BRAND, MAIL } from "../../../../../lib/config/appEnv";
+import { resolveTenantCurrency } from "../../../../../lib/fx/resolveTenantCurrency";
+
 function resolveBaseUrl(req: Request) {
   // Tercihen request URL'den origin al
   try {
@@ -11,26 +18,23 @@ function resolveBaseUrl(req: Request) {
     if (vercel) return `https://${vercel}`.replace(/\/$/, "");
     return "http://localhost:3000";
   }
+}
+
 // Notify ORG OWNER(s) via /dashboard/support by inserting contact_tickets + contact_messages
 // when a MEMBER uses corporate credits. Email still sent (best-effort).
 // Scope-limited: only this file changed.
-import { NextResponse } from "next/server";
-import { getTranslations } from "next-intl/server";
-import { supabaseServer } from "../../../../../lib/supabase/server";
-import { supabaseAdmin } from "../../../../../lib/supabase/serverAdmin";
-import { APP_DOMAINS, BRAND, MAIL } from "../../../../../lib/config/appEnv";
-import { resolveTenantCurrency } from "../../../../../lib/fx/resolveTenantCurrency";
- function resolveLocale(req: Request) {
-   const hdr = (req.headers.get("x-language") || req.headers.get("accept-language") || "").toLowerCase();
-   // Host tabanlı kontrol: EN domaininden geliyorsa 'en'
-   try {
-     const host = new URL((req as any).url ?? "").host.toLowerCase();
-     if (APP_DOMAINS.en && host.endsWith(APP_DOMAINS.en)) return "en";
-   } catch {}
-   // Header tabanlı kontrol: EN belirtilmişse 'en'
-   if (hdr.startsWith("en") || hdr.includes("en")) return "en";
-   return "tr";
- }
+
+function resolveLocale(req: Request) {
+  const hdr = (req.headers.get("x-language") || req.headers.get("accept-language") || "").toLowerCase();
+  // Host tabanlı kontrol: EN domaininden geliyorsa 'en'
+  try {
+    const host = new URL((req as any).url ?? "").host.toLowerCase();
+    if (APP_DOMAINS.en && host.endsWith(APP_DOMAINS.en)) return "en";
+  } catch {}
+  // Header tabanlı kontrol: EN belirtilmişse 'en'
+  if (hdr.startsWith("en") || hdr.includes("en")) return "en";
+  return "tr";
+}
 
 function resolveBrandByLocale(locale: string) {
   return locale === "en" ? BRAND.nameEN : BRAND.nameTR;
@@ -39,7 +43,6 @@ function resolveBrandByLocale(locale: string) {
 async function sendResendEmail(to: string, subject: string, html: string, from: string) {
   try {
     const apiKey = process.env.RESEND_API_KEY;
-   
     if (!apiKey) return false;
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -54,6 +57,7 @@ async function sendResendEmail(to: string, subject: string, html: string, from: 
     return false;
   }
 }
+
 
 export async function POST(req: Request, ctx: { params: Promise<{ id: string }> }) {
 	const locale = resolveLocale(req);
@@ -258,7 +262,7 @@ t("ownerNotice.team", { brand }),
         }
       }
       if (qSel && workerEmail) {
-        const baseUrl = resolveBaseUrl();
+        const baseUrl = resolveBaseUrl(req);
         const askLink = `${baseUrl}/worker/editor/${qSel.id}`;
         const panelLink = `${baseUrl}/worker`;
         const subject = t("assign.subject", { brand });
