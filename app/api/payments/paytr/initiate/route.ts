@@ -136,6 +136,17 @@ export async function POST(req: Request) {
     const { code: tenantCode } = resolveTenantFromHost(host)
     const payload = await req.json().catch(() => ({} as any))
 
+    // 👇 YENİ: USD / TRY isteğini yakala
+    const requestedCurrency = (payload?.currency || payload?.displayCurrency || "").toString().toUpperCase()
+
+    console.log("[paytr/initiate] incoming", {
+      host,
+      tenantCode,
+      requestedCurrency,
+      payload,
+    })
+
+
     // UI bazen orderId, bazen questionId, bazen de sadece id gönderiyor
     const idAny: string | undefined =
       payload?.orderId || payload?.order_id || payload?.questionId || payload?.question_id || payload?.id
@@ -164,6 +175,7 @@ export async function POST(req: Request) {
       const tenantId = await getTenantIdByCode(tenantCode)
 
       // a) Bu soruya bağlı en yeni PENDING order var mı?
+         // a) Bu soruya bağlı en yeni PENDING order var mı?
       if (!order) {
         const { data, error } = await supabaseAdmin
           .from("orders")
@@ -173,32 +185,78 @@ export async function POST(req: Request) {
           .order("created_at", { ascending: false })
           .limit(1)
         if (error) {
-          
           return NextResponse.json({ ok: false, error: "order_select_failed" }, { status: 500 })
         }
         if (data && (data as OrderRow[]).length > 0) {
-          order = (data as OrderRow[])[0]
+          const candidate = (data as OrderRow[])[0]
+
+          // Eğer istenen currency varsa ve DB'deki pending order'ın currency'si farklıysa,
+          // bu order'ı YOK SAY → b) adımında yeniden (doğru dövizle) order oluşturacağız.
+          if (
+            requestedCurrency &&
+            candidate.currency &&
+            candidate.currency.toUpperCase() !== requestedCurrency
+          ) {
+            console.log("[paytr/initiate] skipping existing pending order due to currency mismatch", {
+              questionId,
+              requestedCurrency,
+              existingOrderId: candidate.id,
+              existingCurrency: candidate.currency,
+            })
+            // order'ı null bırakıyoruz ki b) bloğu çalışsın
+          } else {
+            order = candidate
+          }
         }
       }
+
 
       // b) Yoksa, SORU’dan SLA/teklif (price_final_tl → price_tl) ile yeni pending order oluştur
       if (!order) {
         // Soru ve user_id
         let qRow: any | null = null
-        try {
+      try {
           const { data: q } = await supabaseAdmin
-            .from("questions")
-            .select("id, user_id, price_tl, price_final_tl")
+           .from("questions")
+            .select("id, user_id, price_tl, price_final_tl, price_final_usd")
             .eq("id", questionId)
-            .maybeSingle()
+           .maybeSingle()
           qRow = q ?? null
-        } catch {
-          qRow = null
-        }
+     } catch {
+         qRow = null
+       }
         const qUserId: string | null = qRow?.user_id ?? null
 
-        const picked = pickSlaFromQuestion(qRow)
+         let picked: { amount_cents?: number; currency?: string } = {}
+        if (requestedCurrency === "USD") {
+         const usdRaw = Number((qRow as any)?.price_final_usd ?? 0)
+          const usdAmount = Number.isFinite(usdRaw) && usdRaw > 0 ? usdRaw : 0
+          if (usdAmount > 0) {
+            picked = {
+             amount_cents: Math.round(usdAmount * 100), // cent
+            currency: "USD",
+           }
+          } else {
+           // USD fiyat yoksa TL’ye düş
+         picked = pickSlaFromQuestion(qRow)
+          }
+        } else {
+         // TRY vb. için mevcut TL mantığı
+          picked = pickSlaFromQuestion(qRow)
+       }
+
+        console.log("[paytr/initiate] question pricing", {
+         questionId,
+        requestedCurrency,
+         price_tl: (qRow as any)?.price_tl,
+        price_final_tl: (qRow as any)?.price_final_tl,
+        price_final_usd: (qRow as any)?.price_final_usd,
+         picked,
+        })
+
         if (validAmount(picked.amount_cents)) {
+
+
           const { data: created, error: insErr } = await supabaseAdmin
             .from("orders")
             .insert({
@@ -266,6 +324,14 @@ export async function POST(req: Request) {
     // 3) Buraya gelindiyse elimizde kesin bir order var
     const amount = Number(order.amount || 0) // KURUŞ — SLA/DB
     const currency = order.currency || "TRY"
+   console.log("[paytr/initiate] resolved order amount/currency", {
+    orderId: order.id,
+     orderAmount: order.amount,
+    orderCurrency: order.currency,
+     pickedAmount: amount,
+      pickedCurrency: currency,
+      requestedCurrency,
+    })
     if (!validAmount(amount)) {
       return NextResponse.json({ ok: false, error: "amount_missing" }, { status: 400 })
     }
@@ -299,7 +365,14 @@ export async function POST(req: Request) {
       .from("orders")
       .update({ provider: "paytr", provider_ref: merchantOid })
       .eq("id", order.id)
-
+     console.log("[paytr/initiate] calling paytrInitiate", {
+      merchantOid,
+      orderId: order.id,
+      amount,
+      currency,
+     lang,
+      basket_json,
+    })
     const { token } = await paytrInitiate({
       merchant_oid: merchantOid,
       meta_order_id: order.id,   // dönüş URL’si için gerçek orderId’yi kullan

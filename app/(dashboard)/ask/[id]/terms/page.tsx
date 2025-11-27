@@ -152,7 +152,7 @@ const displayCurrency = (resolved?.currency ?? "TRY").toUpperCase()
             <div className="inline-flex flex-col items-end gap-1 text-[11px] leading-snug text-slate-900">
               <span>{t("sections.info.paddle")}</span>
               <img
-                src="/pay/paddlelogo.png"
+                src="/pay/paytrlogo.png"
                 alt="Paddle"
                 className="h-6 md:h-7 w-auto"
                 loading="lazy"

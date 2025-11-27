@@ -30,23 +30,18 @@ export default function TermsClient({ questionId, displayCurrency, children }: {
         // 1) ToS kabul kaydı
         await fetch(`/api/ask/${questionId}/tos-accept`, { method: "POST" }).catch(() => {})
 
-       // 2) Para birimine göre yönlendir:
-       if ((displayCurrency || "").toUpperCase() === "USD") {
-         // Paddle soru ödemesi için server endpoint
-         const res = await fetch(`/api/payments/paddle/for-question/${questionId}`, {
-           method: "POST",
-           headers: { "Content-Type": "application/json" },
-           body: JSON.stringify({}) // şimdilik ek veri yok
-         })
-         const j = await res.json().catch(() => ({} as any))
-         if (res.ok && j?.ok && j?.url) {
-           // Sunucu aynı kredi akışında olduğu gibi /checkout/{orderId} döner
-           return router.push(String(j.url))
-         }
-         // Fallback: başarısızsa mevcut akışa dön
-       }
-        // TRY vb. için mevcut akış
-        return router.push(`/checkout/${questionId}`)
+     // 2) Para birimine göre yönlendir:
+     const curr = (displayCurrency || "").toUpperCase()
+
+   // Hem TRY hem USD için PayTR checkout sayfasını kullan
+       if (curr === "USD") {
+         // USD için de PayTR akışı: para birimini query string ile geçiriyoruz
+      return router.push(`/checkout/${questionId}?currency=USD`)
+  }
+
+   // TRY vb. için mevcut PayTR akışı (query olmadan)
+     return router.push(`/checkout/${questionId}`)
+
       } catch {
         // sessiz geç
       }

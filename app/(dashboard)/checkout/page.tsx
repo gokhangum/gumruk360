@@ -148,70 +148,24 @@ const nf0 = new Intl.NumberFormat(locale, { minimumFractionDigits: 0, maximumFra
           scope_type: scope,
           credits,
           currency: ccy,
-          provider: ccy === "USD" ? "paddle" : "paytr",
+          provider: "paytr",
          })
        } catch {
          // analytics hatası akışı bozmamalı
        }
-if (ccy === 'USD') {
-  // --- Paddle (USD) ---
-  const res = await fetch('/api/payments/paddle/with-credits', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      credits,
-      scope_type: scope,
-      pricing_snapshot: { currency: ccy, unit_price_ccy: unit, total_ccy: total }
-    })
-  })
-  const data = await res.json().catch(() => ({} as any))
-
-  if (!res.ok || (!data?.url && !data?.data?.checkout_url && !data?.data?.transaction_id)) {
-    setError(data?.error || t('paymentStartFail'))
-    return
-  }
-
-  // Backend'in döndürdüğü /checkout/{orderId}?provider=paddle&txn=... URL'sini paddle'a özel sayfaya çevir
-  const genericUrl = (data?.url as string) || null
-  const txn = data?.data?.transaction_id || null
-  if (genericUrl) {
-    const m = genericUrl.match(/\/checkout\/([^/?#]+)/)
-    const oid = m ? m[1] : null
-    if (oid) {
-      const paddleUrl = `/checkout/${oid}` + (txn ? `?provider=paddle&txn=${encodeURIComponent(txn)}` : '')
-
-      window.location.href = paddleUrl
-      return
-    }
-    // orderId çıkarılamazsa, emniyetli olarak generic URL'e git
-    window.location.href = genericUrl
-    return
-  }
-
-  // genericUrl yoksa, emniyetli fallback: Paddle hosted checkout
-  if (data?.data?.checkout_url) {
-    window.location.href = data.data.checkout_url
-    return
-  }
-
-  setError(t('paymentStartFail'))
-  return
-
-} else {
-
-         // --- PayTR (TRY) ---
-        const res = await fetch('/api/payments/paytr/with-credits', {
-         method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-         body: JSON.stringify({ credits, scope_type: scope })
-       })
-        const data = await res.json()
+      // --- PayTR (TRY & USD) ---
+      const res = await fetch('/api/payments/paytr/with-credits', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ credits, scope_type: scope }),
+      })
+      const data = await res.json()
       if (!res.ok || !data?.url) {
-         setError(data?.error || t('paymentStartFail'))
-        } else {
-          window.location.href = data.url
-         }
+        setError(data?.error || t('paymentStartFail'))
+      } else {
+        window.location.href = data.url
       }
+
     } catch (e) {
       setError(t('networkError'))
    } finally {
