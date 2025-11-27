@@ -139,12 +139,7 @@ export async function POST(req: Request) {
     // 👇 YENİ: USD / TRY isteğini yakala
     const requestedCurrency = (payload?.currency || payload?.displayCurrency || "").toString().toUpperCase()
 
-    console.log("[paytr/initiate] incoming", {
-      host,
-      tenantCode,
-      requestedCurrency,
-      payload,
-    })
+
 
 
     // UI bazen orderId, bazen questionId, bazen de sadece id gönderiyor
@@ -197,12 +192,7 @@ export async function POST(req: Request) {
             candidate.currency &&
             candidate.currency.toUpperCase() !== requestedCurrency
           ) {
-            console.log("[paytr/initiate] skipping existing pending order due to currency mismatch", {
-              questionId,
-              requestedCurrency,
-              existingOrderId: candidate.id,
-              existingCurrency: candidate.currency,
-            })
+            
             // order'ı null bırakıyoruz ki b) bloğu çalışsın
           } else {
             order = candidate
@@ -245,14 +235,7 @@ export async function POST(req: Request) {
           picked = pickSlaFromQuestion(qRow)
        }
 
-        console.log("[paytr/initiate] question pricing", {
-         questionId,
-        requestedCurrency,
-         price_tl: (qRow as any)?.price_tl,
-        price_final_tl: (qRow as any)?.price_final_tl,
-        price_final_usd: (qRow as any)?.price_final_usd,
-         picked,
-        })
+      
 
         if (validAmount(picked.amount_cents)) {
 
@@ -324,14 +307,7 @@ export async function POST(req: Request) {
     // 3) Buraya gelindiyse elimizde kesin bir order var
     const amount = Number(order.amount || 0) // KURUŞ — SLA/DB
     const currency = order.currency || "TRY"
-   console.log("[paytr/initiate] resolved order amount/currency", {
-    orderId: order.id,
-     orderAmount: order.amount,
-    orderCurrency: order.currency,
-     pickedAmount: amount,
-      pickedCurrency: currency,
-      requestedCurrency,
-    })
+   
     if (!validAmount(amount)) {
       return NextResponse.json({ ok: false, error: "amount_missing" }, { status: 400 })
     }
@@ -365,14 +341,7 @@ export async function POST(req: Request) {
       .from("orders")
       .update({ provider: "paytr", provider_ref: merchantOid })
       .eq("id", order.id)
-     console.log("[paytr/initiate] calling paytrInitiate", {
-      merchantOid,
-      orderId: order.id,
-      amount,
-      currency,
-     lang,
-      basket_json,
-    })
+
     const { token } = await paytrInitiate({
       merchant_oid: merchantOid,
       meta_order_id: order.id,   // dönüş URL’si için gerçek orderId’yi kullan
