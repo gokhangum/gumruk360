@@ -1,4 +1,16 @@
-function resolveBaseUrl(){const site=process.env.NEXT_PUBLIC_SITE_URL;const vercel=process.env.VERCEL_URL;if(site)return site.replace(/\/$/,"");if(vercel)return `https://${vercel}`.replace(/\/$/,"");return "http://localhost:3000";}
+function resolveBaseUrl(req: Request) {
+  // Tercihen request URL'den origin al
+  try {
+    const url = new URL((req as any).url ?? "");
+    return `${url.protocol}//${url.host}`.replace(/\/$/, "");
+  } catch {
+    // Fallback: env değişkenleri
+    const site = process.env.NEXT_PUBLIC_SITE_URL;
+    if (site) return site.replace(/\/$/, "");
+    const vercel = process.env.VERCEL_URL;
+    if (vercel) return `https://${vercel}`.replace(/\/$/, "");
+    return "http://localhost:3000";
+  }
 // Notify ORG OWNER(s) via /dashboard/support by inserting contact_tickets + contact_messages
 // when a MEMBER uses corporate credits. Email still sent (best-effort).
 // Scope-limited: only this file changed.
@@ -85,8 +97,8 @@ const from =
      const orgId = mem.org_id as string;
      const actorOrgRole = String((mem as any).org_role ?? "").trim().toLowerCase() as "owner" | "member" | "";
     const isOwner = actorOrgRole === "owner";
-     const redirectPath = isOwner ? "/dashboard/subscription" : "/dashboard/questions";
-     const redirectTo = `${resolveBaseUrl()}${redirectPath}`;
+    const redirectPath = isOwner ? "/dashboard/subscription" : "/dashboard/questions";
+const redirectTo = `${resolveBaseUrl(req)}${redirectPath}`;
     // Ayarlar (admin)
     const { data: ss } = await supabaseAdmin
       .from("subscription_settings")
