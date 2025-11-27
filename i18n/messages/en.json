@@ -2588,7 +2588,7 @@
       "viewQuestion": "View Question",
       "footer": "This email was sent by EasyCustoms360.",
       "currencyNote": "All amounts are shown in",
-	   "invoiceNotice": "An invoice will be sent separately. Please make sure your billing and contact information is up to date."
+	   "invoiceNotice": "An invoice will be sent separately. Please make sure your billing and contact information is up to date in your Profile."
     },
     "ticketReply": {
       "subject": "Support Reply",

@@ -107,7 +107,7 @@ locale: Locale;
       <a href="${orderLink}" style="display:inline-block;background:#111;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px">${t("viewOrder")}</a>
       ${questionLink ? ` <a href="${questionLink}" style="display:inline-block;background:#f4f4f5;color:#111;text-decoration:none;padding:10px 14px;border-radius:10px;margin-left:8px">${t("viewQuestion")}</a>` : ``}
     </div>
- <p style="color:#666;font-size:12px;margin-top:12px">${t("invoiceNotice")}</p>
+ <p style="color:#666;font-size:16px;margin-top:12px">${t("invoiceNotice")}</p>
     <p style="color:#666;font-size:12px;margin-top:24px">${t("footer")}</p>
   </div>
   `;
