@@ -200,7 +200,7 @@ export async function POST(req: Request) {
       }
     }
 
-    const order = orderSel.data || null;
+
 	    const order = orderSel.data || null;
     console.log("[paytr.webhook.debug] order", {
       raw: order,
