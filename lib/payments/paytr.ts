@@ -17,6 +17,7 @@ export type PaytrInitInput = {
   paytr_test_mode?: number  // 1/0
   lang?: "tr" | "en"
   meta_order_id?: string 
+  base_url?: string  
 }
 
 /** Env okuma (trim) */
@@ -56,7 +57,7 @@ export async function paytrInitiate(input: PaytrInitInput): Promise<{ token: str
   const MOCK      = toFlag(process.env.MOCK_PAYTR)
 
   // Base URL — dönüş adresleri için
-  const BASE = env("NEXT_PUBLIC_BASE_URL", /*optional*/ true) || "http://localhost:3000"
+  const BASE = input.base_url || env("NEXT_PUBLIC_BASE_URL", /*optional*/ true) || "http://localhost:3000"
   const okUrl   = `${BASE}/checkout/${encodeURIComponent(input.merchant_oid)}/return?status=success`
   const failUrl = `${BASE}/checkout/${encodeURIComponent(input.merchant_oid)}/return?status=failed`
 

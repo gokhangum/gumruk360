@@ -325,9 +325,11 @@ export async function POST(req: Request) {
     // Ad/telefon/adres — ZORUNLU (PayTR)
     const buyer = await resolveBuyerInfo({ payload, order })
 
-    const user_ip = getClientIp(req)
-    const lang: "tr" | "en" =
-      (APP_DOMAINS.en && (host === APP_DOMAINS.en || host.endsWith(APP_DOMAINS.en))) ? "en" : "tr"
+   const user_ip = getClientIp(req)
+  const lang: "tr" | "en" =
+     (APP_DOMAINS.en && (host === APP_DOMAINS.en || host.endsWith(APP_DOMAINS.en))) ? "en" : "tr"
+  const proto = host.startsWith("localhost") || host.startsWith("127.0.0.1") ? "http" : "https"
+  const baseUrl = `${proto}://${host || APP_DOMAINS.primary}`
 
     // Sepet (opsiyonel)
     const basket_json =
@@ -343,6 +345,7 @@ export async function POST(req: Request) {
       .eq("id", order.id)
 
     const { token } = await paytrInitiate({
+		base_url: baseUrl,
       merchant_oid: merchantOid,
       meta_order_id: order.id,   // dönüş URL’si için gerçek orderId’yi kullan
       email,
