@@ -28,15 +28,40 @@ function getClientIp(req: Request): string {
   return "127.0.0.1"
 }
 
-async function getTenantIdByCode(code: string | null) {
-  if (!code) return null
+ async function getTenantIdByCode(code: string | null) {
+   if (!code) return null
   const { data } = await supabaseAdmin
     .from("tenants")
-    .select("id")
+   .select("id")
     .eq("code", code)
+     .maybeSingle()
+   return data?.id ?? null
+ }
+ 
+ async function getTenantIdByHost(host: string | null) {
+  if (!host) return null
+   let h = host.trim().toLowerCase()
+   const colon = h.indexOf(":")
+  if (colon > -1) {
+    const after = h.slice(colon + 1)
+     if (/^\d+$/.test(after)) {
+     h = h.slice(0, colon)
+    }
+   }
+   if (h.startsWith("www.")) h = h.slice(4)
+
+   const { data, error } = await supabaseAdmin
+   .from("tenant_domains")
+    .select("tenant_id")
+    .eq("host", h)
     .maybeSingle()
-  return data?.id ?? null
-}
+
+   if (error) {
+     return null
+  }
+  return (data as any)?.tenant_id ?? null
+ }
+
 
 function validAmount(a: any): a is number {
   const n = Number(a)
@@ -130,11 +155,12 @@ async function resolveBuyerInfo(params: {
   return { name, phone, address }
 }
 
-export async function POST(req: Request) {
-  try {
-    const host = req.headers.get("host") || ""
+ export async function POST(req: Request) {
+   try {
+     const host = req.headers.get("host") || ""
     const { code: tenantCode } = resolveTenantFromHost(host)
-    const payload = await req.json().catch(() => ({} as any))
+   const tenantIdFromHost = await getTenantIdByHost(host)
+     const payload = await req.json().catch(() => ({} as any))
 
     // 👇 YENİ: USD / TRY isteğini yakala
     const requestedCurrency = (payload?.currency || payload?.displayCurrency || "").toString().toUpperCase()
@@ -164,10 +190,13 @@ export async function POST(req: Request) {
       order = (data as OrderRow) ?? null
     }
 
-    // 2) Order yoksa: idAny'yi QUESTION kabul et
-    if (!order) {
-      const questionId = idAny
-      const tenantId = await getTenantIdByCode(tenantCode)
+   // 2) Order yoksa: idAny'yi QUESTION kabul et
+   if (!order) {
+     const questionId = idAny
+      const tenantId =
+        tenantIdFromHost != null
+        ? tenantIdFromHost
+         : await getTenantIdByCode(tenantCode)
 
       // a) Bu soruya bağlı en yeni PENDING order var mı?
          // a) Bu soruya bağlı en yeni PENDING order var mı?

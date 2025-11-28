@@ -2,7 +2,6 @@
 import { NextResponse } from "next/server"
 import { supabaseAdmin } from "@/lib/supabase/serverAdmin"
 import { supabaseServer } from "@/lib/supabase/server"
-import { resolveTenantFromHost } from "@/lib/tenant"
 import { logAudit } from "@/lib/audit"
 import { GET as PriceGET } from "@/app/api/public/subscription-settings/price/route"
 export const runtime = "nodejs"
@@ -142,25 +141,38 @@ export async function POST(req: Request) {
       total_kurus,
     });
 
-    // ---------- TENANT ----------
-    const tenant = await (async () => {
-      try {
-        return await resolveTenantFromHost(host);
-      } catch {
-        return null;
-      }
-    })();
-    const tenant_id = (tenant as any)?.id ?? null;
-
-    // ---------- ORDER OLUŞTURMA ----------
-    const meta: any = { kind: "credit_purchase", credits, scope_type };
-    if (org_id) meta.org_id = org_id;
-    if (typeof unit_price_lira === "number") meta.unit_price_lira = unit_price_lira;
-
+   // ---------- TENANT ----------
     const admin =
-      typeof (supabaseAdmin as any) === "function"
+     typeof (supabaseAdmin as any) === "function"
         ? await (supabaseAdmin as any)()
         : (supabaseAdmin as any);
+
+   let tenant_id: string | null = null;
+   try {
+     let h = host.toLowerCase();
+     const colon = h.indexOf(":");
+      if (colon > -1) {
+         const after = h.slice(colon + 1);
+        if (/^\d+$/.test(after)) {
+          h = h.slice(0, colon);
+       }
+   }
+     if (h.startsWith("www.")) h = h.slice(4);
+
+      const { data: td } = await admin
+        .from("tenant_domains")
+        .select("tenant_id")
+       .eq("host", h)
+       .maybeSingle();
+      tenant_id = (td as any)?.tenant_id ?? null;
+    } catch {
+     tenant_id = null;
+    }
+
+  // ---------- ORDER OLUŞTURMA ----------
+   const meta: any = { kind: "credit_purchase", credits, scope_type };
+    if (org_id) meta.org_id = org_id;
+    if (typeof unit_price_lira === "number") meta.unit_price_lira = unit_price_lira;
 
     const ins = await admin
       .from("orders")
