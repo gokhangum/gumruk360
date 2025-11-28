@@ -309,8 +309,41 @@ if (order.question_id) {
     );
   }
 }
+ // ---------- Tenant bazlı receipt locale & base URL ----------
+  // Varsayılan: TR
+  let receiptLocale: "tr" | "en" = "tr";
+ let dashboardBaseUrl =
+   process.env.APP_BASE_URL_TR ||
+    (process.env.APP_PRIMARY_DOMAIN ? `https://${process.env.APP_PRIMARY_DOMAIN}` : "http://localhost:3000");
+ 
+  if (order.tenant_id) {
+    const { data: ten } = await supabaseAdmin
+      .from("tenants")
+      .select("primary_domain, default_lang")
+      .eq("id", order.tenant_id)
+       .maybeSingle();
 
+   if (ten) {
+       const rawLocale = String(ten.default_lang || "").trim().toLowerCase().replace("_", "-");
+     // "en-US" / "en_us" → en, diğer her şey → tr
+    receiptLocale = rawLocale.startsWith("en") ? "en" : "tr";
 
+     if (ten.primary_domain) {
+        const dom = String(ten.primary_domain).trim();
+      const isLocal = dom.includes("localhost") || dom.includes("127.0.0.1");
+       const proto = isLocal ? "http" : "https";
+       dashboardBaseUrl = `${proto}://${dom}`;
+      } else if (receiptLocale === "en") {
+        // EN tenant ama primary_domain boşsa EN base URL’ye düş
+        dashboardBaseUrl = process.env.APP_BASE_URL_EN || dashboardBaseUrl;
+     }
+    }
+   } else if (currency === "USD") {
+    // Tenant yoksa kaba fallback: USD ödemeleri EN kabul et
+    receiptLocale = "en";
+   dashboardBaseUrl = process.env.APP_BASE_URL_EN || dashboardBaseUrl;
+   }
+  // --------------------------------------------------------------
       // E-postalar
       try {
         // Kullanıcı
@@ -320,7 +353,16 @@ if (order.question_id) {
           if (!pr.error && pr.data?.email) toUser = pr.data.email;
         }
         if (toUser) {
-          await sendPaymentReceiptEmail({ to: toUser, amount: posted, currency, orderId: order.id, questionId: order.question_id || undefined });
+             await sendPaymentReceiptEmail({
+            to: toUser,
+          amount: posted,
+          currency,
+           orderId: order.id,
+          questionId: order.question_id || undefined,
+           paymentProvider: "PayTR",
+             dashboardBaseUrl,
+            locale: receiptLocale,
+          });
           await audit("email.receipt.sent", { order_id: order.id, to: toUser, amount_cents: posted, currency, ...clientInfo }, { order, req });
           await notify("payment.receipt.sent", { order_id: order.id, to: toUser, amount_cents: posted, currency }, { order, to_email: toUser, subject: "Ödeme Makbuzu", template: "payment_receipt", provider: "resend", status: "sent" });
         } else {
@@ -335,8 +377,17 @@ if (order.question_id) {
           .filter(Boolean);
         for (const adminTo of adminList) {
           try {
-            await sendPaymentReceiptEmail({ to: adminTo, amount: posted, currency, orderId: order.id, questionId: order.question_id || undefined });
-            await audit("email.receipt.admin.sent", { order_id: order.id, to: adminTo, ...clientInfo }, { order, req });
+                   await sendPaymentReceiptEmail({
+            to: adminTo,
+             amount: posted,
+              currency,
+               orderId: order.id,
+              questionId: order.question_id || undefined,
+               paymentProvider: "PayTR",
+              dashboardBaseUrl,
+              locale: receiptLocale,
+            });
+
             await notify("payment.receipt.admin.sent", { order_id: order.id, to: adminTo }, { order, to_email: adminTo, subject: "Yeni Ödeme", template: "payment_receipt_admin", provider: "resend", status: "sent" });
           } catch (e: any) {
             await audit("email.receipt.admin.failed", { order_id: order.id, to: adminTo, err: String(e?.message || e), ...clientInfo }, { order, req });
