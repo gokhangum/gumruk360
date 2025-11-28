@@ -138,10 +138,13 @@ async function insertPaymentRow(order: any, data: {
 }
 
 /* ----------------------------- handler ----------------------------- */
-export async function POST(req: Request) {
+ export async function POST(req: Request) {
   const clientInfo = getClientInfo(req);
+  const host = req.headers.get("x-forwarded-host") || req.headers.get("host") || "";
+ const proto = req.headers.get("x-forwarded-proto") || "https";
+ const baseUrl = host ? `${proto}://${host}` : undefined;
 
-  try {
+try {
     // 1) Payload
     const form = await req.formData();
     const merchant_oid = s(form.get("merchant_oid"));
@@ -314,14 +317,23 @@ if (order.question_id) {
       // E-postalar
       try {
         // Kullanıcı
-        let toUser = "";
-        if (order.user_id) {
-          const pr = await supabaseAdmin.from("profiles").select("email").eq("id", order.user_id).maybeSingle();
-          if (!pr.error && pr.data?.email) toUser = pr.data.email;
-        }
-        if (toUser) {
-          await sendPaymentReceiptEmail({ to: toUser, amount: posted, currency, orderId: order.id, questionId: order.question_id || undefined });
-          await audit("email.receipt.sent", { order_id: order.id, to: toUser, amount_cents: posted, currency, ...clientInfo }, { order, req });
+      let toUser = "";
+      if (order.user_id) {
+        const pr = await supabaseAdmin.from("profiles").select("email").eq("id", order.user_id).maybeSingle();
+       if (!pr.error && pr.data?.email) toUser = pr.data.email;
+    }
+   if (toUser) {
+       await sendPaymentReceiptEmail({
+        to: toUser,
+       amount: posted,
+         currency,
+         orderId: order.id,
+         questionId: order.question_id || undefined,
+        dashboardBaseUrl: baseUrl,
+        paymentProvider: "PayTR",
+        });
+        await audit("email.receipt.sent", { order_id: order.id, to: toUser, amount_cents: posted, currency, ...clientInfo }, { order, req });
+
           await notify("payment.receipt.sent", { order_id: order.id, to: toUser, amount_cents: posted, currency }, { order, to_email: toUser, subject: "Ödeme Makbuzu", template: "payment_receipt", provider: "resend", status: "sent" });
         } else {
           await audit("email.receipt.skipped_no_to", { order_id: order.id, ...clientInfo }, { order, req });
@@ -329,14 +341,23 @@ if (order.question_id) {
         }
 
         // Admin(ler)
-        const adminList = (process.env.PAYMENT_ADMIN_EMAILS || "")
-          .split(",")
-          .map((e) => e.trim())
-          .filter(Boolean);
-        for (const adminTo of adminList) {
-          try {
-            await sendPaymentReceiptEmail({ to: adminTo, amount: posted, currency, orderId: order.id, questionId: order.question_id || undefined });
-            await audit("email.receipt.admin.sent", { order_id: order.id, to: adminTo, ...clientInfo }, { order, req });
+     const adminList = (process.env.PAYMENT_ADMIN_EMAILS || "")
+        .split(",")
+      .map((e) => e.trim())
+        .filter(Boolean);
+       for (const adminTo of adminList) {
+        try {
+          await sendPaymentReceiptEmail({
+            to: adminTo,
+             amount: posted,
+          currency,
+           orderId: order.id,
+           questionId: order.question_id || undefined,
+             dashboardBaseUrl: baseUrl,
+           paymentProvider: "PayTR",
+        });
+          await audit("email.receipt.admin.sent", { order_id: order.id, to: adminTo, ...clientInfo }, { order, req });
+
             await notify("payment.receipt.admin.sent", { order_id: order.id, to: adminTo }, { order, to_email: adminTo, subject: "Yeni Ödeme", template: "payment_receipt_admin", provider: "resend", status: "sent" });
           } catch (e: any) {
             await audit("email.receipt.admin.failed", { order_id: order.id, to: adminTo, err: String(e?.message || e), ...clientInfo }, { order, req });
