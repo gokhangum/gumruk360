@@ -177,7 +177,15 @@ export async function sendPaymentReceiptEmail(opts: ReceiptEmailOptions) {
 
   const locale: Locale = opts.locale || inferLocaleFromBase(base);
   const t = await getTranslations({ locale, namespace: "email.receipt" });
-
+// DEBUG: gerçekten hangi dilde ne üretiyoruz?
+ const debugSubject = t("subject", { orderId: opts.orderId });
+ const debugTitle = t("title");
+  console.log("[receipt.debug]", {
+   locale,
+    base,
+   debugSubject,
+    debugTitle,
+  });
 
   // Konu
   const subject = t("subject", { orderId: opts.orderId });
