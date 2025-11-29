@@ -63,7 +63,7 @@ async function replyAction(formData: FormData) {
 
   const { data: owner } = await a
     .from("profiles")
-    .select("id,email,full_name,tenant_key")
+    .select("id,email,full_name,tenant_key,role")
     .eq("id", ticket.user_id)
     .single()
 
@@ -144,7 +144,8 @@ async function replyAction(formData: FormData) {
      const subject = q?.title
        ? (emailIsEN ? `Your Answer: ${q.title}` : `Yanıtınız: ${q.title}`)
        : (emailIsEN ? "Support Reply" : "Destek Yanıtı");
-     const supportUrl = `${base}/dashboard/support/${ticketId}`;
+      const isWorker = (owner as any)?.role === "worker";
+   const supportUrl = `${base}${isWorker ? "/worker" : "/dashboard"}/support/${ticketId}`;
  
      // Gövde: admin cevabının altına soru başlığı + link
      const extras = publicQuestionUrl
