@@ -202,15 +202,7 @@ export async function POST(req: Request) {
 
 
 	    const order = orderSel.data || null;
-    console.log("[paytr.webhook.debug] order", {
-      raw: order,
-      id: order?.id,
-      tenant_id: order?.tenant_id,
-      currency: order?.currency,
-      status: order?.status,
-      provider: order?.provider,
-      provider_ref: order?.provider_ref,
-    });
+
 
     if (!order) {
      // Bizde karşılığı olmayan / daha önce silinmiş siparişler için
@@ -320,65 +312,54 @@ if (order.question_id) {
     );
   }
 }
-// ---------- Tenant bazlı receipt locale & base URL ----------
-// Varsayılan: TR
+ // ---------- Kullanıcı tenant_key → tenants.code → tenants.locale ----------
+ // Varsayılan: TR
 let receiptLocale: "tr" | "en" = "tr";
-let dashboardBaseUrl =
+ let dashboardBaseUrl =
   process.env.APP_BASE_URL_TR ||
   (process.env.APP_PRIMARY_DOMAIN ? `https://${process.env.APP_PRIMARY_DOMAIN}` : "http://localhost:3000");
 
-if (order.tenant_id) {
-  const { data: ten } = await supabaseAdmin
-    .from("tenants")
-    .select("primary_domain, locale, code")
-    .eq("id", order.tenant_id)
+ // 1) Soruyu soran kullanıcının tenant_key'i (profiles.tenant_key)
+ let userTenantKey: string | null = null;
+ if (order.user_id) {
+  const prof = await supabaseAdmin
+    .from("profiles")
+   .select("tenant_key")
+   .eq("id", order.user_id as string)
     .maybeSingle();
-  console.log("[paytr.webhook.debug] tenantLookup", {
-    orderTenantId: order.tenant_id,
-    tenantRow: ten,
-  });
-  if (ten) {
-    const rawLocale = String(ten.locale || "").trim().toLowerCase().replace("_", "-");
-    const primary = String(ten.primary_domain || "").toLowerCase();
-    const code = String((ten as any).code || "").toLowerCase();
 
-    // 1) Tenant.locale EN ise → EN
-    if (rawLocale.startsWith("en")) {
-      receiptLocale = "en";
-    }
-    // 2) Domain veya code içinde "easycustoms360" geçiyorsa → EN
-    else if (primary.includes("easycustoms360") || code.includes("easycustoms360")) {
-      receiptLocale = "en";
-    }
-    // 3) Diğer tüm durumlar → TR
-    else {
-      receiptLocale = "tr";
-    }
-
-    // Base URL: varsa tenant primary_domain, yoksa EN/TR fallback
-    if (ten.primary_domain) {
-      const dom = String(ten.primary_domain).trim();
-      const isLocal = dom.includes("localhost") || dom.includes("127.0.0.1");
-      const proto = isLocal ? "http" : "https";
-      dashboardBaseUrl = `${proto}://${dom}`;
-    } else if (receiptLocale === "en") {
-      // EN tenant ama primary_domain boşsa EN base URL’ye düş
-      dashboardBaseUrl = process.env.APP_BASE_URL_EN || dashboardBaseUrl;
-    }
-    console.log("[paytr.webhook.debug] tenantLocaleResolved", {
-      orderTenantId: order.tenant_id,
-      rawLocale,
-      primary,
-      code,
-      receiptLocale,
-      dashboardBaseUrl,
-    });
+   if (!prof.error && prof.data?.tenant_key) {
+    userTenantKey = String(prof.data.tenant_key).trim();
   }
-} else if (currency === "USD") {
-  // Tenant yoksa kaba fallback: USD ödemeleri EN kabul et
-  receiptLocale = "en";
-  dashboardBaseUrl = process.env.APP_BASE_URL_EN || dashboardBaseUrl;
-}
+ }
+
+ // 2) tenant_key -> tenants.code -> tenants.locale ("tr-TR" | "en-US")
+ if (userTenantKey) {
+  const tenRes = await supabaseAdmin
+     .from("tenants")
+    .select("code, locale, primary_domain")
+    .eq("code", userTenantKey)
+    .maybeSingle();
+ 
+   if (!tenRes.error && tenRes.data) {
+    const rawLocale = String(tenRes.data.locale || "").trim().toLowerCase();
+
+    if (rawLocale.startsWith("en")) {
+     receiptLocale = "en";
+   } else if (rawLocale.startsWith("tr")) {
+    receiptLocale = "tr";
+   }
+
+    if (tenRes.data.primary_domain) {
+     const dom = String(tenRes.data.primary_domain).trim();
+     const isLocal = dom.includes("localhost") || dom.includes("127.0.0.1");
+     const proto = isLocal ? "http" : "https";
+     dashboardBaseUrl = `${proto}://${dom}`;
+    }
+ }
+ }
+// --------------------------------------------------------------
+
 // --------------------------------------------------------------
 
       // E-postalar
@@ -390,15 +371,7 @@ if (order.tenant_id) {
           if (!pr.error && pr.data?.email) toUser = pr.data.email;
         }
         if (toUser) {
-			         console.log("[paytr.webhook.debug] sending user receipt", {
-            toUser,
-            orderId: order.id,
-            questionId: order.question_id,
-            amount: posted,
-            currency,
-            receiptLocale,
-            dashboardBaseUrl,
-          });
+
              await sendPaymentReceiptEmail({
             to: toUser,
           amount: posted,
@@ -423,15 +396,7 @@ if (order.tenant_id) {
           .filter(Boolean);
         for (const adminTo of adminList) {
           try {
-			     console.log("[paytr.webhook.debug] sending admin receipt", {
-              adminTo,
-              orderId: order.id,
-              questionId: order.question_id,
-              amount: posted,
-              currency,
-              receiptLocale,
-              dashboardBaseUrl,
-            });
+
 
                    await sendPaymentReceiptEmail({
             to: adminTo,

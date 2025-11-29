@@ -132,14 +132,7 @@ export async function POST(req: Request) {
       currencyCode = "TRY";
     }
 
-    console.log("[paytr/with-credits] pricing", {
-      scope_type,
-      credits,
-      currencyCode,
-      totalLiraFinal,
-      totalCcyFinal,
-      total_kurus,
-    });
+
 
    // ---------- TENANT ----------
     const admin =
