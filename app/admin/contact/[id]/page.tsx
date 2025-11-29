@@ -151,12 +151,7 @@ async function replyAction(formData: FormData) {
         ? `<hr style="margin:16px 0;border:none;border-top:1px solid #e5e7eb;" />
          <div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.5">
             <div><strong>${emailIsEN ? "Question" : "Soru"}:</strong> ${q?.title ? q.title : (ticket.question_id || "")}</div>
-             <div style="margin-top:8px">
-              <a href="${publicQuestionUrl}" target="_blank" rel="noopener noreferrer"
-                  style="display:inline-block;padding:10px 14px;background:#16a34a;color:#ffffff;border-radius:8px;text-decoration:none;font-weight:600">
-                ${emailIsEN ? "Continue with your question here" : "Sorunuza buradan devam edin"}
-               </a>
-             </div>
+            
            </div>`
        : "";
  
