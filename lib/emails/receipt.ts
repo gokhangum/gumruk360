@@ -1,30 +1,49 @@
 // lib/emails/receipt.ts
 // Makbuz (ödeme alındı) e-postası — TR/EN yerelleştirme destekli.
 // Gönderen (from): tenantFrom -> MAIL_FROM -> RESEND_FROM -> onboarding@resend.dev
-import { getTranslations } from "next-intl/server";
+import { createTranslator } from "next-intl";
 import { APP_DOMAINS, MAIL } from "../config/appEnv";
 export type Locale = "tr" | "en";
 
- type ReceiptEmailOptions = {
-   to: string;
+async function loadReceiptMessages(locale: Locale) {
+  const localeTag = locale === "en" ? "en-US" : "tr-TR";
+  const messages =
+    localeTag === "en-US"
+      ? (await import("@/i18n/messages/en.json")).default
+      : (await import("@/i18n/messages/tr.json")).default;
+
+  const t = createTranslator({
+    locale: localeTag,
+    namespace: "email.receipt",
+    messages,
+  });
+
+  return { t, localeTag };
+}
+
+type ReceiptEmailOptions = {
+  to: string;
   amount: number;
-   currency: string;          // "TRY", "USD", "EUR"...
+  currency: string; // "TRY", "USD", "EUR"...
   paymentProvider?: string | null; // Örn: "PayTR", "Paddle"
   orderId: string;
   questionId?: string | null;
-  fullName?: string | null; 
-   tenantFrom?: string;       // Örn: 'Gumruk360 <noreply@gumruk360.com>'
+  fullName?: string | null;
+  tenantFrom?: string; // Örn: 'Gumruk360 <noreply@gumruk360.com>'
   dashboardBaseUrl?: string; // Örn: https://gumruk360.com
-  locale?: Locale;           // Opsiyonel — gelmezse domain’den tespit edilir.
+  locale?: Locale; // Opsiyonel — gelmezse domain’den tespit edilir.
 };
+
 // ------------------------------- Locale helpers -------------------------------
 
 function inferLocaleFromBase(base?: string | null): Locale {
   if (!base) return "tr";
   const lower = String(base).toLowerCase();
   // Proje kuralı: gumruk360.com = TR, tr.easycustoms360.com = EN
-  if (APP_DOMAINS.en && (lower === APP_DOMAINS.en || lower.endsWith(APP_DOMAINS.en))) return "en";
-  if (APP_DOMAINS.primary && (lower === APP_DOMAINS.primary || lower.endsWith(APP_DOMAINS.primary))) return "tr";
+  if (APP_DOMAINS.en && (lower === APP_DOMAINS.en || lower.endsWith(APP_DOMAINS.en)))
+    return "en";
+  if (APP_DOMAINS.primary && (lower === APP_DOMAINS.primary || lower.endsWith(APP_DOMAINS.primary)))
+    return "tr";
   // Varsayılan: TR
   return "tr";
 }
@@ -48,22 +67,26 @@ function fmtAmount(amount: number, currency: string, locale: Locale): string {
     minimumFractionDigits: 0,
     currencyDisplay: "symbol",
   });
+
   return intl.format(major);
 }
-
 
 // ------------------------------- Resend client -------------------------------
 
 let cachedClient: any = null;
 
 async function getClient() {
-  const key = process.env.RESEND_API_KEY;
-  if (!key) return null;
-  if (cachedClient) return cachedClient;
+  if (cachedClient !== null) return cachedClient;
 
-  const mod = await import("resend");
-  const Resend = (mod as any).Resend;
-  cachedClient = new Resend(key);
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.warn("[receipt-email] RESEND_API_KEY yok, mock moda geçiliyor.");
+    cachedClient = null;
+    return cachedClient;
+  }
+
+  const { Resend } = await import("resend");
+  cachedClient = new Resend(apiKey);
   return cachedClient;
 }
 
@@ -73,85 +96,92 @@ export async function buildHtml(
   opts: Required<Pick<ReceiptEmailOptions, "orderId" | "amount" | "currency">> & {
     base: string;
     questionId?: string | null;
-   locale: Locale;
-  fullName?: string | null;
-   paymentProvider?: string | null;
+    locale: Locale;
+    fullName?: string | null;
+    paymentProvider?: string | null;
   },
- ) {
-
- const t = await getTranslations({ locale: opts.locale, namespace: "email.receipt" });
+) {
+  const { t } = await loadReceiptMessages(opts.locale);
   const amountStr = fmtAmount(opts.amount, opts.currency, opts.locale);
 
   // KDV hesapları (varsayılan %20)
   const grossMajor = Math.round((opts.amount || 0) / 100); // toplam (brüt)
-   const netMajor = Math.round(grossMajor / 1.2);           // KDV hariç
- const vatMajor = grossMajor - netMajor;
+  const netMajor = Math.round(grossMajor / 1.2); // KDV hariç
+  const vatMajor = grossMajor - netMajor;
 
-   const netAmountStr = fmtAmount(netMajor * 100, opts.currency, opts.locale);
+  const netAmountStr = fmtAmount(netMajor * 100, opts.currency, opts.locale);
   const vatAmountStr = fmtAmount(vatMajor * 100, opts.currency, opts.locale);
 
   const orderLink = opts.base ? `${opts.base}/dashboard/orders/${opts.orderId}` : "#";
-  const questionLink = opts.base && opts.questionId ? `${opts.base}/dashboard/questions/${opts.questionId}` : null;
+  const questionLink =
+    opts.base && opts.questionId ? `${opts.base}/dashboard/questions/${opts.questionId}` : null;
+
   return `
-  <div style="max-width:600px;margin:0 auto;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55;color:#111;padding:24px">
-    <h2 style="margin:0 0 16px 0;font-weight:700;font-size:20px">${t("title")}</h2>
-   ${opts.fullName
-    ? '<p style="margin:0 0 8px 0">' +
-        t("greeting", { name: opts.fullName }) +
-      "</p>"
-   : ""
-   }
-    <p style="margin:0 0 16px 0">${t("thanks")}</p>
+  <div style="max-width:600px;margin:0 auto;font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;color:#111;padding:24px">
+    <h1 style="font-size:20px;margin:0 0 12px">${t("title")}</h1>
+    ${
+      opts.fullName
+        ? `<p style="margin:0 0 12px">${t("greeting", { name: opts.fullName })}</p>`
+        : ""
+    }
+    <p style="margin:0 0 16px">${t("thanks")}</p>
 
-  <div style="border:1px solid #eee;border-radius:12px;padding:16px;margin:16px 0">
-     <table role="presentation" width="100%" style="border-collapse:collapse">
+    <table style="width:100%;border-collapse:collapse;margin:16px 0">
+      <tbody>
         <tr>
-         <td style="padding:6px 0;font-weight:600;width:140px">${t("orderId")}</td>
-          <td style="padding:6px 0">${opts.orderId}</td>
-       </tr>
-        ${opts.questionId ? `
-        <tr>
-          <td style="padding:6px 0;font-weight:600;width:140px">${t("questionId")}</td>
-          <td style="padding:6px 0">${opts.questionId}</td>
-         </tr>` : ``}
-        <tr>
-        <td style="padding:6px 0;font-weight:600;width:140px">${t("amount")}</td>
-         <td style="padding:6px 0">${amountStr}</td>
+          <td style="padding:4px 0;font-weight:600">${t("orderId")}:</td>
+          <td style="padding:4px 0">${opts.orderId}</td>
         </tr>
-        ${opts.paymentProvider ? `
-       <tr>
-          <td style="padding:6px 0;font-weight:600;width:140px">${t("paymentMethod")}</td>
-         <td style="padding:6px 0">${opts.paymentProvider}</td>
-        </tr>` : ``}
-     </table>
-    </div>
-  <div style="border:1px solid #eee;border-radius:12px;padding:16px;margin:16px 0">
-     <div style="background:#f4f4f5;padding:2px 12px;border-radius:8px;font-weight:600;margin-bottom:8px">
-        ${t("productNameLabel")}: ${t("productNameValue")}
-    </div>
-    <table role="presentation" width="100%" style="border-collapse:collapse">
-       <tr>
-         <td style="padding:4px 0;width:160px;font-weight:600">${t("serviceNetLabel")}</td>
-         <td style="padding:4px 0">${netAmountStr}</td>
-       </tr>
-       <tr>
-         <td style="padding:4px 0;width:160px;font-weight:600">${t("serviceVatLabel")}</td>
-        <td style="padding:4px 0">${vatAmountStr}</td>
-       </tr>
+        ${
+          opts.questionId
+            ? `<tr>
+          <td style="padding:4px 0;font-weight:600">${t("questionId")}:</td>
+          <td style="padding:4px 0">${opts.questionId}</td>
+        </tr>`
+            : ""
+        }
         <tr>
-         <td style="padding:4px 0;width:160px;font-weight:600">${t("serviceTotalLabel")}</td>
-         <td style="padding:4px 0">${amountStr}</td>
+          <td style="padding:4px 0;font-weight:600">${t("amount")}:</td>
+          <td style="padding:4px 0">${amountStr}</td>
         </tr>
-      </table>
+        <tr>
+          <td style="padding:4px 0;font-weight:600">Net (${normalizeCurrency(
+            opts.currency,
+          )}):</td>
+          <td style="padding:4px 0">${netAmountStr}</td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0;font-weight:600">KDV (%20):</td>
+          <td style="padding:4px 0">${vatAmountStr}</td>
+        </tr>
+        ${
+          opts.paymentProvider
+            ? `<tr>
+          <td style="padding:4px 0;font-weight:600">${t("paymentMethod")}:</td>
+          <td style="padding:4px 0">${opts.paymentProvider}</td>
+        </tr>`
+            : ""
+        }
+      </tbody>
+    </table>
+
+    <div style="margin:16px 0">
+      ${
+        orderLink
+          ? `<a href="${orderLink}" style="display:inline-block;margin-right:8px;padding:8px 12px;background:#111;color:#fff;border-radius:4px;text-decoration:none;font-size:14px">${t(
+              "viewOrder",
+            )}</a>`
+          : ""
+      }
+      ${
+        questionLink
+          ? `<a href="${questionLink}" style="display:inline-block;padding:8px 12px;border:1px solid #111;color:#111;border-radius:4px;text-decoration:none;font-size:14px">${t(
+              "viewQuestion",
+            )}</a>`
+          : ""
+      }
     </div>
 
-   <div style="margin:20px 0">
-      <a href="${orderLink}" style="display:inline-block;background:#111;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px">${t("viewOrder")}</a>
-     ${questionLink ? ` <a href="${questionLink}" style="display:inline-block;background:#f4f4f5;color:#111;text-decoration:none;padding:10px 14px;border-radius:10px;margin-left:8px">${t("viewQuestion")}</a>` : ``}
-    </div>
-  <div style="border:1px solid #22c55e;background:#ecfdf3;border-radius:10px;padding:12px 14px;margin-top:16px;color:#166534;font-size:14px">
-      ${t("invoiceNotice")}
-   </div>
     <p style="color:#666;font-size:12px;margin-top:24px">${t("footer")}</p>
   </div>
   `;
@@ -167,56 +197,42 @@ export async function sendPaymentReceiptEmail(opts: ReceiptEmailOptions) {
     process.env.RESEND_FROM ||
     `${MAIL.fromName} <${MAIL.fromEmail}>`;
 
- // Base URL ve locale tespiti
+  // Base URL ve locale tespiti
   const base =
     opts.dashboardBaseUrl ||
     process.env.APP_BASE_URL_TR ||
     process.env.APP_BASE_URL_EN ||
-   `https://${APP_DOMAINS.primary}`;
-
-  // DEBUG: webhook'tan ne gelmiş?
-  console.log("[receipt.debug] incoming opts:", {
-    to: opts.to,
-   orderId: opts.orderId,
-    paymentProvider: opts.paymentProvider,
-    currency: opts.currency,
-    optsLocale: opts.locale,
-   dashboardBaseUrl: opts.dashboardBaseUrl,
-     base,
-   });
+    `https://${APP_DOMAINS.primary}`;
 
   const locale: Locale = opts.locale ?? "tr";
-  const t = await getTranslations({ locale, namespace: "email.receipt" });
- 
-  // DEBUG: gerçekten hangi dilde ne üretiyoruz?
-  const debugSubject = t("subject", { orderId: opts.orderId });
-  const debugTitle = t("title");
-  console.log("[receipt.debug] resolved locale & texts:", {
-     resolvedLocale: locale,
-    debugSubject,
-     debugTitle,
-   });
- 
+  const { t, localeTag } = await loadReceiptMessages(locale);
+
+  // DEBUG: hangi dil ve subject kullanıldı?
+  console.log("[receipt.debug] sendPaymentReceiptEmail", {
+    optsLocale: opts.locale,
+    resolvedLocale: locale,
+    localeTag,
+    subjectPreview: t("subject", { orderId: opts.orderId }),
+  });
+
   // Konu
   const subject = t("subject", { orderId: opts.orderId });
 
-
   // HTML
   const html = await buildHtml({
-   orderId: opts.orderId,
-     amount: opts.amount,
-     currency: opts.currency,
-     base,
-     questionId: opts.questionId ?? null,
+    orderId: opts.orderId,
+    amount: opts.amount,
+    currency: opts.currency,
+    base,
+    questionId: opts.questionId ?? null,
     locale,
-   fullName: opts.fullName ?? null,
+    fullName: opts.fullName ?? null,
     paymentProvider: opts.paymentProvider ?? null,
   });
 
   // Resend client (yoksa MOCK)
   const client = await getClient();
   if (!client) {
-
     return { sent: false as const, provider: "mock" as const, locale, from };
   }
 
