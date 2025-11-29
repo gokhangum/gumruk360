@@ -192,22 +192,34 @@ export async function buildHtml(
 // --------------------------------- Main API ----------------------------------
 
 export async function sendPaymentReceiptEmail(opts: ReceiptEmailOptions) {
-  // From önceliği: tenantFrom -> MAIL_FROM -> RESEND_FROM -> default
-  const from =
-    opts.tenantFrom ||
-    process.env.MAIL_FROM ||
-    process.env.RESEND_FROM ||
-    `${MAIL.fromName} <${MAIL.fromEmail}>`;
-
-  // Base URL ve locale tespiti
+  // Base URL
   const base =
     opts.dashboardBaseUrl ||
     process.env.APP_BASE_URL_TR ||
     process.env.APP_BASE_URL_EN ||
     `https://${APP_DOMAINS.primary}`;
 
-  const locale: Locale = opts.locale ?? "tr";
-const { t } = await loadReceiptMessages(locale);
+  // Locale: Önce parametre, yoksa domain'den tespit
+  const locale: Locale = opts.locale ?? inferLocaleFromBase(base);
+
+  const { t } = await loadReceiptMessages(locale);
+
+  // From önceliği:
+  // 1) tenantFrom
+  // 2) MAIL_FROM (override)
+  // 3) Dil bazlı default (RESEND_FROM_TR / RESEND_FROM_EN)
+  // 4) Genel RESEND_FROM
+  // 5) MAIL.fromName / MAIL.fromEmail fallback
+  const localeDefaultFrom =
+    locale === "en"
+      ? process.env.RESEND_FROM_EN || process.env.RESEND_FROM_TR || process.env.RESEND_FROM
+      : process.env.RESEND_FROM_TR || process.env.RESEND_FROM_EN || process.env.RESEND_FROM;
+
+  const from =
+    opts.tenantFrom ||
+    process.env.MAIL_FROM ||
+    localeDefaultFrom ||
+    `${MAIL.fromName} <${MAIL.fromEmail}>`;
 
 
 

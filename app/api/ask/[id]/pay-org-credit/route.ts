@@ -200,23 +200,54 @@ const redirectTo = `${resolveBaseUrl(req)}${redirectPath}`;
 
       const actorName = (actorProf as any)?.full_name || (actorProf as any)?.email || t("common.unknown");
       const qTitle = (q as any)?.title || t("common.untitled");
-      const subject = t("ownerNotice.subject", { brand });
-      const bodyLines = [
+     const subject = t("ownerNotice.subject", { brand });
+     const bodyLines = [
         t("ownerNotice.heading", { brand }),
         t("ownerNotice.intro"),
-        "",
+         "",
         `${t("ownerNotice.userFullName")}: ${actorName}`,
-        `${t("ownerNotice.questionId")}: ${id}`,
+       `${t("ownerNotice.questionId")}: ${id}`,
         `${t("ownerNotice.questionTitle")}: ${qTitle}`,
         "",
         `${t("ownerNotice.creditsUsed")}: ${requiredCredits}`,
         `${t("ownerNotice.creditsBalance")}: ${orgBalanceAfter}`,
-        "",
+         "",
         t("ownerNotice.regards"),
-t("ownerNotice.team", { brand }),
-      ];
+        t("ownerNotice.team", { brand }),
+     ];
       const body = bodyLines.join("\n");
-      const html = body.replace(/\n/g, "<br/>");
+    const html = `
+        <div style="font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.5;color:#111;">
+         <p style="margin:0 0 12px;"><strong>${t("ownerNotice.heading", { brand })}</strong></p>
+         <p style="margin:0 0 16px;">${t("ownerNotice.intro")}</p>
+      <table style="width:100%;border-collapse:collapse;margin:0 0 16px;">
+          <tbody>
+             <tr>
+             <td style="padding:4px 8px;border:1px solid #e5e7eb;font-weight:600;">${t("ownerNotice.userFullName")}</td>
+              <td style="padding:4px 8px;border:1px solid #e5e7eb;">${actorName}</td>
+            </tr>
+             <tr>
+              <td style="padding:4px 8px;border:1px solid #e5e7eb;font-weight:600;">${t("ownerNotice.questionId")}</td>
+             <td style="padding:4px 8px;border:1px solid #e5e7eb;">${id}</td>
+             </tr>
+             <tr>
+               <td style="padding:4px 8px;border:1px solid #e5e7eb;font-weight:600;">${t("ownerNotice.questionTitle")}</td>
+              <td style="padding:4px 8px;border:1px solid #e5e7eb;">${qTitle}</td>
+            </tr>
+            <tr>
+               <td style="padding:4px 8px;border:1px solid #e5e7eb;font-weight:600;">${t("ownerNotice.creditsUsed")}</td>
+             <td style="padding:4px 8px;border:1px solid #e5e7eb;">${requiredCredits}</td>
+           </tr>
+             <tr>
+             <td style="padding:4px 8px;border:1px solid #e5e7eb;font-weight:600;">${t("ownerNotice.creditsBalance")}</td>
+               <td style="padding:4px 8px;border:1px solid #e5e7eb;">${orgBalanceAfter}</td>
+            </tr>
+           </tbody>
+       </table>
+        <p style="margin:0;">${t("ownerNotice.regards")}<br/>${t("ownerNotice.team", { brand })}</p>
+      </div>
+    `;
+
 
       // For each owner → create ticket + initial message
       for (const ownerId of ownerIds) {
