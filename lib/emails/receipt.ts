@@ -135,7 +135,7 @@ export async function buildHtml(
          <td style="padding:4px 0">${netAmountStr}</td>
        </tr>
        <tr>
-         <td style="padding:4px 0;width:160px;font-weight:600">${t("serviceVatLabel")}</td>
+         <td style="padding:4px 0;width:160px;font-weight:600">ddddddddddddd</td>
         <td style="padding:4px 0">${vatAmountStr}</td>
        </tr>
         <tr>

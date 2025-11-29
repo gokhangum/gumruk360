@@ -395,6 +395,7 @@ await audit(
            paymentProvider: "PayTR",
              dashboardBaseUrl,
             locale: receiptLocale,
+			
           });
           await audit("email.receipt.sent", { order_id: order.id, to: toUser, amount_cents: posted, currency, ...clientInfo }, { order, req });
           await notify("payment.receipt.sent", { order_id: order.id, to: toUser, amount_cents: posted, currency }, { order, to_email: toUser, subject: "Ödeme Makbuzu", template: "payment_receipt", provider: "resend", status: "sent" });

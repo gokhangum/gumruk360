@@ -182,18 +182,27 @@ export default function LogsTable({ endpoint }: Props) {
       );
     }
 
-    // Nesne/array ise kısalt
-    if (typeof v === "object") {
-      const s = JSON.stringify(v);
-      return <span title={s}>{s.length > 80 ? s.slice(0, 80) + "…" : s}</span>;
-    }
+    // Nesne/array ise: tam göster, yatay scroll ile kesme
+  if (typeof v === "object") {
+    const s = JSON.stringify(v);
+   return (
+       <div className="max-w-full overflow-x-auto text-xs font-mono whitespace-pre">
+          {s}
+       </div>
+      );
+     }
 
-    // Metin uzunsa kısalt
+    // Metin uzunsa: tam göster, yatay scroll ile kesme
     if (typeof v === "string" && v.length > 120) {
-      return <span title={v}>{v.slice(0, 120)}…</span>;
+      return (
+         <div className="max-w-full overflow-x-auto text-xs font-mono whitespace-pre">
+           {v}
+        </div>
+     );
     }
 
     return <span>{String(v)}</span>;
+
   }
 
   const loginHref =
