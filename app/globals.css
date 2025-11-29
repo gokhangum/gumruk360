@@ -32,31 +32,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b1220;
-    --foreground: #e5e7eb;
-    --muted: #9aa7bd;
-    --border: #1f2937;
-    --surface: #0f172a;
-
-    --brand-950: #051437;
-    --brand-900: #0a2f75;
-    --brand-800: #0d3d97;
-    --brand-700: #1250c1;
-    --brand-600: #1a65ec;
-    --brand-500: #3380ff;
-    --brand-400: #5d9aff;
-    --brand-300: #8fbbff;
-    --brand-200: #bcd6ff;
-    --brand-100: #deebff;
-    --brand-50:  #eff6ff;
-
-    --shadow-card: 0 8px 22px rgba(0,0,0,.35);
-    --shadow-elev: 0 14px 40px rgba(0,0,0,.45);
-  }
-}
-
 /* Base */
 * { box-sizing: border-box; }
 html, body { height: 100%; }

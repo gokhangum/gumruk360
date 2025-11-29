@@ -152,6 +152,7 @@ const locale = toShortLocale(resolvedLocale) || (code?.toLowerCase().startsWith(
   return (
     <html lang={locale}>
 	 <head>
+	 <meta name="color-scheme" content="light" />
 <ConsentBootstrap />
         <GtmHead gtmId={gtmId ?? undefined} disabled={disabledGtm} />
 		<StructuredData />
