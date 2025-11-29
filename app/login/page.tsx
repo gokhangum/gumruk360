@@ -52,16 +52,22 @@ const isTr = locale === "tr";
 function mapError(errMsg: string): string {
   const lower = (errMsg || "").toLowerCase();
 
-  // Supabase tipikleri
-  if (lower.includes("invalid login credentials") || lower.includes("invalid email or password")) {
-    return t("errors.invalidCredentials");
-  }
+   // Supabase default mesajları + API error kodları
+ if (
+    lower.includes("invalid login credentials") ||
+     lower.includes("invalid email or password") ||
+     lower === "invalid_credentials"
+  ) {
+     return t("errors.invalidCredentials");
+   }
   if (lower.includes("email not confirmed")) {
     return t("errors.emailNotConfirmed");
   }
-  return errMsg || t("errors.loginFailed");
-}
-
+  if (lower === "login_failed") {
+   return t("errors.loginFailed");
+  }
+   return errMsg || t("errors.loginFailed");
+ }
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault();
