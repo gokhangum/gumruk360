@@ -181,7 +181,9 @@ export async function buildHtml(
           : ""
       }
     </div>
-
+  <div style="border:1px solid #22c55e;background:#ecfdf3;border-radius:10px;padding:12px 14px;margin-top:16px;color:#166534;font-size:14px">
+      ${t("invoiceNotice")}
+   </div>
     <p style="color:#666;font-size:12px;margin-top:24px">${t("footer")}</p>
   </div>
   `;
