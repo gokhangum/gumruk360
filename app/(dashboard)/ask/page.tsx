@@ -659,7 +659,7 @@ if (id) {
 
 {/* CV Önizleme Modal */}
 {showCv && selectedWorkerId ? (
-  <div className="fixed inset-0 z-40">
+  <div className="fixed inset-0 z-[60] md:inset-y-0 md:left-[240px]">
     {/* backdrop */}
     <div className="absolute inset-0 bg-black/40" onClick={() => setShowCv(false)} />
     {/* dialog */}
