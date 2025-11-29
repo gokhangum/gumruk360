@@ -217,8 +217,9 @@ export async function sendPaymentReceiptEmail(opts: ReceiptEmailOptions) {
 
   const from =
     opts.tenantFrom ||
-    process.env.MAIL_FROM ||
     localeDefaultFrom ||
+    process.env.MAIL_FROM ||
+    process.env.RESEND_FROM ||
     `${MAIL.fromName} <${MAIL.fromEmail}>`;
 
 
