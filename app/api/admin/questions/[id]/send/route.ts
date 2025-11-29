@@ -136,7 +136,7 @@ export async function POST(request: Request, context: { params: Promise<{ id: st
     locale === "en"
       ? (process.env.APP_BASE_URL_EN || `https://${APP_DOMAINS.en || APP_DOMAINS.primary}`)
       : (process.env.APP_BASE_URL_TR || `https://${APP_DOMAINS.primary}`);
-  const ctaUrl = `${APP_URL}/ask/${q.id}`;
+  const ctaUrl = `${APP_URL}/dashboard/questions/${q.id}`;
   const title = q.title || (locale === "tr" ? `${BRAND.nameTR} Yanıtı` : `${BRAND.nameEN} Answer`);
   const subject = (locale === "tr")
      ? `${BRAND.nameTR} Yanıtı – ${q.title || "Sorunuz"}`
