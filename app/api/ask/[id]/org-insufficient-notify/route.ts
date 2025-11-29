@@ -8,13 +8,17 @@ import { APP_DOMAINS, BRAND, MAIL } from "@/lib/config/appEnv";
 type Json = Record<string, any>;
 function j(data: Json, status = 200) { return NextResponse.json(data, { status }); }
 
-function resolveBaseUrl() {
-  const site = process.env.NEXT_PUBLIC_SITE_URL;
+function resolveBaseUrl(req: Request) {
+   try {
+    const url = new URL(req.url);
+     return url.origin.replace(/\/$/, "");
+  } catch {}
+   const site = process.env.NEXT_PUBLIC_SITE_URL;
   const vercel = process.env.VERCEL_URL;
-  if (site) return site.replace(/\/$/, "");
+   if (site) return site.replace(/\/$/, "");
   if (vercel) return `https://${vercel}`.replace(/\/$/, "");
-  return "http://localhost:3000";
-}
+   return "http://localhost:3000";
+ }
 function resolveLocale(req: Request) {
    const hdr = (req.headers.get("x-language") || req.headers.get("accept-language") || "").toLowerCase();
    try {
@@ -64,9 +68,9 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
     const body = await req.json().catch(() => ({}));
     const questionTitle: string = body?.title ?? "";
 
-    const baseUrl = resolveBaseUrl();
-    const askUrl = `${baseUrl}/ask/${id}`;
-    const subsUrl = `${baseUrl}/dashboard/subscription`;
+     const baseUrl = resolveBaseUrl(req);
+  const askUrl = `${baseUrl}/ask/${id}`;
+   const subsUrl = `${baseUrl}/dashboard/subscription`;
 const locale = resolveLocale(req);
 const t = await getTranslations({ locale, namespace: "orgInsufficient" });
 const brand = resolveBrandByLocale(locale);
