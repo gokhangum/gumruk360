@@ -710,7 +710,10 @@ if (id) {
            type="button"
             onClick={() => {
               try {
-               (window as any).__openAskAiNoticeModal?.();
+           setShowDescHelp(false);                       // önce ipuçları popup'ını kapat
+ setTimeout(() => {                             // sonra AI bilgilendirmesini aç
+  (window as any).__openAskAiNoticeModal?.();
+}, 50);
               } catch {}
             }}
            className="mt-1 text-sm text-indigo-700 hover:underline text-left block"
