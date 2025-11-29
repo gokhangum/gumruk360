@@ -3,7 +3,6 @@
 // Gönderen (from): tenantFrom -> MAIL_FROM -> RESEND_FROM -> onboarding@resend.dev
 import { getTranslations } from "next-intl/server";
 import { APP_DOMAINS, MAIL } from "../config/appEnv";
-import { logAudit } from "../audit";
 export type Locale = "tr" | "en";
 
  type ReceiptEmailOptions = {
@@ -158,58 +157,49 @@ export async function buildHtml(
   `;
 }
 
- // --------------------------------- Main API ----------------------------------
- 
- export async function sendPaymentReceiptEmail(opts: ReceiptEmailOptions) {
+// --------------------------------- Main API ----------------------------------
+
+export async function sendPaymentReceiptEmail(opts: ReceiptEmailOptions) {
   // From önceliği: tenantFrom -> MAIL_FROM -> RESEND_FROM -> default
-   const from =
+  const from =
     opts.tenantFrom ||
     process.env.MAIL_FROM ||
-     process.env.RESEND_FROM ||
-     `${MAIL.fromName} <${MAIL.fromEmail}>`;
+    process.env.RESEND_FROM ||
+    `${MAIL.fromName} <${MAIL.fromEmail}>`;
 
-// Base URL ve locale tespiti
+ // Base URL ve locale tespiti
   const base =
-   opts.dashboardBaseUrl ||
+    opts.dashboardBaseUrl ||
     process.env.APP_BASE_URL_TR ||
     process.env.APP_BASE_URL_EN ||
-     `https://${APP_DOMAINS.primary}`;
+   `https://${APP_DOMAINS.primary}`;
 
-   // Gönderilen locale (webhook vs.) + fallback
-   const locale: Locale = opts.locale ?? "tr";
-   const t = await getTranslations({ locale, namespace: "email.receipt" });
+  // DEBUG: webhook'tan ne gelmiş?
+  console.log("[receipt.debug] incoming opts:", {
+    to: opts.to,
+   orderId: opts.orderId,
+    paymentProvider: opts.paymentProvider,
+    currency: opts.currency,
+    optsLocale: opts.locale,
+   dashboardBaseUrl: opts.dashboardBaseUrl,
+     base,
+   });
 
-  // Örnek subject / title (hangi dilde çözüldüğünü görmek için)
- const debugSubject = t("subject", { orderId: opts.orderId });
-  const debugTitle = t("title");
+  const locale: Locale = opts.locale ?? "tr";
+  const t = await getTranslations({ locale, namespace: "email.receipt" });
  
-   // AUDIT: webhook'tan ne geldi, burada ne kullanıyoruz?
-   try {
-    await logAudit({
-     question_id: opts.questionId ?? null,
-      action: "email.receipt.debug",
-      payload: {
-       to: opts.to,
-       orderId: opts.orderId,
-        paymentProvider: opts.paymentProvider ?? null,
-         currency: opts.currency,
-        // webhook'tan gelenler
-         dashboardBaseUrl: opts.dashboardBaseUrl ?? null,
-         localeFromOpts: opts.locale ?? null,
-        // bu fonksiyon içinde hesaplananlar
-       base,
-        resolvedLocale: locale,
-       debugSubject,
-        debugTitle,
-      },
-    });
-  } catch (e) {
-    // Audit hata verirse mail'i bloklamayalım
-     console.error("[email.receipt.debug.error]", e);
-  }
-
+  // DEBUG: gerçekten hangi dilde ne üretiyoruz?
+  const debugSubject = t("subject", { orderId: opts.orderId });
+  const debugTitle = t("title");
+  console.log("[receipt.debug] resolved locale & texts:", {
+     resolvedLocale: locale,
+    debugSubject,
+     debugTitle,
+   });
+ 
   // Konu
   const subject = t("subject", { orderId: opts.orderId });
+
 
   // HTML
   const html = await buildHtml({
