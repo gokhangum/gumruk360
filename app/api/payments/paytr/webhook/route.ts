@@ -334,33 +334,47 @@ let receiptLocale: "tr" | "en" = "tr";
  }
 
  // 2) tenant_key -> tenants.code -> tenants.locale ("tr-TR" | "en-US")
- if (userTenantKey) {
+let tenantLocaleRaw: string | null = null;              // <— YENİ SATIR (315 civarı üstüne)
+
+if (userTenantKey) {
   const tenRes = await supabaseAdmin
-     .from("tenants")
+    .from("tenants")
     .select("code, locale, primary_domain")
     .eq("code", userTenantKey)
     .maybeSingle();
- 
-   if (!tenRes.error && tenRes.data) {
+
+  if (!tenRes.error && tenRes.data) {
     const rawLocale = String(tenRes.data.locale || "").trim().toLowerCase();
+    tenantLocaleRaw = rawLocale;                        // <— YENİ
 
     if (rawLocale.startsWith("en")) {
-     receiptLocale = "en";
-   } else if (rawLocale.startsWith("tr")) {
-    receiptLocale = "tr";
-   }
+      receiptLocale = "en";
+    } else if (rawLocale.startsWith("tr")) {
+      receiptLocale = "tr";
+    }
 
     if (tenRes.data.primary_domain) {
-     const dom = String(tenRes.data.primary_domain).trim();
-     const isLocal = dom.includes("localhost") || dom.includes("127.0.0.1");
-     const proto = isLocal ? "http" : "https";
-     dashboardBaseUrl = `${proto}://${dom}`;
+      const dom = String(tenRes.data.primary_domain).trim();
+      const isLocal = dom.includes("localhost") || dom.includes("127.0.0.1");
+      const proto = isLocal ? "http" : "https";
+      dashboardBaseUrl = `${proto}://${dom}`;
     }
- }
- }
-// --------------------------------------------------------------
-
-// --------------------------------------------------------------
+  }
+}
+await audit(
+  "paytr.webhook.locale_debug",
+  {
+    order_id: order.id,
+    user_id: order.user_id,
+    userTenantKey,
+    tenantLocaleRaw,
+    receiptLocale,
+    dashboardBaseUrl,
+    APP_BASE_URL_TR: process.env.APP_BASE_URL_TR || null,
+    APP_BASE_URL_EN: process.env.APP_BASE_URL_EN || null,
+  },
+  { order, req }
+);
 
       // E-postalar
       try {
