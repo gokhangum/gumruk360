@@ -207,15 +207,9 @@ export async function sendPaymentReceiptEmail(opts: ReceiptEmailOptions) {
     `https://${APP_DOMAINS.primary}`;
 
   const locale: Locale = opts.locale ?? "tr";
-  const { t, localeTag } = await loadReceiptMessages(locale);
+const { t } = await loadReceiptMessages(locale);
 
-  // DEBUG: hangi dil ve subject kullanıldı?
-  console.log("[receipt.debug] sendPaymentReceiptEmail", {
-    optsLocale: opts.locale,
-    resolvedLocale: locale,
-    localeTag,
-    subjectPreview: t("subject", { orderId: opts.orderId }),
-  });
+
 
   // Konu
   const subject = t("subject", { orderId: opts.orderId });

@@ -86,21 +86,38 @@ const displayCurrency = (resolved?.currency ?? "TRY").toUpperCase()
   }
 
 
-  let required = Number(credit?.requiredUserCredits ?? credit?.requiredCredits ?? 0)
-  let balance  = Number(credit?.userBalance ?? credit?.balance ?? 0)
+ // 89–118 YENİ HÂLİ
+  const hasActiveOrg = Boolean(credit?.meta?.hasActiveOrg)
 
-  if (!Number.isFinite(balance)) {
-    try {
+ let required = Number(
+   credit?.requiredCredits ??
+      (hasActiveOrg ? credit?.requiredOrgCredits : credit?.requiredUserCredits) ??
+      0,
+  )
+
+ let balance = Number(
+   hasActiveOrg
+      ? (credit?.orgBalance ?? credit?.balance ?? 0)
+      : (credit?.userBalance ?? credit?.balance ?? 0),
+ )
+ 
+   if (!Number.isFinite(balance)) {
+     try {
       const b = await fetch(`${origin}/api/dashboard/balance`, {
         cache: "no-store",
-        headers: { cookie: cookieHeader },
-      })
-      const bj = await b.json()
-      balance = Number(bj?.user_balance ?? bj?.balance ?? 0)
-    } catch {
-      balance = 0
-    }
+         headers: { cookie: cookieHeader },
+       })
+       const bj = await b.json()
+      balance = Number(
+        hasActiveOrg
+        ? (bj?.orgBalance ?? bj?.org_balance ?? bj?.balance ?? 0)
+         : (bj?.user_balance ?? bj?.userBalance ?? bj?.balance ?? 0),
+    )
+  } catch {
+    balance = 0
   }
+  }
+
 
   return (
    
