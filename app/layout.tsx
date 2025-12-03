@@ -83,6 +83,7 @@ export async function generateMetadata(): Promise<Metadata> {
     languageAlternates = {
       "tr-TR": `${proto}://${trHost}${pathname}`,
       en: `${proto}://${enHost}${pathname}`,
+      "x-default": `${proto}://${enHost}${pathname}`,
     };
   }
 
