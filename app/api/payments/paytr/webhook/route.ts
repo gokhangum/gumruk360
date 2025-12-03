@@ -44,11 +44,6 @@ const computeHash = (oid: string, status: string, total: string, key: string, sa
      ? `${x.slice(0, 8)}-${x.slice(8, 12)}-${x.slice(12, 16)}-${x.slice(16, 20)}-${x.slice(20)}`
     : null;
 
-const hyphenateUuidIfPossible = (x: string) =>
-  /^[a-f0-9]{32}$/i.test(x)
-    ? `${x.slice(0, 8)}-${x.slice(8, 12)}-${x.slice(12, 16)}-${x.slice(16, 20)}-${x.slice(20)}`
-    : null;
-
 function getClientInfo(req: Request) {
   const ip =
     (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() ||
