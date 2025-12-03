@@ -4,7 +4,7 @@
 //   node tools/seo/regression-check.js
 //   TR_BASE=https://gumruk360.com EN_BASE=https://tr.easycustoms360.com node tools/seo/regression-check.js
 
-import fs from "node:fs/promises";
+const fs = require("node:fs/promises");
 
 // Bases (override via env)
 const BASES = [
