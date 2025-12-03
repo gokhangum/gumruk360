@@ -56,6 +56,37 @@ export async function generateMetadata(): Promise<Metadata> {
   shortLocale === "en"
      ? "/brand/easycustoms360.ico"
       : "/brand/gumruk360.ico";
+	    // TR/EN hreflang alternates (gumruk360.com <-> tr.easycustoms360.com)
+  let languageAlternates: Record<string, string> | undefined;
+  if (baseUrl && host) {
+    let pathname = "/";
+    try {
+      const urlStr = self || baseUrl;
+      const u = new URL(urlStr);
+      pathname = u.pathname || "/";
+    } catch {
+      pathname = "/";
+    }
+
+    const proto = (h.get("x-forwarded-proto") || "http").toLowerCase();
+    let trHost = host;
+    let enHost = host;
+
+    if (host.includes("gumruk360.com")) {
+      trHost = "gumruk360.com";
+      enHost = "tr.easycustoms360.com";
+    } else if (host.includes("tr.easycustoms360.com")) {
+      trHost = "gumruk360.com";
+      enHost = "tr.easycustoms360.com";
+    }
+
+    languageAlternates = {
+      "tr-TR": `${proto}://${trHost}${pathname}`,
+      en: `${proto}://${enHost}${pathname}`,
+    };
+  }
+
+
   // ---- Wildcard SEO kaydını çek (tenant_seo, route="*", is_active=true) ----
   let wildcard: {
     title?: string | null;
@@ -80,7 +111,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const meta: Metadata = {
     title: titleDefault,
     description: descriptionDefault,
-    alternates: self ? { canonical: self } : undefined,
+    alternates:
+     self || languageAlternates
+      ? {
+           ...(self ? { canonical: self } : {}),
+            ...(languageAlternates ? { languages: languageAlternates } : {}),
+        }
+       : undefined,
     metadataBase: baseUrl ? new URL(baseUrl) : undefined,
   icons: {
     icon: faviconPath,
