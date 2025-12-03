@@ -22,6 +22,28 @@ const normalizeCurrency = (c?: string | null) => {
 };
 const computeHash = (oid: string, status: string, total: string, key: string, salt: string) =>
   createHmac("sha256", key).update(oid + salt + status + total, "utf8").digest("base64");
+ const getPaytrSecretsForMerchant = (merchantId: string) => {
+  const trId = process.env.PAYTR_MERCHANT_ID || "";
+  const enId = process.env.PAYTR_MERCHANT_ID_EN || "";
+
+  if (merchantId && enId && merchantId === enId) {
+    return {
+      key: process.env.PAYTR_MERCHANT_KEY_EN || "",
+      salt: process.env.PAYTR_MERCHANT_SALT_EN || "",
+    };
+   }
+ 
+  return {
+     key: process.env.PAYTR_MERCHANT_KEY || "",
+    salt: process.env.PAYTR_MERCHANT_SALT || "",
+   };
+ };
+
+ const hyphenateUuidIfPossible = (x: string) =>
+   /^[a-f0-9]{32}$/i.test(x)
+     ? `${x.slice(0, 8)}-${x.slice(8, 12)}-${x.slice(12, 16)}-${x.slice(16, 20)}-${x.slice(20)}`
+    : null;
+
 const hyphenateUuidIfPossible = (x: string) =>
   /^[a-f0-9]{32}$/i.test(x)
     ? `${x.slice(0, 8)}-${x.slice(8, 12)}-${x.slice(12, 16)}-${x.slice(16, 20)}-${x.slice(20)}`
@@ -161,14 +183,13 @@ export async function POST(req: Request) {
     }
 
     // 2) İmza
-    const KEY = process.env.PAYTR_MERCHANT_KEY || "";
-    const SALT = process.env.PAYTR_MERCHANT_SALT || "";
-    const computed_hash = computeHash(merchant_oid, status, total_amount, KEY, SALT);
+  const { key: KEY, salt: SALT } = getPaytrSecretsForMerchant(merchant_id);
+  const computed_hash = computeHash(merchant_oid, status, total_amount, KEY, SALT);
 
     let libVerified: boolean | undefined = undefined;
     try {
       const anyFn = verifyPaytrWebhook as any;
-      if (typeof anyFn === "function") libVerified = !!anyFn({ merchant_oid, status, total_amount, hash: received_hash });
+      if (typeof anyFn === "function") libVerified = !!anyFn({ merchant_oid, status, total_amount, hash: received_hash }, merchant_id);
     } catch {}
 
     if (received_hash !== computed_hash) {

@@ -18,6 +18,7 @@ export type PaytrInitInput = {
   lang?: "tr" | "en"
   meta_order_id?: string 
   base_url?: string  
+  tenantCode?: "tr" | "en"
 }
 
 /** Env okuma (trim) */
@@ -39,6 +40,47 @@ function toFlag(v: any): 0 | 1 {
   if (v === true || v === 1 || v === "1") return 1
   return 0
 }
+ 
+ type TenantCode = "tr" | "en"
+ 
+ function getPaytrEnvByTenant(tenantCode?: TenantCode) {
+   const code: TenantCode = (tenantCode || "tr") as TenantCode
+
+  if (code === "en") {
+    return {
+      merchantId: env("PAYTR_MERCHANT_ID_EN"),
+       merchantKey: env("PAYTR_MERCHANT_KEY_EN"),
+     merchantSalt: env("PAYTR_MERCHANT_SALT_EN"),
+     }
+   }
+
+  // Varsayılan: Gümrük360 (TR) mağazası
+  return {
+    merchantId: env("PAYTR_MERCHANT_ID"),
+    merchantKey: env("PAYTR_MERCHANT_KEY"),
+     merchantSalt: env("PAYTR_MERCHANT_SALT"),
+  }
+ }
+ 
+ function getPaytrEnvByMerchantId(merchantId: string) {
+   const trId = env("PAYTR_MERCHANT_ID")
+  const enId = env("PAYTR_MERCHANT_ID_EN", /*optional*/ true)
+
+  if (merchantId && enId && merchantId === enId) {
+     return {
+      merchantId: enId,
+      merchantKey: env("PAYTR_MERCHANT_KEY_EN"),
+      merchantSalt: env("PAYTR_MERCHANT_SALT_EN"),
+    }
+  }
+
+  // Varsayılan veya eşleşmeyen durumlarda TR mağazası kullanılsın
+  return {
+    merchantId: trId,
+    merchantKey: env("PAYTR_MERCHANT_KEY"),
+    merchantSalt: env("PAYTR_MERCHANT_SALT"),
+ }
+ }
 
 /**
  * PayTR — Token Alma
@@ -48,10 +90,9 @@ function toFlag(v: any): 0 | 1 {
  *  - MOCK_PAYTR=1 ise gerçek isteği atlamayı sağlar (lokal akış için).
  *  - merchant_ok_url / merchant_fail_url ZORUNLU; NEXT_PUBLIC_BASE_URL üzerinden kuruyoruz.
  */
-export async function paytrInitiate(input: PaytrInitInput): Promise<{ token: string }> {
-  const MERCHANT_ID   = env("PAYTR_MERCHANT_ID")
-  const MERCHANT_KEY  = env("PAYTR_MERCHANT_KEY")
-  const MERCHANT_SALT = env("PAYTR_MERCHANT_SALT")
+ export async function paytrInitiate(input: PaytrInitInput): Promise<{ token: string }> {
+  const { merchantId: MERCHANT_ID, merchantKey: MERCHANT_KEY, merchantSalt: MERCHANT_SALT } =
+   getPaytrEnvByTenant(input.tenantCode)
 
   const TEST_MODE = toInt(process.env.PAYTR_TEST_MODE ?? input.paytr_test_mode ?? 0)
   const MOCK      = toFlag(process.env.MOCK_PAYTR)
@@ -145,26 +186,30 @@ export async function paytrInitiate(input: PaytrInitInput): Promise<{ token: str
 
   return { token: json.token }
 }
-
-/**
- * PayTR — Webhook Doğrulama
- * base64( HMAC_SHA256(key=MERCHANT_KEY, data=merchant_oid + status + total_amount + MERCHANT_SALT) )
+ /**
+  * PayTR — Webhook Doğrulama
+  * base64( HMAC_SHA256(key=MERCHANT_KEY, data=merchant_oid + status + total_amount + MERCHANT_SALT) )
  */
-export function verifyPaytrWebhook(params: Record<string, string | undefined>): boolean {
-  const MERCHANT_KEY = env("PAYTR_MERCHANT_KEY")
-  const MERCHANT_SALT = env("PAYTR_MERCHANT_SALT")
+ export function verifyPaytrWebhook(
+  params: Record<string, string | undefined>,
+   merchantId?: string,
+ ): boolean {
+   const { merchantKey: MERCHANT_KEY, merchantSalt: MERCHANT_SALT } = merchantId
+    ? getPaytrEnvByMerchantId(merchantId)
+     : getPaytrEnvByTenant()
 
-  const hash = params.hash || ""
-  const concat =
-    (params.merchant_oid || "") +
+   const hash = params.hash || ""
+   const concat =
+     (params.merchant_oid || "") +
     (params.status || "") +
     (params.total_amount || "") +
-    MERCHANT_SALT
-
-  const calc = crypto.createHmac("sha256", MERCHANT_KEY).update(concat).digest("base64")
+     MERCHANT_SALT
+ 
+   const calc = crypto.createHmac("sha256", MERCHANT_KEY).update(concat).digest("base64")
   try {
     return crypto.timingSafeEqual(Buffer.from(hash), Buffer.from(calc))
-  } catch {
+   } catch {
     return false
   }
-}
+ }
+

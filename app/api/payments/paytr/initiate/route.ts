@@ -374,7 +374,7 @@ async function resolveBuyerInfo(params: {
       .eq("id", order.id)
 
     const { token } = await paytrInitiate({
-		base_url: baseUrl,
+	  base_url: baseUrl,
       merchant_oid: merchantOid,
       meta_order_id: order.id,   // dönüş URL’si için gerçek orderId’yi kullan
       email,
@@ -382,6 +382,7 @@ async function resolveBuyerInfo(params: {
       amount,           // KURUŞ — SLA/DB
       currency,
       lang,
+	  tenantCode,
       // Zorunlu paytr bilgiler
       user_name: buyer.name,
       user_phone: buyer.phone,
