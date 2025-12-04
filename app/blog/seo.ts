@@ -66,35 +66,39 @@ export async function blogPostingJsonLd(opts: {
   };
 }
 
-/** Blog liste sayfası için ItemList JSON-LD */
-export function itemListJsonLd(opts: {
+ export function itemListJsonLd(opts: {
   title: string;
-   description?: string;
+  description?: string;
    items: Array<{ url: string; name: string; image?: string; datePublished?: string }>;
-  inLanguage?: string; // "tr-TR"
+   inLanguage?: string; // "tr-TR"
  }) {
-   const { title, description, items = [], inLanguage = "tr-TR" } = opts ?? ({} as any);
-   const safeItems = Array.isArray(items) ? items : [];
+ const { title, description, items = [], inLanguage = "tr-TR" } = opts ?? ({} as any);
+  const safeItems = Array.isArray(items) ? items : [];
   return {
      "@context": "https://schema.org",
-   "@type": "ItemList",
+  "@type": "ItemList",
     name: title,
-    description,
-     inLanguage,
-     itemListElement: safeItems.map((it, i) => ({
-      "@type": "ListItem",
-       position: i + 1,
-     item: {
+   description,
+    inLanguage,
+    itemListElement: safeItems.map((it, i) => {
+       const name = it.name || it.url;
+      return {
+       "@type": "ListItem",
+         position: i + 1,
+         name,
+        item: {
         "@type": "BlogPosting",
-		name: it.name, 
-         headline: it.name,
-        url: it.url,
-       ...(it.image ? { image: [it.image] } : {}),
-       ...(it.datePublished ? { datePublished: it.datePublished } : {})
-      }
-    }))
-  };
+         name,
+       headline: name,
+       url: it.url,
+         ...(it.image ? { image: [it.image] } : {}),
+       ...(it.datePublished ? { datePublished: it.datePublished } : {}),
+       },
+      };
+    }),
+   };
  }
+
 // Liste sayfası için başlık ve açıklama (i18n)
 export async function getListTitle() {
   const t = await getTranslations("Seo");
