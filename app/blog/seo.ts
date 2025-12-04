@@ -86,6 +86,7 @@ export function itemListJsonLd(opts: {
        position: i + 1,
      item: {
         "@type": "BlogPosting",
+		name: it.name, 
          headline: it.name,
         url: it.url,
        ...(it.image ? { image: [it.image] } : {}),

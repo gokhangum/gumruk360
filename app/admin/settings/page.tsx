@@ -30,7 +30,7 @@ export default function AdminSettingsPage() {
   const [signupOpen, setSignupOpen] = useState<boolean | null>(null)
   const [authBusy, setAuthBusy] = useState(false)
   const [authError, setAuthError] = useState<string | null>(null)
-
+const [currentHost, setCurrentHost] = useState<string | null>(null)
   const [flagError, setFlagError] = useState<string | null>(null)
 
   // --- kişi bazlı izinler ---
@@ -116,7 +116,11 @@ export default function AdminSettingsPage() {
       setSignupOpen(true)
     }
   }
-
+ useEffect(() => {
+   if (typeof window !== "undefined") {
+     setCurrentHost(window.location.host || null)
+    }
+  }, [])
   useEffect(() => {
     loadWorkers()
     loadMessageFlag()
@@ -386,15 +390,27 @@ export default function AdminSettingsPage() {
 
          </div>
        </div>
-      {/* Login / Signup Erişimi */}
-      <div className="mb-6 rounded-lg border p-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <div className="font-medium">Login / Signup Erişimi</div>
-            <div className="text-sm text-gray-600">
-              Giriş ve kayıt ol akışlarını global olarak aç/kapat.
-            </div>
+    {/* Login / Signup Erişimi */}
+     <div className="mb-6 rounded-lg border p-4">
+   <div className="flex items-center justify-between">
+         <div>
+           <div className="font-medium">Login / Signup Erişimi</div>
+          <div className="text-sm text-gray-600">
+           <div>
+            Bu ayar, içinde bulunduğunuz domain için geçerlidir
+            (örn. gumruk360.com / tr.easycustoms360.com).
+           </div>
+            <div>
+               Giriş ve kayıt ol akışlarını bu domain için açıp kapatabilirsiniz.
+               {currentHost && (
+                 <span className="ml-1 text-xs text-gray-500">
+                  (Şu an: {currentHost})
+                 </span>
+               )}
+         </div>
           </div>
+         </div>
+
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <span className="text-sm">
