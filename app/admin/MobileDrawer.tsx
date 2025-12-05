@@ -126,6 +126,9 @@ export default function AdminMobileDrawer() {
               <Link href="/admin/danisman-odeme-yonetimi" className="block py-2" onClick={close}>
                 Danışman Ödeme Yönetimi
               </Link>
+			                <Link href="/admin/sla-reminders" className="block py-2" onClick={close}>
+                SLA Hatırlatıcı
+              </Link>
               <Link href="/admin/seo" className="block py-2" onClick={close}>
                 Tenant Seo
               </Link>
