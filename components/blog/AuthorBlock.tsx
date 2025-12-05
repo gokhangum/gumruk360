@@ -19,7 +19,7 @@ import CvPreviewById from "@/components/cv/CvPreviewById";
    content?: TiptapNode[];
  };
 
- function renderTiptapContent(nodes?: TiptapNode[] | null): JSX.Element[] | null {
+function renderTiptapContent(nodes?: TiptapNode[] | null): any {
    if (!nodes || !Array.isArray(nodes)) return null;
   return nodes.map((node, index) => renderTiptapNode(node, index));
  }
@@ -47,7 +47,7 @@ function parseTiptapDoc(bio: string): any | null {
   }
 }
 
-function renderTiptapNode(node: TiptapNode, key: number): JSX.Element | string | null {
+function renderTiptapNode(node: TiptapNode, key: number): any {
    if (!node) return null;
    switch (node.type) {
      case "paragraph":
@@ -105,7 +105,7 @@ function renderTiptapNode(node: TiptapNode, key: number): JSX.Element | string |
    }
  }
 
-function renderAuthorBioContent(bio: string | null): JSX.Element | string | null {
+function renderAuthorBioContent(bio: string | null): any {
   if (!bio) return null;
 
   const doc = parseTiptapDoc(bio);
@@ -116,7 +116,7 @@ function renderAuthorBioContent(bio: string | null): JSX.Element | string | null
     // Her child için key vererek React uyarısını temizliyoruz
     return (
       <>
-        {children.map((child, index) => (
+        {children.map((child: any, index: number) => (
           <span key={index}>{child}</span>
         ))}
       </>
