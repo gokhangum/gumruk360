@@ -3,6 +3,7 @@
 import React from "react";
 import { fetchAuthorOptions, createAuthor, uploadAuthorAvatar, ProfileOption, AuthorOption } from "@/lib/blog/authors";
  import { useTranslations } from "next-intl";
+ import RichEditor from "@/components/blog/RichEditor";
 type SelectedKind = "profile" | "author" | "";
 
 export type AuthorSelection = {
@@ -31,7 +32,7 @@ export default function AuthorSelector({ label, value, onChange, required }: Pro
   // New author form state
   const [name, setName] = React.useState("");
   const [title, setTitle] = React.useState("");
-  const [bio, setBio] = React.useState("");
+  const [bio, setBio] = React.useState<any | null>(null);
 const [avatarFile, setAvatarFile] = React.useState<File | null>(null);
 const [avatarPreview, setAvatarPreview] = React.useState<string | null>(null);
   React.useEffect(() => {
@@ -76,8 +77,12 @@ const submitNewAuthor = async () => {
     setError(null);
     setLoading(true);
     try {
-      const res = await createAuthor({ name: name.trim(), title: title.trim() || null, bio: bio.trim() || null });
-      const a = res.author as AuthorOption;
+     const res = await createAuthor({
+       name: name.trim(),
+        title: title.trim() || null,
+        bio: bio ? JSON.stringify(bio) : null,
+      });
+       const a = res.author as AuthorOption;
 	  // Avatar seçilmişse dosyayı yükle
 if (avatarFile) {
   try {
@@ -94,7 +99,7 @@ if (avatarFile) {
       setShowNew(false);
 setName("");
 setTitle("");
-setBio("");
+setBio(null);
 setAvatarFile(null);
 setAvatarPreview(null);
     } catch (e: any) {
@@ -162,14 +167,13 @@ setAvatarPreview(null);
             />
           </div>
           <div className="flex flex-col gap-1">
-            <label className="text-sm text-gray-700">{t("bioOptional")}</label>
-            <textarea
-              className="rounded-md border border-gray-300 bg-white p-2 text-sm"
-              rows={4}
-              value={bio}
-              onChange={(e) => setBio(e.target.value)}
-              placeholder={t("bioPh")}
-            />
+                   <label className="text-sm text-gray-700">{t("bioOptional")}</label>
+           <RichEditor
+             value={bio}
+              onChange={setBio}
+             placeholder={t("bioPh")}
+          />
+
           </div>
 		  {/* Avatar (opsiyonel) */}
 <div className="flex flex-col gap-2">

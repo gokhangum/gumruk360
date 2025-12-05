@@ -334,6 +334,9 @@
   "listDescription": "Gümrük ve dış ticaret odaklı makaleler, rehberler ve haberler."
 },
 	"BlogIndex": {
+		"becomeAuthorTitle": "Yazar olmak ister misiniz?",
+"becomeAuthorText": "Gümrük360 Blog’da yazmak, gümrük ve dış ticaret alanındaki uzmanlığınızı daha geniş bir kitleyle paylaşmanın en hızlı yollarından biridir. Yazar olmak için bizimle iletişime geçebilirsiniz.",
+"becomeAuthorCta": "Yazar olmak istiyorum",
 		"fallbackListTitle": "Blog",
 		"ogImageAlt": "{siteName} – Blog kapak görseli",
   "breadcrumbHome": "Ana Sayfa",

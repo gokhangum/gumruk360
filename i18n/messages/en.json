@@ -333,6 +333,9 @@
   "listDescription": "Articles, guides, and news on customs and international trade."
 },
 	"BlogIndex": {
+		"becomeAuthorTitle": "Want to become an author?",
+"becomeAuthorText": "Writing for the EasyCustoms360 Blog is a great way to share your customs and trade expertise with a wider audience. Get in touch with us if you would like to contribute.",
+"becomeAuthorCta": "I want to be an author",
 		"fallbackListTitle": "Blog",
 		"ogImageAlt": "{siteName} – Blog cover image",
   "breadcrumbHome": "Home",

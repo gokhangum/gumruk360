@@ -468,39 +468,60 @@ url: urlForJsonLd,
         )}
       </section>
 
-     {/* SAĞ: Yazarlar */}
-        {uniqueAuthors && uniqueAuthors.length > 0 ? (
-          <aside className="md:col-span-1 w-full">
-             <div className="card-surface shadow-colored p-4 md:p-5 edge-underline edge-blue edge-taper">
-               <h3 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-2">{t("authors")}</h3>
-               <div className="space-y-3">
-              {uniqueAuthors.map((row) => (
-  <div key={row.id} className="group rounded-xl hover:edge-rise-2mm transition">
-   <AuthorBlock
-  author={{
-    ...row.author,
-    // [/blog/[slug]] ile birebir aynı fallback:
-    avatar_url:
-      (row.author as any)?.avatar_url
-      || (row.author as any)?.avatarUrl
-      || (row.author as any)?.avatar
-      || (row.author as any)?.image
-      || (row.author as any)?.photo
-      || null,
-  }}
-  workerId={row.workerId}
-  authorId={row.id}
-  locale={__uiLocale as "tr" | "en"}
-/>
+     {/* SAĞ: Yazar CTA + Yazarlar */}
+     <div className="md:col-span-1 w-full space-y-4">
+      {/* Yazar olmak istiyorsanız… */}
+    <aside className="w-full">
+          <div className="card-surface shadow-colored p-4 md:p-5 edge-underline edge-blue edge-taper">
+            <h3 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-2">
+             {t("becomeAuthorTitle")}
+            </h3>
+          <p className="text-xs md:text-sm text-gray-700 mb-3">
+              {t("becomeAuthorText")}
+            </p>
+           <a
+              href="/contact"
+             className="inline-flex items-center rounded-full bg-slate-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
+            >
+            {t("becomeAuthorCta")}
+            </a>
+          </div>
+        </aside>
 
-   
-  </div>
-))}
-
-               </div>
+        {/* Yazarlar listesi */}
+         {uniqueAuthors && uniqueAuthors.length > 0 ? (
+        <aside className="w-full">
+            <div className="card-surface shadow-colored p-4 md:p-5 edge-underline edge-blue edge-taper">
+              <h3 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-2">
+               {t("authors")}
+           </h3>
+           <div className="space-y-3">
+               {uniqueAuthors.map((row) => (
+                <div key={row.id} className="group rounded-xl hover:edge-rise-2mm transition">
+                    <AuthorBlock
+                     author={{
+                    ...row.author,
+                       // [/blog/[slug]] ile birebir aynı fallback:
+                    avatar_url:
+                      (row.author as any)?.avatar_url ||
+                        (row.author as any)?.avatarUrl ||
+                          (row.author as any)?.avatar ||
+                         (row.author as any)?.image ||
+                        (row.author as any)?.photo ||
+                         null,
+                   }}
+                    workerId={row.workerId}
+                      authorId={row.id}
+                    locale={__uiLocale as "tr" | "en"}
+                  />
+                  </div>
+               ))}
             </div>
-          </aside>
-         ) : null}
+          </div>
+       </aside>
+      ) : null}
+      </div>
+
       </div>
 </div></div>
         

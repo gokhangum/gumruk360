@@ -6,12 +6,131 @@
 import CvPreviewById from "@/components/cv/CvPreviewById";
  type Author = {
    name: string | null;
-   title: string | null;
+  title: string | null;
    bio: string | null;
-   avatar_url: string | null;
-};
- 
+  avatar_url: string | null;
+ };
+
+ type TiptapNode = {
+   type?: string;
+  text?: string;
+   marks?: { type: string; attrs?: any }[];
+   attrs?: Record<string, any>;
+   content?: TiptapNode[];
+ };
+
+ function renderTiptapContent(nodes?: TiptapNode[] | null): JSX.Element[] | null {
+   if (!nodes || !Array.isArray(nodes)) return null;
+  return nodes.map((node, index) => renderTiptapNode(node, index));
+ }
+function parseTiptapDoc(bio: string): any | null {
+  try {
+    let val: any = JSON.parse(bio);
+
+    // Çift encode durumu: "\"{...}\"" gibi ise, içini tekrar parse etmeyi dene
+    if (typeof val === "string") {
+      try {
+        const inner = JSON.parse(val);
+        val = inner;
+      } catch {
+        // inner parse edilemezse, val string kalsın
+      }
+    }
+
+    if (val && typeof val === "object" && (val as any).type === "doc") {
+      return val;
+    }
+
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+function renderTiptapNode(node: TiptapNode, key: number): JSX.Element | string | null {
+   if (!node) return null;
+   switch (node.type) {
+     case "paragraph":
+       return <p key={key}>{renderTiptapContent(node.content)}</p>;
+     case "text": {
+       let text: any = node.text ?? "";
+       const marks = node.marks || [];
+      for (const mark of marks) {
+         if (mark.type === "bold") {
+         text = <strong>{text}</strong>;
+        } else if (mark.type === "italic") {
+          text = <em>{text}</em>;
+        } else if (mark.type === "strike") {
+          text = <s>{text}</s>;
+         } else if (mark.type === "link") {
+         const href = mark.attrs?.href || "#";
+         text = (
+           <a href={href} target="_blank" rel="noopener noreferrer">
+              {text}
+            </a>
+          );
+        }
+     }
+     return <span key={key}>{text}</span>;
+    }
+	
+    case "bulletList":
+      return <ul key={key}>{renderTiptapContent(node.content)}</ul>;
+     case "orderedList":
+     return <ol key={key}>{renderTiptapContent(node.content)}</ol>;
+    case "listItem":
+       return <li key={key}>{renderTiptapContent(node.content)}</li>;
+    case "blockquote":
+       return <blockquote key={key}>{renderTiptapContent(node.content)}</blockquote>;
+     case "inlineQuote":
+      return <span key={key} className="italic">{renderTiptapContent(node.content)}</span>;
+    case "image":
+      return (
+        <img
+          key={key}
+           src={node.attrs?.src || ""}
+           alt={node.attrs?.alt || ""}
+          className="my-2 max-h-48 w-auto"
+         style={
+             node.attrs?.float
+             ? { float: node.attrs.float as any, margin: "0 12px 12px 0" }
+             : undefined
+         }
+       />
+      );
+    case "hardBreak":
+     return <br key={key} />;
+    default:
+      return node.content ? renderTiptapContent(node.content) : null;
+   }
+ }
+
+function renderAuthorBioContent(bio: string | null): JSX.Element | string | null {
+  if (!bio) return null;
+
+  const doc = parseTiptapDoc(bio);
+  if (doc) {
+    const children = renderTiptapContent((doc as any).content || []);
+    if (!children) return null;
+
+    // Her child için key vererek React uyarısını temizliyoruz
+    return (
+      <>
+        {children.map((child, index) => (
+          <span key={index}>{child}</span>
+        ))}
+      </>
+    );
+  }
+
+  // TipTap doc değilse ya da parse edilemezse: düz metin olarak göster
+  return bio;
+}
+
+
+  
  export default function AuthorBlock(
+
   { author, workerId, locale, authorId }: { author: Author | null; workerId?: string | null; locale?: "tr" | "en"; authorId?: string | null }
  ) {
    if (!author) return null;
@@ -104,25 +223,12 @@ style={{ objectPosition: "50% 45%" }}
              {t("allPosts")}
            </Link>
          )}
-       </div>
-               {author.bio ? (
-          <div className="relative">
-            {(!isWorkerAuthor && showBio) && (
-              <div
-                ref={bioPanelRef}
-                className="absolute z-20 mt-2 max-w-[80vw] sm:max-w-md rounded-lg border border-gray-200 bg-white p-3 text-sm shadow-lg"
-              >
-                <div className="whitespace-pre-wrap text-gray-700">
-                  {author.bio}
-                </div>
-              </div>
-            )}
-          </div>
-        ) : null}
+             </div>
      </div>
 
+
       {/* Basit full-screen görsel modalı (dikdörtgen, kırpmasız) */}
-      {showFullImg && (
+           {showFullImg && (
         <div
           className="fixed inset-0 z-40 bg-black/60 flex items-center justify-center p-4"
          onClick={() => setShowFullImg(false)}
@@ -153,8 +259,43 @@ style={{ objectPosition: "50% 45%" }}
           </div>
        </div>
      )}
+
+      {/* Yazar Hakkında Modal — worker CV ile aynı genişlik */}
+      {showBio && author.bio && !isWorkerAuthor && (
+        <div className="fixed inset-0 z-40">
+          <div
+            className="absolute inset-0 bg-black/40"
+            onClick={() => setShowBio(false)}
+          />
+          <div className="absolute inset-0 flex items-center justify-center p-4">
+            <div
+              ref={bioPanelRef}
+              className="w-[min(100%,900px)] rounded-xl bg-white shadow-2xl max-h-[80vh] overflow-auto"
+            >
+              <div className="flex items-center justify-between border-b p-3">
+                <div className="text-sm font-medium">{t("aboutAuthor")}</div>
+                <button
+                  type="button"
+                  onClick={() => setShowBio(false)}
+                  className="rounded-md bg-gray-100 px-2 py-1 text-xs hover:bg-gray-200"
+                  aria-label={t("close")}
+                >
+                  {t("close")}
+                </button>
+              </div>
+              <div className="p-4">
+                <div className="prose prose-sm max-w-full text-gray-700">
+                  {renderAuthorBioContent(author.bio)}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
 	  {/* CV Önizleme Modal (Ask sayfasındakiyle aynı davranış) */}
  {showCv && workerId ? (
+
    <div className="fixed inset-0 z-40">
      <div className="absolute inset-0 bg-black/40" onClick={() => setShowCv(false)} />
      <div className="absolute inset-0 flex items-center justify-center p-4">
